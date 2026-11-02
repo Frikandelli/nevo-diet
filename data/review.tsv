@@ -1,0 +1,15 @@
+product_regex	action	note
+maza hoemoes	exclude	hummus with sun-dried tomato, matched as sun-dried tomato (2026-11-01)
+zongedroogde tomaten|tomaten zongedroogd	remap:2377	Dutch supermarket sun-dried tomatoes come in oil; NEVO 2378 is the dry form (3x denser). Use 2377 'gedroogd in olie, uitgelekt'
+appelstroop|stroop appel	keep	checked 2026-11-01 (stage 2): NEVO 427 has 13.8 mg iron/100 g (non-haem), real product at 7 chains; enters the women's baskets for iron. Kept.
+zelfrijzend bakmeel	keep	checked 2026-11-01 (stage 2): NEVO 1020, 610 mg Na/100 g from baking powder; real, cheapest calories. Kept; meals (stage 5) decide how it is eaten.
+^((ah terra( biologisch)?|bio\+|mediza|plus|smaakt) )?linzen( bio)?$	remap:5169	stage 3 check 2026-11-01: lentils without "gedroogd"/colour come in 360-400 g packs (can/jar sizes) and were matched as dried (NEVO 120), ~2.5x too cheap per cooked portion. Treated as canned (NEVO 5169, priced on 60% drained); conservative when the label is ambiguous
+insalatissime	exclude	stage 3 check: Rio Mare Insalatissime is a ready-made tuna salad, matched as dried lentils
+zeeuwse oesters	exclude	stage 3 check: fresh oysters in the shell (6 pieces, ~600 g incl. shell) were priced as edible oyster meat
+boerenkool (deelblokjes|mini-p)	exclude	stage 3 check: frozen kale cubes matched as raw kale (NEVO 959); frozen kale is the hand-mapped kale_frozen
+slaatje	exclude	stage 4 check 2026-11-01: Westland/Kleer "slaatje" (canned salad meat/fish) matched as raw beef and tinned salmon; composition unclear
+iglo (roerbak|rb )	exclude	stage 4 check: Iglo stir-fry ready meals matched as tinned salmon
+vis marine zalmfilets	exclude	stage 4 check: salmon fillets (fresh/frozen) were matched as tinned salmon (602). (A remap to raw salmon was tried and dropped: remaps skip the filters and pulled in pet food and smoked salmon.)
+olvarit|ella.s kitchen|yogolino|\bhipp\b|bambix|nutrilon|ontbijtpap|knabbels|\b\d+m\+|\b\d+\+?\s?mnd\b|\b\d+\+?jr\b	exclude	stage 5 check 2026-11-01: baby food (Olvarit, Ella's Kitchen, "4m+", "15mnd") was matched as plain fruit, vegetables and flour; Olvarit vegetable rings priced "Vegetables av raw" at €72/kg
+plantaardige tonijn	exclude	stage 5 check: John West plant-based tuna in oil was matched as vegetable oil
+zonder palmolie	exclude	stage 5 check: "Flower Farm Bakken zonder palmolie" (frying fat *without* palm oil) was matched as palm oil

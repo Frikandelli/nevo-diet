@@ -1,0 +1,2943 @@
+key	chain	eur_per_100g	product	pack_eur	pack_g
+oats	ah	0.145	AH Volkoren havermout grove vlokken	1.45	1000
+oats	dekamarkt	0.148	G'woon Havermout fijn	0.74	500
+oats	dirk	0.146	Molina Havermout	0.73	500
+oats	hoogvliet	0.148	Molina Havermout vlokken	0.74	500
+oats	jumbo	0.145	Jumbo Havermout Fijne Vlokken Volkoren Voordeelverpakking 1 kg	1.45	1000
+oats	lidl	0.148	Havermout grove vlokken	0.74	500
+oats	plus	0.158	Molina Havermout	0.79	500
+oats	spar	0.15	g'woon havermout fijn	0.75	500
+oats	vomar	0.146	G'woon havermout 500gr	0.73	500
+pasta	ah	0.095	AH Macaroni	0.95	1000
+pasta	dekamarkt	0.11	G'woon Macaroni	0.55	500
+pasta	hoogvliet	0.186	G'woon Spaghetti	0.93	500
+pasta	lidl	0.07	Macaroni	0.35	500
+pasta	spar	0.098	g'woon spaghetti	0.49	500
+pasta_wholemeal	ah	0.178	AH Biologisch Volkoren penne	0.89	500
+pasta_wholemeal	dekamarkt	0.174	Bio+ Penne volkoren	0.87	500
+pasta_wholemeal	dirk	0.17	1 de Beste Spaghetti volkoren	0.85	500
+pasta_wholemeal	hoogvliet	0.156	Bio+ Biologische macaroni volkoren	0.78	500
+pasta_wholemeal	jumbo	0.198	Jumbo's Biologisch Volkoren Macaroni 500 g	0.99	500
+pasta_wholemeal	lidl	0.596	Bio volkoren spaghetti	1.49	250
+pasta_wholemeal	plus	0.158	PLUS Macaroni volkoren	0.79	500
+pasta_wholemeal	spar	0.17	Bio+ spaghetti volkoren bio	0.85	500
+rice	ah	0.119	AH Witte snelkook rijst	1.19	1000
+rice	dekamarkt	0.119	G'woon Witte rijst	1.19	1000
+rice	hoogvliet	0.149	G'woon Witte rijst	1.49	1000
+rice	jumbo	0.1125	Jumbo Witte Snelkookrijst 400 g	0.45	400
+rice	lidl	0.063	Rijst wit 1kg	0.63	1000
+rice	plus	0.239	PLUS Witte rijst	2.39	1000
+rice_brown	ah	0.149	AH Zilvervliesrijst	1.49	1000
+rice_brown	dekamarkt	0.147	G'woon Zilvervliesrijst	1.47	1000
+rice_brown	dirk	0.147	1 de Beste Zilvervliesrijst	1.47	1000
+rice_brown	hoogvliet	0.148	G'woon Zilvervliesrijst	1.48	1000
+rice_brown	jumbo	0.109	Jumbo Zilvervliesrijst Voordeelverpakking 1 kg	1.09	1000
+rice_brown	plus	0.179	PLUS Zilvervliesrijst VDV	1.79	1000
+rice_brown	spar	0.3125	Lassie zilvervliesrijst voordeel	1.25	400
+flour_wholemeal	ah	0.089	AH Volkoren tarwemeel	0.89	1000
+flour_wholemeal	dekamarkt	0.087	G'woon Tarwemeel volkoren	0.87	1000
+flour_wholemeal	dirk	0.082	1 de Beste Tarwemeel volkoren	0.82	1000
+flour_wholemeal	hoogvliet	0.082	G'woon Tarwemeel volkoren	0.82	1000
+flour_wholemeal	jumbo	0.089	Jumbo Tarwemeel Volkoren 1KG	0.89	1000
+flour_wholemeal	plus	0.089	PLUS tarwemeel volkoren	0.89	1000
+flour_wholemeal	spar	0.089	g'woon Tarwemeel Volkoren	0.89	1000
+bread_wholemeal	ah	0.1187	AH Extra lang lekker volkoren heel	0.95	800
+bread_wholemeal	dekamarkt	0.1163	DekaVers Fijn volkoren heel	0.93	800
+bread_wholemeal	dirk	0.1163	Bakker van der Akker Rond volkoren heel	0.93	800
+bread_wholemeal	hoogvliet	0.2488	Hoogvliet Tijger volkoren heel	1.99	800
+bread_wholemeal	lidl	0.1163	Fijn volkoren heel L	0.93	800
+bread_wholemeal	plus	0.1487	Basismerk Rond volkoren heel GV	1.19	800
+bread_wholemeal	spar	0.2737	BakkersHart Brood Volkoren Heel	2.19	800
+potatoes	ah	0.2345	AH Gourmande aardappelen	2.99	1500
+potatoes	dekamarkt	0.1525	Aardappelen vastkokend	3.89	3000
+potatoes	dirk	0.2224	1 de Beste Culinaire kriel aardappelen	1.89	1000
+potatoes	hoogvliet	0.1174	Hoogvliet Aardappelen voordeel	4.99	5000
+potatoes	jumbo	0.3902	Jumbo Aardappel Bolletjes 600 g	1.99	600
+potatoes	lidl	0.1281	Aardappel harten	0.49	450
+potatoes	plus	0.2294	Biologisch PLUS Biologische aardappelen	1.95	1000
+potatoes	poiesz	0.1315	Aardappelen Kruimig	5.59	5000
+potatoes	spar	0.0976	aardappelen kruimig	2.49	3000
+potatoes	vomar	0.1133	Aardappelen kruimig 3kg	2.89	3000
+milk_semi	ah	0.0945	De Zaanse Hoeve Halfvolle melk	1.89	2000
+milk_semi	dekamarkt	0.089	Zuivelmeester Halfvolle melk	1.78	2000
+milk_semi	dirk	0.0865	1 de Beste Houdbare halfvolle melk 6 stuks	5.19	6000
+milk_semi	hoogvliet	0.0915	Melkan Voordeelverpakking halfvolle melk houdbaar	5.49	6000
+milk_semi	jumbo	0.0775	Halfvolle Melk 2 L	1.55	2000
+milk_semi	lidl	0.082	Halfvol. melk los 1L	0.82	1000
+milk_semi	plus	0.0975	Zuivelmeester Halfvolle melk	1.95	2000
+milk_semi	poiesz	0.195	Arla Biologisch Halfvolle Melk	1.95	1000
+milk_semi	spar	0.0845	Zuivelmeester melk halfvol	1.69	2000
+milk_skim	ah	0.099	AH Houdbare magere melk	0.99	1000
+milk_skim	dekamarkt	0.095	Melkan Magere melk	0.95	1000
+milk_skim	dirk	0.095	1 de Beste Magere melk	0.95	1000
+milk_skim	hoogvliet	0.095	Melkan Magere melk	0.95	1000
+milk_skim	jumbo	0.079	Jumbo Houdbare Magere Melk 1 L	0.79	1000
+milk_skim	lidl	0.077	Houdbare magere melk	0.77	1000
+milk_skim	plus	0.095	PLUS Houdbare magere melk	5.7	6000
+milk_skim	spar	0.095	Melkan magere houdbare melk	0.95	1000
+milk_powder	ah	1.5475	Two Cows Melkpoeder	6.19	400
+quark	ah	0.199	De Zaanse Hoeve Magere kwark	1.99	1000
+quark	dekamarkt	0.198	Oing Magere kwark	0.99	500
+quark	dirk	0.198	Campina Magere kwark naturel	0.99	500
+quark	hoogvliet	0.175	Melkan Magere kwark franse stijl	1.75	1000
+quark	jumbo	0.198	Öing Magere Kwark 500 g	0.99	500
+quark	lidl	0.169	Magere kwark 1kg	1.69	1000
+quark	plus	0.209	Melkan Magere Franse kwark	2.09	1000
+quark	poiesz	0.258	Konings Magere Naturel Kwark	1.29	500
+quark	spar	0.279	Melkan magere Franse kwark	2.79	1000
+yoghurt	ah	0.085	De Zaanse Hoeve Magere yoghurt	0.85	1000
+yoghurt	dekamarkt	0.084	Zuivelmeester Magere yoghurt	0.84	1000
+yoghurt	dirk	0.139	Bio+ Biologische magere yoghurt	1.39	1000
+yoghurt	hoogvliet	0.119	Zuivelmeester Magere yoghurt	1.19	1000
+yoghurt	jumbo	0.075	Magere yoghurt 1 L	0.75	1000
+yoghurt	lidl	0.082	Magere yoghurt	0.82	1000
+yoghurt	plus	0.115	Zuivelmeester Magere yoghurt	1.15	1000
+yoghurt	poiesz	0.085	Zuivelmeester Magere Yoghurt	0.85	1000
+cheese_gouda	ah	0.8748	De Zaanse Hoeve Goudse jong belegen 48+ stuk voordeel	8.8	1006
+cheese_gouda	dekamarkt	0.8594	Zuivelmeester Gouda kaas jong belegen 48+	8.25	960
+cheese_gouda	dirk	0.8591	1 de Beste Jong belegen kaas 48+ stuk	7.99	930
+cheese_gouda	hoogvliet	0.8309	Zuivelmeester Jong belegen stuk	7.81	940
+cheese_gouda	jumbo	0.869	Goudse Kaas 48+ Jong Belegen Stuk 1KG	8.69	1000
+cheese_gouda	lidl	0.598	Gouda jong belegen	2.99	500
+cheese_gouda	plus	0.8489	Zuivelmeester Goudse jong belegen 48+ stuk	7.98	940
+cheese_gouda	poiesz	1.3809	Uniekaas Jong Belegen 48+	6.49	470
+cheese_gouda	spar	0.8713	Zuivelmeester kaas jong belegen 48+ stuk	8.19	940
+egg	ah	0.5035	AH Scharreleieren	3.19	720
+egg	dekamarkt	0.4719	Scharreleieren M/L	2.99	720
+egg	dirk	0.4577	Vrije uitloop eieren wit M	1.45	360
+egg	hoogvliet	0.4246	Kwetters Scharreleieren wit m/l	2.69	720
+egg	jumbo	0.5145	Powerful Eggs Nederlandse Witte Scharreleieren 30 Stuks	8.15	1800
+egg	lidl	1.132	Scharreleieren XXL	2.59	260
+egg	plus	0.4034	PLUS Vrije uitloopeieren wit S/M	6.39	1800
+egg	spar	0.5852	scharreleieren wit	3.09	600
+beans_brown_tin	ah	0.2672	AH Terra Hollandse bruine bonen	1.09	408
+beans_brown_tin	dekamarkt	0.2652	G'woon Bruine bonen hollands	1.05	396
+beans_brown_tin	dirk	0.2652	1 de Beste Bruine bonen hollands	1.05	396
+beans_brown_tin	hoogvliet	0.2431	G'woon Hollandse bruine bonen	1.05	432
+beans_brown_tin	jumbo	0.2479	Jumbo Hollandse Bruine Bonen 800 g	1.19	480
+beans_brown_tin	lidl	0.3763	Bruine bonen	1.05	279
+beans_brown_tin	plus	0.2753	PLUS Bruine bonen	1.09	396
+beans_brown_tin	spar	0.2986	g'woon G'woon Hollandse bruine bonen 720ML	1.29	432
+lentils_dry	ah	0.398	AH Terra Biologisch rode linzen	1.99	500
+lentils_dry	dekamarkt	0.398	Brandwijk Groene linzen	1.99	500
+lentils_dry	dirk	0.298	Brandwijk Groene linzen	1.49	500
+lentils_dry	hoogvliet	0.398	Valle del sole Rode linzen	1.99	500
+lentils_dry	jumbo	0.309	Garrido Rode Linzen 1KG	3.09	1000
+lentils_dry	lidl	0.298	Groene linzen	1.49	500
+lentils_dry	plus	0.398	Mediza Groene linzen	1.99	500
+lentils_dry	spar	0.558	linzen  rood	2.79	500
+lentils_tin	ah	0.4542	AH Terra Linzen	1.09	240
+lentils_tin	dekamarkt	0.5658	Hak Linzen	1.29	228
+lentils_tin	dirk	0.5044	Hak Linzen	1.15	228
+lentils_tin	hoogvliet	0.5307	Hak Linzen in pak	1.21	228
+lentils_tin	jumbo	0.6535	Hak Linzen 380 g	1.49	228
+lentils_tin	lidl	0.3465	Hak linzen	0.79	228
+lentils_tin	plus	0.4125	Mediza Linzen	0.99	400
+lentils_tin	spar	0.7237	Hak linzen in pak	1.65	228
+split_peas	ah	0.2767	Valle del sole Groene spliterwten	2.49	900
+split_peas	dekamarkt	0.198	Brandwijk Spliterwten	0.99	500
+split_peas	dirk	0.198	Brandwijk Spliterwten	0.99	500
+split_peas	hoogvliet	0.23	Valle del sole Spliterwten	1.15	500
+split_peas	jumbo	0.199	Chan's Gele Spliterwten 1000 g	1.99	1000
+split_peas	lidl	0.2433	Groene spliterwten	2.19	900
+split_peas	plus	0.438	Biologisch PLUS Groene spliterwten biologisch	2.19	500
+split_peas	spar	0.49	spliterwten	2.45	500
+chickpeas_tin	ah	0.4125	AH Terra Kikkererwten	0.99	400
+chickpeas_tin	dekamarkt	0.374	G'woon Kikkererwten	0.92	246
+chickpeas_tin	dirk	0.3104	Miras Nohut haslama Kikkererwten	1.49	800
+chickpeas_tin	hoogvliet	0.4431	G'woon Kikkererwten	1.09	246
+chickpeas_tin	jumbo	0.4486	Jumbo Biologische Kikkererwten 405 g	1.09	243
+chickpeas_tin	lidl	0.2063	Kikkererwten	0.99	480
+chickpeas_tin	plus	0.4431	PLUS Kikkererwten	1.09	246
+chickpeas_tin	spar	0.4675	g'woon kikkererwten	1.15	246
+peanut_butter	ah	0.569	AH Terra Plantaardig 100% pindakaas naturel	5.69	1000
+peanut_butter	dekamarkt	0.2483	G'woon Pindakaas	1.49	600
+peanut_butter	dirk	0.2467	1 de Beste Pindakaas	1.48	600
+peanut_butter	hoogvliet	0.275	G'woon Pindakaas	1.65	600
+peanut_butter	jumbo	0.2417	Jumbo Pindakaas Naturel 600 g	1.45	600
+peanut_butter	lidl	0.23	Pindakaas	1.38	600
+peanut_butter	plus	0.34	Pcd Pindakaas	1.19	350
+peanut_butter	spar	0.3983	g'woon Pindakaas naturel	2.39	600
+peanuts	ah	0.23	AH Pinda's ongezouten	1.15	500
+peanuts	dekamarkt	0.23	G'woon Pindas ongezouten	1.15	500
+peanuts	dirk	0.6618	1 de Beste Pinda's ongezouten	1.82	275
+peanuts	hoogvliet	0.298	G'woon Pinda's ongezouten	1.49	500
+peanuts	jumbo	0.228	Jumbo Pinda's Ongezouten Voordeelverpakking 500 g	1.14	500
+peanuts	lidl	0.31	Ongezouten pinda‘s	0.62	200
+peanuts	plus	0.35	PLUS Pinda's ongezouten 500 gram	1.75	500
+peanuts	spar	0.316	g'woon pinda's ongezouten	0.79	250
+sunflower_seeds	ah	0.798	AH Biologisch Zonnebloempitten	3.99	500
+sunflower_seeds	dekamarkt	0.438	Bio+ Zonnebloempitten	2.19	500
+sunflower_seeds	dirk	0.438	Bio+ Zonnebloempitten	2.19	500
+sunflower_seeds	hoogvliet	1.3111	Bolletje Zaden & pittenreep zonnebloempit	2.95	225
+sunflower_seeds	jumbo	0.798	Jumbo Zonnebloempitten Biologisch 500 g	3.99	500
+sunflower_seeds	lidl	0.598	Zonnebloempitten	2.99	500
+sunflower_seeds	plus	0.555	Raw Organic Food Zonnebloempitten XL - bio	9.99	1800
+sunflower_seeds	spar	1.13	RAW Organic Food zonnebloempitten	3.39	300
+sunflower_seeds	vomar	0.598	Bio+ zonnebloempitten 500gr	2.99	500
+linseed	ah	0.414	Smaakt Lijnzaad heel	2.07	500
+linseed	dekamarkt	0.458	Bio+ Lijnzaad gebroken	2.29	500
+linseed	dirk	0.438	Bio+ Lijnzaad gebroken	2.19	500
+linseed	hoogvliet	0.5725	Zonnatura Gebroken lijnzaad	2.29	400
+linseed	jumbo	0.598	Jumbo Lijnzaad Heel Biologisch 500 g	2.99	500
+linseed	lidl	0.3967	Lijnzaad	1.19	300
+linseed	plus	0.4493	Smaakt Lijnzaad gebroken XL bio	6.74	1500
+linseed	poiesz	0.6225	Zonnatura Lijnzaad Heel	2.49	400
+linseed	vomar	0.438	Bio+ lijnzaad gebroken 500gr	2.19	500
+walnuts	ah	1.43	AH Terra Walnoten ongebrand	7.15	500
+walnuts	dekamarkt	1.41	G'woon Walnoten ongebrand en ongezouten	7.05	500
+walnuts	dirk	1.475	1 de Beste Walnoten ongezouten	2.95	200
+walnuts	hoogvliet	1.238	G'woon Walnoten ongebrand ongezouten	6.19	500
+walnuts	lidl	1.7182	Walnoten ongebrand	1.89	110
+walnuts	plus	1.298	PLUS Walnoten ongebrand ongezouten	6.49	500
+walnuts	spar	1.495	g'woon g'woon Noten Walnoten ongezouten ongebrand	2.99	200
+oil_sunflower	ah	0.1929	AH Zonnebloemolie	3.55	1840
+oil_sunflower	dekamarkt	0.1576	G'woon Zonnebloemolie	1.45	920
+oil_sunflower	dirk	0.1576	1 de Beste Zonnebloemolie	1.45	920
+oil_sunflower	hoogvliet	0.1609	G'woon Zonnebloemolie	1.48	920
+oil_sunflower	jumbo	0.1402	Jumbo Zonnebloemolie 1 L	1.29	920
+oil_sunflower	lidl	0.1467	Zonnebloemolie	1.35	920
+oil_sunflower	plus	0.238	BIO+ Zonnebloemolie	2.19	920
+oil_sunflower	poiesz	0.1467	g'woon Zonnebloemolie	1.35	920
+oil_sunflower	spar	0.2163	Spar zonnebloemolie	1.99	920
+oil_sunflower	vomar	0.139	G'woon zonnebloemolie 1000ml	1.39	1000
+margarine	ah	0.15	AH Halvarine 100% plantaardig	0.75	500
+margarine	dekamarkt	0.15	G'woon Halvarine	0.75	500
+margarine	dirk	0.148	1 de Beste Halvarine	0.74	500
+margarine	hoogvliet	0.19	G'woon Halvarine	0.95	500
+margarine	jumbo	0.108	Jumbo Halvarine 500 g	0.54	500
+margarine	lidl	0.114	Halvarine	0.57	500
+margarine	plus	0.21	PLUS Halvarine kuip	1.05	500
+margarine	spar	0.118	g'woon halvarine	0.59	500
+cabbage_white	ah	0.8292	AH Biologisch Witte kool	1.99	300
+cabbage_white	dirk	0.1242	Witte kool	1.49	1500
+cabbage_white	jumbo	0.8292	Jumbo Biologisch Gesneden Witte Kool 300 g	1.99	300
+cabbage_white	lidl	0.1242	Witte kool	1.49	1500
+cabbage_white	plus	0.9542	Biologisch PLUS Witte kool biologisch	2.29	300
+cabbage_white	spar	0.1875	witte kool	2.25	1500
+cabbage_red	ah	0.9542	AH Biologisch Rode kool	2.29	300
+cabbage_red	dekamarkt	0.5906	Rode kool	1.89	400
+cabbage_red	dirk	0.1552	Rode kool	1.49	1200
+cabbage_red	hoogvliet	0.3975	Kramer Rode kool	1.59	500
+cabbage_red	jumbo	0.2821	Jumbo Rode Kool 350 g	0.79	350
+cabbage_red	lidl	0.1552	Rode kool	1.49	1200
+cabbage_red	plus	0.1305	PLUS Rode kool	0.71	680
+cabbage_red	spar	0.2344	rode kool	2.25	1200
+kale_frozen	ah	0.438	AH Boerenkool grootverpakking	2.19	500
+kale_frozen	dekamarkt	0.2112	G'woon Boerenkool deelblokjes	1.69	800
+kale_frozen	dirk	0.2967	1 de Beste Boerenkool grof	0.89	300
+kale_frozen	hoogvliet	0.3275	G'woon Boerenkool	2.62	800
+kale_frozen	jumbo	0.22	Jumbo Boerenkool Voordeelverpakking 750 g	1.65	750
+kale_frozen	lidl	0.398	Boerenkool	1.99	500
+kale_frozen	plus	0.22	PLUS Boerenkool mini-p	1.1	500
+kale_frozen	spar	0.2188	g'woon boerenkool deelblokjes	1.75	800
+spinach_frozen	ah	0.2556	AH Bladspinazie grof gesneden	1.15	450
+spinach_frozen	dekamarkt	0.4515	G'woon Bladspinazie gesneden	1.49	330
+spinach_frozen	hoogvliet	0.4619	Hak Gesneden bladspinazie	2.91	630
+spinach_frozen	jumbo	0.172	Jumbo Gehakte Spinazie Voordeelverpakking 750 g	1.29	750
+spinach_frozen	lidl	0.3978	Iglo bladspinazie	1.79	450
+spinach_frozen	plus	0.188	PLUS Fijn gesneden spinazie deelblokjes	0.94	500
+spinach_frozen	spar	0.33	g'woon bladspinazie gesneden	1.65	500
+carrots	ah	0.1167	AH Winterpeen	1.05	1000
+carrots	dekamarkt	0.11	Winterpeen verpakt	0.99	1000
+carrots	dirk	0.1089	Hollandse Winterpeen	0.98	1000
+carrots	hoogvliet	0.1878	Bio+ Biologische winterpeen	1.69	1000
+carrots	jumbo	0.2593	Jumbo Winterpeen ca. 150 g	0.35	150
+carrots	lidl	0.1528	Wortelen	0.99	720
+carrots	plus	0.1944	PLUS Winterpeen	1.75	1000
+carrots	spar	0.1722	winterpeen	1.55	1000
+onions	ah	0.1074	AH Gele uien	1.45	1500
+onions	dekamarkt	0.0939	Uien verpakt groot	1.69	2000
+onions	dirk	0.0656	1 de Beste Uien	0.59	1000
+onions	hoogvliet	0.1194	Hoogvliet Uien	2.15	2000
+onions	jumbo	0.105	Jumbo Gele Uien Extra Groot 2 kg	1.89	2000
+onions	lidl	0.0939	Uien geel	1.69	2000
+onions	plus	0.1772	PLUS Gele uien	3.19	2000
+onions	poiesz	0.1106	Uien	1.99	2000
+onions	spar	0.1167	uien	1.05	1000
+onions	vomar	0.0828	Uien net 2kg	1.49	2000
+peas_frozen	ah	0.2429	AH Doperwten	0.85	350
+peas_frozen	dekamarkt	0.2044	G'woon Doperwten extra fijn	1.39	680
+peas_frozen	dirk	0.1985	1 de Beste Doperwten zeer fijn	1.35	680
+peas_frozen	hoogvliet	0.2426	G'woon Doperwten extra fijn	1.65	680
+peas_frozen	lidl	0.2329	Doperwten	0.99	425
+peas_frozen	spar	0.1838	g'woon doperwten zeer fijn	1.25	680
+broccoli	ah	0.2625	AH Broccoli	1.05	500
+broccoli	dekamarkt	0.3113	Ardo Broccoli	2.49	1000
+broccoli	dirk	0.2475	Broccoli los	1.98	1000
+broccoli	hoogvliet	0.3225	Hoogvliet Broccoli	1.29	500
+broccoli	jumbo	0.2975	Jumbo Broccoli 500 g	1.19	500
+broccoli	lidl	0.3238	Broccoli mix	2.59	1000
+broccoli	plus	0.3725	PLUS Broccoli	1.49	500
+broccoli	spar	0.3725	Broccoli	1.49	500
+tomatoes_tin	ah	0.1475	AH Tomatenblokjes	0.59	400
+tomatoes_tin	dekamarkt	0.1625	Bio+ Tomatenblokjes	0.65	400
+tomatoes_tin	dirk	0.16	Bio+ Tomatenblokjes	0.64	400
+tomatoes_tin	hoogvliet	0.17	G'woon Gepelde tomaten	0.68	400
+tomatoes_tin	jumbo	0.0925	Jumbo Tomatenblokjes 400 g	0.37	400
+tomatoes_tin	lidl	0.0988	Tomatenblokjes	0.42	425
+tomatoes_tin	plus	0.1725	PLUS Tomatenblokjes	0.69	400
+tomatoes_tin	spar	0.1125	g'woon tomatenblokjes	0.45	400
+banana	ah	0.3134	Chiquita Later lekker bananen	1.89	900
+banana	dekamarkt	0.297	Del Monte Bananen	1.99	1000
+banana	dirk	0.1925	Del Monte Bananen	1.29	1000
+banana	hoogvliet	0.2672	Bananen	1.79	1000
+banana	jumbo	0.3494	Jumbo Fairtrade Bio Bananen 850 g	1.99	850
+banana	lidl	2.4793	Bananencake	2.99	180
+banana	plus	0.3269	PLUS Bananen Fairtrade	2.19	1000
+banana	poiesz	0.2314	Budget Bananen	1.29	832
+banana	spar	0.3068	bananen	1.85	900
+banana	vomar	1.136	Bananen los	1.37	180
+apple	lidl	0.105	Appel Elstar tas	1.89	2000
+apple	plus	0.21	PLUS Handappels Jonagold	1.89	1000
+sardines	ah	1.2417	Morjon Sardines in soja olie	1.49	120
+sardines	dekamarkt	1.192	Vis Marine Sardines in zonnebloemolie	1.49	125
+sardines	dirk	1.5	Princes Sardines in olijfolie	1.65	110
+sardines	hoogvliet	1.16	Vis Marine Sardines zonnebloemolie	1.45	125
+sardines	jumbo	1.6583	Ribeira Sardines in Zonnebloemolie 120 g	1.99	120
+sardines	lidl	1.192	Sardines in zonnebloemolie	1.49	125
+sardines	plus	1.2636	Princes Sardines in olijfolie MSC	1.39	110
+mackerel_tin	ah	1.24	Statesman Makreelfilets in zonnebloemolie	1.55	125
+mackerel_tin	dekamarkt	1.192	Vis Marine Makreel in zonnebloemolie	1.49	125
+mackerel_tin	dirk	1.104	La Miranda Makreelfilet in zonnebloemolie	1.38	125
+mackerel_tin	hoogvliet	1.432	Vis Marine Makreel zonnebloemolie	1.79	125
+mackerel_tin	lidl	1.112	Makreelfilet in olie	1.39	125
+mackerel_tin	plus	1.592	Princes Makreel in zonnebloemolie	1.99	125
+mackerel_tin	spar	1.32	Vis Marine makreel in zonnebloemolie	1.65	125
+herring_tomato	ah	0.6053	Statesman Haringfilets in tomatensaus	1.15	190
+herring_tomato	dekamarkt	0.6053	Statesman Haring in tomatensaus	1.15	190
+herring_tomato	dirk	0.5947	Statesman Haring in tomatensaus	1.13	190
+herring_tomato	hoogvliet	1.0294	Princes Haringfilets in milde tomatensaus	1.75	170
+herring_tomato	jumbo	1.1706	John West Haringfilets in Tomatensaus 170g	1.99	170
+herring_tomato	plus	0.6263	Statesman Haringfilets in Tomatensaus MSC	1.19	190
+herring_tomato	spar	1.3235	Princes haring in milde tomatensaus	2.25	170
+chicken_liver	ah	0.6725	AH Scharrel kippenlevertjes	2.69	400
+chicken_liver	dekamarkt	0.8725	DekaVers Scharrel kippenlever	3.49	400
+chicken_liver	dirk	0.6625	Vleeschmeesters Kippenlever	2.65	400
+chicken_liver	plus	0.6225	PLUS Boerentrots Kippenlevers	2.49	400
+chicken_thigh	ah	1.1675	AH Scharrel kipdijfilet	8.99	770
+chicken_thigh	dekamarkt	1.1675	DekaVers Scharrel kipdijfilet	6.83	585
+chicken_thigh	dirk	1.2462	Vleeschmeesters Kipdijfilet	7.29	585
+chicken_thigh	hoogvliet	1.1675	Hoogvliet kipdijfilet grootverpakking	9.34	800
+chicken_thigh	jumbo	1.1493	Jumbo Scharrelkip Kippendijfilet 750 g	8.62	750
+chicken_thigh	lidl	1.1487	Kipdijfilet grootverpakking	9.19	800
+chicken_thigh	plus	1.0714	PLUS Boerentrots Kipdijfilet	8.25	770
+chicken_thigh	spar	1.7	Spar kipdijfilet	7.48	440
+mince_mixed	ah	1.058	AH Half-om-half gehakt	5.29	500
+mince_mixed	dirk	0.845	Vleeschmeesters Half om half gehakt 1000 gram	8.45	1000
+mince_mixed	jumbo	0.958	Jumbo Half-om-Half Gehakt Varken-Rund 500 g	4.79	500
+mince_mixed	lidl	0.899	Gehakt HOH 1kg	8.99	1000
+tofu	ah	0.398	AH Terra Biologische tofu grootverpakking	1.99	500
+tofu	dekamarkt	0.5089	Vivera Tofu	2.29	450
+tofu	dirk	0.4867	Vivera Tofu	2.19	450
+tofu	hoogvliet	0.3909	Bio+ Biologische tofu	2.15	550
+tofu	jumbo	0.3618	Vivera Zachte Tofu 550 g	1.99	550
+tofu	lidl	0.3611	Tofu	1.3	360
+tofu	plus	0.4345	BIO+ Tofu	2.39	550
+tofu	spar	0.4273	Bio+ tofu	2.35	550
+soy_drink	ah	0.089	AH Terra Plantaardige sojadrink ongezoet	0.89	1000
+soy_drink	dekamarkt	0.088	Melkan Soja drink ongezoet	0.88	1000
+soy_drink	dirk	0.088	Melkan Soja drink ongezoet	0.88	1000
+soy_drink	hoogvliet	0.088	Melkan Sojadrink ongezoet	0.88	1000
+soy_drink	jumbo	0.086	Jumbo Sojadrink Ongezoet 1 L	0.86	1000
+soy_drink	lidl	0.088	Soja drink ongezoet	0.88	1000
+soy_drink	plus	0.089	Melkan Sojadrink ongezoet	0.89	1000
+yeast_flakes	ah	5.9043	BioToday Edelgistvlokken	6.79	115
+yeast_flakes	dekamarkt	5.8174	BioToday Edelgistvlokken	6.69	115
+yeast_flakes	jumbo	5.9043	Bio Today 100% Organic Edelgistvlokken 115 g	6.79	115
+yeast_flakes	plus	5.2957	BioToday Edelgistvlokken bio	6.09	115
+salt_iodised	ah	0.392	AH Tafelzout met jodium	0.49	125
+salt_iodised	dekamarkt	0.356	Ambtman Zeezout bevat jodium	0.89	250
+salt_iodised	dirk	0.388	Ambtman Zeezout bevat jodium	0.97	250
+salt_iodised	hoogvliet	0.1483	Jozo Keukenzout	0.89	600
+salt_iodised	jumbo	0.6	JOZO Jodium Zout Extra Fijn 125 g	0.75	125
+salt_iodised	plus	0.165	Jozo Keukenzout met jodium	0.99	600
+salt_iodised	spar	0.2083	Jozo Keukenzout	1.25	600
+frikandelbroodje	dekamarkt	0.6828	Frikandelbroodje	0.99	145
+frikandelbroodje	dirk	0.6759	Frikandelbroodje	0.98	145
+frikandelbroodje	lidl	0.6759	Frikandelbroodje	0.98	145
+frikandelbroodje	plus	0.6552	PLUS Frikandelbroodje	0.95	145
+kidney_tin	ah	0.2708	AH Terra Kidneybonen	0.65	240
+kidney_tin	dekamarkt	0.2417	G'woon Rode kidneybonen	0.58	240
+kidney_tin	dirk	0.2542	1 de Beste Rode kidneybonen	0.61	240
+kidney_tin	hoogvliet	0.2333	G'woon Kidneybonen	0.56	240
+kidney_tin	jumbo	0.9409	Bonduelle Rode kidneybonen 310g	1.75	186
+kidney_tin	lidl	0.265	Kidneybonen	0.62	234
+kidney_tin	plus	0.2417	PLUS Rode kidneybonen	0.58	240
+kidney_tin	spar	0.2549	g'woon kidneybonen rood	0.65	255
+flour_white	ah	0.085	AH Patent tarwebloem	0.85	1000
+flour_white	dekamarkt	0.082	G'woon Patent tarwebloem	0.82	1000
+flour_white	dirk	0.081	1 de Beste Tarwebloem	0.81	1000
+flour_white	hoogvliet	0.084	G'woon Tarwebloem	0.84	1000
+flour_white	jumbo	0.085	Tarwebloem 1 kg	0.85	1000
+flour_white	lidl	0.27	Tarwebloem	0.81	300
+flour_white	plus	0.089	PLUS Tarwebloem	0.89	1000
+flour_white	spar	0.085	g'woon tarwebloem	0.85	1000
+sugar	ah	0.095	AH Kristalsuiker	0.95	1000
+sugar	dekamarkt	0.117	Van Gilse Kristalsuiker	1.17	1000
+sugar	dirk	0.0847	Sundale Kristalsuiker	1.27	1500
+sugar	hoogvliet	0.134	Van Gilse Kristalsuiker	1.34	1000
+sugar	jumbo	0.079	Van Gilse Natuurlijke Kristalsuiker 1 kg	0.79	1000
+sugar	plus	0.139	Van Gilse Kristalsuiker	1.39	1000
+sugar	spar	0.0727	Sundale Kristalsuiker	1.09	1500
+tomato_paste	ah	0.4268	AH Tomatenpuree 4-pack	2.39	560
+tomato_paste	dekamarkt	0.8286	Del Monte Tomatenpuree	0.58	70
+tomato_paste	dirk	0.9286	Del Monte Tomatenpuree	0.65	70
+tomato_paste	hoogvliet	0.4286	G'woon Tomatenpuree	0.3	70
+tomato_paste	jumbo	0.3732	Jumbo Tomatenpuree 4 x 140 g	2.09	560
+tomato_paste	lidl	0.476	Tomatenpuree	0.99	208
+tomato_paste	plus	0.4643	PLUS Tomatenpuree	0.65	140
+tomato_paste	spar	0.7024	Akfa tomatenpuree	2.95	420
+n10	ah	1.22	Picard Gegratineerde aubergines	5.49	450
+n1007	spar	2.7667	Spar granaatappel pitjes 90 gram	2.49	90
+n1010	ah	1.578	AH Biologisch Vijgen	7.89	500
+n1010	dekamarkt	1.516	Smaakt Vijgen	3.79	250
+n1010	dirk	1.516	Smaakt Vijgen	3.79	250
+n1010	jumbo	2.5267	Chavroux Pyramide Vijgen 150 g	3.79	150
+n1010	lidl	0.798	Vijgen vers	3.99	500
+n1010	plus	1.399	Raw Organic Food Vijgen bio	13.99	1000
+n1013	ah	0.1875	AH Paneermeel naturel broodkruim	0.75	400
+n1013	dekamarkt	0.185	Weltgold Paneermeel	0.74	400
+n1013	dirk	0.185	Weltgold Paneermeel	0.74	400
+n1013	hoogvliet	0.3667	G'woon Paneermeel naturel	0.55	150
+n1013	lidl	0.185	Paneermeel	0.74	400
+n1013	plus	0.1875	Weltgold Paneermeel	0.75	400
+n1013	poiesz	2.3933	Saitaku Paneermeel Panko	3.59	150
+n1015	ah	0.289	Duru Bulgur grof	2.89	1000
+n1015	dekamarkt	0.34	Bio+ Bulgur	1.19	350
+n1015	dirk	0.518	Riso Vignola Bulgur	2.59	500
+n1015	jumbo	0.45	Jumbo Bulgur 300 g	1.35	300
+n1015	plus	0.269	Duru Bulgur grof	2.69	1000
+n1015	spar	0.349	Duru bulgur grof	3.49	1000
+n1018	plus	0.358	Smaakt Roggevlokken bio	1.79	500
+n1019	jumbo	0.6225	Koopmans Boekweitgrutten Biologisch 400 g	2.49	400
+n1019	plus	0.4975	Koopmans boekweitgrutten biologisch	1.99	400
+n1019	spar	0.6975	Koopmans biologisch boekweitgrutten bio	2.79	400
+n1020	ah	0.069	AH Zelfrijzend bakmeel	0.69	1000
+n1020	dekamarkt	0.069	G'woon Zelfrijzend bakmeel	0.69	1000
+n1020	dirk	0.108	1 de Beste Zelfrijzend bakmeel	0.54	500
+n1020	hoogvliet	0.074	G'woon Zelfrijzend bakmeel	0.74	1000
+n1020	jumbo	0.065	Zelfrijzend Bakmeel 1 kg	0.65	1000
+n1020	lidl	0.062	Zelfrijzend bakmeel	0.62	1000
+n1020	plus	0.075	PLUS Zelfrijzend bakmeel	0.75	1000
+n1020	spar	0.218	Koopmans zelfrijzend bakmeel beste basis	1.09	500
+n1056	ah	0.5802	AH Groene kiwi's	4.99	1000
+n1056	hoogvliet	0.464	Groene kiwi	3.99	1000
+n1074	ah	1.352	Isey Air passievrucht	1.69	125
+n1074	vomar	0.478	Almhof roomyogh maracuja 500gr	2.39	500
+n1076	ah	0.129	AH Kefir naturel	1.29	1000
+n1076	dekamarkt	0.225	Arla Biologisch kefir naturel	2.25	1000
+n1076	dirk	0.219	Arla Biologisch kefir naturel	2.19	1000
+n1076	hoogvliet	0.125	Melkan Kefir naturel	1.25	1000
+n1076	jumbo	0.135	Jumbo Kefir Naturel 1 L	1.35	1000
+n1076	plus	0.209	Arla Biologisch kefir naturel	2.09	1000
+n1076	poiesz	0.249	Arla Biologisch Kefir Naturel	2.49	1000
+n1076	spar	0.269	Arla bio kefir naturel naturel	2.69	1000
+n1076	vomar	0.219	Arla bio kefir naturel 1l	2.19	1000
+n1090	lidl	0.598	Lychees	2.99	500
+n1095	ah	0.3316	Miras Gekookte kikkererwten	1.89	570
+n1095	jumbo	0.2741	Sera Gekookte Kikkererwten 580g	1.59	580
+n1096	ah	3.995	AH Gerookte zalm	7.99	200
+n1096	dekamarkt	2.66	Hardanger Gerookte zalm	3.99	150
+n1096	dirk	2.995	Atlantic Noorse  zalm gerookt	5.99	200
+n1096	hoogvliet	3.89	Leroy Hardanger gerookte zalm	3.89	100
+n1096	jumbo	2.975	Jumbo Gerookte Zalm 200 g	5.95	200
+n1096	lidl	2.33	Gerookte zalm XXL	6.99	300
+n1096	plus	4.25	Unfished Gerookte zalm 100g	4.25	100
+n1096	spar	4.99	noose zalm gerookte	4.99	100
+n1097	lidl	79.9333	Kaviaar	11.99	15
+n1101	ah	2.245	Delby's Escargots	4.49	200
+n1104	ah	1.6786	AH Rookkaas naturel 45+ plakken	2.35	140
+n1104	dekamarkt	1.6	DekaVers Rookkaas gesneden	1.92	120
+n1104	dirk	1.8229	Vergeer Rookkaas plakken	3.19	175
+n1104	jumbo	1.55	Jumbo Rookkaas 45+ Plakken ca. 120 g	1.86	120
+n1104	lidl	1.5267	Rookkaas 45+	2.29	150
+n1104	plus	1.6333	PLUS Rookkaas 45+ plakken	1.96	120
+n1104	spar	1.86	Spar Rookkaas 45+	2.79	150
+n1105	ah	2.2189	AH Verse watermeloen	3.75	325
+n1105	dekamarkt	1.8376	Napoleon Kogels watermeloen	2.15	225
+n1105	dirk	1.6077	1 de Beste Watermeloen stukjes	2.09	250
+n1105	hoogvliet	1.8697	Candyman Frisse watermeloen	1.75	180
+n1105	jumbo	2.1261	Candyman Frisse Watermeloen 180 g	1.99	180
+n1105	plus	1.7009	Napoleon Watermeloen	1.99	225
+n1105	spar	1.7751	Spar watermeloenblokjes 325 gram	3.0	325
+n111	jumbo	1.46	Jumbo Mosselen Gekookt 150 g	2.19	150
+n111	plus	1.26	PLUS Gekookte mosselen	1.89	150
+n1112	hoogvliet	1.8	Streek Boerenkaas vinkethaler	7.2	400
+n1112	jumbo	2.2971	Jumbo Boerenkaas 48+ Oud ca. 175 g	4.02	175
+n1112	plus	2.0	GIJS Boerenkaas oud 48+ stuk	10.0	500
+n1127	ah	0.325	AH Citroensap	0.65	200
+n1127	dekamarkt	0.325	Limochef Citroensap	0.65	200
+n1127	dirk	0.32	Limochef Citroensap	0.64	200
+n1127	hoogvliet	0.32	Limochef Citroensap	0.64	200
+n1127	jumbo	0.345	Jumbo Citroensap 200 ml	0.69	200
+n1127	lidl	0.315	Citroensap	0.63	200
+n1127	plus	0.325	Limochef Citroensap	0.65	200
+n1127	spar	0.92	Spar Citroensap	1.15	125
+n1139	ah	0.0809	AH Doperwten en wortelen	0.55	680
+n1139	dekamarkt	0.0794	G'woon Doperwten en wortelen extra fijn	0.54	680
+n1139	dirk	0.0794	1 de Beste Doperwten en wortelen	0.54	680
+n1139	hoogvliet	0.1456	G'woon Doperwten wortelen extra fijn	0.99	680
+n1139	jumbo	0.0721	Jumbo Extra Fijn Doperwten Wortelen 680 g	0.49	680
+n1139	lidl	0.1229	Doperwten met wortel	0.43	350
+n1139	plus	0.175	PLUS Doperwten en wortelen	1.19	680
+n1139	spar	0.2722	g'woon doperwten extra fijn en wortelen	0.49	180
+n1152	dekamarkt	0.958	Slagerhuis Salami worst	4.79	500
+n1157	jumbo	0.5853	Kesbeke Augurken AB Natriumarm Zoetzuur 340 g	1.99	340
+n1162	ah	1.6583	AH Slagers gekookte worst	1.99	120
+n1162	dekamarkt	1.6056	Bio Gekookte worst	2.89	180
+n1162	dirk	0.59	Zalox Gekookte worst	2.95	500
+n1162	hoogvliet	0.59	Zalox Gekookte worst	2.95	500
+n1162	jumbo	0.538	Jumbo Gekookte Worst 500 g	2.69	500
+n1162	lidl	0.538	Gekookte worst 1/2	2.69	500
+n1162	plus	0.598	Zalox Gekookte worst	2.99	500
+n1162	poiesz	1.59	Gekookte Gelderse	1.59	100
+n117	jumbo	0.398	Jumbo Gedroogde Witte Bonen 500 g	1.99	500
+n118	dekamarkt	0.258	Brandwijk Groene erwten	1.29	500
+n118	dirk	0.238	Brandwijk Groene erwten	1.19	500
+n118	spar	0.398	erwten  groen	1.99	500
+n1182	dirk	0.2042	1 de Beste Appelmoes zonder suiker	2.45	1200
+n12	ah	0.178	AH Biologisch Rode bieten los	0.89	500
+n12	dirk	0.2926	1 de Beste Rode bieten schijven	1.99	680
+n12	jumbo	0.3221	Jumbo Rode Bieten Plakken 680 g	2.19	680
+n12	lidl	0.25	Biologische rode bieten	1.25	500
+n12	plus	0.199	PLUS rode bieten	1.99	1000
+n12	spar	1.7164	Vifon rode biet	1.15	67
+n1212	dekamarkt	0.9	Losalt Mineraalzout minder natrium	3.15	350
+n1239	ah	1.345	AH Keulse smeerleverworst	2.69	200
+n1239	dekamarkt	0.5	Kroon Saksische smeerleverworst naturel	0.75	150
+n1239	dirk	1.825	Kips Smeerleverworst kleintje	2.19	120
+n1239	hoogvliet	1.9083	Kips Kleintje smeerleverworst 6 x 20g	2.29	120
+n1239	jumbo	0.5267	Kroon Saksische Smeerleverworst 150 g	0.79	150
+n1239	plus	1.215	PLUS Saksische smeerleverworst stukje	2.43	200
+n124	ah	0.395	AH Radijs	0.79	200
+n124	jumbo	0.475	Jumbo Radijs 200 g	0.95	200
+n124	plus	0.3967	PLUS Radijs geschoond	1.19	300
+n124	spar	0.4833	radijs	1.45	300
+n1253	plus	0.3973	PLUS Knackebrod Vezelrijk	1.49	375
+n1255	ah	1.256	Princes Makreel in water	1.57	125
+n1255	hoogvliet	1.352	Vis Marine Makreel in water	1.69	125
+n1255	plus	1.192	Vis Marine Makreel in water	1.49	125
+n126	plus	5.45	Biologisch PLUS Tuinkers	1.09	20
+n127	ah	0.796	Bieze Rauwkost 4 seizoenen	1.99	250
+n127	dekamarkt	0.756	Bieze Rauwkost farmer	1.89	250
+n127	dirk	0.756	Bieze Rauwkost farmer	1.89	250
+n127	jumbo	1.3267	Jumbo Rauwkost Hollands 150 g	1.99	150
+n127	plus	0.796	Bieze Rauwkost 4 seizoenen	1.99	250
+n127	spar	0.9	Bieze farmer rauwkost	2.25	250
+n131	ah	0.1776	AH Augurken zuur	1.19	670
+n131	dekamarkt	0.2727	G'woon Augurken zuur	0.9	330
+n131	dirk	0.2818	1 de Beste Augurken zuur	0.93	330
+n131	jumbo	0.2912	Jumbo Fijne Augurk Zuur 190 g	0.99	340
+n131	plus	0.4106	Rolnik Ogorki Kwaszone / Augurken zuur	3.49	850
+n1311	spar	1.2538	De Ruijter chocoladehagelslag hagelfeest	4.89	390
+n132	ah	0.1413	AH Augurken groot zoetzuur	2.19	1550
+n132	dekamarkt	0.1348	G'woon Augurken zoetzuur	2.09	1550
+n132	dirk	0.1393	1 de Beste Augurken zoetzuur	2.09	1500
+n132	hoogvliet	0.1254	G'woon Augurken middel zoetzuur	0.84	670
+n132	jumbo	0.1542	Jumbo Zoetzuur Augurken 1550 g	2.39	1550
+n132	plus	0.3909	Kuhne Augurkenblokjes zoetzuur	1.29	330
+n132	poiesz	0.4212	g'woon Zoetzure Augurken Fijn	1.39	330
+n132	spar	0.5606	Kühne Augurken Zoetzuur	1.85	330
+n135	dekamarkt	0.825	G'woon Doperwten zeer fijn	0.99	200
+n135	dirk	0.3309	1 de Beste Doperwten zeer fijn	1.35	680
+n135	hoogvliet	0.625	G'woon Doperwten zeer fijn	0.75	200
+n135	plus	0.5792	PLUS Doperwten zeer fijn	1.39	400
+n135	spar	0.3064	g'woon doperwten zeer fijn	1.25	680
+n136	lidl	4.0625	Hak doperwt / wortel	1.95	80
+n1361	ah	0.258	AH Turks brood	1.29	500
+n1361	dekamarkt	0.2556	Turks brood	1.15	450
+n1361	dirk	0.2556	Turks brood	1.15	450
+n1361	hoogvliet	0.2556	Artar Turks brood	1.15	450
+n1361	jumbo	0.258	Jumbo - Turks Brood - 500 g	1.29	500
+n1361	lidl	0.254	Turks brood ZAV	1.27	500
+n1361	plus	0.258	PLUS Turks brood	1.29	500
+n1361	spar	0.29	g'woon turks brood	1.45	500
+n138	ah	1.125	Bonduelle Snijboontjes	1.35	200
+n138	dekamarkt	0.8125	Bonduelle Hollandse snijbonen	1.95	400
+n138	dirk	0.7458	Bonduelle Hollandse snijbonen	1.79	400
+n138	hoogvliet	0.7625	Bonduelle Snijboontjes	1.83	400
+n138	jumbo	1.125	Bonduelle Snijboontjes 200 g	1.35	200
+n138	plus	0.7292	Bonduelle Hollandse snijbonen	1.75	400
+n138	spar	1.2917	Bonduelle Hollandse Snijbonen	1.55	200
+n1382	ah	2.46	Beemster Oud 30+ plakken	3.69	150
+n1382	dekamarkt	1.3267	Beemster Oud 30+ plakken	1.99	150
+n1382	dirk	2.3267	Beemster Oud 30+ plakken	3.49	150
+n1382	hoogvliet	2.2333	Beemster Oud 30+ Plakken	3.35	150
+n1382	jumbo	2.46	Beemster 30+ Oud Plakken 150 g	3.69	150
+n1382	plus	2.4333	Beemster Oud plakken 30+	3.65	150
+n139	ah	0.6889	Hak Sperziebonen	2.79	675
+n139	dekamarkt	0.8292	Bonduelle Sperzieboontjes Frans	1.99	400
+n139	dirk	0.9542	Bonduelle Franse sperziebonen	2.29	400
+n139	hoogvliet	0.7708	Bonduelle Franse Sperzieboontjes	1.85	400
+n139	jumbo	0.6889	Hak Sperziebonen Bio 675 g	2.79	675
+n139	lidl	0.3679	Hak Bio sperziebonen	1.49	675
+n139	plus	0.6854	Bonduelle Franse sperzieboontjes	3.29	800
+n139	spar	1.1208	Bonduelle sperzieboontjes Frans	2.69	400
+n1395	ah	0.258	Van Dijk Roggebrood	1.29	500
+n1395	dekamarkt	0.358	Bolletje Roggebrood	1.79	500
+n1395	dirk	0.356	Bolletje Roggebrood	1.78	500
+n1395	lidl	0.238	Roggebrood	1.19	500
+n1395	plus	0.478	Smaakt Roggebrood bio	2.39	500
+n1395	spar	0.338	Vos Banket roggebrood donker	1.69	500
+n1398	ah	0.8309	Hak Boerenkool	3.39	680
+n1398	dekamarkt	0.7819	Hak Boerenkool	3.19	680
+n1398	hoogvliet	0.7475	Hak Boerenkool	3.05	680
+n1398	jumbo	0.8309	HAK Boerenkool 680 g	3.39	680
+n1398	plus	0.8309	Hak Boerenkool	3.39	680
+n1398	spar	0.9436	Hak Boerenkool	3.85	680
+n1399	ah	0.4975	AH IJsbergsla grootverpakking	1.99	400
+n1399	dekamarkt	0.4875	Ijsbergsla voordeel	1.95	400
+n1399	dirk	0.495	1 de Beste IJsbergsla naturel	0.99	200
+n1399	hoogvliet	0.545	Hoogvliet IJsbergsla naturel	1.09	200
+n1399	jumbo	0.4975	Jumbo Gesneden IJsbergsla 400 g	1.99	400
+n1399	lidl	0.2572	IJsbergsla	0.89	346
+n1399	plus	0.4975	PLUS Ijsbergsla GVP	1.99	400
+n1399	poiesz	0.5	IJsbergsla	1.0	200
+n1399	spar	0.625	ijsbergsla	1.25	200
+n14	dekamarkt	0.3831	Ardo Bloemkool	2.49	1000
+n14	jumbo	0.3795	Jumbo Bloemkool Roosjes Voordeelverpakking 750 g	1.85	750
+n14	lidl	0.359	DV brocc / bloemkool	1.75	750
+n14	spar	1.0731	bloemkool roosjes	2.79	400
+n140	ah	0.9233	Hak Spinazie	3.49	630
+n140	dekamarkt	0.8439	Hak Spinazie	3.19	630
+n140	dirk	0.5	Hak Spinazie	0.99	330
+n140	jumbo	0.9233	Hak Spinazie 630 g	3.49	630
+n140	plus	0.7804	Hak Spinazie	2.95	630
+n1400	dekamarkt	3.0	DekaVers Biologisch Runderbiefstuk	4.5	150
+n1400	dirk	1.796	Portion Frost Runderbiefstuk 2 stuks	4.49	250
+n1400	spar	1.996	Spar runderbiefstuk Duits 2 stuks	4.99	250
+n1401	dekamarkt	6.25	DekaVers Ossenhaas	10.0	160
+n1401	jumbo	7.0	Jumbo Ossenhaas ca. 280 g	19.6	280
+n1401	plus	5.49	PLUS Boerentrots Ossenhaas	10.98	200
+n1407	ah	2.513	AH Gelardeerd runderlever	2.89	115
+n1407	dirk	2.49	1 de Beste Runderlever gelardeerd	2.49	100
+n1407	jumbo	2.5	Jumbo Runderlever Gelardeerd ca. 100 g	2.5	100
+n1408	dekamarkt	1.9911	DekaVers Runderpoulet	4.48	225
+n1408	dirk	2.3067	Vleeschmeesters Runderpoulet 225 gram	5.19	225
+n1408	jumbo	2.4385	Jumbo Runderpoulet ca. 260 g	6.34	260
+n1409	plus	2.26	PLUS Runderrollade	2.26	100
+n1411	plus	1.296	PLUS Boerentrots Runderschenkel	6.48	500
+n1412	lidl	1.57	Runderriblappen	10.99	700
+n1412	plus	1.498	PLUS Boerentrots Runderriblappen	7.49	500
+n1415	ah	2.1633	AH Biologisch Rundertartaar	6.49	300
+n1415	hoogvliet	1.645	Hoogvliet Rundertartaar	3.29	200
+n1415	lidl	1.3317	Rundertartaar XXL	7.99	600
+n1416	ah	3.49	AH Rundertong	3.49	100
+n1417	dekamarkt	0.8685	DekaVers Varkensbraadworst 6 stuks	4.69	540
+n1417	dirk	0.7978	Vleeschmeesters Varkensbraadworst 5 st.	3.59	450
+n1417	jumbo	1.995	Jumbo Varkenssaucijs Biologisch 2 Stuks	3.99	200
+n1417	plus	0.7288	PLUS Varkenssaucijs	5.83	800
+n1417	spar	0.8967	Spar varkenssaucijs 3 stuks	2.69	300
+n1418	dekamarkt	1.2478	Varkensfiletlap 2 stuks	2.87	230
+n1418	dirk	0.9957	Varkensfiletlap 2 st.	2.29	230
+n1418	lidl	0.932	Varkensfiletlapjes	6.99	750
+n1418	plus	1.4	PLUS Boerentrots Varkensfiletlapjes 2 stuks	4.2	300
+n1419	dekamarkt	2.6933	DekaMarkt Varkensfricandeau	2.02	75
+n1419	plus	1.198	PLUS Boerentrots Varkensfricandeau	5.99	500
+n142	ah	1.2722	Bonduelle Tuinboontjes	2.29	300
+n142	dekamarkt	1.25	Bonduelle Tuinbonen extra fijn	2.25	300
+n142	dirk	1.2167	Bonduelle Tuinbonen extra fijn	2.19	300
+n142	hoogvliet	1.2389	Bonduelle Tuinboontjes	2.23	300
+n142	jumbo	1.4876	Hak Tuinboontjes 355 g	2.99	335
+n142	plus	1.2722	Bonduelle Tuinboontjes	2.29	300
+n142	spar	1.5915	Hak Tuinboontjes Wit Extra Fijn	3.39	355
+n1422	ah	1.2923	AH Varkenshaas culinair naturel	4.2	325
+n1422	dekamarkt	1.6982	DekaVers Varkenshaas lang	4.84	285
+n1422	dirk	1.7967	Vleeschmeesters Varkenshaas lang	5.39	300
+n1422	hoogvliet	1.4	Hoogvliet korte varkenshaas	4.48	320
+n1422	jumbo	1.6484	Jumbo Varkenshaas ca. 310 g	5.11	310
+n1422	lidl	1.66	Mini varkenshaas	2.49	150
+n1422	plus	1.64	PLUS Varkenshaas kort 2 stuks	4.92	300
+n1422	spar	1.88	Spar varkenshaas	6.11	325
+n1426	ah	1.825	AH Varkenslever	2.19	120
+n1426	dekamarkt	1.3267	DekaVers Varkenslever	1.99	150
+n1426	dirk	1.55	1 de Beste Varkenslever	1.55	100
+n1426	hoogvliet	1.3545	Hoogvliet Varkenslever	1.49	110
+n1426	jumbo	2.0	Jumbo Varkenslever Ongelardeerd ca. 100 g	2.0	100
+n1426	plus	1.656	PLUS Varkenslever	2.07	125
+n1426	spar	2.09	Spar Varkenslever 100 gram	2.09	100
+n1429	dirk	1.2438	Van 't Huijs Varkensoesters mini	1.99	160
+n1429	plus	1.598	PLUS Varkensoesters	7.99	500
+n143	ah	0.9476	Hak Worteltjes	1.99	350
+n143	dekamarkt	0.9286	Hak Wortelen extra fijn	1.95	350
+n143	dirk	0.8905	Hak Wortelen extra fijn	1.87	350
+n143	hoogvliet	0.6838	Hak Doperwtjes & worteltjes extra fijn	2.79	680
+n143	jumbo	0.7083	Hak Worteltjes 680 g	2.89	680
+n143	lidl	0.969	Hak worteltjes fijn	1.25	215
+n143	plus	0.9476	Hak Worteltjes	1.99	350
+n143	spar	1.0208	Bonduelle tuinerwtjes worteltjes	2.45	400
+n1431	ah	1.245	AH Slavink	2.49	200
+n1431	dekamarkt	1.1	DekaVers Slavink 4 stuks	4.4	400
+n1431	dirk	0.9475	Vleeschmeesters Slavink 4 st.	3.79	400
+n1431	hoogvliet	0.9225	Hoogvliet Slavinken	3.69	400
+n1431	jumbo	0.981	Jumbo Slavink 3 Stuks	3.09	315
+n1431	lidl	0.9475	Slavinken	3.79	400
+n1431	plus	0.958	PLUS Slavink ambachtelijk 5st	4.79	500
+n1431	spar	1.395	Spar slavink 2 stuks  200 gram	2.79	200
+n1432	ah	1.276	AH Speklap	3.19	250
+n1432	dekamarkt	1.2	DekaVers Speklap 4 stuks	5.76	480
+n1432	dirk	1.0819	Speklap naturel 6 st.	7.79	720
+n1432	hoogvliet	1.0912	Hoogvliet speklappen	6.22	570
+n1432	jumbo	1.448	Jumbo Speklap à la Minute 5 Stuks	5.43	375
+n1432	lidl	0.7488	Speklapjes nat. XXL	5.99	800
+n1432	plus	1.2943	PLUS Boerentrots Speklap zonder zwoerd 3 stuks	4.53	350
+n1432	spar	1.5292	Spar speklap zonder zwoerd 2 stuks	3.67	240
+n1435	ah	0.6036	AH Hamburgers	1.69	280
+n1435	dekamarkt	0.5094	Mora Hamburger 12 stuks	4.89	960
+n1435	dirk	0.675	Mora Hamburgers 4 stuks	1.89	280
+n1435	hoogvliet	0.4792	Mora Hamburgers xtra groot	4.6	960
+n1435	jumbo	0.5893	Jumbo Hamburgers 4 Stuks	1.65	280
+n1435	lidl	1.516	BBQ hamburger XXL	3.79	250
+n1435	plus	0.74	PLUS Hamburger a la minute 3 stuks	2.22	300
+n1435	spar	1.5806	Spar hamburger vgbr	5.6899999999999995	360
+n144	ah	0.4115	AH Zilveruitjes zoetzuur	0.79	320
+n144	dekamarkt	0.3906	G'woon Zilveruitjes zoetzuur	0.75	320
+n144	dirk	0.3594	1 de Beste Zilveruitjes zoetzuur	0.69	320
+n144	hoogvliet	0.3854	G'woon Zilveruitjes zoetzuur	0.74	320
+n144	jumbo	0.803	Kühne Zilveruien Zoetzuur 330 g	1.59	330
+n1445	ah	4.519	AH Excellent Lamskotelet	9.49	210
+n1445	dekamarkt	3.6889	Polderlam Lamskotelet naturel	8.3	225
+n1445	jumbo	4.4	Polderlam Lamskoteletten ca. 220 g	9.68	220
+n1445	plus	3.95	PLUS Lamskotelet Rhodos	11.06	280
+n145	ah	0.6881	Hak Rode kool	2.89	700
+n145	dekamarkt	1.0094	Hak Rode kool	2.15	355
+n145	dirk	0.9343	Hak Rode kool	1.99	355
+n145	hoogvliet	0.9343	Hak Rode kool	1.99	355
+n145	jumbo	0.7119	Hak Rode Kool 700 g	2.99	700
+n145	plus	0.9812	Hak Rode kool	2.09	355
+n145	spar	1.1502	Hak Rode Kool	2.45	355
+n1454	dirk	1.1033	Hak Rode bieten sticks zoetzuur	2.35	355
+n1454	hoogvliet	0.8685	Hak Rode bieten schijven zoetzuur	1.85	355
+n1454	plus	1.9352	Hak Rode bieten zoetzuur	2.09	180
+n1454	spar	1.1502	Hak Rode Bieten Schijven Zoetzuur	2.45	355
+n1457	plus	4.8693	Silvo Mix aardappel gebakken	1.49	36
+n1458	plus	1.5686	Smaakt Seitan gekruid bio	5.49	350
+n1461	ah	1.3759	Sebahat Tahin sesampasta	3.99	290
+n1461	plus	1.1633	Baktat Tahin sesampasta	3.49	300
+n1462	ah	0.269	AH Ananassap	2.69	1000
+n1462	dirk	0.249	1 de Beste Ananassap	2.49	1000
+n1462	jumbo	0.265	Jumbo Ananassap 1 L	2.65	1000
+n1462	plus	0.205	PLUS Ananassap	2.05	1000
+n1464	ah	0.095	AH Chocolademelk halfvol	0.95	1000
+n1464	dekamarkt	0.089	Melkan Chocolademelk halfvol	0.89	1000
+n1464	dirk	0.087	1 de Beste Chocolademelk halfvol	0.87	1000
+n1464	hoogvliet	0.098	Melkan Chocolademelk halfvol	0.98	1000
+n1464	jumbo	0.075	Jumbo Chocolademelk Halfvol 1 L	0.75	1000
+n1464	lidl	0.079	Halfvolle choco melk	0.79	1000
+n1464	plus	0.105	PLUS Fairtrade chocolademelk halfvol	1.05	1000
+n1464	spar	0.1575	Melkan chocolademelk halfvol weidemelk	1.8900000000000001	1200
+n1469	dekamarkt	1.3667	Dr. Oetker Banketbakkersroom	2.05	150
+n1469	hoogvliet	1.26	Dr. Oetker Mix banketbakkersroom	1.89	150
+n1469	plus	1.3267	Dr. Oetker Banketbakkersroom mix	1.99	150
+n147	ah	0.2189	SPRANK Appels zak	1.97	1000
+n147	dekamarkt	0.2956	Kleine appeltjes verpakt	3.99	1500
+n147	dirk	0.2733	Kanzi Appelen	3.69	1500
+n147	hoogvliet	0.2585	Morgana appels	3.49	1500
+n147	jumbo	0.3322	Tessa Appels 1 KG	2.99	1000
+n147	lidl	0.2722	Biologische Royal Gala appels	2.45	1000
+n147	plus	0.3322	PLUS Appels Morgana los	2.99	1000
+n147	poiesz	0.5111	Appels Fuji	2.99	650
+n147	spar	0.3767	appel Royal Gala	3.39	1000
+n147	vomar	0.2215	Junami appelen tas 1,5kg	2.99	1500
+n1472	dekamarkt	2.2571	Dr. Oetker Botercreme mix	2.37	105
+n1472	dirk	2.0857	Dr. Oetker Botercreme mix	2.19	105
+n1472	plus	2.181	Dr. Oetker Botercreme mix	2.29	105
+n148	ah	0.5978	Arla Cultura aardbei	2.69	450
+n148	dekamarkt	0.4625	Müller Müllermilk aardbei	1.85	400
+n148	dirk	0.4375	Müller Müllermilk aardbei	1.75	400
+n148	hoogvliet	0.6964	Balconi Trancetto aardbei	1.95	280
+n148	jumbo	0.4653	Jumbo Vriesverse Aardbeien Voordeelverpakking 750 g	3.49	750
+n148	lidl	0.399	Aardbeien 1kg kist	3.99	1000
+n148	plus	0.7067	PLUS Aardbeien	1.59	225
+n148	poiesz	0.9975	Hollandse Aardbeien	3.99	400
+n148	spar	0.538	Alpro aardbei	2.69	500
+n148	vomar	0.478	Almhof roomyogh aardbei 500gr	2.39	500
+n1487	jumbo	2.19	Jumbo President Brie Kaas 60+ ca. 200 g	4.38	200
+n149	dekamarkt	1.396	Abrikozen zonder pit ready to eat	3.49	250
+n149	dirk	1.0533	1 de Beste Abrikozen	3.95	375
+n149	hoogvliet	1.198	Qualino Abrikozen rte	5.99	500
+n149	jumbo	2.196	Jumbo Gewelde Abrikozen 250g	5.49	250
+n149	lidl	0.578	Abrikozen	2.89	500
+n149	plus	0.55	PLUS Abrikozen	2.75	500
+n149	poiesz	2.195	Abrikozen	4.39	200
+n149	spar	2.445	Abrikozen	4.89	200
+n149	vomar	0.598	Abrikozen schaal 500gr	2.99	500
+n1496	lidl	0.66	Premium vissalade	0.99	150
+n1498	plus	1.5933	PLUS Kip-kerriesalade	2.39	150
+n1498	spar	2.0514	Johma kip-kerriesalade	3.59	175
+n1499	hoogvliet	0.6267	Karaat Vrije uitloop eisalade	1.88	300
+n1499	jumbo	1.73	Johma Eisalade Voordeelpak XL 300 g	5.19	300
+n1499	plus	0.63	Karaat Vrije-uitloop eisalade	1.89	300
+n1499	spar	2.0514	Johma eisalade	3.59	175
+n150	ah	1.6298	AH Verse ananas grootverpakking	3.39	400
+n150	dirk	1.4375	1 de Beste Ananas geschild	2.99	400
+n150	hoogvliet	2.9487	Healthyhand Ananasblokjes	2.3	150
+n150	jumbo	1.5308	Jumbo Vriesverse Ananas Stukjes 250 g	1.99	250
+n150	lidl	0.6749	Ananasstukken	1.99	567
+n150	plus	1.5	PLUS Ananas	1.95	250
+n150	poiesz	1.2019	Ananasblokjes	2.5	400
+n150	spar	1.2284	Spar Spar Ananasstukjes	1.45	227
+n1502	ah	0.119	De Zaanse Hoeve Halfvolle yoghurt	1.19	1000
+n1502	dekamarkt	0.119	Melkan Milde yoghurt halfvol	1.19	1000
+n1502	dirk	0.159	Bio+ Yoghurt halfvol	1.59	1000
+n1502	hoogvliet	0.125	Melkan Halfvolle milde yoghurt	1.25	1000
+n1502	jumbo	0.089	Jumbo Halfvolle Yoghurt 1 L	0.89	1000
+n1502	lidl	0.094	Halfvolle yoghurt	0.94	1000
+n1502	plus	0.139	Biologisch PLUS Milde halfvolle yoghurt biologisch	1.39	1000
+n1502	poiesz	0.185	Bio+ Halfvolle Yoghurt 1,6% Vet	1.85	1000
+n1502	spar	0.185	Melkan yoghurt halfvol mild	1.85	1000
+n152	ah	1.358	AH Blauwe bessen	6.79	500
+n152	dekamarkt	0.5587	G'woon Blauwe bessen	4.19	750
+n152	dirk	0.5587	1 de Beste Blauwe bessen	4.19	750
+n152	hoogvliet	0.836	G'woon Blauwe bessen	2.09	250
+n152	jumbo	0.5853	Jumbo Vriesverse Blauwe Bessen Voordeelverpakking 750 g	4.39	750
+n152	lidl	0.558	Diepv. blauwe bessen	2.79	500
+n152	plus	0.5307	PLUS Blauwe Bessen	3.98	750
+n152	spar	1.6633	bessen blauw	4.99	300
+n153	ah	1.33	AH Rode bessen	3.99	300
+n153	dirk	1.33	Rode bessen	3.99	300
+n153	jumbo	1.992	Jumbo Nederlandse Rode Bessen 125 g	2.49	125
+n153	lidl	1.432	Rode bessen	1.79	125
+n153	plus	1.6633	PLUS Rode bessen	4.99	300
+n155	spar	0.83	Vos Banket Cakerol Bosbessen	2.49	300
+n157	ah	1.8622	AH Bramen	4.19	225
+n157	jumbo	1.9933	Jumbo Bramen 150 g	2.99	150
+n157	lidl	1.032	Bramen	1.29	125
+n157	plus	0.716	PLUS Bramen	1.79	250
+n158	ah	0.258	AH Citroen	1.29	500
+n158	dekamarkt	0.252	Citroenen	1.89	750
+n158	dirk	0.25	1 de Beste Citroenen verpakt	1.25	500
+n158	hoogvliet	0.278	SanLucar Citroenen	1.39	500
+n158	jumbo	0.318	Jumbo Citroenen 500 g	1.59	500
+n158	lidl	0.1987	Citroenen 750gr	1.49	750
+n158	plus	0.258	PLUS Citroenen (voordeelverpakking)	1.29	500
+n158	spar	0.398	citroen	0.78	196
+n1585	jumbo	4.99	Jumbo Gerookte Heilbot 100 g	4.99	100
+n1585	lidl	3.3267	Gerookte heilbot MSC	4.99	150
+n1586	ah	1.99	AH Gerookte makreelfilet	3.98	200
+n1586	dekamarkt	2.4933	DekaVers Gerookte makreelfilet	3.74	150
+n1586	dirk	1.9792	1 de Beste Makreelfilet gerookt	4.75	240
+n1586	hoogvliet	1.8708	Vis Marine Gerookte makreelfilet naturel	4.49	240
+n1586	plus	1.8708	PLUS Gerookte makreelfilet	4.49	240
+n1588	ah	3.2391	Princes Ansjovisfilets in zonnebloemolie	1.49	46
+n1588	dekamarkt	5.1474	Fish tales Ansjovis in olijfolie	4.89	95
+n1588	dirk	4.1087	Princes Ansjovis in zonnebloemolie	1.89	46
+n1588	hoogvliet	4.3261	Vis Marine Ansjovis olijfolie	1.99	46
+n1588	jumbo	5.0421	John West Ansjovis in Olijfolie 95g	4.79	95
+n1588	lidl	2.4875	Ansjovis olijfolie	1.99	80
+n1588	plus	3.5333	John West Ansjovisfilets in zonnebloemolie	1.59	45
+n1589	ah	1.1187	Statesman Tonijn stukken in zonnebloemolie	1.79	160
+n1589	dekamarkt	1.0938	Statesman Tonijnstukken in zonnebloemolie	1.75	160
+n1589	dirk	0.9688	Statesman Tonijnstukken in zonnebloemolie	1.55	160
+n1589	hoogvliet	0.9688	Statesman Tonijnstukken in zonnebloemolie	1.55	160
+n1589	jumbo	1.0562	Ribeira Tonijnstukken in Zonnebloemolie 160 g	1.69	160
+n1589	lidl	0.6656	Tonijn in olijfolie	5.99	900
+n1589	plus	0.9938	Statesman Tonijnstukken in zonnebloemolie	1.59	160
+n1589	spar	1.0562	Statesman Statesman Tonijnstukken MSC in Zonnebloemolie	1.69	160
+n159	ah	2.745	AH Biologisch Cranberry's	5.49	200
+n159	dekamarkt	1.66	Bon Appetit Cranberry mix	2.49	150
+n159	dirk	0.845	1 de Beste Cranberry mix	1.69	200
+n159	hoogvliet	1.18	Hoogvliet Cranberry's	2.95	250
+n159	jumbo	0.796	Jumbo Vriesverse Cranberry's 250 g	1.99	250
+n159	lidl	1.076	Cranberry mix	2.69	250
+n159	plus	3.8533	BioToday Notenreep cranberry almond	2.89	75
+n1590	ah	0.8438	Statesman Tonijn stukken in water	1.35	160
+n1590	dekamarkt	0.825	Statesman Tonijnstukken in water	1.32	160
+n1590	dirk	0.8375	Statesman Tonijnstukken in water	1.34	160
+n1590	hoogvliet	0.8438	Statesman Tonijnstukken in water	1.35	160
+n1590	jumbo	0.9312	Ribeira Tonijnstukken in Water 160 g	1.49	160
+n1590	lidl	4.9821	Tonijn in water	2.79	56
+n1590	plus	0.8687	Statesman Tonijnstukken in water	1.39	160
+n1590	spar	0.9312	Statesman Statesman Tonijnstukken MSC in Water	1.49	160
+n160	ah	0.55	AH Rode druiven pitloos	2.75	500
+n160	dekamarkt	0.578	Pitloze rode druiven	2.89	500
+n160	dirk	0.49	1 de Beste Pitloze rode druiven	2.45	500
+n160	hoogvliet	0.598	Hoogvliet Pitloze rode druiven	2.99	500
+n160	jumbo	0.518	Jumbo Druiven Mix Pitloos 500 g	2.59	500
+n160	lidl	0.538	Druiven mix	2.69	500
+n160	plus	0.478	PLUS Druiven rood pitloos	2.39	500
+n160	spar	0.398	druiven rood	1.99	500
+n161	ah	1.0	Verkade Tops framboos	1.0	100
+n161	dekamarkt	2.06	Lu Pims framboos	3.09	150
+n161	dirk	0.6467	1 de Beste Frambozen	4.85	750
+n161	hoogvliet	1.3833	Look-O-Look Foammmies framboos	2.49	180
+n161	jumbo	0.732	Jumbo Vriesverse Frambozen Voordeelverpakking 750 g	5.49	750
+n161	lidl	0.66	DV Frambozen	3.3	500
+n161	plus	0.6653	PLUS Frambozen	4.99	750
+n161	spar	1.1956	Napoleon framboos	2.69	225
+n162	ah	0.3411	AH Grapefruits rood	2.49	1000
+n162	lidl	0.3137	Grapefruit	2.29	1000
+n162	spar	0.4064	rode grapefruit	0.89	300
+n163	hoogvliet	2.1652	Look-O-Look Zoete streken kersen	2.49	115
+n163	jumbo	1.036	Jumbo Vriesverse Zoete Kersen Pitloos 250 g	2.59	250
+n163	plus	0.796	PLUS Zoete kersen	1.99	250
+n1634	ah	1.2488	AH Scharrel kipfilet	9.99	800
+n1634	dekamarkt	1.2488	DekaVers Scharrel kipfilet	9.99	800
+n1634	dirk	1.1612	Vleeschmeesters Kipfilet	9.29	800
+n1634	hoogvliet	1.1863	Hoogvliet kipfilet grootverpakking	9.49	800
+n1634	jumbo	1.1987	Jumbo Kipfilet 800 g	9.59	800
+n1634	lidl	0.898	Kipfilet Americanos	4.49	500
+n1634	plus	1.1863	PLUS Boerentrots Kipfilet Voordeelverpakking	9.49	800
+n1634	spar	1.3783	Spar kipfilet 3st	8.27	600
+n1642	hoogvliet	2.5538	Hoogvliet Kiprollade gesneden	3.32	130
+n1642	jumbo	1.298	Jumbo Kiprollade Scharrelkip 500 g	6.49	500
+n1642	lidl	1.198	Kiprollade	5.99	500
+n165	ah	0.3274	AH Mandarijnen	2.39	1000
+n165	dekamarkt	0.2376	Kistje mandarijnen	3.99	2300
+n165	dirk	0.2972	Kistje mandarijnen	4.99	2300
+n165	hoogvliet	0.3817	SanLucar Mandarijnen	2.09	750
+n165	jumbo	0.3	Jumbo Mandarijnen 1 kg	2.19	1000
+n165	lidl	0.1635	Mandarijnen 1,5 kg	1.79	1500
+n165	plus	0.3822	PLUS Mandarijnen	2.79	1000
+n165	spar	0.4096	mandarijnen netje	2.99	1000
+n1650	ah	2.09	Bettine Milde geitenkaas pearls naturel	2.09	100
+n1650	dekamarkt	1.7862	DekaVers Chevre naturel geitenkaas	2.59	145
+n1650	dirk	1.7615	Bits & Bites Geitenkaas naturel	2.29	130
+n1650	hoogvliet	1.045	Bettine Geitenkaas naturel	2.09	200
+n1650	jumbo	1.2722	Jumbo Geitenkaas 50+ Ongesneden Naturel 180 g	2.29	180
+n1650	plus	1.125	Bettine Geitenkaas naturel	2.25	200
+n1656	ah	0.372	Zonnatura Wortelsap	2.79	750
+n1656	dekamarkt	0.3667	Zonnatura Bio wortelsap	2.75	750
+n1656	dirk	0.3453	Zonnatura Bio wortelsap	2.59	750
+n1656	hoogvliet	0.332	Zonnatura Wortelsap	2.49	750
+n1656	jumbo	0.3853	Zonnatura Biologische Wortelsap 750 ml	2.89	750
+n1656	plus	0.3853	Smaakt Wortelsap biologisch	2.89	750
+n166	jumbo	3.1923	Jumbo Galiameloen 150 g	2.49	150
+n168	ah	3.0199	AH Pere joseph 50+	5.3	195
+n168	dekamarkt	0.21	Hollandse Conference peren	1.89	1000
+n168	dirk	0.1989	Hollandse Conference peren	1.79	1000
+n168	jumbo	0.2056	Jumbo Conference Peren 1 kg	1.85	1000
+n168	lidl	0.1767	Peren Doyenne du com	1.59	1000
+n168	plus	0.2211	PLUS Conference Peren los	1.99	1000
+n168	spar	0.2622	Conference peer	0.59	250
+n169	dekamarkt	0.716	Haribo Perziken	1.79	250
+n169	dirk	0.672	Haribo Perziken	1.68	250
+n169	jumbo	5.98	Freeze Dried Candy Perzik Ringen 50g	2.99	50
+n169	lidl	0.249	Perziken schaal	2.49	1000
+n169	plus	0.349	PLUS Perziken verpakt	3.49	1000
+n169	spar	1.02	Haribo Perziken	2.55	250
+n17	jumbo	3.49	Jumbo Cantharellen 100 g	3.49	100
+n17	lidl	1.495	Cantharelle	2.99	200
+n170	dekamarkt	0.498	Rode pruimen verpakt	2.49	500
+n170	dirk	0.378	Pruimen los	3.78	1000
+n170	hoogvliet	1.198	Qualino Pruimen rte	5.99	500
+n170	lidl	0.249	Pruimen	2.49	1000
+n170	plus	0.538	PLUS Pruimen	2.69	500
+n170	poiesz	0.4196	Aarts pruimen	2.35	560
+n171	ah	2.9132	LU Pim's sinaasappel	3.19	150
+n171	dekamarkt	5.4985	ANTA Refresh sinaasappel	2.89	72
+n171	jumbo	6.9751	Tic Tac Sinaasappel 2 x 49 g	4.99	98
+n171	plus	12.0939	Fairtrade Original Rooibos sinaasappel bio Fairtrade	3.09	35
+n171	spar	12.7808	XXL Nutrition blast pre workout sinaasappel	27.99	300
+n1721	lidl	0.149	Halfvolle vanilleyoghurt	1.49	1000
+n1721	poiesz	0.199	Melkan Halfvolle Vanilleyoghurt 1,6% Vet	1.99	1000
+n1722	ah	0.229	Melkunie Griesmeelpap	2.29	1000
+n1722	dekamarkt	0.219	Melkunie Griesmeelpap	2.19	1000
+n1722	dirk	0.278	Melkunie Griesmeelpap	1.39	500
+n1722	hoogvliet	0.278	Melkunie Griesmeelpap	1.39	500
+n1722	jumbo	0.229	Melkunie Griesmeelpap 1 L	2.29	1000
+n1722	lidl	0.149	Hollandse griesmeelpap	1.49	1000
+n1722	plus	0.219	Melkunie Griesmeelpap	2.19	1000
+n1722	spar	0.259	Melkunie griesmeelpap XX1	2.59	1000
+n1723	dekamarkt	1.7267	Melkan Kaas 20+ plakken	2.59	150
+n1724	ah	1.1225	Picard Bladerdeeghapjes ham kaas	4.49	400
+n1724	dekamarkt	0.916	Daily Chef Ravioli kaas	2.29	250
+n1724	dirk	0.916	Daily Chef Ravioli kaas	2.29	250
+n1724	hoogvliet	1.4487	Wagner Brezel piccolinis kaas	3.39	234
+n1724	jumbo	0.9689	Galbani Burrata Kaas 100 g	2.49	257
+n1724	lidl	0.7475	Aardappelgratin kaas	2.99	400
+n1724	plus	2.4	Originals Tricolore kaas 50+	6.0	250
+n1724	spar	1.8145	Heksnkaas Kaas Voordeelpack	4.99	275
+n1725	ah	1.7438	Leerdammer Original jong 45+ plakken	2.79	160
+n1725	hoogvliet	1.4938	Leerdammer Jong original plakken	2.39	160
+n1725	jumbo	1.9154	Leerdammer Extra Mild	2.49	130
+n1725	lidl	1.2438	Leerdammer plakken	1.99	160
+n1725	plus	1.6562	Leerdammer Jong original 45+ plakken	2.65	160
+n1726	jumbo	2.0	Jumbo Nagelkaas Oud Gesneden Friese Nagelkaas 40+	4.0	200
+n1726	plus	2.4114	PLUS Friese nagelkaas 40+ plakken	4.22	175
+n175	ah	1.396	AH Gewelde gedroogde abrikozen	3.49	250
+n175	jumbo	1.796	Jumbo Gedroogde Abrikozen Zonder Pit 250 g	4.49	250
+n175	lidl	0.795	Gedroogde abrikozen	1.59	200
+n175	plus	1.3973	PLUS Gedroogde Abrikozen	5.24	375
+n1773	dekamarkt	1.5933	DekaVers Zure zult	2.39	150
+n1773	dirk	0.7875	Merkx Zure zult	1.89	240
+n1773	hoogvliet	1.4583	Hoogvliet Zure zult	1.75	120
+n1773	jumbo	1.4286	Jumbo Zure Zult ca. 140 g	2.0	140
+n1773	plus	0.7708	Van Iersel Brabantse zure zult	1.85	240
+n1774	ah	2.19	AH Tongenworst	2.19	100
+n1774	dirk	1.64	1 de Beste Tongenworst	2.05	125
+n1774	plus	1.888	PLUS Tongenworst	2.36	125
+n1776	jumbo	3.55	Jumbo Biologisch Gegrilde Slagers Achterham ca. 100 g	3.55	100
+n1776	spar	2.632	Spar Gegrilde Achterham	3.29	125
+n1777	dekamarkt	1.3483	DekaVers Beenham naturel	8.09	600
+n1777	dirk	1.338	Vleeschmeesters Beenham culinair naturel	6.69	500
+n1777	hoogvliet	1.3584	Hoogvliet Beenham naturel	8.49	625
+n1777	jumbo	1.4529	Jumbo Beenham Naturel ca. 510 g	7.41	510
+n1777	plus	1.415	PLUS Culinaire beenham naturel	8.49	600
+n1777	spar	1.64	Spar beenham naturel	8.2	500
+n1779	ah	0.3333	AH Knäckebröd volkoren	1.25	375
+n1779	dekamarkt	0.3333	G'woon Knackebrod volkoren	1.25	375
+n1779	dirk	0.38	Fjord Knäckebröd volkoren	0.95	250
+n1779	hoogvliet	0.3307	G'woon Knackebrod volkoren	1.24	375
+n1779	jumbo	0.3333	Jumbo Knäckebröd Volkoren 5 x 5 Stuks	1.25	375
+n1779	lidl	0.392	Volkoren knäckebrod	0.98	250
+n1779	plus	0.75	Wasa Knäckebröd Volkoren 20 stuks	1.95	260
+n1779	spar	0.3333	g'woon knäckebröd volkoren	1.25	375
+n179	ah	0.1912	AH Appelcompote	1.09	570
+n179	dekamarkt	0.1943	G'woon Appelcompote extra kwaliteit	0.68	350
+n179	dirk	0.1528	1 de Beste Appelmoes extra kwaliteit	0.55	360
+n179	hoogvliet	0.1639	Green Appelmoes	0.59	360
+n179	jumbo	0.1908	Jumbo Appelmoes 12 x 100 g	2.29	1200
+n179	lidl	0.2017	Appelcompote	1.17	580
+n179	plus	0.2475	PLUS Appelmoes 0% 4-pack	0.99	400
+n179	spar	0.4028	Bio+ Biologische appelmoes	1.45	360
+n1808	ah	0.545	De Zaanse Hoeve Creme fraiche	1.09	200
+n1808	dekamarkt	0.495	�ing Creme fraiche 30% vet	0.99	200
+n1808	dirk	0.495	�ing Creme fraiche 30% vet	0.99	200
+n1808	hoogvliet	0.495	Oing Creme fraiche	0.99	200
+n1808	jumbo	0.49	Crème Fraîche 200 g	0.98	200
+n1808	lidl	0.436	Crème fraîche XXL	1.09	250
+n1808	plus	0.495	Öing Crème fraiche	0.99	200
+n1808	spar	0.495	Öing creme fraiche	0.99	200
+n1808	vomar	0.49	Öing creme fraiche 200gr	0.98	200
+n181	lidl	0.795	Gedroogde dadels	1.59	200
+n1812	lidl	0.2653	Nectarines	1.99	750
+n1812	plus	0.349	PLUS Nectarines	3.49	1000
+n1832	ah	0.318	Vifit Drinkyoghurt rode vruchten	1.59	500
+n1832	dekamarkt	0.1575	Melkan Drinkyoghurt rode vruchten	1.89	1200
+n1832	dirk	0.1633	Melkan Drinkyoghurt rode vruchten	1.96	1200
+n1832	jumbo	0.318	Vifit drinkyoghurt rode vrucht 500 ml	1.59	500
+n1832	plus	0.1658	Melkan Drinkyoghurt rode vruchten mini 6-pack	1.99	1200
+n1832	spar	0.358	Vifit Drinkyoghurt Rode Vruchten	1.79	500
+n1876	ah	1.1371	AH Komkommersalade	1.99	175
+n1876	plus	1.1133	PLUS Komkommersalade	1.67	150
+n1877	dirk	1.1933	1 de Beste Ambachtelijke vleessalade	1.79	150
+n1877	plus	1.1267	PLUS Vleessalade	1.69	150
+n1887	ah	0.756	AH Dadels	1.89	250
+n1887	dekamarkt	1.076	Smaakt Dadels	2.69	250
+n1887	dirk	0.996	Smaakt Dadels	2.49	250
+n1887	hoogvliet	0.799	Bomaja Medjoul dadels	7.99	1000
+n1887	jumbo	1.596	Jumbo Medjoul Dadels 250 g	3.99	250
+n1887	lidl	0.549	Dadels aan tak	5.49	1000
+n1887	plus	0.595	Ziné Dadel tunis	1.19	200
+n1887	spar	1.46	Smaakt Dadels	3.65	250
+n1889	ah	0.3225	AH Couscous	1.29	400
+n1889	dekamarkt	0.32	Bio+ Couscous	1.12	350
+n1889	dirk	0.296	Riso Vignola Couscous	1.48	500
+n1889	hoogvliet	0.6	Lassie Biologische couscous	1.65	275
+n1889	jumbo	0.3475	Jumbo Durum Couscous 400 g	1.39	400
+n1889	plus	0.3229	BIO+ Couscous	1.13	350
+n1889	spar	0.438	Bio+ Couscous	2.19	500
+n1892	ah	0.8225	AH Luxe wok Chinees sugersnaps paksoi	3.29	400
+n1894	jumbo	0.498	Jumbo Gedroogde Rode Kidneybonen 500 g	2.49	500
+n1895	ah	3.0348	AH Pecannoten ongezouten	3.49	115
+n1895	dekamarkt	1.975	G'woon Pecannoten ongebrand ongezouten	3.95	200
+n1895	dirk	1.945	1 de Beste Pecannoten ongebrand, ongezouten	3.89	200
+n1895	hoogvliet	2.8	Hoogvliet Pecannoten ongezouten	3.22	115
+n1895	jumbo	3.4696	Jumbo Ongezouten Pecannoten 115 g	3.99	115
+n1895	plus	1.995	PLUS Pecannoten ongebrand ongezouten	3.99	200
+n1896	ah	1.2714	AH Pistachenoten gezouten	4.45	350
+n1896	dekamarkt	1.26	G'woon Pistachenoten gezouten	3.15	250
+n1896	dirk	1.4214	1 de Beste Pistachenoten gezouten	1.99	140
+n1896	hoogvliet	1.9929	Hoogvliet Pistachenoten gezouten	2.79	140
+n1896	jumbo	1.0886	Jumbo Pistachenoten Gezouten Voordeelverpakking 350 g	3.81	350
+n1896	spar	1.356	g'woon pistachenoten gezout	3.39	250
+n19	ah	0.4225	AH Witte champignons	1.69	400
+n19	dekamarkt	0.3464	G'woon Champignons gesneden	0.97	280
+n19	dirk	0.3464	1 de Beste Champignons gesneden	0.97	280
+n19	hoogvliet	0.4975	Hoogvliet Champignons	1.99	400
+n19	jumbo	0.3536	Jumbo Gesneden Champignons 280 g	0.99	280
+n19	lidl	0.4375	Extra grote champignons	1.75	400
+n19	plus	0.4975	Neutraal Champignons wit voordeelverpakking	1.99	400
+n19	spar	0.4107	g'woon champignons gesneden	1.15	280
+n190	ah	1.8368	AH Pruimen gedroogd	3.49	190
+n190	lidl	0.795	Gedroogde pruimen	1.59	200
+n190	plus	0.9973	PLUS Gedroogde pruimen	3.74	375
+n1905	dekamarkt	0.745	Kucharek Groenten mix przyprawa do potraw	1.49	200
+n1905	dirk	0.3222	1 de Beste Hollandse groente	1.45	450
+n1905	hoogvliet	0.604	Verspakket orzo gegr groenten	5.49	909
+n1905	jumbo	1.4958	Duca Gyoza's Groente 12 Stuks 240 g	3.59	240
+n1905	lidl	0.3978	Macar./spagh. groent	1.79	450
+n1905	plus	0.5667	PLUS Italiaanse groenten	2.55	450
+n1905	poiesz	0.8313	Iglo Groente-Idee Hollands	3.99	480
+n1914	ah	0.678	AH Pizzabodem houtoven	3.39	500
+n1914	jumbo	0.6396	Jumbo Ambachtelijke Pizzabodems 2 Stuks	3.39	530
+n1914	plus	0.9607	Bertolli Pizzabodems	2.69	280
+n193	dirk	1.245	Gedroogde vijgen	2.49	200
+n193	lidl	0.795	Gedroogde vijgen	1.59	200
+n1932	dekamarkt	0.229	G'woon Sinaasappelsap met vruchtvlees	2.29	1000
+n1932	dirk	0.229	1 de Beste Sinaasappelsap vruchtvlees	2.29	1000
+n1932	jumbo	0.189	Jumbo Sinaasappelsap met Extra Vruchtvlees 1 L	1.89	1000
+n1932	plus	0.169	PLUS Sinaasappelsap met vruchtvlees	1.69	1000
+n1932	spar	0.245	g'woon sinaasappelsap vruchtvlees	2.45	1000
+n1936	ah	1.9933	AH Kalkoenfilet	2.99	150
+n1936	dekamarkt	2.344	Wahid Kalkoenfilet halal	2.93	125
+n1936	dirk	1.9667	Landerij Kalkoenfilet	2.95	150
+n1936	hoogvliet	1.8533	Slagers kwaliteit Kalkoenfilet	2.78	150
+n1936	jumbo	1.9933	Kalkoenfilet 150 g	2.99	150
+n1936	lidl	1.9667	Kalkoenfilet BLK	2.95	150
+n1936	plus	1.8481	PLUS Boerentrots Kalkoenfilet à la minute	4.99	270
+n1936	spar	2.1933	Slagerskwaliteit Slagerskwaliteit Kalkoenfilet Slagers Kwaliteit	3.29	150
+n1953	dekamarkt	0.398	Alpro Yoghurtvariatie perzik	1.99	500
+n1953	dirk	0.398	Alpro Yoghurtvariatie perzik	1.99	500
+n1953	spar	0.538	Alpro Yoghurtvariatie Naturel	2.69	500
+n196	ah	0.7343	Hak Kapucijners	3.15	715
+n196	dekamarkt	0.697	Hak Kapucijners	2.99	715
+n196	dirk	0.6876	Hak Kapucijners	2.95	715
+n196	hoogvliet	0.6925	Hak Kapucijners	2.95	710
+n196	jumbo	0.7343	Hak Kapucijners 715 g	3.15	715
+n196	lidl	0.7326	Hak kapucijners	1.89	430
+n196	plus	0.9087	Hak Kapucijners	1.99	365
+n196	spar	1.0731	Hak Kapucijners	2.35	365
+n1962	hoogvliet	0.6975	Venz Chocoladehagelslag melk	2.79	400
+n1962	plus	0.5625	PLUS Chocoladehagelslag melk Fairtrade	2.25	400
+n1962	spar	1.0744	De Ruijter chocoladehagelslag melk	4.19	390
+n1963	hoogvliet	0.7575	Venz Chocoladehagelslag puur	3.03	400
+n1963	jumbo	0.4817	Jumbo Chocoladehagelslag Puur 600 g	2.89	600
+n1963	plus	0.5725	PLUS Chocoladehagelslag puur Fairtrade	2.29	400
+n1963	spar	1.1225	Venz chocoladehagelslag puur	4.49	400
+n1964	ah	0.6725	AH Chocoladepasta melk	2.69	400
+n1964	dekamarkt	0.5629	Orinoko Chocoladepasta melk	1.97	350
+n1964	dirk	0.5486	Orinoko Chocoladepasta melk	1.92	350
+n1964	hoogvliet	0.5686	ORINOKO Chocoladepasta melk	1.99	350
+n197	ah	0.3194	AH Terra Witte bonen in tomatensaus	0.69	360
+n197	dekamarkt	0.3143	G'woon Witte bonen in tomatensaus	0.66	350
+n197	dirk	0.3143	1 de Beste Witte bonen in tomatensaus	0.66	350
+n197	hoogvliet	0.7292	Hak Witte bonen in tomatensaus	3.15	720
+n197	jumbo	0.2892	Jumbo Witte Bonen in Tomatensaus 340 g	0.59	340
+n197	plus	0.269	PLUS Witte bonen in tomatensaus	1.13	700
+n197	spar	0.6435	Bio+ Biologische witte bonen in tomatensaus	1.3900000000000001	360
+n198	dekamarkt	1.32	Nutcase Amandelschaafsel	0.99	75
+n198	dirk	1.32	Nutcase Amandelschaafsel	0.99	75
+n198	hoogvliet	3.55	Dr. Oetker Amandelschaafsel	1.42	40
+n198	lidl	1.49	Amandelschaafsel	1.49	100
+n198	plus	3.6182	PLUS Amandelschaafsel	1.99	55
+n198	spar	4.3	Dr. Oetker Dr. Oetker Amandelschaafsel	2.15	50
+n199	ah	1.198	AH Cashewnoten ongezouten	5.99	500
+n199	dekamarkt	1.138	G'woon Cashewnoten ongezouten	5.69	500
+n199	dirk	1.8765	1 de Beste Cashewnoten ongezouten	3.19	170
+n199	hoogvliet	1.05	G'woon Cashewnoten ongezouten	5.25	500
+n199	jumbo	1.198	Jumbo Cashewnoten Ongezouten Voordeelverpakking 500 g	5.99	500
+n199	plus	1.195	PLUS Cashewnoten ongezouten	2.39	200
+n199	spar	1.245	g'woon g'woon Cashewnoten Ongezouten	2.49	200
+n1999	jumbo	1.0879	Kellogg's Frosties ontbijtgranen 330 g	3.59	330
+n1999	spar	1.2091	Kellogg's ontbijtgranen frosties	3.99	330
+n200	ah	1.645	AH Ongezouten hazelnoten	3.29	200
+n200	jumbo	1.945	Jumbo Hazelnoten Ongezouten 200 g	3.89	200
+n2002	jumbo	1.1364	Kellogg's Coco Pops Chocos ontbijtgranen 330 g	3.75	330
+n2006	jumbo	1.0879	Kellogg's smacks ontbijtgranen 330 g	3.59	330
+n2007	hoogvliet	1.0027	Kellogg's Unicorn Froot Loops ontbijtgranen	3.76	375
+n2007	jumbo	1.0879	Kellogg's Honey Loops ontbijtgranen 330 g	3.59	330
+n2007	spar	1.2091	Kellogg's ontbijtgranen honey loops	3.99	330
+n201	lidl	0.798	Kastanjes	3.99	500
+n2048	ah	1.0622	Duyvis Oven roasted pinda's original	2.39	225
+n2048	dekamarkt	0.595	G'woon Pindas dry roasted	1.19	200
+n2048	dirk	0.59	1 de Beste Pindas dry roasted	1.18	200
+n2048	hoogvliet	0.495	G'woon Dry roasted pinda's	0.99	200
+n2048	jumbo	0.595	Jumbo Pinda's Dry Roasted 200 g	1.19	200
+n2048	plus	0.595	PLUS Dry roasted pinda's	1.19	200
+n2048	spar	0.695	g'woon pinda's dry roasted	1.3900000000000001	200
+n205	dekamarkt	0.876	G'woon Studentenhaver	2.19	250
+n205	lidl	1.036	Studentenhaver	2.59	250
+n205	plus	0.8	Nutcase Studentenhaver	2.0	250
+n2068	dekamarkt	0.2963	G'woon Frituurvet vloeibaar	8.89	3000
+n2068	dirk	0.2963	1 de Beste Frituurvet vloeibaar	8.89	3000
+n2068	hoogvliet	0.2963	G'woon Vloeibaar frituurvet 3L	8.89	3000
+n2068	jumbo	0.3263	Jumbo Vloeibaar Frituurvet 3L	9.79	3000
+n2068	poiesz	0.3463	g'woon Vloeibaar Frituurvet	10.39	3000
+n2069	ah	0.439	Diamant Friet & snacks vast frituurvet	4.39	1000
+n2069	dekamarkt	0.379	G'woon Frituurvet vast	3.79	1000
+n2069	dirk	0.379	1 de Beste Frituurvet vast blok	3.79	1000
+n2069	plus	0.479	PLUS Frituurvet vast	4.79	1000
+n208	dekamarkt	0.6575	Bio+ Boekweitmeel	2.63	400
+n208	dirk	0.6225	Bio+ Boekweitmeel	2.49	400
+n208	jumbo	0.7375	Koopmans Boekweitmeel 400 g	2.95	400
+n208	plus	0.6225	BIO+ Biologisch boekweitmeel	2.49	400
+n208	spar	0.71	Lokaal boekweitmeel	3.55	500
+n215	ah	0.316	Duryea Maizena	0.79	250
+n215	dekamarkt	0.308	Duryea Maizena	0.77	250
+n215	dirk	0.3	Duryea Maizena	0.75	250
+n215	hoogvliet	0.268	Duryea maizena	0.67	250
+n215	jumbo	0.596	Koopmans Maizena 250 g	1.49	250
+n215	plus	0.276	Dureya maizena	0.69	250
+n215	spar	0.356	Duryea Maizena	0.89	250
+n2176	ah	4.9933	AH Pijnboompitten	7.49	150
+n2176	dekamarkt	4.975	G'woon Pijnboompitten	1.99	40
+n2176	dirk	3.49	Pijnboompitten	3.49	100
+n2176	hoogvliet	4.94	Pijnboompitten	4.94	100
+n2176	jumbo	5.49	Jumbo Biologisch Pijnboompitten 100 g	5.49	100
+n2176	lidl	4.98	Pijnboompitten	2.49	50
+n2176	plus	5.9867	Biologisch PLUS Pijnboompitten biologisch	4.49	75
+n2176	spar	7.72	pijnboompitten 75 gram	5.79	75
+n218	plus	0.4975	Smaakt Roggemeel bio	1.99	400
+n2240	ah	0.2653	Betsie's Volle geitenmelk	1.99	750
+n2240	dekamarkt	0.252	Betsies Volle geitenmelk	1.89	750
+n2240	dirk	0.232	Betsies Volle geitenmelk	1.74	750
+n2240	hoogvliet	0.2387	Betsie`s Volle geitenmelk	1.79	750
+n2244	dekamarkt	0.3333	Bauer Roomyoghurt vruchten	0.5	150
+n2244	dirk	0.32	Bauer Roomyoghurt vruchten	0.48	150
+n2244	lidl	0.32	Roomyoghurt vruchten	0.48	150
+n2254	ah	0.219	Optimel Drinkyoghurt aardbei	2.19	1000
+n2254	dekamarkt	0.209	Optimel Drinkyoghurt limoen	2.09	1000
+n2258	ah	0.6238	Actimel Drinkyoghurt naturel 0%	4.99	800
+n2258	jumbo	0.6238	Actimel 0% Drinkyoghurt Naturel 8 x 100 ml	4.99	800
+n226	ah	0.9353	Koopmans Aardappelzetmeel helder bindend	1.59	200
+n226	dekamarkt	0.9235	Koopmans Aardappelzetmeel	1.57	200
+n226	dirk	0.9118	Koopmans Aardappelzetmeel	1.55	200
+n226	jumbo	0.9353	Koopmans Aardappelzetmeel Helder Bindend 200 g	1.59	200
+n226	plus	0.8765	Koopmans Aardappelzetmeel	1.49	200
+n226	poiesz	0.5882	Aardappelzetmeel	1.0	200
+n226	spar	1.0529	Koopmans aardappelzetmeel helder bindend	1.79	200
+n2262	jumbo	0.17	Jumbo Soja Plantaardig Alternatief voor Yoghurt 500 g	0.85	500
+n227	ah	0.472	AH Beschuit naturel	0.59	125
+n227	dekamarkt	0.456	G'woon Beschuit naturel 13 stuks	0.57	125
+n227	dirk	0.456	1 de Beste Beschuit naturel	0.57	125
+n227	hoogvliet	0.52	G'woon Beschuit naturel	0.65	125
+n227	jumbo	0.392	Jumbo Beschuit Naturel 13 Stuks	0.49	125
+n227	lidl	0.4	Beschuit naturel	0.5	125
+n227	plus	0.456	PLUS Beschuit naturel	0.57	125
+n227	spar	0.552	g'woon beschuit naturel	0.69	125
+n2271	ah	0.9725	Barilla Spaghetti glutenvrij	3.89	400
+n2271	jumbo	0.9475	Rummo Penne Rigate Glutenvrij 400 g	3.79	400
+n2271	plus	0.9975	Grand'Italia Fusilli glutenvrij	3.99	400
+n2275	ah	0.396	AH Kookroom	0.99	250
+n2275	dirk	0.845	Kookroom panna di cucina	1.69	200
+n2275	hoogvliet	0.356	Melkan Schenkbare kookroom	0.89	250
+n2275	jumbo	0.396	Jumbo Kookroom 20% Vet 250 ml	0.99	250
+n2275	lidl	0.392	Kookroom	0.98	250
+n2275	plus	0.38	Melkan Kookroom 20% vet	0.95	250
+n2275	spar	0.396	Melkan kookroom  20%	0.99	250
+n2276	hoogvliet	0.392	Melkan Kookroom light	0.98	250
+n2276	plus	0.356	Melkan Kookroom light 7% vet	0.89	250
+n2276	spar	0.46	Melkan kookroom light	1.15	250
+n228	spar	0.695	Patria Creamcrackers	1.3900000000000001	200
+n229	dekamarkt	0.851	Bolletje Knackebrod proteine	2.17	255
+n229	dirk	0.8196	Bolletje Knackebrod proteine	2.09	255
+n229	hoogvliet	1.5333	Wasa Knackebrod gluten&lact.vrij	3.68	240
+n229	lidl	0.3253	Knäckebröd	1.22	375
+n229	plus	0.7953	Wasa Knäckebröd Rustiek 14 stuks	1.71	215
+n2290	ah	0.5975	Go-Tan Kokosmelk	2.39	400
+n2290	dekamarkt	0.4475	Valle Del Sole Kokosmelk	1.79	400
+n2290	dirk	0.399	Kara Kokosmelk	3.99	1000
+n2290	hoogvliet	0.33	Sum & Sam Kokosmelk	1.32	400
+n2290	jumbo	0.399	Mae Ploy Kokosmelk 1 L	3.99	1000
+n2290	lidl	0.4975	FTO kokosmelk	1.99	400
+n2290	plus	0.32	BIO+ Kokosmelk	1.28	400
+n2290	poiesz	0.378	Sum&Sam Kokosmelk 6%	1.89	500
+n2290	spar	0.638	Sum&Sam kokosmelk 0.17	3.19	500
+n2290	vomar	0.6225	Fair trade kokosmelk 400 ml	2.49	400
+n2297	ah	1.0471	Gourmet Nature's creations tonijn	0.89	85
+n2297	hoogvliet	2.44	John West Vispate tonijn	3.05	125
+n2297	lidl	0.85	Tonijn in zonnebl.	6.29	740
+n2297	spar	1.5882	Gourmet natures creations tonijn	1.35	85
+n2299	plus	1.3278	PLUS Tilapiafilets	7.17	540
+n23	ah	0.2429	AH Doperwten	0.85	350
+n23	jumbo	0.1368	Jumbo Doperwten 680 g	0.93	680
+n23	lidl	0.2478	Doperwten	0.57	230
+n23	plus	0.2926	PLUS Doperwten	1.99	680
+n23	spar	0.5265	Bio+ doperwten bio	1.79	340
+n2302	ah	0.4875	AH Magere knakworst	1.95	400
+n2302	hoogvliet	0.4625	G'woon Magere knakworsten	1.85	400
+n2302	plus	0.4975	PLUS Magere knakworsten	1.99	400
+n2302	poiesz	1.0975	Unox Knakworst Magere Knaks	4.39	400
+n2308	dekamarkt	0.865	Becel Pro activ drink original 8 stuks	5.19	600
+n2308	dirk	0.8583	Becel Pro activ drink original 8 stuks	5.15	600
+n2326	hoogvliet	0.2494	G'woon Aardappelkroket	1.59	750
+n2326	lidl	0.1694	Aardappelkroketten	1.44	1000
+n2326	plus	0.2918	PLUS Aardappelkroketten	1.86	750
+n233	jumbo	0.418	Jumbo - Krentenbrood - 500 g	2.09	500
+n2333	ah	1.058	AH Half-om-half gehakt	5.29	500
+n2333	dekamarkt	0.998	DekaVers Gehakt half om half	4.99	500
+n2333	dirk	0.845	Vleeschmeesters Half om half gehakt 1000 gram	8.45	1000
+n2333	hoogvliet	1.1818	Hoogvliet Gehakt cordonbleu's	2.6	220
+n2333	jumbo	1.596	Redefine Gehakt, 250 g	3.99	250
+n2333	lidl	0.918	Gehakt half-om-half	4.59	500
+n2333	plus	1.2633	Biologisch PLUS Gehakt half om half	3.79	300
+n2333	poiesz	1.298	Italiaans Gehakt	6.49	500
+n2333	spar	1.83	Bio+ gehakt half om half	5.49	300
+n2334	jumbo	0.958	Jumbo Half-om-Half Gehakt Varken-Rund 500 g	4.79	500
+n2336	ah	0.4725	Smuldier Rundvlees	1.89	400
+n2336	dekamarkt	0.4475	Smuldier Rundvlees	1.79	400
+n2336	dirk	0.9896	Van Dobben Croquetten rundvlees 6 stuks	4.75	480
+n2336	hoogvliet	0.425	Smuldier Rundvlees aanvullend	1.7	400
+n2336	jumbo	1.1021	Van Dobben Rundvlees Croquetten 6 x 80 g	5.29	480
+n2336	lidl	0.999	Rundvlees hamb. XXXL	9.99	1000
+n2336	plus	3.7	Unox CAS rundvlees	5.55	150
+n2336	spar	3.0405	Honig basismix deense rundvlees	2.25	74
+n2337	ah	2.1633	AH Rundergehaktbal	6.49	300
+n2337	hoogvliet	1.6633	Food by Four Rundergehaktbal	4.99	300
+n2339	ah	1.995	AH Rundervink 2 stuks	3.99	200
+n2339	dekamarkt	1.9	DekaVers Rundervink 2 stuks	3.8	200
+n2339	hoogvliet	1.745	Hoogvliet Rundervinken	3.49	200
+n2339	jumbo	1.5725	Jumbo Rundervink 4 Stuks	6.29	400
+n2339	lidl	1.495	Rundervinken	5.98	400
+n2339	plus	1.238	PLUS Rundervinken 5st. VDV	6.19	500
+n2339	spar	2.245	Spar rundervinken 2 stuks 200 gram	4.49	200
+n2340	dirk	1.3167	Vleeschmeesters Varkensschnitzel gepaneerd 2 stuks	3.95	300
+n2340	jumbo	1.225	Jumbo Varkensschnitzel Gepaneerd 2 Stuks	2.45	200
+n2340	plus	1.3947	PLUS Varkensschnitzel gepaneerd 3 stuks	5.23	375
+n2344	jumbo	0.9542	Jumbo Varkens Cordon Bleu 2 Stuks	2.29	240
+n2344	plus	1.3115	PLUS Varkens cordon bleu 2 stuks	3.41	260
+n2345	ah	0.476	AH Suikerpinda's	1.19	250
+n2345	dekamarkt	0.472	G'woon Suikerpindas	1.18	250
+n2345	dirk	0.472	1 de Beste Suikerpinda's	1.18	250
+n2345	lidl	0.472	Suikerpinda‘s	1.18	250
+n2345	plus	0.436	PLUS Suikerpinda's	1.09	250
+n2345	spar	0.9733	g'woon suikerpinda's	2.19	225
+n2346	jumbo	2.2533	Growy Frisse Sla 75g	1.69	75
+n2350	dekamarkt	0.7156	Slooow BIO Crispy Meergranenbroodjes 4 stuks	2.29	320
+n2350	lidl	0.2725	Halfje donker meergranenbrood	1.09	400
+n2353	plus	0.498	PLUS Mueslibrood	2.49	500
+n2353	spar	0.618	BakkersHart Mueslibrood Half	3.09	500
+n2355	dekamarkt	0.4422	DekaVers Suikerbrood	1.99	450
+n2355	lidl	0.3557	Suikerbrood	2.49	700
+n2355	spar	0.6475	BakkersHart suikerbrood	2.59	400
+n236	lidl	0.1163	Bruinbrood, heel bro	0.93	800
+n2363	ah	2.7182	AH Gehakt cordon bleu	2.99	110
+n2363	lidl	0.798	Gehakt cordon bleu	3.99	500
+n2363	plus	1.1409	PLUS Gehakt cordon bleu 2 stuks	2.51	220
+n2363	spar	1.0409	Spar Cordon bleu gehakt 2 stuks 220 gram	2.29	220
+n2364	lidl	1.1225	Kipschnitzel gepan.	4.49	400
+n2364	plus	1.76	PLUS Boerentrots Kipschnitzel Gepaneerd 2st	4.4	250
+n2365	ah	1.198	AH Scharrel kip cordon bleu 4 stuks	5.99	500
+n2365	dekamarkt	1.228	DekaVers Scharrel kip cordon bleu 2 st.	3.07	250
+n2365	lidl	0.798	Kip cordon bleu	3.99	500
+n2365	plus	1.298	PLUS Boerentrots Kip cordon bleu 4st	6.49	500
+n2365	spar	1.516	Spar Cordon Bleu Kip	3.79	250
+n2367	ah	1.5686	Calvé Pindakaas light	5.49	350
+n2367	hoogvliet	1.6086	Calvé Pindakaas light	5.63	350
+n2369	ah	0.6	AH Soepstengels naturel	0.75	125
+n2369	dekamarkt	0.592	G'woon Soepstengels naturel	0.74	125
+n2369	dirk	0.592	1 de Beste Soepstengels naturel	0.74	125
+n2369	hoogvliet	0.592	G'woon Soepstengels naturel	0.74	125
+n2369	jumbo	0.6	Jumbo Soepstengels Naturel 125 g	0.75	125
+n2369	plus	0.632	PLUS Soepstengels naturel	0.79	125
+n2371	ah	0.6928	Hertog Ijssalon tiramisu	5.75	830
+n2371	dekamarkt	0.698	Melkan Tiramisu	3.49	500
+n2371	dirk	0.698	Melkan Tiramisu	3.49	500
+n2371	hoogvliet	0.598	Melkan Tiramisu	2.99	500
+n2371	jumbo	0.798	Jumbo Tiramisu 500 g	3.99	500
+n2371	lidl	0.698	Tiramisu	3.49	500
+n2371	plus	0.798	PLUS Tiramisu	3.99	500
+n2371	spar	1.4331	Oreo tiramisu double stuff	2.25	157
+n2377	ah	1.1637	AH Zongedroogde tomaten jullienne	1.99	285
+n2377	dekamarkt	0.9464	G'woon Zongedroogde tomaten	1.59	280
+n2377	dirk	1.4775	Kokota Zongedroogde tomaten mix	1.99	224
+n2377	hoogvliet	0.9048	G'woon Zongedroogde tomaten	1.52	280
+n2377	jumbo	1.006	Jumbo Tomaten Zongedroogd 280 g	1.69	280
+n2377	lidl	0.7251	Gedroogde tomaten in zonnebloemolie	1.24	285
+n2377	plus	0.9464	PLUS Zongedroogde Tomaten op olie	1.59	280
+n2377	spar	1.0234	Spar tomaten zongedroogde	1.75	285
+n2378	hoogvliet	1.25	Grand'Italia Toscana zongedroogde tomaat	3.25	260
+n2378	jumbo	0.725	Jumbo Houmous Zongedroogde Tomaat 200 g	1.45	200
+n238	dekamarkt	1.69	Hollandia Matze crackers naturel	1.69	100
+n238	dirk	1.59	Hollandia Matze crackers naturel	1.59	100
+n238	plus	1.495	Hollandia Matzes crackers naturel	2.99	200
+n2400	ah	1.4145	Danerolles Pains au chocolat	3.89	275
+n2402	ah	0.79	AH Kappertjes	0.79	100
+n2402	dekamarkt	0.74	G'woon Kappertjes	0.74	100
+n2402	dirk	0.74	1 de Beste Kappertjes	0.74	100
+n2402	hoogvliet	0.75	G'woon Kappertjes	0.75	100
+n2402	jumbo	1.1735	Sera Kappertjes 340 g	3.99	340
+n2402	plus	0.79	PLUS Kappertjes	0.79	100
+n2402	spar	0.8895	Spar kappertjes	1.69	190
+n2402	vomar	0.55	G'woon kappertjes 100gr	0.55	100
+n2416	ah	0.259	AH Roomijs stracciatella	2.59	1000
+n2416	dekamarkt	0.249	G'woon Roomijs stracciatella	2.49	1000
+n2416	dirk	0.249	1 de Beste Roomijs stracciatella	2.49	1000
+n2416	hoogvliet	0.258	G'woon Roomijs stracciatella	2.58	1000
+n2416	plus	0.299	PLUS Roomijs stracciatella	2.99	1000
+n2416	poiesz	0.678	G'woon Stracciatella roomijs	3.39	500
+n244	dekamarkt	0.398	DekaVers Rozijnenbrood	1.99	500
+n244	jumbo	0.418	Jumbo - Rozijnenbrood - 500 g	2.09	500
+n244	plus	0.498	PLUS Rozijnenbrood	2.49	500
+n244	spar	0.578	BakkersHart Rozijnenbrood Half	2.89	500
+n2472	ah	0.9761	Conimex Wokolie	4.49	460
+n2472	dekamarkt	0.7717	Sum & Sam Wokolie	3.55	460
+n2472	dirk	0.75	Daily Wokolie	3.45	460
+n2472	hoogvliet	0.728	Sum & Sam Wokolie	3.64	500
+n2472	jumbo	0.978	Go-Tan Wokolie 500ml	4.89	500
+n2472	plus	0.8674	PLUS Wokolie	3.99	460
+n2472	poiesz	0.898	Sum & Sam Geurige Wokolie	4.49	500
+n2472	spar	0.898	Sum&Sam wokolie Oosters	4.49	500
+n2472	vomar	0.7804	Sum&sam wokolie 500 ml.	3.59	460
+n2489	ah	0.4725	AH Speculoospasta	1.89	400
+n2489	dekamarkt	0.805	Lotus Speculoospasta	3.22	400
+n2489	dirk	0.4375	1 de Beste Speculoospasta	1.75	400
+n2489	hoogvliet	0.4375	G'woon Speculoospasta	1.75	400
+n2489	jumbo	0.4975	Jumbo Speculoospasta 400 g	1.99	400
+n2489	lidl	0.4375	Speculoospasta	1.75	400
+n2489	plus	0.4475	PLUS Speculoospasta	1.79	400
+n2489	spar	0.9475	Lotus biscoff speculoospasta creamy	3.79	400
+n2498	ah	0.158	AH Tomaten passata gezeefd	0.79	500
+n2498	dekamarkt	0.156	G'woon Gezeefde tomaten	0.78	500
+n2498	dirk	0.156	Victoria Gezeefde tomaten	0.78	500
+n2498	hoogvliet	0.358	Elvea Gezeefde tomaten	1.79	500
+n2498	jumbo	0.138	Jumbo Tomaten Gezeefd Passata 500 g	0.69	500
+n2498	lidl	0.129	Tomaten gezeefd XXL	1.29	1000
+n2498	plus	0.178	PLUS Passata gezeefde tomaten	0.89	500
+n2498	spar	0.17	g'woon tomaten gezeefde	0.85	500
+n2501	lidl	0.276	Halfvolle vruchtenyoghurt	0.69	250
+n2504	lidl	1.9467	Fruit King vruchtenkwark	1.46	75
+n2517	dekamarkt	1.65	ERU Smeerkaas Kids 30+	1.65	100
+n2517	dirk	1.59	ERU Smeerkaas Kids 30+	1.59	100
+n2520	jumbo	2.2636	Jumbo Bavarois Stoofpeer 110 g	2.49	110
+n2520	lidl	1.6611	Mini bavarois	2.99	180
+n2524	dekamarkt	9.6207	Silvo Chilipeper vlokken	2.79	29
+n2524	dirk	4.4483	Silvo Chilipeper vlokken	1.29	29
+n2528	ah	1.6333	AH Mini naturel croutons	0.49	30
+n2528	dirk	3.3158	Remia Croutons Italiaans	3.15	95
+n2528	hoogvliet	0.91	Landleben Croutons	0.91	100
+n2528	jumbo	1.4	Jumbo Croutons Naturel 125 g	1.75	125
+n2528	lidl	0.95	Croutons	0.95	100
+n2528	plus	0.99	Landleben Croutons naturel	0.99	100
+n2531	jumbo	1.4958	De Ruijter Royaal Chocoladevlokken 240g	3.59	240
+n2537	lidl	0.275	Campina vlaflip fra.	2.75	1000
+n2654	spar	2.392	Wahid snijwaren kipfilet naturel	2.99	125
+n2675	ah	0.3656	AH Krokante muesli noten	3.29	900
+n2675	dekamarkt	0.3656	G'woon Krokante muesli 4 noten	3.29	900
+n2675	dirk	0.3611	1 de Beste Muesli krokant 4 noten	3.25	900
+n2675	hoogvliet	0.3615	G'woon Krokante muesli 4 noten	2.35	650
+n2675	jumbo	0.74	Jumbo Bio Krokante Muesli 4 noten 350g	2.59	350
+n2675	lidl	0.7475	Krokante muesli 5-noten	2.99	400
+n2675	plus	0.3662	PLUS Krokante muesli 4 noten	2.38	650
+n2675	spar	0.3989	g'woon Muesli Krokante 4 Noten	3.59	900
+n2675	vomar	0.35	G'woon krokante muesli noten 900gr	3.15	900
+n2677	ah	1.025	Bolletje Krokante muesli proteine	3.69	360
+n2677	dekamarkt	0.824	Bolletje Krokante muesli notenmix	3.09	375
+n2677	dirk	0.5307	Bolletje Krokante muesli notenmix	1.99	375
+n2677	hoogvliet	1.0056	Bolletje Krokante muesli proteine	3.62	360
+n2677	lidl	0.3433	Krokante muesli	3.09	900
+n2677	plus	0.824	Bolletje Krokante Muesli Notenmix	3.09	375
+n2678	ah	0.695	AH Zuivelspread naturel	1.39	200
+n2678	dekamarkt	0.695	Melkan Zuivelspread naturel	1.39	200
+n2678	dirk	0.69	Melkan Zuivelspread naturel	1.38	200
+n2678	hoogvliet	0.635	Melkan Zuivelspread naturel	1.27	200
+n2678	jumbo	0.685	Cremette Zuivelspread Naturel 200 g	1.37	200
+n2678	plus	0.645	Melkan Zuivelspread naturel	1.29	200
+n2678	spar	0.775	Melkan zuivelspread naturel	1.55	200
+n2679	ah	0.695	AH Zuivelspread light	1.39	200
+n2679	hoogvliet	1.275	Philadelphia Zuivelspread original naturel light	2.55	200
+n2679	jumbo	1.495	Philadelphia Zacht-frisse Zuivelspread Original Light, kuipje 200 g	2.99	200
+n2683	spar	1.2697	Kellogg's ontbijtgranen chocos	4.19	330
+n2705	hoogvliet	0.76	Kellogg's Corn Flakes ontbijtgranen	2.85	375
+n271	dekamarkt	0.5432	Becel Koffiemelk omega	2.64	486
+n271	dirk	0.755	Becel Koffiemelk lekker romig	1.51	200
+n271	hoogvliet	0.3897	Becel Lekker Romig Koffiemelk	1.82	467
+n271	plus	0.3747	Becel Lekker romig koffiemelk	1.75	467
+n2710	ah	0.2892	AH Rode kool met appel	0.59	340
+n2710	dekamarkt	0.2843	G'woon Rode kool met appel	0.58	340
+n2710	dirk	0.2402	1 de Beste Rode kool met appel	0.49	340
+n2710	hoogvliet	0.2647	G'woon Rode kool met appel	0.54	340
+n2710	jumbo	0.307	Jumbo Rode Kool met Appel 190 g	0.35	190
+n2710	lidl	0.4778	Iglo rode kool-appel	1.29	450
+n2710	plus	0.2892	PLUS Rode kool met appel	0.59	340
+n2710	poiesz	0.7741	Iglo Rode Kool met Appeltjes	2.09	450
+n2710	spar	0.5889	Bio+ Rode kool Met appel	1.5899999999999999	450
+n2710	vomar	0.7222	Iglo rode kool appel mp 450gr	1.95	450
+n272	dirk	0.095	1 de Beste Volle chocolademelk	0.95	1000
+n272	jumbo	0.075	Jumbo Volle Chocolademelk 1 L	0.75	1000
+n272	spar	0.105	Melkan chocolademelk volle weidemelk	1.05	1000
+n2726	ah	0.7204	AH Geschilde bospeen	3.89	600
+n2726	dekamarkt	0.22	DekaVers Waspeen	0.99	500
+n2726	dirk	0.22	1 de Beste Waspeen	0.99	500
+n2726	lidl	0.22	Waspeen	0.99	500
+n2726	plus	0.22	PLUS Waspeen	0.99	500
+n2726	spar	0.2652	bospeen	1.79	750
+n2730	ah	0.55	AH Biologisch Trostomaten	2.75	500
+n2730	dekamarkt	0.198	Trostomaten los	1.98	1000
+n2730	dirk	0.19	Trostomaten los	1.9	1000
+n2730	hoogvliet	0.278	Hoogvliet Trostomaten	1.39	500
+n2730	jumbo	0.598	Jumbo Biologische Trostomaten 500 g	2.99	500
+n2730	lidl	0.498	Biologische trostomaten	2.49	500
+n2730	plus	0.238	PLUS Trostomaten	1.19	500
+n2730	spar	0.3	trostomaten	0.42	140
+n2731	dekamarkt	0.5875	Mutti Kerstomaatjes	2.35	400
+n2732	ah	0.278	AH Vleestomaten	1.39	500
+n2734	ah	0.1475	AH Tomatenblokjes	0.59	400
+n2734	dekamarkt	0.1625	Bio+ Tomatenblokjes	0.65	400
+n2734	dirk	0.16	Bio+ Tomatenblokjes	0.64	400
+n2734	hoogvliet	0.1875	Bio+ Biologische tomatenstukjes	0.75	400
+n2734	jumbo	0.1475	Jumbo Biologisch Tomatenblokjes 400 g	0.59	400
+n2734	lidl	0.169	Tomaten	1.69	1000
+n2734	plus	0.1725	PLUS Tomatenblokjes	0.69	400
+n2734	spar	0.2125	Bio+ Biologische tomatenblokjes	0.85	400
+n2736	lidl	1.1647	Rucola sla	0.99	85
+n2736	spar	1.1	sla babyleaf rucola	5.5	500
+n274	ah	0.3686	AH Koffiecreamer navul	1.29	350
+n274	dekamarkt	0.3571	Melkan Koffiecreamer navulzak	1.25	350
+n274	dirk	0.3571	Melkan Koffiecreamer navulzak	1.25	350
+n274	hoogvliet	0.3771	Melkan Koffiecreamer	1.32	350
+n274	jumbo	0.7029	Friesche Vlag Completa Koffiecreamer Navulverpakking 370 g	2.39	340
+n274	lidl	0.38	Koffiecreamer	1.52	400
+n274	plus	0.4125	PLUS Koffiecreamer	1.65	400
+n274	spar	0.3975	Melkan Koffiecreamer	1.5899999999999999	400
+n2742	ah	0.8633	Lay's Paprika flavour value pack	2.59	300
+n2742	dekamarkt	1.86	Cerrillo Fuet extra paprika	2.79	150
+n2742	dirk	0.9	1 de Beste Salvos paprika	1.35	150
+n2742	hoogvliet	0.7633	Lay's Paprika	2.29	300
+n2742	jumbo	0.6422	Jumbo Aardappelgratin Paprika 450 g	2.89	450
+n2742	lidl	0.76	Lay's paprika	2.09	275
+n2742	plus	0.5853	Rolnik Papryka/ Paprika	1.99	340
+n2742	poiesz	1.0757	Epixs Paprika	1.99	185
+n2742	spar	2.152	Lay's Max ribbel paprika snackbox	2.69	125
+n2747	dirk	0.2094	1 de Beste Gekookte aardappelen kruimig	0.89	500
+n2749	jumbo	0.538	Jumbo Druiven Rood/Blauw Pitloos 500 g	2.69	500
+n2749	lidl	0.6225	Premium pitloze blauwe druiven	2.49	400
+n2749	spar	0.398	blauwe druiven	1.99	500
+n2750	ah	0.498	AH Witte druiven pitloos	2.49	500
+n2750	dekamarkt	0.438	Pitloze witte druiven	2.19	500
+n2750	dirk	0.49	1 de Beste Pitloze witte druiven	2.45	500
+n2750	hoogvliet	0.598	Hoogvliet Pitloze witte druiven	2.99	500
+n2750	lidl	0.478	Pitloze witte druiven	2.39	500
+n2750	spar	0.398	witte druiven	1.99	500
+n2751	hoogvliet	0.2185	Streek Elstar appels	2.95	1500
+n2751	lidl	0.105	Appel Elstar tas	1.89	2000
+n2751	poiesz	0.2215	Elstar appels	2.99	1500
+n2751	spar	0.2585	Elstar appels	3.49	1500
+n2751	vomar	0.1622	Elstar tas appelen 1,5kg.	2.19	1500
+n2753	hoogvliet	0.1994	Hoogvliet Jonagold appels	3.59	2000
+n2753	jumbo	0.1474	Jumbo Jonagold Appels 1,5 kg	1.99	1500
+n2753	spar	0.1548	Jonagold appel	2.09	1500
+n2753	vomar	0.1548	Jonagold appelen tas 1,5kg	2.09	1500
+n2755	ah	0.399	AH Vers geperst sap sinaasappel	3.99	1000
+n2755	jumbo	0.395	Jumbo Vers Geperste Sinaasappelsap 1 L	3.95	1000
+n2755	plus	0.389	PLUS 100% zelf geperst sinaasappelsap	3.89	1000
+n2755	spar	0.598	Spar sinaasappelsap vers geperst	2.99	500
+n2756	ah	0.8293	De Zaanse Hoeve Goudse jong 48+ stuk voordeel	7.48	902
+n2756	dekamarkt	0.7177	Zuivelmeester Gouda kaas jong 48+	6.89	960
+n2756	dirk	1.1414	SILIFKE Goudse kaas jong	7.99	700
+n2756	hoogvliet	0.8865	Melkan Kaasstuk Goudse jong 48+	8.51	960
+n2756	jumbo	0.699	Goudse Kaas 48+ Jong Stuk 1KG	6.99	1000
+n2756	lidl	0.6082	Goudse jong stuk	5.96	980
+n2756	plus	0.798	Zuivelmeester Goudse jong 48+ stuk	7.82	980
+n2756	poiesz	1.66	Uniekaas Goudse kaasplakken 48+ jong	2.49	150
+n2756	spar	0.6622	Zuivelmeester kaas jong 48+ stuk	6.49	980
+n2758	ah	0.9589	De Zaanse Hoeve Goudse belegen 48+ stuk voordeel	9.33	973
+n2758	dekamarkt	0.9245	Zuivelmeester Gouda kaas belegen 48+	8.69	940
+n2758	dirk	0.9286	1 de Beste Belegen kaas 48+ stuk	8.45	910
+n2758	hoogvliet	0.9615	Hoogvliet Belegen stuk kaas	5.0	520
+n2758	jumbo	0.9463	Goudse Kaas 48+ Belegen Stuk 950 g	8.99	950
+n2758	lidl	0.5904	Goudse kaas extra belegen stuk	5.55	940
+n2758	plus	0.9489	Zuivelmeester Goudse belegen 48+ stuk	8.92	940
+n2758	poiesz	1.7933	Uniekaas Goudse kaasplakken 48+ belegen	2.69	150
+n2758	spar	1.6574	Melkan stuk kaas belegen 48+	7.79	470
+n2759	ah	1.56	AH Goudse oud 48+ stuk	7.8	500
+n2759	dekamarkt	1.5737	Melkan Goudse oud 48+ plakken	2.99	190
+n2759	dirk	1.432	Beemster Kaas extra oud 48+ plakken	1.79	125
+n2759	hoogvliet	1.3947	Melkan 7 Kaasplakken oud 48+	2.65	190
+n2759	jumbo	1.6263	Jumbo Kaas Oud 48+ Plakken 190 g	3.09	190
+n2759	lidl	1.1422	Goudse kaas oud stuk	5.14	450
+n2759	plus	2.1842	PLUS Goudse oud 48+ plakken	4.15	190
+n2759	spar	2.5	Beemster kaas oud 2-plaks	1.0	40
+n2768	ah	1.7571	AH Ossenworst	3.69	210
+n2768	dekamarkt	1.6619	Woorts Ossenworst 3 stuks	3.49	210
+n2768	dirk	1.6619	1 de Beste Ossenworst 3 st.	3.49	210
+n2768	hoogvliet	1.19	Luiten Ossenworst	1.19	100
+n2768	jumbo	1.8048	Jumbo Ossenworst 3 x 70 g	3.79	210
+n2768	lidl	1.9933	Luxe ossenworst st.	2.99	150
+n2768	plus	1.3286	PLUS Ossenworst 3 x 70 gram	2.79	210
+n2768	poiesz	2.7273	Ossenworst	3.0	110
+n2768	spar	2.345	Spar Ossenworst	4.6899999999999995	200
+n2769	spar	1.4015	Koopmans Pannenkoekmix Scharrelei	2.59	210
+n2771	jumbo	1.213	Jumbo Biologisch Witte Eieren S/M/L 10 Stuks	4.59	430
+n2771	lidl	2.1875	Biologische eieren	3.85	200
+n278	ah	0.139	De Zaanse Hoeve Volle yoghurt	1.39	1000
+n278	dekamarkt	0.138	Zuivelmeester Volle yoghurt	1.38	1000
+n278	dirk	0.138	1 de Beste Volle yoghurt	1.38	1000
+n278	hoogvliet	0.138	Zuivelmeester Volle yoghurt	1.38	1000
+n278	jumbo	0.137	Volle Yoghurt 1 L	1.37	1000
+n278	lidl	0.138	Volle yoghurt	1.38	1000
+n278	plus	0.125	Zuivelmeester Volle yoghurt	1.25	1000
+n278	poiesz	0.154	Zuivelmeester Volle Yoghurt	1.54	1000
+n2785	lidl	0.2488	Maisbrood	1.99	800
+n279	ah	0.105	De Zaanse Hoeve Volle melk	1.05	1000
+n279	dekamarkt	0.094	Zuivelmeester Volle melk	0.94	1000
+n279	dirk	0.118	1 de Beste Houdbare volle melk 6 stuks	7.08	6000
+n279	hoogvliet	0.109	Zuivelmeester Volle melk	1.09	1000
+n279	jumbo	0.089	Volle Melk 1 L	0.89	1000
+n279	lidl	0.094	Verse volle melk PP	0.94	1000
+n279	plus	0.105	Zuivelmeester Volle melk	1.05	1000
+n279	poiesz	0.199	Arla Lactosevrije Volle Melk	1.99	1000
+n279	spar	0.099	Melkan melk volle houdbare melk 6x1 liter	5.9399999999999995	6000
+n2790	dekamarkt	0.17	G'woon Pitabroodjes 10 stuks	0.85	500
+n2790	dirk	0.156	1 de Beste Pitabroodjes 10 stuks	0.78	500
+n2790	jumbo	2.3632	Consenza Glutenvrije pitabroodjes 2stuks 190g	4.49	190
+n2790	lidl	0.154	Pitabroodjes	0.77	500
+n2790	plus	0.158	PLUS Pitabroodjes 2x5st	0.79	500
+n2793	ah	0.796	AH Biologisch Robuust wit stokbrood	1.99	250
+n2793	dekamarkt	0.2932	DekaVers Frans stokbrood	1.29	440
+n2793	hoogvliet	0.476	G'woon Stokbrood wit rustiek	1.19	250
+n2793	jumbo	0.596	Jumbo Stokbrood Bourgondisch 1 Stuk	1.49	250
+n2793	lidl	0.2475	Frans stokbrood	0.99	400
+n2793	spar	0.5659	BakkersHart rustiek stokbrood wit desem	2.49	440
+n2795	dekamarkt	0.3529	DekaVers Pistolet wit	0.3	85
+n2795	dirk	0.33	1 de Beste Pistolets wit 4 stuks	0.99	300
+n2795	jumbo	0.5167	Jumbo - Pistolet Wit - 4 Stuks	1.55	300
+n2795	plus	0.43	PLUS Pistolets wit	1.29	300
+n2795	spar	0.53	g'woon pistolets wit	1.5899999999999999	300
+n2796	hoogvliet	0.53	G'woon Pistolet bruin rustiek	1.59	300
+n2796	jumbo	0.5571	Jumbo - Pistolets Bruin - 4 Stuks	1.56	280
+n2796	lidl	0.2843	Pistoletjes bruin	1.99	700
+n2799	dekamarkt	0.53	G'woon Pistolet rustiek meergranen 4 st.	1.59	300
+n2799	dirk	0.3833	1 de Beste Pistolets meergranen 4 stuks	1.15	300
+n2799	plus	0.43	PLUS Pistolets meergranen	1.29	300
+n2799	spar	0.5679	g'woon pistolets meergranen	1.5899999999999999	280
+n280	ah	0.5033	Friesche Vlag Goudband volle koffiemelk	2.29	455
+n280	hoogvliet	0.2081	Melkan Volle koffiemelk	0.98	471
+n280	jumbo	0.4234	Jumbo Volle Koffiemelk 470ML	1.99	470
+n280	plus	0.2102	PLUS Volle koffiemelk	0.99	471
+n2802	dekamarkt	0.6923	Roomboter croissant 65 g	0.45	65
+n2802	dirk	0.6923	Roomboter croissant 65 g	0.45	65
+n2802	jumbo	0.8111	Jumbo - Roomboter Croissant - 4 Stuks	1.46	180
+n2802	plus	0.7167	PLUS Croissants roomboter	1.29	180
+n2802	spar	0.8278	g'woon roomboter croissants	1.49	180
+n2803	dekamarkt	0.41	DekaVers Rozijnen krentenbol 6 st.	1.64	400
+n2803	lidl	0.2673	Roz.-/krentenbol XXL	1.39	520
+n2803	spar	0.625	BakkersHart mini rozijnen krentenbollen	2.25	360
+n2804	lidl	0.5594	Volkoren mueslibol	1.79	320
+n2805	ah	6.2778	Verstegen Maanzaad	3.39	54
+n2805	jumbo	6.2778	Verstegen Maanzaad 54 g	3.39	54
+n2805	plus	2.392	Damhert Biofood Maanzaad bio	2.99	125
+n2806	ah	1.8257	AH Biologisch Pompoenpitten	6.39	500
+n2806	dekamarkt	1.7	Bio+ Pompoenpitten	5.95	500
+n2806	dirk	1.4257	Bio+ Pompoenpitten	4.99	500
+n2806	hoogvliet	1.4238	Raw organic food Pompoenpitten	2.99	300
+n2806	jumbo	1.8257	Jumbo Pompoenpitten Biologisch 500 g	6.39	500
+n2806	lidl	1.4214	Pompoenpitten	1.99	200
+n2806	plus	1.7114	Biofood Pompoenpitten biologisch	5.99	500
+n2806	spar	2.6143	RAW Organic Food raw food pompoenpitten	5.49	300
+n2809	dirk	0.275	1 de Beste Muesli naturel	2.75	1000
+n2809	jumbo	0.265	Jumbo Muesli Naturel 1 kg	2.65	1000
+n2809	plus	0.279	PLUS Muesli naturel	2.79	1000
+n2809	spar	1.1973	Zonnatura Muesli Naturel	4.49	375
+n281	hoogvliet	0.5013	Melkan Gecondenseerde melk	1.99	397
+n281	jumbo	0.7179	Jumbo Gecondenseerde Melk 397 g	2.85	397
+n281	plus	0.5516	Melkan Gezoete gecondenseerde melk	2.19	397
+n281	spar	0.8287	Melkan Gecondenseerde houdbare melk 397 gram	3.29	397
+n2816	dekamarkt	0.5	Vers afbak Tijgerbol wit tarwebroodje	0.35	70
+n2816	dirk	0.5	Vers afbak Tijgerbol wit tarwebroodje	0.35	70
+n2818	ah	0.6208	AH Verse original croissants	1.49	240
+n2818	dekamarkt	0.4542	The Dough Factory Croissants 6 stuks	1.09	240
+n2818	dirk	0.4542	The Dough Factory Croissants 6 stuks	1.09	240
+n2818	hoogvliet	0.4542	Dough Factory Croissants	1.09	240
+n2818	jumbo	0.6208	Jumbo - Croissants - 6 Stuks	1.49	240
+n2818	lidl	0.5725	Croissants	2.29	400
+n2818	plus	0.9382	Danerolles Super croissants	3.19	340
+n2818	spar	1.0208	Danerolles croissants	2.45	240
+n2818	vomar	0.4542	Dough factory croissants 240gr	1.09	240
+n2830	spar	1.09	Spar kaascroissant	1.09	100
+n2836	ah	1.3267	AH Grillworst kaas	1.99	150
+n2836	dekamarkt	1.46	DekaVers Grillworst kaas	2.19	150
+n2836	dirk	0.94	Zandvliet Grillworst kaas	2.35	250
+n2836	hoogvliet	1.556	Hoogvliet Grillworst kaas	3.89	250
+n2836	jumbo	1.345	Jumbo Kaas Grillworst 200 g	2.69	200
+n2836	lidl	1.2333	Grillworst met kaas	1.85	150
+n2836	plus	1.14	Zandvliet Grillworst kaas	2.85	250
+n2836	spar	2.392	Spar grillworst met kaas	2.99	125
+n284	lidl	0.249	Magere vruchtenyoghurt	2.49	1000
+n284	plus	0.179	Melkan Magere vruchtenyoghurt aardbei	1.79	1000
+n2843	ah	0.6749	AH Stukjes ananas op sap	1.99	567
+n2843	dekamarkt	1.6689	Fairtrade Ananasstukjes op sap	1.97	227
+n2843	dirk	1.2876	Del Monte Ananasblokjes op sap	1.54	230
+n2843	jumbo	1.6859	Fairtrade Original Ananasstukjes op Eigen Sap 227 g	1.99	227
+n2843	plus	0.6543	Del monte Ananas schijven op sap	2.79	820
+n285	ah	0.2129	AH Halfvolle koffiemelk	0.99	465
+n285	dekamarkt	0.2099	Melkan Koffiemelk halfvol	1.95	929
+n285	dirk	0.1991	Melkan Koffiemelk halfvol	1.85	929
+n285	hoogvliet	0.2102	Melkan Halfvolle koffiemelk	0.99	471
+n285	jumbo	0.2034	Jumbo Halfvolle Koffiemelk 929 ML	1.89	929
+n285	lidl	0.192	Halfvolle koffiemelk	0.96	500
+n285	plus	0.2129	PLUS Halfvolle koffiemelk	0.99	465
+n285	spar	0.198	Melkan Koffiemelk halfvol	0.99	500
+n2875	lidl	0.5028	Fruitsnack	1.81	360
+n2876	ah	0.8225	AH Brioche	3.29	400
+n2876	lidl	0.4983	Brioche-vlecht	2.99	600
+n2886	ah	1.198	AH Gezouten cashewnoten	5.99	500
+n2886	dekamarkt	1.098	G'woon Cashewnoten gezouten	5.49	500
+n2886	dirk	1.195	1 de Beste Cashewnoten gezouten	2.39	200
+n2886	hoogvliet	1.05	G'woon Cashewnoten gezouten	5.25	500
+n2886	jumbo	1.198	Jumbo Cashewnoten Gezouten Voordeelverpakking 500 g	5.99	500
+n2886	plus	1.195	PLUS Cashewnoten gezouten	2.39	200
+n2886	spar	2.6412	g'woon cashewnoten gezouten	4.49	170
+n289	ah	0.095	De Zaanse Hoeve Karnemelk	0.95	1000
+n289	dekamarkt	0.094	Melkan Karnemelk	0.94	1000
+n289	dirk	0.094	1 de Beste Karnemelk	0.94	1000
+n289	hoogvliet	0.098	Zuivelmeester Karnemelk	0.98	1000
+n289	jumbo	0.095	Karnemelk 1 L	0.95	1000
+n289	lidl	0.092	Karnemelk	0.92	1000
+n289	plus	0.099	Zuivelmeester Karnemelk	0.99	1000
+n289	poiesz	0.179	Arla Biologisch Karnemelk	1.79	1000
+n289	spar	0.119	Melkan karnemelk	1.19	1000
+n2899	dekamarkt	0.9984	DekaVers Balkenbrij	6.24	625
+n2899	spar	1.198	Bleijlevens balkenbrij	5.99	500
+n2900	ah	0.9917	AH Terra Bonenmix maïs	1.19	200
+n2900	dekamarkt	0.8114	Hak Mais	1.85	380
+n2900	dirk	0.6431	1 de Beste Crispy mais 3-pack	1.91	495
+n2900	hoogvliet	0.6752	Hak Mais in pak	1.58	390
+n2900	jumbo	0.7525	Jumbo Biologisch Maïs 330 g	1.49	330
+n2900	lidl	1.5417	Bonduelle maïs Mexicano	2.59	280
+n2900	plus	1.0792	Bonduelle Maïs Mexicana	2.59	400
+n2900	spar	0.9188	Hak maïs in pak	2.15	390
+n2916	ah	1.325	Liga Vitalu crackers volkoren	2.65	200
+n2916	plus	1.275	Liga Vitalu crackers volkoren	2.55	200
+n2916	spar	1.495	Vitalu Crackers Volkoren	2.99	200
+n2921	dekamarkt	0.219	Fristi Drinkyoghurt rood fruit	2.19	1000
+n2921	dirk	0.197	Fristi Drinkyoghurt rood fruit	1.97	1000
+n2921	hoogvliet	0.528	Fristi Drinkyoghurt rood fruit	1.32	250
+n2921	jumbo	0.479	Fristi Drinkyoghurt Rood Fruit 24x200 ml	22.99	4800
+n2921	spar	0.245	Fristi Drinkyoghurt Rood Fruit	2.45	1000
+n2925	jumbo	1.398	Galbani Mascarpone Kaas 500 g	6.99	500
+n293	ah	0.5892	AH Koffieroom	1.09	185
+n293	dekamarkt	0.5676	Melkan Koffieroom	1.05	185
+n293	hoogvliet	0.5294	Melkan Koffieroom	0.99	187
+n293	jumbo	0.7514	Jumbo Zachte Koffieroom 185 ml	1.39	185
+n293	plus	0.5892	PLUS Koffieroom	1.09	185
+n293	spar	0.6096	Melkan koffieroom	0.89	146
+n2930	ah	0.6725	AH Chocoladepasta wit	2.69	400
+n2930	dirk	0.6225	1 de Beste Chocoladepasta wit	2.49	400
+n2930	hoogvliet	0.5725	G'woon Duo chocoladepasta	2.29	400
+n2930	lidl	0.332	Chocoladepasta	2.49	750
+n2930	plus	0.6725	PLUS Witte chocoladepasta Fairtrade	2.69	400
+n2930	spar	0.7975	g'woon chocoladepasta	3.19	400
+n2935	ah	0.478	Activia Yoghurt naturel	2.39	500
+n2935	dirk	0.458	Activia Yoghurt naturel	2.29	500
+n2935	hoogvliet	0.468	Activia Yoghurt Naturel	2.34	500
+n2935	jumbo	0.4899	Activia Kefir Yoghurt Naturel 345g	1.69	345
+n2937	ah	1.325	Van der Meulen Melba toast naturel	1.59	120
+n2937	dekamarkt	0.6167	Crispy Melba toast naturel	1.48	240
+n2937	dirk	0.6167	Crispy Melba toast naturel	1.48	240
+n2937	jumbo	1.325	Van der Meulen Melba Toast Naturel 120 g	1.59	120
+n2937	lidl	0.6625	Melba toast naturel	1.59	240
+n2939	ah	0.198	AH Terra Plantaardig alternatief voor yoghurt	0.99	500
+n2939	jumbo	0.358	Jumbo Soja Plantaardig Alternatief voor Yoghurt Mango 500 g	1.79	500
+n2939	lidl	0.154	Plantaardig alternatief voor yoghurt	0.77	500
+n2947	dekamarkt	0.5606	Ouwehand Rolmops	1.99	355
+n2947	dirk	0.8141	Ouwehand Rolmops	2.89	355
+n2947	hoogvliet	0.831	Ouwehand Rolmops	2.95	355
+n2947	jumbo	0.9831	Ouwehand Sea You Fish Bites Rolmops 355 g	3.49	355
+n2947	plus	0.8423	Ouwehand Rolmops	2.99	355
+n2947	poiesz	0.9831	Ouwehand Sea You Fish Bites Rolmops	3.49	355
+n2947	spar	1.0958	Ouwehand Rolmops	3.89	355
+n2953	ah	0.498	La Baleine Zeezout fijn	2.49	500
+n2953	dekamarkt	0.8833	Jozo Zeezout	2.65	300
+n2953	dirk	1.3556	1 de Beste Zeezout grof	1.22	90
+n2953	hoogvliet	0.88	Jozo Zeezout fijn	2.64	300
+n2953	jumbo	0.498	La Baleine Fijn Zeezout 500 g	2.49	500
+n2953	lidl	0.8533	Crefée zeezout	1.28	150
+n2953	plus	0.8633	Jozo Zeezout fijn	2.59	300
+n2953	poiesz	2.2375	Elephant Pretzels zeezout	1.79	80
+n2953	spar	1.6333	Spar scrocchi zeezout	2.45	150
+n298	ah	0.229	Melkunie Rijstepap	2.29	1000
+n298	dekamarkt	0.217	Melkunie Rijstepap	2.17	1000
+n298	dirk	0.27	Melkunie Rijstepap	1.35	500
+n298	hoogvliet	0.276	Melkunie Rijstepap	1.38	500
+n298	jumbo	0.229	Melkunie Rijstepap 1 L	2.29	1000
+n298	lidl	0.149	Hollandse rijstepap	1.49	1000
+n298	plus	0.219	Melkunie Rijstepap	2.19	1000
+n298	spar	0.338	Melkunie Rijstepap	1.69	500
+n299	ah	0.47	AH Slagroom	2.35	500
+n299	dekamarkt	0.458	Melkan Verse slagroom 35% vet	2.29	500
+n299	dirk	0.45	Melkan Verse slagroom 35% vet	2.25	500
+n299	hoogvliet	0.4433	Hertog Slagroom	3.99	900
+n299	jumbo	0.592	Jumbo Slagroom 250 g	1.48	250
+n299	lidl	0.35	Verse slagroom	1.75	500
+n299	plus	0.495	Melkan Houdbare slagroom	0.99	200
+n299	spar	0.398	Melkan Slagroom 35% Vet	1.99	500
+n2995	ah	0.695	AH Smeerkaas naturel 48+	1.39	200
+n2995	dekamarkt	0.69	Melkan Smeerkaas naturel 48+	0.69	100
+n2995	hoogvliet	0.58	Melkan Smeerkaas naturel 48+	0.58	100
+n2995	jumbo	0.67	Jumbo Naturel 48+ Smeerkaas 200 g	10.72	1600
+n2995	lidl	0.395	Smeerkaas	0.79	200
+n2995	plus	0.575	PLUS Smeerkaas 48+ naturel	1.15	200
+n2995	spar	0.745	Melkan Melkan Smeerkaas Naturel 48+	1.49	200
+n2997	ah	1.3267	AH Grillworst	1.99	150
+n2997	dekamarkt	0.83	Zalox Grillworst	2.49	300
+n2997	dirk	0.8167	Zalox Grillworst	2.45	300
+n2997	hoogvliet	1.396	Hoogvliet Grillworst naturel	3.49	250
+n2997	jumbo	1.1029	Grillworst 175 g	1.93	175
+n2997	lidl	1.095	Grillworst XXL	2.19	200
+n2997	plus	1.18	Zandvliet Grillworst naturel	2.95	250
+n2997	spar	1.316	Zandvliet grillworst naturel	3.29	250
+n3002	ah	1.66	AH Katenspek	2.49	150
+n3002	dirk	1.5267	1 de Beste Katenspek	2.29	150
+n3002	hoogvliet	1.46	Slagers kwaliteit Katenspek	2.19	150
+n3002	jumbo	2.5	Jumbo Katenspek ca. 140 g	3.5	140
+n3002	plus	2.59	PLUS Katenspek	2.59	100
+n3002	poiesz	2.0	Katenspek	2.0	100
+n3002	spar	2.9	Spar Katenspek	3.19	110
+n3003	ah	0.7375	AH Runder knakworst	2.95	400
+n3003	plus	0.5975	PLUS Runder knakworst	2.39	400
+n3003	spar	0.9975	g'woon knakworsten runder	3.99	400
+n303	ah	1.5196	Häagen-Dazs Vanilla ijs	6.99	460
+n303	dirk	0.9722	Ola Dracula ijs 6 st.	3.15	324
+n303	hoogvliet	1.4818	Magnum Mini IJs Almond 6 x 55 ml	4.89	330
+n303	jumbo	0.8552	Ola IJs Calippo Supermix 5 stuks 5 x 105ml	4.49	525
+n303	lidl	0.6633	IJs	1.99	300
+n303	plus	1.192	Ola Viennetta ijs mini	1.49	125
+n303	spar	1.3179	Ola Ijs Twister Monstaah	3.69	280
+n3030	ah	1.3725	AH Runderbraadworst	5.49	400
+n3030	dekamarkt	1.45	DekaVers Runderbraadworst 4st	5.22	360
+n3030	dirk	1.2472	Vleeschmeesters Runderbraadworst 4 st.	4.49	360
+n3030	jumbo	2.495	Jumbo Rundersaucijs Biologisch 2 Stuks	4.99	200
+n3030	plus	1.995	Biologisch PLUS Rundersaucijs 2 stuks	3.99	200
+n3030	spar	2.345	Spar rundersaucijs fijn 2 stuks	4.6899999999999995	200
+n3034	ah	1.398	AH Mager rundergehakt	6.99	500
+n3034	dekamarkt	1.4975	DekaVers Rundergehakt mager	5.99	400
+n3034	dirk	1.5967	Vleeschmeesters Rundergehakt extra mager 300 gram	4.79	300
+n3034	hoogvliet	1.158	Hoogvliet Mager rundergehakt	5.79	500
+n3034	jumbo	2.156	Jumbo Biologisch Rundergehakt Mager 250 g	5.39	250
+n3034	plus	1.198	PLUS Boerentrots Mager rundergehakt Blonde D'Aquitaine	5.99	500
+n3034	spar	1.478	Spar rundergehakt mager	7.39	500
+n304	jumbo	3.8778	Geska Zwitserse Strooikaas 90 g	3.49	90
+n304	plus	3.1	Geska Zwitserse strooikaas	2.79	90
+n3040	plus	1.6639	Valess Gouda schnitzel grootverpakking	5.99	360
+n3049	ah	0.7847	Hak Witte bonen	3.39	720
+n3049	dekamarkt	0.7755	Hak Witte bonen	3.35	720
+n3049	dirk	0.9087	Hak Witte bonen	1.99	365
+n3049	hoogvliet	0.7454	Hak Witte bonen	3.22	720
+n3049	jumbo	0.7847	Hak Witte Bonen 720 g	3.39	720
+n3049	lidl	0.5708	Hak witte bonen	1.25	365
+n3049	plus	0.7616	Hak Witte bonen	3.29	720
+n3049	spar	1.1187	Hak witte bonen	2.45	365
+n3051	dekamarkt	2.2565	Raw Organic Food Lijnzaadolie	5.19	230
+n3051	dirk	1.7348	Raw Organic Food Lijnzaadolie	3.99	230
+n3051	jumbo	1.9957	Zonnatura Biologische Lijnzaadolie 250 ml	4.59	230
+n3051	plus	1.9522	Zonnatura Lijnzaadolie	4.49	230
+n3058	ah	0.738	Smaakt Haverzemelen	3.69	500
+n3058	dekamarkt	0.73	Smaakt Haverzemelen	3.65	500
+n3058	dirk	0.718	Smaakt Haverzemelen	3.59	500
+n3058	jumbo	0.758	Smaakt Biologische Haverzemelen 500 g	3.79	500
+n3058	plus	0.738	Smaakt Haverzemelen bio	3.69	500
+n306	ah	0.338	AH Halfvolle kwark	1.69	500
+n306	dekamarkt	0.249	Melkan Franse kwark halfvolle	2.49	1000
+n306	dirk	0.249	Melkan Franse kwark halfvolle	2.49	1000
+n306	jumbo	0.338	Jumbo Franse Kwark Halfvol 500 g	1.69	500
+n306	plus	0.278	Melkan Halfvolle Franse kwark naturel	2.78	1000
+n307	ah	0.278	De Zaanse Hoeve Volle kwark	1.39	500
+n307	dekamarkt	0.338	Bio+ Volle kwark	1.69	500
+n307	hoogvliet	0.258	Melkan Volle kwark	1.29	500
+n307	jumbo	0.39	Jumbo Biologische Volle Kwark 500 g	1.95	500
+n307	lidl	0.254	Volle Franse kwark	1.27	500
+n307	plus	0.318	Melkan Volle kwark	1.59	500
+n307	spar	0.398	Melkan volle kwark	1.99	500
+n308	dekamarkt	0.5207	G'woon Arachideolie	4.79	920
+n308	dirk	0.4837	1 de Beste Arachideolie	4.45	920
+n308	hoogvliet	0.4837	G'woon Arachideolie	4.45	920
+n308	lidl	0.4761	Geraff. arachideolie	2.19	460
+n308	plus	0.488	PLUS Arachideolie	4.49	920
+n31	jumbo	0.9967	Jumbo Snackgroente Paprikaatjes Mix 300 g	2.99	300
+n310	ah	0.95	De Zaanse Hoeve Ongezouten roomboter	4.75	500
+n310	dekamarkt	0.956	Zuivelmeester Roomboter ongezouten	2.39	250
+n310	dirk	1.14	Boterboer Roomboter zilverwikkel ongezouten	2.85	250
+n310	hoogvliet	1.116	Zuivelmeester Roomboter ongezouten wikkel	2.79	250
+n310	jumbo	0.8667	Jumbo Roomboter Ongezouten 225 g	1.95	225
+n310	plus	0.9	Zuivelmeester Roomboter ongezouten	2.25	250
+n310	spar	1.316	Lurpak roomboter ongezouten	3.29	250
+n3127	ah	0.4725	AH Biologisch Pastinaak	1.89	400
+n3127	dekamarkt	0.4725	Bio+ Pastinaak	1.89	400
+n3127	dirk	0.4225	Bio+ Pastinaak	1.69	400
+n3127	jumbo	0.4975	Jumbo Biologisch Pastinaak 400 g	1.99	400
+n3127	lidl	0.198	Biologische pastinaak	0.99	500
+n3127	plus	0.358	PLUS Pastinaak	1.79	500
+n3127	spar	0.5625	Mijnboer Bio pastinaak	2.25	400
+n3153	ah	0.6975	AH Quinoa	2.79	400
+n3153	dekamarkt	0.658	Riso Vignola Quinoa	3.29	500
+n3153	dirk	0.678	Riso Vignola Quinoa	3.39	500
+n3153	jumbo	0.7491	Jumbo Biologisch Quinoa 275 g	2.06	275
+n3153	lidl	0.6225	Quinoa	2.49	400
+n3153	plus	0.7714	BIO+ Quinoa	2.7	350
+n3155	ah	1.0532	De Zaanse Hoeve Goudse jong 30+ stuk	4.95	470
+n3155	dekamarkt	1.3632	Melkan Goudse jong 30+ plakken	2.59	190
+n3155	jumbo	1.6867	Milner 35+ Jong Kaas Stuk 450 g	7.59	450
+n3155	lidl	1.1533	Goudse 30+ jong plak	3.46	300
+n3163	ah	1.2681	AH Goudse jong belegen 30+ stuk	5.77	455
+n3163	dekamarkt	1.2644	Melkan Kaas goudse jong belegen 30+	5.69	450
+n3163	dirk	1.1943	1 de Beste Kaas rasp jong belegen 30+	2.09	175
+n3163	hoogvliet	1.4975	Koggelandse kaas 30+ jong belegen	5.9	394
+n3163	jumbo	1.33	Jumbo Kaas Jong Belegen 30+ Voordeelverpakking Plakken 300 g	3.99	300
+n3163	lidl	1.745	Groene hart kaas jong belegen 30+ plakken	3.49	200
+n3163	plus	1.288	PLUS Goudse jong belegen 30+ stuk	6.44	500
+n3163	spar	2.3833	Sparwoudse kaas gesneden jong belegen 35+	4.29	180
+n3164	ah	1.4067	AH Goudse belegen 30+ stuk	6.26	445
+n3164	dekamarkt	1.5737	Melkan Goudse belegen 30+ plakken	2.99	190
+n3164	hoogvliet	1.875	Streek Belegen 30+ plakken kaas	3.75	200
+n3164	jumbo	1.5737	Jumbo Kaas Belegen 30+ Plakken 190 g	2.99	190
+n3164	lidl	1.396	Goudse kaas Extra belegen 30+ plakken	3.49	250
+n3164	plus	1.7842	PLUS Goudse belegen 30+ plakken	3.39	190
+n3164	spar	2.6056	Sparwoudse kaas gesneden belegen 35+	4.6899999999999995	180
+n3165	jumbo	2.3486	Wapenaer Goudse Kaas Oud 35+ ca. 175 g	4.11	175
+n3165	lidl	1.925	Groene hart kaas oud 30+ plakken	3.85	200
+n3175	dekamarkt	0.5756	Johma Coleslaw Amerikaans salade	2.59	450
+n3175	dirk	0.5889	Johma Coleslaw Amerikaans salade	2.65	450
+n3175	hoogvliet	0.5644	Johma Amerikaanse coleslaw salade	2.54	450
+n319	dekamarkt	2.632	DekaVers Cornedbeef	3.29	125
+n319	dirk	2.12	1 de Beste Cornedbeef hollands	2.65	125
+n3199	ah	3.5444	AH Ansjovis	3.19	90
+n3199	dekamarkt	4.3261	Vis Marine Ansjovis	1.99	46
+n3199	jumbo	3.5444	Jumbo Ansjovis 90 g	3.19	90
+n3201	ah	0.356	Silifke Ayran yoghurtdrank	0.89	250
+n3201	dekamarkt	0.352	Yayla Ayran drinkyoghurt	0.88	250
+n3201	dirk	0.27	SILIFKE Ayran drinkyoghurt	1.89	700
+n3207	dekamarkt	0.695	G'woon Hummus naturel	1.39	200
+n3207	dirk	0.645	Bits & Bites Hummus naturel	1.29	200
+n3207	hoogvliet	0.695	G'woon Hummus naturel	1.39	200
+n3207	jumbo	1.295	Jumbo Hummus Naturel 200 g	2.59	200
+n3207	lidl	0.5725	Hummus naturel XXL	2.29	400
+n3207	plus	0.695	PLUS Hummus naturel	1.39	200
+n3208	ah	3.49	AH Zeekraal	3.49	100
+n3208	jumbo	3.3625	Zeekraal 80 g	2.69	80
+n3220	ah	1.4257	AH Groene asperges	4.99	350
+n3220	dekamarkt	0.996	Eat Me Groene asperges bosje	2.49	250
+n3220	dirk	1.196	Eat Me Groene asperges bosje	2.99	250
+n3220	jumbo	1.7114	Jumbo Groene Asperges 350 g	5.99	350
+n3220	lidl	1.098	Groene asperges	5.49	500
+n3220	plus	1.42	Eat Me Asperges groen	6.39	450
+n3220	spar	5.49	asperge punt groen	5.49	100
+n3221	ah	0.4043	AH Zwarte olijven zonder pit	0.95	235
+n3221	dekamarkt	0.4528	Sera Zwarte olijven zonder pit	1.63	360
+n3221	dirk	0.3706	Siof Zwarte olijven zonder pit	3.15	850
+n3221	hoogvliet	0.5559	Carbonell Zwarte olijven zonder pit	1.89	340
+n3221	jumbo	0.4291	Zohra Zwarte Olijven Zonder Pit 860 g	3.69	860
+n3221	lidl	0.9967	Dilek zwarte olijven	2.99	300
+n3221	plus	0.4304	PLUS Zwarte olijven zonder pit	0.99	230
+n3223	ah	1.9957	AH Grillworst kip	4.69	235
+n3223	dekamarkt	1.6611	Bio Grillworst kip	2.99	180
+n3223	dirk	1.3267	1 de Beste Kip grillworst	1.99	150
+n3223	hoogvliet	1.26	Zandvliet Kip grillworst	1.89	150
+n3223	jumbo	1.396	Lezziz Kip Grillworst Naturel 250g	3.49	250
+n3223	plus	1.3267	Zandvliet Grillworst kip	1.99	150
+n3223	spar	2.472	Spar kip grillworst	3.09	125
+n3229	ah	0.6967	AH Kipsaté salade	2.09	300
+n3229	dekamarkt	1.5267	DekaVers Salade kipsate	2.29	150
+n3229	dirk	0.66	1 de Beste Salade kipsaté	0.99	150
+n3229	hoogvliet	1.7086	Johma Kipsate salade	2.99	175
+n3229	jumbo	1.495	Jumbo Kipsaté Salade 200 g	2.99	200
+n3229	lidl	0.6633	kip satésalade	1.99	300
+n3229	plus	1.46	PLUS Kip-satesalade	2.19	150
+n3229	spar	2.1657	Johma kip-satésalade	3.79	175
+n3230	hoogvliet	2.1086	Johma Zalmsalade	3.69	175
+n3230	jumbo	2.1933	Zalmsalade 150 g	3.29	150
+n3230	lidl	2.99	Broodsal. zalmsalade	2.99	100
+n3231	ah	0.5833	AH Tonijnsalade	1.75	300
+n3231	dekamarkt	1.0229	Johma Frisse tonijnsalade	1.79	175
+n3231	hoogvliet	0.65	Karaat Tonijnsalade	1.95	300
+n3231	jumbo	1.6467	Tonijnsalade 150 g	2.47	150
+n3231	lidl	0.795	Frisse tonijnsalade	1.59	200
+n3231	plus	0.6633	Karaat Tonijnsalade	1.99	300
+n3231	spar	3.5	Johma tonijnsalade portie	1.75	50
+n3231	vomar	0.796	Msc tonijnsalade 250gr	1.99	250
+n3232	jumbo	2.1933	Ambachtelijke Krabsalade 150 g	3.29	150
+n3233	jumbo	2.1429	Johma Garnalensalade 175 g	3.75	175
+n3233	plus	1.9943	Johma Garnalensalade	3.49	175
+n3236	plus	1.5794	Feestelijk PLUS Mini stokbroodje kruidenboter	1.99	126
+n3240	ah	0.199	Arla Lactofree halfvolle melk lactosevrij	1.99	1000
+n3240	dekamarkt	0.155	Melkan Halfvolle melk lactosevrij	1.55	1000
+n3240	dirk	0.155	Melkan Halfvolle melk lactosevrij	1.55	1000
+n3240	jumbo	0.189	Arla Lactofree halfvolle melk houdbaar lactosevrij 1L	1.89	1000
+n3240	plus	0.189	Arla Lactofree halfvolle melk lactosevrij	1.89	1000
+n3240	poiesz	0.189	Arla Halfvolle Melk Lactosevrij	1.89	1000
+n3240	spar	0.209	Arla melk halfvol lactosevrij	2.09	1000
+n3241	ah	1.25	AH Kruidenboter	1.25	100
+n3241	dekamarkt	0.54	Coolback Baguette kruidenboter 2 st.	1.89	350
+n3241	dirk	0.54	Coolback Baguette kruidenboter 2 st.	1.89	350
+n3241	hoogvliet	0.5086	Coolback Baguette kruidenboter	1.78	350
+n3241	jumbo	1.08	Kruidenboter 100 g	1.08	100
+n3241	lidl	1.08	Kruidenboter	1.08	100
+n3241	plus	0.9938	Meggle Baguette kruidenboter	1.59	160
+n3241	spar	1.1187	Meggle Kruidenboter Baquette	1.79	160
+n3242	ah	0.3317	Van Gilse Schenkstroop	1.99	600
+n3242	dekamarkt	0.3317	Van Gilse Schenkstroop de originele	1.99	600
+n3242	dirk	0.315	Van Gilse Schenkstroop de originele	1.89	600
+n3242	hoogvliet	0.315	Van Gilse Schenkstroop	1.89	600
+n3242	jumbo	0.3317	Van Gilse de Originele Schenkstroop 600 g	1.99	600
+n3242	lidl	0.314	Schenkstroop	1.57	500
+n3242	plus	0.3317	Van Gilse schenkstroop origineel	1.99	600
+n3242	spar	0.375	Van Gilse Schenkstroop Origineel	2.25	600
+n3243	ah	0.8685	AH Biologisch Kokosolie	7.99	920
+n3243	dekamarkt	0.8457	Bio+ Kokosolie geurloos	3.89	460
+n3243	dirk	0.8457	Bio+ Kokosolie geurloos	3.89	460
+n3243	hoogvliet	0.778	Bio+ Kokosolie geurloos	3.89	500
+n3243	jumbo	0.8696	Jumbo Kokosolie Biologisch 500 ML	4.0	460
+n3243	lidl	0.8674	Biologische kokosolie	3.99	460
+n3243	plus	0.8674	BIO+ Geurloze kokosolie	3.99	460
+n3245	ah	0.9593	De Ruijter Gestampte muisjes	2.59	270
+n3245	dekamarkt	0.8758	De Ruijter Blauwe & witte muisjes	2.89	330
+n3245	dirk	0.8636	De Ruijter Blauwe & witte muisjes	2.85	330
+n3245	hoogvliet	0.9074	De Ruijter Gestampte muisjes	2.45	270
+n3245	jumbo	0.9061	De Ruijter Feest Muisjes 330g	2.99	330
+n3245	spar	1.0273	De Ruijter muisjes blauw wit	3.39	330
+n3252	dekamarkt	1.225	Surimi chunks	2.45	200
+n3252	dirk	0.995	Surimi chunks	1.99	200
+n3252	lidl	1.195	Surimi chunks MSC	2.39	200
+n3258	dirk	0.7956	Duca Filodeeg	1.79	225
+n3258	hoogvliet	0.7956	Duca Filodeeg	1.79	225
+n3258	lidl	0.3725	Filodeeg banitsa	1.49	400
+n3258	plus	0.933	Duca Filodeeg	2.09	224
+n328	ah	1.445	AH Rauwe ham	2.89	200
+n328	jumbo	2.9	Jumbo Klumper Rauwe Ham ca. 110 g	3.19	110
+n328	lidl	1.345	Rauwe ham	2.69	200
+n328	spar	3.69	Spar Rauwe Ham	3.69	100
+n3282	hoogvliet	0.229	Arla Lactofree halfvolle yoghurt (lactosevrij)	2.29	1000
+n3282	jumbo	0.239	Arla Lactofree halfvolle yoghurt lactosevrij 1L	2.39	1000
+n330	dekamarkt	1.796	DekaVers Kalkoenblokjes	4.49	250
+n330	jumbo	1.996	Jumbo Kalkoenblokjes 250g	4.99	250
+n330	spar	2.1967	Spar kalkoenblokjes	6.59	300
+n3318	lidl	0.59	Alaska koolvis XXL	6.49	1100
+n3322	ah	1.9323	AH Pangasius Mediterraans koekenpan	5.99	310
+n3322	plus	0.7389	PLUS Pangasius	3.99	540
+n3323	hoogvliet	0.2667	G'woon Rostirondjes	2.0	750
+n3325	ah	0.4231	AH Rijstwafels naturel	0.55	130
+n3325	dekamarkt	0.9846	Zonnatura Rijstwafels naturel	1.28	130
+n3325	hoogvliet	0.9692	Zonnatura Rijstwafels naturel	1.26	130
+n3325	jumbo	0.4923	Jumbo Rijstwafels Naturel 130 g	0.64	130
+n3325	plus	0.9923	Zonnatura Rijstwafels naturel	1.29	130
+n3325	spar	1.1154	Zonnatura rijstwafels naturel	1.45	130
+n3331	ah	1.1923	AH Artisjokharten	2.79	390
+n3331	dekamarkt	1.1325	G'woon Artisjokharten	2.65	390
+n3331	dirk	1.1068	1 de Beste Artisjokharten	2.59	390
+n3331	jumbo	1.2042	Jumbo Artisjokharten 400 g	2.89	400
+n3331	lidl	0.8504	Artisjokharten	1.99	390
+n3331	plus	1.0641	PLUS Artisjokharten	2.49	390
+n3332	ah	1.495	AH Romaine sla	2.99	200
+n3334	ah	0.4886	King Rijstolie	8.99	1840
+n3334	dekamarkt	0.5978	King Rijstolie	2.75	460
+n3334	dirk	0.5848	King Rijstolie	2.69	460
+n3334	hoogvliet	0.548	King Rijstolie	2.74	500
+n3334	plus	0.6065	King Rijstolie	2.79	460
+n3334	vomar	0.538	King rijstolie 500ml	2.69	500
+n3335	ah	0.2714	AH Frituurolie	7.49	2760
+n3335	dekamarkt	0.2533	G'woon Frituurolie	6.99	2760
+n3335	hoogvliet	0.2527	G'woon Frituurolie	4.65	1840
+n3335	jumbo	0.2245	Jumbo Frituurolie 2 L	4.49	2000
+n3335	lidl	0.1846	Frituurolie XXL	8.49	4600
+n3335	plus	0.3418	PLUS Frituurolie	6.29	1840
+n3335	poiesz	0.1997	G'woon Frituurolie	5.99	3000
+n3335	spar	0.2821	Spar frituurolie	5.19	1840
+n3335	vomar	0.4692	Diamant echte frituurolie 3 lt	12.95	2760
+n3341	ah	3.1923	AH Verse cantaloupe meloen	2.49	150
+n3341	jumbo	3.1923	Jumbo Cantaloupe Meloen 150 g	2.49	150
+n3341	plus	1.1474	PLUS Halve cantaloupe meloen	1.79	300
+n335	ah	0.744	AH Leverpastei	1.25	168
+n335	dekamarkt	0.744	G'woon Leverpastei 3-pack	1.25	168
+n335	dirk	0.7381	1 de Beste Leverpastei 3-pack	1.24	168
+n335	hoogvliet	0.7083	G'woon Leverpastei 6-pak	2.38	336
+n335	jumbo	0.7411	Jumbo Leverpastei 6 x 56 g	2.49	336
+n335	lidl	4.4286	Leverpastei	2.48	56
+n335	plus	0.6815	PLUS Leverpastei 6-pack	2.29	336
+n335	poiesz	1.6012	Unox Leverpastei Regulier	2.69	168
+n335	spar	0.8631	g'woon leverpastei	1.45	168
+n335	vomar	7.7679	Unox leverpastei 6 x 56gr	4.35	56
+n3355	spar	1.395	De Ruijter chocoladevlokken wit	2.79	200
+n3356	ah	1.5236	Heks'nkaas Origineel voordeelpak	4.19	275
+n3356	dekamarkt	1.0873	Heks'nkaas Smeerdip origineel voordeelpak	2.99	275
+n3356	dirk	1.625	Heks'nkaas Origineel	3.25	200
+n3356	hoogvliet	1.495	Heks'nkaas Origineel	2.99	200
+n3356	jumbo	1.5236	Heks'nkaas Origineel XL 275 g	4.19	275
+n3356	plus	1.495	Heks'nkaas Smeerdip origineel	2.99	200
+n336	dekamarkt	0.5853	G'woon Luncheon meat	1.99	340
+n336	dirk	0.5735	Groot Luncheon meat	1.95	340
+n336	jumbo	0.5735	Jumbo Luncheon Meat 340 g	1.95	340
+n336	spar	0.675	g'woon luncheon meat	1.35	200
+n3360	lidl	0.4422	Peren-/appelstroop	1.99	450
+n3362	jumbo	0.925	Jumbo Feta Kaas 43+ Plak 200 g	1.85	200
+n3362	lidl	0.995	Feta kaas	1.99	200
+n3368	ah	0.7933	Garlan Verse roomkaas met kruiden	1.19	150
+n3368	dekamarkt	0.8533	Melkan Roomkaas kruiden	1.28	150
+n3368	dirk	0.7867	Melkan Roomkaas kruiden	1.18	150
+n3368	hoogvliet	0.6667	Melkan Franse kruiden roomkaas	1.0	150
+n3368	plus	0.7933	Garlan Roomkaas kruiden	1.19	150
+n3368	spar	2.312	Brets kaas verse kruiden	2.89	125
+n3370	ah	0.845	AH Witte kaas grote plak	1.69	200
+n3370	dekamarkt	0.745	Melkan Zachte witte kaas 45+	1.49	200
+n3370	dirk	0.745	Melkan Zachte witte kaas 45+	1.49	200
+n3370	hoogvliet	0.745	Melkan Witte kaas	1.49	200
+n3370	jumbo	0.62	Jumbo Witte Kaas Plak 250 g	1.55	250
+n3370	lidl	0.644	Griekse witte kaas	1.61	250
+n3370	plus	0.725	Melkan Zachte witte kaas 45+	1.45	200
+n3370	poiesz	1.3267	Apetina Original Witte Kaas 45+	1.99	150
+n3370	spar	0.725	Melkan Melkan Witte kaas 45+	1.45	200
+n3374	lidl	0.6633	Verse focaccia duo	1.99	300
+n3376	ah	1.6043	AH Sesamolie	3.69	230
+n3376	dekamarkt	1.5	Sum & Sam Sesamolie	3.45	230
+n3376	dirk	1.5	Sum & Sam Sesamolie	3.45	230
+n3376	jumbo	1.6043	Jumbo Sesamolie 250ML	3.69	230
+n3376	lidl	1.0826	Sesamolie	2.49	230
+n3376	plus	2.1696	Damhert Sesamolie bio	4.99	230
+n3376	poiesz	1.596	Sum & Sam Sesamolie	3.99	250
+n3376	spar	3.036	Monini sesamolie	7.59	250
+n3377	jumbo	1.196	Galbani Ricotta Kaas 250 g	2.99	250
+n3378	jumbo	1.595	M&M'S Pinda Melkchocolade 363g	5.79	363
+n3378	plus	1.14	PLUS Melkchocolade pinda's Fairtrade	2.85	250
+n3378	spar	2.232	M&M'S Melkchocolade met pinda's	2.79	125
+n338	ah	3.0818	AH Pekelvlees	3.39	110
+n338	dekamarkt	3.05	DekaVers Pekelvlees	3.05	100
+n338	dirk	2.99	1 de Beste Pekelvlees	2.99	100
+n338	jumbo	3.0818	Jumbo Pekelvlees ca. 110 g	3.39	110
+n340	ah	3.59	AH Greenfields Runderrookvlees	3.59	100
+n340	dekamarkt	2.95	DekaVers Runderrookvlees	2.95	100
+n340	dirk	2.95	1 de Beste Runderrookvlees	2.95	100
+n340	hoogvliet	2.85	Slagers kwaliteit Runderrookvlees	2.85	100
+n340	jumbo	2.79	Jumbo Runderrookvlees 100 g	2.79	100
+n340	lidl	2.66	Runderrookvlees XXL	3.99	150
+n340	plus	2.99	PLUS Runderrookvlees	2.99	100
+n344	dekamarkt	2.49	Stegeman Broodbeleg mediterraans	2.49	100
+n344	dirk	2.45	Stegeman Broodbeleg mediterraans	2.45	100
+n344	lidl	0.9933	Gastronomische vleeswar	1.49	150
+n344	spar	1.46	Slagerskwaliteit Slagerskwaliteit Vleeswaren Tostiham	2.19	150
+n3442	hoogvliet	1.1341	Kellogg's Tresor Milk ontbijtgranen	4.65	410
+n3444	jumbo	1.0879	Kellogg's Honey Pops ontbijtgranen 330 g	3.59	330
+n3445	dekamarkt	3.96	RAW Organic Food Gojibessen	7.92	200
+n3445	dirk	3.425	RAW Organic Food Gojibessen	6.85	200
+n3445	plus	3.745	Raw Organic Food Gojibessen biologisch	7.49	200
+n3446	ah	2.156	AH Biologisch Hennepzaad	5.39	250
+n3446	dekamarkt	1.996	RAW Organic Food Hennepzaad	4.99	250
+n3446	dirk	1.98	RAW Organic Food Hennepzaad	4.95	250
+n3446	hoogvliet	1.996	Raw organic food Hennepzaad	4.99	250
+n3446	jumbo	2.236	Jumbo Hennepzaad Biologisch 250 g	5.59	250
+n3446	plus	1.996	Raw Organic Food Hennepzaad biologisch	4.99	250
+n3447	ah	1.4509	AH Biologisch Chiazaad	3.99	275
+n3447	dekamarkt	1.2691	Bio+ Chiazaad	3.49	275
+n3447	dirk	1.0873	Bio+ Chiazaad	2.99	275
+n3447	hoogvliet	1.42	Raw organic food Chiazaad	3.55	250
+n3447	jumbo	1.4509	Jumbo Chiazaad Biologisch 275 g	3.99	275
+n3447	plus	1.596	Biofood Chiazaad biologisch	3.99	250
+n3449	dekamarkt	0.8587	Brassica Koolzaadolie koud & warm	3.95	460
+n3449	jumbo	0.8674	Brassica Koud & Warm Koolzaadolie 500 ml	3.99	460
+n3449	lidl	0.4326	Bio koolzaadolie	1.99	460
+n3449	plus	0.8457	Brassica Koolzaadolie Koud & Warm	3.89	460
+n35	ah	1.1	AH Peulen	2.75	250
+n35	dekamarkt	1.076	Eat Me Peulen	2.69	250
+n35	dirk	0.796	Eat Me Peulen	1.99	250
+n35	jumbo	1.156	Jumbo Peultjes 250 g	2.89	250
+n35	plus	1.196	PLUS Peultjes	2.99	250
+n35	spar	1.316	peulen	3.29	250
+n353	hoogvliet	1.8522	John West Makreelfilets naturel	2.13	115
+n354	dirk	1.5778	Brunswick Oesters naturel	3.55	225
+n378	ah	0.31	De Zeeuwse Boerin Keukenstroop	1.55	500
+n378	dekamarkt	0.306	Van Gilse Keukenstroop zeeuws	1.53	500
+n378	dirk	0.29	Van Gilse Keukenstroop zeeuws	1.45	500
+n378	hoogvliet	0.29	De Zeeuwse Boerin Keukenstroop	1.45	500
+n378	jumbo	0.318	De Zeeuwsche Boerin De Beroemde Zeeuwse Keukenstroop 500 g	1.59	500
+n378	plus	0.278	Friesche Vlag Keukenstroop	1.39	500
+n378	spar	0.35	De Zeeuwsche Boerin Keukenstroop Keukenstroop	1.75	500
+n381	plus	0.298	Van Gilse Originele Suikerstroop	1.49	500
+n383	ah	0.126	AH Appelsap	1.89	1500
+n383	dekamarkt	0.249	Bio+ Appelsap	2.49	1000
+n383	dirk	0.0967	1 de Beste Appelsap	1.45	1500
+n383	hoogvliet	0.332	Streek Appelsap Streek	2.49	750
+n383	jumbo	0.0933	Jumbo Appelsap 8 x 1,5 L	11.2	12000
+n383	lidl	0.0953	Appelsap	1.43	1500
+n383	plus	0.1527	PLUS Appelsap	2.29	1500
+n383	spar	0.245	Bio+ Bio appelsap	2.45	1000
+n396	dekamarkt	0.189	G'woon Rode druivensap	1.89	1000
+n396	hoogvliet	0.169	G'woon Druivensap	1.69	1000
+n396	jumbo	0.249	Jumbo 100% Puur Druivensap 1 L	2.49	1000
+n396	lidl	0.229	Druivensap	2.29	1000
+n396	plus	0.159	PLUS Druivensap	1.59	1000
+n396	spar	0.299	g'woon sap druiven	2.99	1000
+n410	ah	0.3527	Appelsientje Sinaasappelsap	5.29	1500
+n410	dekamarkt	0.3327	Appelsientje Sinaasappelsap	4.99	1500
+n410	dirk	0.385	Appelsientje Sinaasappelsap	3.85	1000
+n410	hoogvliet	0.3327	Appelsientje Sinaasappelsap mild	4.99	1500
+n410	plus	0.2527	Appelsientje Sinaasappelsap	3.79	1500
+n410	poiesz	0.299	Appelsientje Sinaasappelsap	2.99	1000
+n410	spar	0.329	Appelsientje Sinaasappelsap	3.29	1000
+n410	vomar	0.299	Appelsientje sinaasappelsap 1l	2.99	1000
+n413	ah	0.4387	Zonnatura Tomatensap	3.29	750
+n413	dekamarkt	0.139	G'woon Tomatensap	1.39	1000
+n413	dirk	0.139	1 de Beste Tomatensap	1.39	1000
+n413	hoogvliet	0.128	G'woon Tomatensap	1.28	1000
+n413	jumbo	0.149	Jumbo Tomatensap 1 L	1.49	1000
+n413	lidl	0.115	Tomatensap	1.15	1000
+n413	plus	0.129	PLUS Tomatensap	1.29	1000
+n413	vomar	0.219	Appelsientje tomatensap 1l	2.19	1000
+n427	ah	0.42	AH Appelstroop extra rinse	1.89	450
+n427	dekamarkt	0.6967	Canisius 100% appelstroop	2.09	300
+n427	dirk	0.9061	Bio+ Rinse appelstroop	2.99	330
+n427	hoogvliet	0.3978	Frutesse Appelstroop	1.79	450
+n427	jumbo	0.6644	Canisius Rinse Appelstroop 450 g	2.99	450
+n427	plus	0.2422	PLUS Rinse Appelstroop	1.09	450
+n427	spar	0.5833	Timson rinse appelstroop	1.75	300
+n433	hoogvliet	1.0733	De Ruijter Chocoladevlokken melk	3.22	300
+n433	jumbo	1.245	De Ruijter Chocoladevlokken Melk 200g	2.49	200
+n433	lidl	0.63	Chocoladevlokken melk	1.89	300
+n433	plus	0.5633	PLUS Chocoladevlokken melk Fairtrade	1.69	300
+n433	spar	1.175	Choca chocoladevlokken melk	2.35	200
+n435	hoogvliet	1.0733	De Ruijter Chocoladevlokken puur	3.22	300
+n435	jumbo	1.295	De Ruijter Chocoladevlokken Puur 200g	2.59	200
+n435	plus	0.5633	PLUS Chocoladevlokken puur Fairtrade	1.69	300
+n435	spar	1.475	De Ruijter chocoladevlokken puur	2.95	200
+n436	ah	0.8625	AH Biologisch Hazelnootpasta	3.45	400
+n436	dekamarkt	0.3453	G'woon Hazelnootpasta	2.59	750
+n436	dirk	0.34	Pranutti Hazelnootpasta	2.55	750
+n436	hoogvliet	0.3667	G'woon Hazelnootpasta 13%	2.75	750
+n436	jumbo	0.5686	Orinoko Hazelnootpasta 350 g	1.99	350
+n436	lidl	0.3187	Hazelnootpasta	2.39	750
+n436	plus	0.3933	PLUS Hazelnootpasta	2.95	750
+n436	poiesz	0.5971	OriNoko Hazelnootpasta	2.09	350
+n436	spar	0.5475	g'woon hazelnootpasta	2.19	400
+n443	ah	1.6056	Klene Puur honing	2.89	180
+n443	dekamarkt	1.0932	Melvita Woud honing knijpfles	3.99	365
+n443	dirk	1.3014	Melvita Honing zacht & rijk biologisch	4.75	365
+n443	hoogvliet	1.3096	Melvita Acacia honing	4.78	365
+n443	jumbo	3.1333	Diele Pastilles Honing 75 g	2.35	75
+n443	lidl	0.5686	Florimel Honing	1.99	350
+n443	plus	1.0658	Melvita Tijm honing	3.89	365
+n443	spar	1.0932	Melvita Honing Acacia	3.99	365
+n444	ah	0.6625	AH Chocoladepasta puur	2.65	400
+n444	dekamarkt	0.5686	Orinoko Chocoladepasta puur	1.99	350
+n444	dirk	0.6225	1 de Beste Chocoladepasta puur	2.49	400
+n444	hoogvliet	0.6225	G'woon Chocoladepasta puur	2.49	400
+n445	ah	0.9973	Sera Sourcherry jam	3.69	370
+n445	dekamarkt	1.03	De Ruijter Jam kleintjes extra 12 stuks	3.09	300
+n445	dirk	0.9967	De Ruijter Jam kleintjes extra 12 stuks	2.99	300
+n445	jumbo	1.0967	De Ruijter Kleintjes Extra Jam 12 x 25 g	3.29	300
+n445	lidl	0.5533	Alpen jam	2.49	450
+n445	plus	1.0967	De Ruijter Extra jam kleintjes	3.29	300
+n445	spar	1.5375	Hero jam	3.69	240
+n45	jumbo	0.3662	Jumbo Schorseneren 680 g	2.49	680
+n457	ah	0.6735	Roosvicee Rozenbotteljam	2.29	340
+n457	plus	0.6147	Roosvicee Rozenbotteljam	2.09	340
+n50	ah	0.2644	AH Sperziebonen fijn heel	1.19	450
+n50	dekamarkt	0.39	Sperziebonen	3.9	1000
+n50	dirk	0.338	Sperziebonen	3.38	1000
+n50	hoogvliet	0.338	Hoogvliet Sperziebonen	1.69	500
+n50	jumbo	0.3	Jumbo Biologisch Hele Sperziebonen 450g	1.35	450
+n50	lidl	0.298	Sperziebonen	1.49	500
+n50	plus	0.1988	PLUS Sperziebonen heel	1.59	800
+n50	spar	0.458	sperziebonen	2.29	500
+n5072	ah	0.956	Lassie Meer notenrijst	2.39	250
+n5074	ah	1.48	AH Oude kaassalade	2.59	175
+n5074	dekamarkt	1.5267	Kaassalade oud hollands	2.29	150
+n5074	hoogvliet	1.8	Johma Oude kaassalade	3.15	175
+n5074	jumbo	2.7071	Beemster Signature Kaassalade 140 g	3.79	140
+n5074	spar	3.5	Johma oude kaassalade	1.75	50
+n5095	dekamarkt	0.812	Lu Minicrackers naturel	2.03	250
+n5095	dirk	0.82	Lu Minicrackers naturel	2.05	250
+n5095	spar	0.98	Lu MiniCrackers Naturel	2.45	250
+n51	ah	0.4817	AH Spinazie grootverpakking	2.89	600
+n51	dekamarkt	0.4422	Spinazie ongewassen	1.99	450
+n51	dirk	0.3311	1 de Beste Spinazie ongewassen	1.49	450
+n51	hoogvliet	0.4975	Hoogvliet Spinazie	1.99	400
+n51	jumbo	0.4817	Jumbo Gewassen Spinazie 600 g	2.89	600
+n51	lidl	0.3978	Spinazie	1.79	450
+n51	plus	0.465	PLUS Spinazie gewassen GVP	2.79	600
+n51	poiesz	0.4867	Ongewassen Spinazie	2.19	450
+n51	spar	0.6125	spinazie	2.45	400
+n5101	hoogvliet	0.179	Melkan Rijstdrink	1.79	1000
+n5101	jumbo	0.179	Jumbo Rijstdrink Naturel 1 L	1.79	1000
+n5101	plus	0.165	Melkan Rijstdrink	1.65	1000
+n5104	plus	0.8386	Bolletje Knackebrod oerknack robuust volkoren	2.39	285
+n5104	spar	0.93	Bolletje knäckebrod oerknack robuust volkoren	2.79	300
+n5111	jumbo	2.632	Jumbo Macadamianoten Gezouten 125 g	3.29	125
+n5112	dekamarkt	2.0929	Bon Appetit Pistachenoten ongezouten	2.93	140
+n5112	jumbo	1.195	Jumbo Pistachenoten Ongezouten 200 g	2.39	200
+n5112	lidl	1.14	Ongezouten Californische pistachenoten	2.85	250
+n5112	spar	2.85	g'woon pistachenoten  ongezout	3.99	140
+n5116	jumbo	0.159	Jumbo Amandeldrink Naturel 1 L	1.59	1000
+n5120	ah	1.1395	Zespri Kiwi sungold	7.35	750
+n5120	dekamarkt	0.6186	Zespri Kiwi Green	3.99	750
+n5120	dirk	0.464	Kiwi green verpakt	3.99	1000
+n5120	lidl	0.9428	Kiwi	0.75	92
+n5120	plus	0.5802	PLUS Kiwi Green	4.99	1000
+n513	ah	2.3267	MinusL Goudse 48+ plakken	3.49	150
+n513	dekamarkt	1.4214	Violife Gouda flavour plakken	1.99	140
+n513	dirk	1.1933	Beemster Oude kaas 48+ plakken	1.79	150
+n513	jumbo	1.7071	Gouda Flavour Slices 140g	2.39	140
+n513	lidl	0.796	Gouda kaasringen	1.99	250
+n513	plus	1.4741	Hollandia Kaasrolletjes Gouda kaas	1.99	135
+n5149	hoogvliet	0.4825	Koopmans Biologische pannenkoekenmix meergranen	1.93	400
+n5149	jumbo	0.4475	Koopmans Pannenkoekenmix Meergranen 400 g	1.79	400
+n5149	plus	0.4225	Koopmans Pannenkoekenmix meergranen	1.69	400
+n5149	spar	0.4875	Koopmans pannenkoekenmix meergranen	1.95	400
+n5165	ah	2.2867	Huls Amb grunneger metworst	10.29	450
+n5165	dekamarkt	2.4045	Huls Groninger metworst	5.29	220
+n5165	dirk	1.7955	Slagerhuis Metworst 2 st.	3.95	220
+n5165	jumbo	2.192	Jumbo Brabantse Metworst ca. 125 g	2.74	125
+n5165	lidl	2.1545	Brabantse metworst	2.37	110
+n5165	plus	1.9389	Huls Achterhoekse metworst onverpakt	3.49	180
+n5165	spar	2.3038	metworst	5.99	260
+n517	ah	0.695	AH Smeerkaas ham 15+	1.39	200
+n517	dekamarkt	0.69	Melkan Smeerkaas naturel 20+	0.69	100
+n517	dirk	0.69	1 de Beste Smeerkaas naturel  20+	0.69	100
+n517	hoogvliet	0.59	Melkan Smeerkaas naturel 20+	0.59	100
+n517	jumbo	0.99	Jumbo Naturel Smeerkaas 15+ 100 g	0.99	100
+n517	lidl	0.59	Smeerkaas naturel 20+	1.18	200
+n517	plus	0.65	PLUS Smeerkaas naturel 20+	0.65	100
+n517	poiesz	1.19	Kaptein Smeerkaas Naturel 20+	1.19	100
+n5170	ah	0.4958	AH Terra Cannellini bonen	1.19	400
+n5170	dirk	0.5921	Hak Cannellini bonen	1.35	380
+n5170	hoogvliet	0.5789	Hak Cannellini bonen in pak	1.32	380
+n5170	jumbo	0.5658	Boon Cannellini Boon 380 g	1.29	380
+n5170	plus	1.2312	Bonduelle Cannellini bonen	2.29	310
+n5171	ah	0.7042	AH Terra Chilibonen	1.69	400
+n5171	hoogvliet	0.5375	G'woon Chilibonen	1.29	400
+n5171	jumbo	0.8728	HAK Chilibonen 380g	1.99	380
+n5171	lidl	0.3135	Chilibonen	0.79	420
+n5171	plus	1.2458	Bonduelle Chilibonen	2.99	400
+n5172	ah	0.6313	AH Terra Jonge kapucijners	1.25	330
+n5172	dekamarkt	0.8005	Hak Veldertjes	3.29	685
+n5172	hoogvliet	0.5714	G'woon Jonge kapucijners	1.2	350
+n5172	jumbo	1.2417	Bonduelle Jonge kapucijners 200 g	1.49	200
+n5172	plus	1.2417	Bonduelle Jonge kapucijners	1.49	200
+n5172	spar	0.9465	Hak Veldertjes Mals	3.89	685
+n5175	jumbo	0.2569	Sera Gekookte Witte Bonen 580g	1.49	580
+n5176	ah	0.4125	AH Terra Zwarte bonen	0.99	400
+n5176	dekamarkt	0.375	G'woon Zwarte bonen	0.9	400
+n5176	dirk	0.375	1 de Beste Zwarte bonen	0.9	400
+n5176	hoogvliet	0.5789	Hak Zwarte bonen in pak	1.32	380
+n5176	jumbo	0.4375	Jumbo Zwarte Bonen 400 g	1.05	400
+n5176	lidl	0.6226	Bonduelle zwarte bonen	0.99	265
+n5176	plus	0.4542	PLUS Zwarte bonen 0% zout toegevoegd	1.09	400
+n5176	spar	0.7237	Hak zwarte bonen in pak	1.65	380
+n5234	dekamarkt	1.992	Castello Danablu 50+	2.49	125
+n5234	dirk	1.592	Castello Danablu 50+	1.99	125
+n5234	hoogvliet	2.072	Castello Danablu	2.59	125
+n5234	plus	2.072	Castello Danablu	2.59	125
+n5234	poiesz	2.12	Castello Danablu 50+	2.65	125
+n5234	spar	2.26	Castello Blauwschimmelkaas Blue	3.39	150
+n5234	vomar	1.912	Arla danablu 125gr	2.39	125
+n5263	plus	0.3978	PLUS Bamigroenten	1.79	450
+n5264	ah	0.5	AH Luchtige crackers naturel	1.25	250
+n5264	dekamarkt	0.5	G'woon Luchtige crackers naturel	1.25	250
+n5264	dirk	0.476	1 de Beste Luchtige crackers naturel	1.19	250
+n5264	hoogvliet	0.496	G'woon Luchtige crackers naturel	1.24	250
+n5264	jumbo	0.516	Jumbo Luchtige Crackers Naturel 33 Stuks	1.29	250
+n5264	spar	0.636	g'woon crackers lucht naturel	1.5899999999999999	250
+n5265	ah	1.3062	Princes Tonijnstukken groenten	2.09	160
+n5265	dekamarkt	1.6208	Pescamar Atun tonijn tomatensaus	3.89	240
+n5265	dirk	1.5792	Pescamar Atun tonijn tomatensaus	3.79	240
+n5265	hoogvliet	1.625	Princes Tonijnstukken met groenten pikant	2.6	160
+n5265	jumbo	1.5267	Jumbo Tonijnstukken met Groenten in Pikante Tomatensaus 150 g	2.29	150
+n5265	lidl	3.0718	Tonijn in blik XXL	5.99	195
+n5265	plus	1.5946	Vis Marine Tonijnstukken met groente MSC	2.95	185
+n5265	vomar	2.2714	Almo blik tonijn 70gr	1.59	70
+n5267	ah	0.5475	AH Roerbakgroente Italiaans champignons	2.19	400
+n5267	dekamarkt	0.5375	Roerbakgroente champignon	2.15	400
+n5267	dirk	0.4975	1 de Beste Champignon roerbakgroente	1.99	400
+n5267	plus	0.5975	PLUS Roerbakgroenten Italiaans champignons	2.39	400
+n5267	spar	0.6475	Roerbakgroenten Champignon	2.59	400
+n5279	dekamarkt	0.5187	G'woon Bosvruchten	3.89	750
+n5279	dirk	0.5267	1 de Beste Bosvruchten	3.95	750
+n5279	hoogvliet	0.5187	G'woon Bosvruchten	3.89	750
+n5279	jumbo	0.5533	Jumbo Vriesverse Bosvruchten Voordeelverpakking 750 g	4.15	750
+n5279	plus	0.5187	PLUS Bosvruchten	3.89	750
+n5279	poiesz	0.3987	Zuivelhoeve Boer'n Yoghut Bosvruchten	2.99	750
+n5279	spar	1.125	Hipro proteïne pouch bosvruchten	2.25	200
+n5299	dekamarkt	0.1475	G'woon Appeltaartmix	0.59	400
+n5299	dirk	0.13	1 de Beste Appeltaartmix	0.52	400
+n53	ah	0.6719	AH Gesneden spitskool	2.15	400
+n53	dekamarkt	0.6813	Spitskool	1.09	200
+n53	dirk	0.6187	1 de Beste Spitskool	0.99	200
+n53	hoogvliet	0.7437	Hoogvliet Spitskool	1.19	200
+n53	jumbo	0.5906	Jumbo Gesneden Spitskool 400 g	1.89	400
+n53	plus	0.6531	PLUS Spitskool gesneden	2.09	400
+n53	spar	0.7031	spitskool	2.25	400
+n530	dekamarkt	0.735	G'woon Pannenkoekenmix shaker naturel	1.47	200
+n530	dirk	0.73	Dr. Oetker Pannenkoekenmix american origineel	2.19	300
+n530	hoogvliet	1.0571	Koopmans Pannenkoekenmix origineel schudfles	1.85	175
+n530	jumbo	0.2725	Koopmans Pannenkoekenmix Origineel 400 g	1.09	400
+n530	lidl	0.745	Pannenkoekenmix	1.49	200
+n530	plus	0.2725	Koopmans Pannenkoekenmix origineel	1.09	400
+n530	spar	0.3125	Koopmans pannenkoekenmix origineel	1.25	400
+n5306	hoogvliet	0.145	Melkan Melk lactosevrij	1.45	1000
+n5306	jumbo	0.199	Arla Lactofree volle melk lactosevrij 1L	1.99	1000
+n5306	plus	0.199	Arla Lactofree volle melk lactosevrij	1.99	1000
+n531	plus	0.4875	Koopmans Poffertjesmix origineel	1.95	400
+n532	lidl	0.398	Chocoladepudding	1.99	500
+n5326	ah	2.2475	AH Verse mosselen	8.99	2000
+n5326	dekamarkt	1.9975	Premier Mosselen medium	7.99	2000
+n5326	dirk	2.745	Premier Actie mosselen medium	5.49	1000
+n5326	hoogvliet	2.4975	Vismarine Mosselen	9.99	2000
+n5326	jumbo	2.4975	Jumbo Mosselen Super 2KG	9.99	2000
+n5326	lidl	2.2475	Mosselen MSC	8.99	2000
+n5326	plus	2.2475	PLUS Oosterschelde mosselen	8.99	2000
+n5326	vomar	3.6479	Ouwehand mosselen 355 gram	2.59	355
+n5330	dirk	0.6591	1 de Beste Paprika geroosterd knoflook	1.75	295
+n5340	dekamarkt	0.3656	G'woon Roomijs 3 chocolades	3.29	900
+n5340	hoogvliet	0.4711	G'woon roomijs 3 chocolades	4.24	900
+n5340	poiesz	0.41	g'woon Roomijs 3 Chocolades	3.69	900
+n5340	spar	0.9032	g'woon roomijs drie chocolades	4.29	475
+n5345	ah	0.279	AH Roomijs vanille	2.79	1000
+n5345	dekamarkt	0.249	G'woon Roomijs vanille	2.49	1000
+n5345	dirk	0.249	1 de Beste Roomijs vanille	2.49	1000
+n5345	hoogvliet	0.5067	Hertog Vanille roomijs	4.56	900
+n5345	jumbo	0.5121	Jumbo Roomijs IJsstam Vanille 330 g	1.69	330
+n5345	plus	0.279	PLUS Roomijs vanille	2.79	1000
+n5345	spar	0.658	g'woon roomijs vanille	3.29	500
+n5346	jumbo	0.3192	Jumbo Schepijs Bourbon Vanille 2500ML	3.99	1250
+n5346	poiesz	0.638	Poiesz Noordertrots Ambachtelijk Schepijs Boeren Vanille	3.19	500
+n5347	lidl	0.2483	Vruchtenijs	1.49	600
+n5349	dekamarkt	0.16	G'woon Pannenkoekenmix volkoren	0.64	400
+n5349	dirk	0.155	1 de Beste Pannenkoekenmix volkoren	0.62	400
+n5349	plus	0.3225	Koopmans Pannenkoekenmix volkoren	1.29	400
+n5349	spar	0.4975	Koopmans pannenkoekenmix volkoren	1.99	400
+n5369	ah	3.1923	AH Galia meloen	2.49	150
+n5369	hoogvliet	3.1538	Healthyhand Meloen medley	2.46	150
+n5369	plus	1.1474	PLUS Halve galia meloen	1.79	300
+n5369	spar	3.1923	Spar meloen medley 150 gram	2.49	150
+n5397	ah	0.6056	Mai Wa Instant Japanese ramen noodles	1.09	180
+n5397	dekamarkt	1.1832	NongShim Instant noodles shin stir-fry ramyun	1.55	131
+n5397	dirk	2.2533	NongShim Instant noodles kimchi	1.69	75
+n5397	jumbo	2.0714	Yum Yum Instant Noodles Beef Flavour 70 g	1.45	70
+n5397	lidl	0.6353	Instant noodles	0.54	85
+n5397	plus	0.9867	Suntat Instant noodle kip	0.74	75
+n5404	jumbo	1.2	Jumbo Zaden en Pitten Mix 250 g	3.0	250
+n5404	lidl	1.6857	Zaden fijn PG3	0.59	35
+n541	ah	0.665	AH Smeuïge pindakaas stukjes noot	3.99	600
+n541	dekamarkt	0.36	G'woon Pindakaas met stukjes pinda	2.16	600
+n541	dirk	0.4967	1 de Beste 100% pindakaas met stukjes pinda	2.98	600
+n541	hoogvliet	0.3583	G'woon Pindakaas met stukjes pinda	2.15	600
+n541	jumbo	0.3483	Jumbo Pindakaas met Stukjes Pinda 600 g	2.09	600
+n541	plus	0.3983	PLUS Pindakaas met stukjes pinda	2.39	600
+n541	spar	0.8138	Calvé pindakaas met stukjes noot	5.29	650
+n5410	ah	0.438	Blue Band Halvarine palmolievrij voordeelpak	2.19	500
+n5410	dekamarkt	0.43	Blue Band Halvarine	2.15	500
+n5410	dirk	0.398	Blue Band Halvarine	1.99	500
+n5410	hoogvliet	0.41	Blue Band Halvarine	2.05	500
+n5410	jumbo	0.438	Blue Band Halvarine 500g	2.19	500
+n5410	plus	0.438	Blue Band Halvarine	2.19	500
+n5410	spar	0.49	Blue Band halvarine	2.45	500
+n5412	ah	2.9045	BFree Pita broodjes glutenvrij	6.39	220
+n5412	jumbo	0.975	Yam - Desem Brood Glutenvrij 600g	5.85	600
+n5412	lidl	1.1056	Bio glutenvrij brood	1.99	180
+n5412	plus	1.6303	Damhert 4 Sneetjes Glutenvrij Classico Brood	2.69	165
+n5412	poiesz	0.8317	Yam Brood Bruin Glutenvrij	4.99	600
+n5413	ah	0.7479	AH Glutenvrij Brood donker meerzaden half	3.59	480
+n5418	ah	0.298	AH Gnocchi	1.49	500
+n5418	dekamarkt	0.7225	Daily Chef Gnocchi	2.89	400
+n5418	dirk	0.7125	Daily Chef Gnocchi	2.85	400
+n5418	jumbo	0.598	Rummo Potato Gnocchi 500 g	2.99	500
+n5418	lidl	0.338	Gnocchi	1.69	500
+n5418	plus	0.538	La Molisana Gnocchi patata con spinaci	2.69	500
+n5424	jumbo	0.596	Jumbo Biologisch Halvarine 250 g	1.49	250
+n5427	dekamarkt	0.264	Oatly Haverdrink vol	2.64	1000
+n5427	dirk	0.275	Oatly Haverdrink barista bio	2.75	1000
+n5427	hoogvliet	0.135	Melkan Haverdrink original	1.35	1000
+n5427	jumbo	0.149	Jumbo Haverdrink Naturel 1 L	1.49	1000
+n5427	lidl	0.125	Bio haverdrink XXL	1.25	1000
+n5427	plus	0.145	Melkan Haverdrink UHT	1.45	1000
+n5427	spar	0.159	Melkan haverdrink	1.5899999999999999	1000
+n5427	vomar	0.239	Oatly haverdrink barista 1l	2.39	1000
+n5430	ah	6.6481	Leev Yes peas kikkererwten zeezout	3.59	90
+n5450	ah	0.3311	AH Roerbakgroente Mexicaans	1.49	450
+n5450	dekamarkt	0.6125	Roerbakgroente mexicaanse stijl	2.45	400
+n5450	plus	0.5975	PLUS Roerbakgroenten Mexicaanse stijl	2.39	400
+n5450	spar	0.6975	roerbakgroenten Mexicaans	2.79	400
+n5459	ah	0.1389	AH Rode uien	1.25	1000
+n5459	dekamarkt	0.1322	Rode uien net	1.19	1000
+n5459	dirk	0.11	1 de Beste Rode uien	0.99	1000
+n5459	hoogvliet	0.1433	Hoogvliet Rode uien	1.29	1000
+n5459	jumbo	0.1389	Jumbo Rode Uien Extra Groot 1 kg	1.25	1000
+n5459	lidl	0.1319	Rode uien	0.89	750
+n5459	plus	0.21	PLUS Rode uien	1.89	1000
+n546	ah	0.3833	AH Oriental borrelnoten	1.15	300
+n546	dekamarkt	0.3833	G'woon Borrelnoten pittig	1.15	300
+n546	dirk	0.38	1 de Beste Borrelnoten mild	1.14	300
+n546	hoogvliet	0.9782	Duyvis Borrelnoten provencale	2.69	275
+n546	jumbo	0.45	Jumbo Borrelnoten Provençaals 300 g	1.35	300
+n546	lidl	0.38	Borrelnoten	1.14	300
+n546	plus	0.5	PLUS Borrelnoten Mild	1.5	300
+n546	poiesz	0.7236	Epixs borrelnoten crunch	1.99	275
+n546	spar	0.5833	g'woon borrelnoten	1.75	300
+n5462	ah	0.7174	AH Dikke maiswafels met zeezout	0.99	138
+n5462	dekamarkt	0.6846	Bio+ Maiswafels met zeezout	0.89	130
+n5462	dirk	0.6615	Bio+ Maiswafels met zeezout	0.86	130
+n5462	jumbo	0.6583	Jumbo Dikke Maïswafels Zeezout 120 g	0.79	120
+n5462	plus	0.8923	BIO+ Maiswafels met Zeezout	1.16	130
+n5462	spar	1.75	Bio+ maiswafels met zout	1.75	100
+n5463	jumbo	0.135	Jumbo Haverdrink Ongezoet 1 L	1.35	1000
+n5463	spar	0.309	Alpro drink haver ongezoet	3.09	1000
+n5468	ah	0.6	AH Soepstengels volkoren	0.75	125
+n5468	dekamarkt	0.592	G'woon Soepstengels volkoren	0.74	125
+n5468	dirk	0.592	1 de Beste Soepstengels volkoren	0.74	125
+n5468	hoogvliet	0.592	G'woon Soepstengels volkoren	0.74	125
+n5468	jumbo	0.6	Jumbo Soepstengels Volkoren 125 g	0.75	125
+n5468	plus	0.632	PLUS Soepstengels volkoren	0.79	125
+n5475	dekamarkt	1.18	DekaVers Kipkrokantschnitzel 4 st.	4.72	400
+n5475	dirk	1.545	Vivera Krokante kipschnitzel	3.09	200
+n5475	hoogvliet	1.595	Hoogvliet Kipkrokantschnitzel	3.19	200
+n5475	lidl	1.395	Kipkrokantschnitzel	2.79	200
+n5505	lidl	0.3211	Peulvruchten	2.89	900
+n5518	ah	0.3475	AH Biologisch Volkoren couscous	1.39	400
+n5518	dekamarkt	0.478	Riso Vignola Couscous volkoren	2.39	500
+n5518	hoogvliet	0.5375	Smaakt Couscous volkoren	2.15	400
+n5518	jumbo	0.3725	Jumbo Durum Couscous Volkoren 400 g	1.49	400
+n5518	plus	0.498	Dari Volkoren couscous compleet	2.49	500
+n5518	spar	0.7964	Lassie bio volkoren couscous	2.19	275
+n5524	plus	8.2778	Silvo Mix varkensvlees	1.49	18
+n5537	jumbo	1.4074	Jumbo Jalapeño Peper Plakjes 225 g	1.9	225
+n5538	jumbo	0.4867	Arla Lactofree magere kwark naturel lactosevrij 450g	2.19	450
+n5538	plus	0.4778	Arla Lactofree magere kwark lactosevrij	2.15	450
+n5543	jumbo	0.189	Jumbo Kokosdrink Ongezoet 1 L	1.89	1000
+n5544	jumbo	0.4938	Nature's Charm Shredded Young Green Jackfruit in Water 565 g	2.79	565
+n5547	ah	0.7469	AH Terra Biologische falafel	2.39	320
+n5547	dekamarkt	1.116	Maza Falafel	2.79	250
+n5547	dirk	1.545	Vivera Falafel	3.09	200
+n5547	jumbo	0.7194	Jumbo Falafel Naturel Voordeelverpakking 360 g	2.59	360
+n5547	plus	1.196	Maza Falafel  hot 'n spicy	2.99	250
+n556	jumbo	1.7798	Jumbo's Camembert Chimichurri Kaas 168 g	2.99	168
+n5565	dekamarkt	1.9944	Valess Schnitzel sate 2 stuks	3.59	180
+n5565	dirk	2.0278	Valess Schnitzel sate 2 stuks	3.65	180
+n5565	plus	2.05	Valess Schnitzel	3.69	180
+n5565	spar	2.3833	Valess schnitzel Milner	4.29	180
+n5567	dekamarkt	0.5	G'woon Luchtige crackers volkoren	1.25	250
+n5567	dirk	0.476	1 de Beste Luchtige crackers volkoren	1.19	250
+n5567	hoogvliet	0.5	G'woon Luchtige crackers volkoren	1.25	250
+n557	lidl	0.258	Bleekselderij	1.29	500
+n557	spar	0.31	bleekselderij	1.55	500
+n5573	ah	0.5797	AH Terra Tempeh	2.29	395
+n5573	jumbo	0.5797	Jumbo Tempeh Naturel 395g	2.29	395
+n5573	plus	0.5797	GoodBite Tempeh block	2.29	395
+n5576	ah	0.269	AH Biologisch Speltbloem	2.69	1000
+n5576	dekamarkt	0.5725	Smaakt Speltbloem	2.29	400
+n5576	dirk	0.5875	Smaakt Speltbloem	2.35	400
+n5576	plus	0.5975	Smaakt Speltbloem bio	2.39	400
+n5577	ah	0.5725	Smaakt Volkoren speltmeel	2.29	400
+n5577	dekamarkt	0.252	Bio+ Speltmeel volkoren	2.52	1000
+n5577	jumbo	0.249	Molensteen biologisch volkoren speltmeel 1000g	2.49	1000
+n5577	plus	0.249	BIO+ Speltmeel volkoren	2.49	1000
+n5577	spar	0.6625	Smaakt Speltmeel Volkoren	2.65	400
+n5579	ah	1.7475	AH Biologisch Amandelmeel	6.99	400
+n5579	dekamarkt	2.825	Smaakt Amandelmeel	5.65	200
+n5579	hoogvliet	1.645	Bio+ Amandelmeel	3.29	200
+n5579	jumbo	1.845	Molensteen Amandelmeel 200g	3.69	200
+n5579	lidl	1.745	Californische amandelmeel	3.49	200
+n5579	plus	2.795	Smaakt Amandelmeel bio	5.59	200
+n5579	spar	3.55	Lokaal amandelmeel	3.55	100
+n5580	jumbo	0.378	Koopmans Tarwegriesmeel Naturel 500 g	1.89	500
+n5580	plus	0.29	Koopmans Tarwegriesmeel	1.45	500
+n5581	plus	0.6225	Smaakt Havermeel volkoren bio	2.49	400
+n5582	dekamarkt	0.558	Smaakt Speltvlokken	2.79	500
+n5582	plus	0.458	Better Pete Speltvlokken Bio	2.29	500
+n5582	spar	0.658	Lokaal speltvlokken	3.29	500
+n5583	plus	0.37	Smaakt Gerstevlokken bio	1.85	500
+n5585	hoogvliet	0.6725	Koopmans Pannenkoekenmix glutenvrij	2.69	400
+n5585	plus	0.7225	Koopmans pannenkoekenmix glutenvrij	2.89	400
+n5586	dekamarkt	0.8125	Smaakt Kokosmeel	3.25	400
+n5586	dirk	0.6633	Bio+ Kokosmeel	1.99	300
+n5586	plus	0.6475	Smaakt Kokosmeel bio	2.59	400
+n559	dekamarkt	0.4975	Koolraap	1.99	400
+n559	jumbo	0.5725	Jumbo Gesneden Koolraap 400 g	2.29	400
+n559	spar	0.6475	koolraap	2.59	400
+n5591	ah	0.2419	AH Tortilla naturel wraps large 12 stuks	1.79	740
+n5591	dekamarkt	0.2419	Banderos Tortilla wraps 12 st.	1.79	740
+n5591	dirk	0.2541	Banderos Tortilla wraps 6 stuks	0.94	370
+n5591	jumbo	0.7811	La Morena Tortilla Wrap Naturel 370 g	2.89	370
+n5591	lidl	0.2284	Tortilla wraps XXL	1.69	740
+n5591	plus	0.2554	Banderos Tortilla wraps 12st	1.89	740
+n5591	spar	0.2946	Spar Wraps Flour Tortilla	1.09	370
+n5592	ah	0.449	AH Muesli fruit & noten	4.49	1000
+n5592	dekamarkt	0.4875	Bio+ Muesli noten en fruit	1.95	400
+n5592	dirk	0.4875	Bio+ Muesli noten en fruit	1.95	400
+n5592	hoogvliet	0.4778	G'woon Muesli fruit en noten	2.15	450
+n5592	jumbo	0.498	Jumbo Muesli Vier Noten 500 g	2.49	500
+n5592	plus	0.44	PLUS Muesli fruit & noten	1.98	450
+n5592	spar	0.5725	Bio+ muesli noten en fruit	2.29	400
+n5592	vomar	0.4875	Bio+ muesli noten fruit 400gr	1.95	400
+n5593	ah	0.75	AH Biologisch Krokante muesli naturel	2.25	300
+n5593	dekamarkt	0.558	G'woon Granola naturel	2.79	500
+n5593	dirk	1.0714	TastyBasics Granola naturel	3.75	350
+n5593	hoogvliet	0.9925	Quaker Cruesli de ruijter	3.97	400
+n5593	lidl	0.6644	Quaker Cruesli 4nuts	2.99	450
+n5593	plus	0.8867	Quaker Cruesli Raisin & Hazelnut	3.99	450
+n5594	ah	0.3944	AH Krokante muesli fruit	3.55	900
+n5594	dekamarkt	0.8556	Quaker Cruesli multifruit	3.85	450
+n5594	dirk	0.3878	1 de Beste Muesli krokant multifruit	3.49	900
+n5594	hoogvliet	0.86	Quaker Cruesli multifruit	3.87	450
+n5594	jumbo	0.92	Jumbo's Granola Rood Fruit 325 g	2.99	325
+n5594	lidl	0.41	Krokante muesli fruit	3.69	900
+n5594	plus	0.8867	Quaker Cruesli multifruit	3.99	450
+n5594	vomar	0.8556	Quaker cruesli multifruit 450g	3.85	450
+n5595	ah	0.449	AH Muesli fruit pitten & zaden	4.49	1000
+n5595	jumbo	0.475	Jumbo Muesli Fruit, Zaden & Pitten 1 kg	4.75	1000
+n5602	ah	2.995	AH Garnalen knoflook	5.99	200
+n5602	dekamarkt	1.6111	Vis Marine Garnalen knoflook	7.25	450
+n5602	dirk	1.5978	Klaas Puul Wok garnalen knoflook	7.19	450
+n5602	hoogvliet	1.4644	Vis Marine Knoflook garnalen	6.59	450
+n5602	jumbo	1.6644	Jumbo Garnalen Knoflook 450 g	7.49	450
+n5602	plus	2.9667	PLUS Wokgarnalen rauw knoflook	4.45	150
+n5602	spar	2.5267	wokgarnalen knoflook	3.79	150
+n5605	vomar	19.5714	G'woon 7 granen ontbijt	1.37	7
+n561	plus	0.6225	PLUS Postelein	2.49	400
+n5610	plus	0.7618	Smaakt Lupinebonen bio	2.59	340
+n562	ah	0.8708	AH Prei	2.09	400
+n562	dekamarkt	0.825	Prei fijn	0.99	200
+n562	dirk	0.825	1 de Beste Prei fijn	0.99	200
+n562	hoogvliet	0.3967	Hoogvliet Prei	1.19	500
+n562	jumbo	0.8708	Jumbo Gesneden Prei 400 g	2.09	400
+n562	plus	0.8708	PLUS Prei grofgesneden	2.09	400
+n562	spar	1.0417	prei fijn	1.25	200
+n564	ah	0.2333	AH Spruitjes	1.05	450
+n564	dekamarkt	0.198	Hollandse Kleine spruitjes	1.98	1000
+n564	dirk	0.198	Hollandse Kleine spruitjes	1.98	1000
+n564	hoogvliet	0.29	Hoogvliet Kleine spruitjes	1.45	500
+n564	jumbo	0.74	Jumbo Geschoonde Spruitjes 350 g	2.59	350
+n564	plus	0.6829	PLUS Spruitjes geschoond	2.39	350
+n566	ah	0.5625	AH Cocktailworstjes	2.25	400
+n566	dekamarkt	0.5073	G'woon Frankfurter 6 st.	2.79	550
+n566	dirk	0.5073	1 de Beste Frankfurters 6 stuks	2.79	550
+n566	hoogvliet	0.5073	G'woon Premium Frankfurters	2.79	550
+n566	jumbo	0.5225	Jumbo Cocktailworst ca. 30 Stuks	2.09	400
+n566	plus	0.5722	PLUS Cocktailworstjes BLK 1 ster	3.09	540
+n566	poiesz	1.0345	Unox Frankfurters	5.69	550
+n566	spar	1.1436	Unox frankfurters	6.29	550
+n567	ah	0.6568	Salland Boterhamworst	2.89	440
+n567	dekamarkt	1.58	DekaVers Ardenner boterhamworst	2.37	150
+n567	dirk	0.9267	Landerij Boterhamworst	1.39	150
+n567	hoogvliet	0.8533	Boterhamworst	1.28	150
+n567	jumbo	0.6568	Boterhamworst 440 g	2.89	440
+n567	lidl	0.745	Boterhamworst XXL	1.49	200
+n567	plus	0.9267	Neutraal Boterhamworst BLK	1.39	150
+n567	poiesz	1.79	Ardenner Boterhamworst	1.79	100
+n567	spar	1.3267	Slagerskwaliteit Slagerskwaliteit Boterhamworst	1.99	150
+n568	jumbo	1.4286	Jumbo Bloedworst ca. 105 g	1.5	105
+n568	plus	1.4	PLUS Bloedworst	1.75	125
+n57	lidl	1.2438	Suikermais gekookt	1.99	160
+n575	hoogvliet	0.4422	Heinz Sandwichspread naturel	1.99	450
+n58	ah	0.796	AH Taugé grootverpakking	1.99	250
+n58	dekamarkt	0.795	Tauge	1.59	200
+n58	dirk	0.78	1 de Beste Tauge	1.95	250
+n58	hoogvliet	0.78	Hoogvliet Tauge	1.95	250
+n58	jumbo	0.796	Jumbo Taugé 250 g	1.99	250
+n58	lidl	0.792	Taugé	0.99	125
+n58	plus	0.795	PLUS Tauge	1.59	200
+n58	spar	0.975	Taugé zak 200 gram	1.95	200
+n590	ah	0.625	Smaakt Tarwezemelen	1.25	200
+n590	hoogvliet	0.495	Zonnatura Tarwezemelen	0.99	200
+n590	jumbo	0.695	Tarwezemelen 200 g	1.39	200
+n590	plus	0.625	Smaakt Tarwezemelen bio	1.25	200
+n590	spar	0.795	Lokaal biologische tarwezemelen	1.5899999999999999	200
+n596	ah	0.3333	AH Knäckebröd goudbruin	1.25	375
+n596	dekamarkt	0.3333	G'woon Knackebrod goudbruin	1.25	375
+n596	dirk	0.6082	Wasa Knackebrod goudbruin	1.49	245
+n596	hoogvliet	0.3333	G'woon Knackebrod goudbruin	1.25	375
+n596	jumbo	0.344	Jumbo Knäckebröd Goudbruin 5 x 5 Stuks	1.29	375
+n596	plus	0.3973	PLUS Knackebrod goudbruin	1.49	375
+n596	spar	0.3867	g'woon knäckebröd goudbruin	1.45	375
+n601	ah	0.7598	Allegro Olijfolie pomace	6.99	920
+n601	dekamarkt	0.8457	Miras Pomace olijfolie	3.89	460
+n601	dirk	0.8315	1 de Beste Olijfolie traditioneel	7.65	920
+n601	hoogvliet	1.0533	Goldsun Olijfolie extra vierge	9.69	920
+n601	jumbo	0.8685	Jumbo Olijfolie Classico 1 L	7.99	920
+n601	lidl	0.6507	Olijfolie extra vierge	4.49	690
+n601	plus	1.0098	PLUS Olijfolie traditioneel	9.29	920
+n601	poiesz	1.258	Bio+ Olijfolie Extra Vierge	6.29	500
+n601	spar	1.318	Bio+ olijfolie bio	6.59	500
+n601	vomar	1.3022	Bio+ olijfolie e.v. 500 ml	5.99	460
+n602	ah	1.1837	AH Wilde zalmfilets	7.99	675
+n602	dekamarkt	1.1593	Vis Marine Wilde zalm	6.26	540
+n602	dirk	1.1574	Vis Marine Wilde zalm	6.25	540
+n602	hoogvliet	1.1759	Vis Marine Wilde zalm	6.35	540
+n602	jumbo	2.49	Jumbo's Zalm Dumbbells 100 g	2.49	100
+n602	lidl	4.1583	Wilde Sockeye zalm	4.99	120
+n602	plus	2.8609	Adventuros training treats rijk aan zalm	3.29	115
+n602	spar	3.325	Tartaar Zalm	3.99	120
+n605	ah	0.169	Bessola Krentjebrij	1.69	1000
+n605	dekamarkt	0.166	Bessola Krentjebrij	1.66	1000
+n605	dirk	0.165	Bessola Krentjebrij	1.65	1000
+n605	jumbo	0.189	Bessola Krentjebrij 1 kg	1.89	1000
+n605	plus	0.149	Bessola Krentjebrij	1.49	1000
+n606	dekamarkt	1.1065	Becel Olie blend classic	5.09	460
+n606	dirk	1.0848	Becel Olie blend classic	4.99	460
+n606	jumbo	1.1935	Becel Olie Blend Classic 0,5 L	5.49	460
+n606	plus	1.0848	Becel Olie blend classic	4.99	460
+n606	vomar	1.038	Becel dieet olie 500ml	5.19	500
+n608	ah	1.6043	AH Druivenpit olie	3.69	230
+n608	dekamarkt	3.7228	Zwitsal Rijke olie	6.85	184
+n608	dirk	1.8967	Garnier Cremespoeling argan- & camelia olie	3.49	184
+n608	jumbo	0.798	Jumbo Wok Olie 500ML	3.99	500
+n608	lidl	1.3022	Antico Frantoio olie	5.99	460
+n608	plus	3.9087	BioToday MCT olie 100% bio	8.99	230
+n608	spar	0.599	Diamant olie	5.99	1000
+n638	spar	1.098	Slagershuis cervelaatworst	5.49	500
+n639	ah	1.9882	AH Ontbijtspek	1.69	85
+n639	dirk	1.045	Landerij Ontbijtspek	2.09	200
+n639	hoogvliet	1.9267	Slagers kwaliteit Ontbijtspek	2.89	150
+n639	jumbo	1.8929	Jumbo Ontbijtspek 140 g	2.65	140
+n639	lidl	1.045	Ontbijtspek	2.09	200
+n639	plus	1.795	PLUS Ontbijtspek	3.59	200
+n639	poiesz	2.5	Ontbijtspek	2.5	100
+n639	spar	2.46	Slagerskwaliteit Slagerskwaliteit Ontbijtspek	3.69	150
+n639	vomar	1.045	Ontbijtspek 1* 200 gram	2.09	200
+n640	ah	0.476	AH Leverworst	1.19	250
+n640	dekamarkt	0.33	Verberghe Saksische leverworst naturel	0.99	300
+n640	dirk	0.3267	Verberghe Leverworst saksisch	0.49	150
+n640	hoogvliet	0.42	Slagers Leverworst	1.05	250
+n640	jumbo	0.43	Jumbo Leverworst 500 g	2.15	500
+n640	plus	0.338	Verberghe Leverworst	1.69	500
+n640	spar	0.9364	Kips slagers leverworst	3.09	330
+n641	ah	1.46	AH Bacon	2.19	150
+n641	dekamarkt	1.1933	Slagerskwaliteit Baconreepjes	1.79	150
+n641	dirk	1.3267	1 de Beste Bacon	1.99	150
+n641	hoogvliet	1.9933	Slagers kwaliteit Baconreepjes	2.99	150
+n641	jumbo	1.9933	Jumbo Bak Bacon Plakken 150 g	2.99	150
+n641	lidl	0.9967	Bak bacon	2.99	300
+n641	plus	2.5933	Slagers kwaliteit Baconreepjes	3.89	150
+n641	spar	3.2	Spar Bacon	3.2	100
+n642	jumbo	1.7471	Jumbo Roompaté ca. 170 g	2.97	170
+n65	ah	1.46	AH Veldsla grootverpakking	2.19	150
+n65	dekamarkt	1.4706	Veldsla	1.25	85
+n65	dirk	1.4	1 de Beste Veldsla	1.19	85
+n65	hoogvliet	1.5176	Hoogvliet Veldsla	1.29	85
+n65	jumbo	1.5	Jumbo Veldsla 150 g	2.25	150
+n65	plus	1.3933	PLUS Veldsla	2.09	150
+n65	spar	1.7059	veldsla	1.45	85
+n650	lidl	0.2297	Diepvries rode kool met appel	1.47	800
+n654	ah	0.4475	AH Cottage cheese	1.79	400
+n654	dekamarkt	0.475	Melkan Cottage cheese	0.95	200
+n654	dirk	0.475	1 de Beste Cottage cheese	0.95	200
+n654	hoogvliet	0.49	Melkan Cottage cheese	0.98	200
+n654	jumbo	0.3625	Jumbo Cottage Cheese 400 g	1.45	400
+n654	lidl	0.3725	Cottage cheese	1.49	400
+n654	plus	0.445	Melkan Cottage Cheese	0.89	200
+n654	spar	0.425	Melkan Melkan Cottage Cheese	0.85	200
+n655	ah	0.4643	AH Beschuit volkoren	0.65	140
+n655	dekamarkt	0.448	G'woon Beschuit volkoren 13 stuks	0.56	125
+n655	dirk	0.448	1 de Beste Beschuit volkoren	0.56	125
+n655	hoogvliet	0.448	G'woon Beschuit volkoren	0.56	125
+n655	jumbo	0.392	Jumbo Beschuit Volkoren 13 Stuks	0.49	125
+n655	lidl	0.4071	Beschuit volkoren	0.57	140
+n655	plus	0.424	PLUS Beschuit volkoren	0.53	125
+n655	poiesz	1.625	Ambachtelijk Beschuit Meergranen	2.99	184
+n655	spar	0.552	g'woon beschuit volkoren	0.69	125
+n657	ah	0.229	Optimel Drinkyoghurt limited edition	2.29	1000
+n657	dirk	0.219	Optimel Drinkyoghurt	2.19	1000
+n657	hoogvliet	0.219	Optimel Drinkyoghurt limited edition	2.19	1000
+n657	lidl	0.128	Drinkyoghurt framb	1.28	1000
+n657	poiesz	0.239	Optimel Drinkyoghurt Cheeky Cheery 0% Vet	2.39	1000
+n657	spar	0.259	Optimel drinkyoghurt limited edition	2.59	1000
+n667	hoogvliet	1.032	Sum & Sam Pittige cassave	1.29	125
+n667	plus	1.9857	Go-Tan Cassave	1.39	70
+n67	ah	0.26	AH Witlof los	1.3	500
+n67	dekamarkt	0.25	Hollandse Witlof	2.5	1000
+n67	dirk	0.238	Hollandse Witlof	2.38	1000
+n67	hoogvliet	0.398	Hoogvliet Witlof	1.99	500
+n67	jumbo	0.25	Jumbo Witlof - 2-3 Personen - 500g	1.25	500
+n67	lidl	0.238	Witlof	1.19	500
+n67	plus	0.278	PLUS Witlof	1.39	500
+n67	spar	0.518	witlof grof	2.59	500
+n671	ah	0.4157	AH Zoete aardappelblokjes	1.59	450
+n671	dekamarkt	0.3271	Zoete aardappelen	2.78	1000
+n671	dirk	0.28	Zoete aardappelen	2.38	1000
+n671	hoogvliet	0.3412	Hoogvliet Zoete aardappelen	1.45	500
+n671	jumbo	0.4418	Jumbo Zoete Aardappelblokjes 450 g	1.69	450
+n671	lidl	2.1059	Bio zoete aardappel	1.79	100
+n671	plus	0.3271	PLUS zoete aardappel	2.78	1000
+n671	poiesz	0.3976	Zoete aardappel	1.69	500
+n671	spar	0.4336	zoete aardappel	2.58	700
+n680	jumbo	0.4397	Sera Okra 680g	2.99	680
+n682	ah	1.4653	AH Pompoen lasagneblad	3.59	350
+n682	dekamarkt	0.5686	DekaVers Batard desem pompoen	1.99	500
+n682	dirk	0.8893	Pompoen	2.49	400
+n682	hoogvliet	0.8893	Hoogvliet Pompoenblokjes	2.49	400
+n682	jumbo	0.5523	Jumbo Pompoen Stampot Verspakket 4 Personen	5.49	1420
+n682	plus	1.0857	Bonbebe Bio M0414 Pompoen	0.95	125
+n689	ah	0.6571	AH Avocado	2.99	650
+n689	dekamarkt	0.6571	Voordeel avocado	2.99	650
+n689	dirk	0.6352	Voordeel avocado	2.89	650
+n689	jumbo	0.6571	Jumbo Biologisch Avocado ca. 650 g	2.99	650
+n689	lidl	0.6102	Avocado's in net	2.99	700
+n689	plus	0.6571	PLUS Avocado (ongerijpt)	2.99	650
+n691	hoogvliet	0.5864	Hoogvliet Limoen 3 stuks	1.29	220
+n691	lidl	0.2475	Limoen	0.99	400
+n692	ah	1.9481	AH Mango	3.75	275
+n692	dirk	0.76	1 de Beste Mango stukjes	3.99	750
+n692	hoogvliet	1.7857	Healthyhand Mangoblokjes	3.0	240
+n692	jumbo	1.1371	Jumbo Smoothiemix Mango Dream 250 g	1.99	250
+n692	lidl	3.3238	Bio mango stukjes	3.49	150
+n692	plus	0.7638	PLUS Mangostukjes	4.01	750
+n692	spar	1.6071	Hipro proteine pouch mango	2.25	200
+n696	ah	0.7225	Smaakt Maismeel biologisch	2.89	400
+n696	dekamarkt	0.2333	Valle Del Sole Maismeel rood	2.1	900
+n696	dirk	0.21	Valle Del Sole Maismeel rood	1.89	900
+n696	lidl	0.299	Witte maïsmeel	2.99	1000
+n696	plus	0.6725	Smaakt Maismeel bio	2.69	400
+n71	ah	0.1879	AH Wortelen	1.15	680
+n71	dekamarkt	0.3533	Worteltjes geschrapt voordeel	1.59	500
+n71	dirk	0.1618	1 de Beste Wortelen extra fijn	0.99	680
+n71	hoogvliet	0.2422	Hoogvliet Hollandse worteltjes	1.09	500
+n71	jumbo	0.1544	Jumbo Wortelen 1 kg	1.39	1000
+n71	lidl	0.1322	Biologische wortelen	1.19	1000
+n71	plus	0.1618	PLUS Wortelen extra fijn	0.99	680
+n71	spar	0.4422	worteltjes geschrapt	1.99	500
+n718	plus	3.2231	Stegeman Fuet Parmezaanse kaas	4.19	130
+n718	spar	4.4833	Galbani Galbani Parmezaanse kaas Parmigiano Reggiano DOP Grattugiato Intensita	2.69	60
+n719	ah	1.95	MonChou Original verse roomkaas	1.95	100
+n719	dekamarkt	1.93	MonChou Verse roomkaas	1.93	100
+n719	dirk	1.85	MonChou Verse roomkaas	1.85	100
+n719	hoogvliet	1.85	MonChou Verse Roomkaas	1.85	100
+n719	jumbo	1.99	MonChou Original Verse Roomkaas 100 g	1.99	100
+n719	plus	1.79	MonChou Verse roomkaas	1.79	100
+n719	spar	2.25	MonChou verse roomkaas	2.25	100
+n724	jumbo	1.8519	Jumbo Emmentaler Kaas 45+ ca. 120 g	2.0	108
+n724	lidl	0.9983	Emmentaler kaas	5.99	600
+n725	jumbo	1.5504	Jumbo Cheddar Red Kaas 50+ ca. 125 g	2.0	129
+n725	lidl	0.8543	Cheddar kaas	2.99	350
+n73	ah	0.1423	AH Biologisch Zuurkool naturel	0.74	520
+n73	dekamarkt	0.138	Zuurkool naturel	0.69	500
+n73	dirk	0.13	Zuurkool naturel	0.65	500
+n73	hoogvliet	0.176	Kramer Naturel zuurkool	0.88	500
+n73	jumbo	0.1519	Jumbo Zuurkool Naturel 520 g	0.79	520
+n73	lidl	0.1058	Naturel zuurkool	0.55	520
+n73	plus	0.1519	PLUS Zuurkool naturel	0.79	520
+n73	spar	0.238	Kramer biologische zuurkool zuurkool	1.19	500
+n736	lidl	0.3311	Mona vanillepudding	1.49	450
+n783	ah	1.7267	AH Palingworst	2.59	150
+n783	dekamarkt	1.3933	DekaVers Palingworst	2.09	150
+n783	dirk	1.5933	1 de Beste Palingworst	2.39	150
+n783	hoogvliet	1.42	Slagers kwaliteit Palingworst	2.13	150
+n783	jumbo	1.7813	Jumbo Palingworst 160 g	2.85	160
+n783	plus	1.49	PLUS Palingworst	1.49	100
+n784	ah	1.276	AH Achterham grootverpakking	3.19	250
+n784	dekamarkt	1.99	DekaVers Achterham flinterdun	1.99	100
+n784	dirk	1.1933	Landerij Achterham	1.79	150
+n784	hoogvliet	1.1467	Achterham	1.72	150
+n784	jumbo	1.1257	Achterham Gegaard 175 g	1.97	175
+n784	lidl	1.1933	Achterham	1.79	150
+n784	plus	1.1933	Neutraal Achterham BLK	1.79	150
+n784	poiesz	2.49	Achterham Flinterdun	2.49	100
+n784	spar	1.9267	Slagerskwaliteit Slagerskwaliteit Achterham	2.89	150
+n784	vomar	1.145	Achterham 1* 200 gram	2.29	200
+n785	ah	1.156	AH Schouderham grootverpakking	2.89	250
+n785	dekamarkt	1.18	DekaVers Schouderham	2.36	200
+n785	dirk	0.78	Zalox Schouderhamblokjes	1.95	250
+n785	hoogvliet	0.8933	Schouderham	1.34	150
+n785	jumbo	0.7943	Schouderham 175 g	1.39	175
+n785	lidl	0.745	Schouderham rond XXL	1.49	200
+n785	plus	0.836	Merkloos Schouderhamblokjes	2.09	250
+n785	spar	1.06	Slagerskwaliteit Slagerskwaliteit Schouderham	1.5899999999999999	150
+n804	ah	2.3695	AH Hollandse schapenkaas 50+ stuk	6.99	295
+n804	jumbo	2.2	Jumbo Schapenkaas 50+ Jong ca. 300 g	6.6	300
+n810	ah	1.46	AH Filet americain naturel	2.19	150
+n810	dekamarkt	1.3267	DekaVers Filet americain naturel	1.99	150
+n810	dirk	1.3933	1 de Beste Filet americain naturel	2.09	150
+n810	hoogvliet	1.26	Luiten Filet americain	1.89	150
+n810	jumbo	1.3933	Jumbo Filet Americain Naturel 150 g	2.09	150
+n810	lidl	1.2514	Filet americain XXL	2.19	175
+n810	plus	1.26	Luiten Filet Americain naturel	1.89	150
+n810	spar	1.5667	Spar Spar Filet americain Naturel	2.35	150
+n812	dekamarkt	0.472	Melkan Zure room	0.59	125
+n812	dirk	0.472	Melkan Zure room	0.59	125
+n812	hoogvliet	0.632	Melkan Zure room	0.79	125
+n812	jumbo	0.952	Jumbo Verse Zure Room 125 g	1.19	125
+n812	lidl	0.47	Biologische zure room	0.94	200
+n812	plus	0.92	PLUS Zure room	1.15	125
+n812	spar	1.112	Melkan zure room	1.3900000000000001	125
+n815	dekamarkt	0.9911	Iglo Vissticks 20 stuks	5.55	560
+n815	dirk	0.7952	Iglo Vissticks	3.34	420
+n815	jumbo	0.7083	Iglo Vissticks XXL 25+5 Gratis 840 g	5.95	840
+n815	lidl	0.3533	Vissticks	1.59	450
+n815	plus	0.9982	Iglo Vissticks 20 stuks	5.59	560
+n815	spar	0.5533	Vis Marine vissticks	2.49	450
+n820	ah	1.4475	AH Kabeljauw	5.79	400
+n820	dekamarkt	1.2944	Vis Marine Kabeljauwfilets	6.99	540
+n820	dirk	1.2759	Vis Marine Kabeljauwfilets	6.89	540
+n820	hoogvliet	1.285	Vis Marine Kabeljauwfilets	5.14	400
+n820	lidl	1.6648	Kabeljauw	8.99	540
+n820	spar	1.8975	Vis Marine kabeljauwfilets 4 stuks	7.59	400
+n830	ah	1.0444	AH Knoflook	2.35	250
+n830	dekamarkt	0.6635	Coolback Baguette knoflook 2 stuks	2.09	350
+n830	dirk	0.946	Farmland Knoflook baguette	1.49	175
+n830	hoogvliet	0.6	Coolback Baquette knoflook	1.89	350
+n830	jumbo	0.5806	Mutti Polpa di Pomodoro Knoflook 400g	2.09	400
+n830	lidl	0.9389	Knoflook	1.69	200
+n830	plus	0.525	Mutti Polpa Knoflook	1.89	400
+n830	spar	1.7222	knoflook	1.55	100
+n830	vomar	1.1067	Solo knoflook 250 gram	2.49	250
+n838	ah	1.356	Smaakt Sesamzaad ongepeld	3.39	250
+n838	dekamarkt	1.34	Smaakt Sesamzaad ongepeld	3.35	250
+n838	dirk	1.3	Smaakt Sesamzaad ongepeld	3.25	250
+n838	hoogvliet	1.26	Smaakt Sesamzaad ongepeld	3.15	250
+n838	jumbo	2.99	Jumbo Sesamzaad 100 g	2.99	100
+n838	plus	1.196	Smaakt Sesamzaad ongepeld biologisch	2.99	250
+n839	ah	1.66	AH Sojabonen	2.49	150
+n839	plus	0.8257	Smaakt Sojabonen bio	2.89	350
+n847	plus	0.5225	Smaakt Gierst - bio	2.09	400
+n847	spar	0.458	Lokaal gierst	2.29	500
+n851	jumbo	0.9844	Kühne Paprikareepjes Zoetzuur 320 g	1.89	320
+n856	ah	0.2983	AH Rosti rondjes	1.79	600
+n856	dekamarkt	0.292	Aviko Rösti original	2.19	750
+n856	dirk	0.2867	Aviko Rösti original	2.15	750
+n856	hoogvliet	0.284	Aviko Rösti Original	2.13	750
+n856	jumbo	0.2483	Jumbo Rösti Rondjes 600 g	1.49	600
+n856	lidl	0.248	Rösti rondjes	2.48	1000
+n856	plus	0.2413	PLUS Rosti rondjes	1.81	750
+n856	poiesz	0.3053	Aviko Rosti Original	2.29	750
+n856	spar	0.34	Aviko rösti original	2.55	750
+n856	vomar	0.3667	Aviko rosti rondjes 750gr	2.75	750
+n861	ah	0.4387	Zonnatura Rode bietensap	3.29	750
+n861	dekamarkt	0.412	Zonnatura Bietensap rood	3.09	750
+n861	hoogvliet	0.3853	Zonnatura Bietensap	2.89	750
+n861	jumbo	0.4653	Zonnatura Biologische Bietensap 750 ml	3.49	750
+n863	dekamarkt	0.145	Melkan Vruchtenyoghurt perzik	1.45	1000
+n863	dirk	0.145	Melkan Vruchtenyoghurt perzik	1.45	1000
+n863	lidl	0.258	Volle vruchtenyoghurt	1.29	500
+n863	spar	0.165	Melkan vruchtenyoghurt perzik	1.65	1000
+n870	hoogvliet	0.078	Melkan Sojadrink naturel original	0.78	1000
+n870	jumbo	0.065	Jumbo Sojadrink Naturel 1 L	0.65	1000
+n870	plus	0.089	Melkan Sojadrink naturel	0.89	1000
+n870	spar	0.229	Alpro sojadrink soya ongezoet	2.29	1000
+n876	ah	0.396	AH Pinda's gezouten	0.99	250
+n876	dekamarkt	0.356	G'woon Pindas gezouten	0.89	250
+n876	dirk	0.6618	1 de Beste Pinda's gezouten	1.82	275
+n876	hoogvliet	0.298	G'woon Pinda's gezouten	1.49	500
+n876	jumbo	0.316	Jumbo Pinda's Gezouten 250 g	0.79	250
+n876	plus	0.35	Brouwer Gezouten pinda's	1.75	500
+n876	spar	0.27	g'woon pinda's gezouten	1.35	500
+n879	ah	0.98	De Zaanse Hoeve Roomboter gezouten	2.45	250
+n879	dekamarkt	0.956	Zuivelmeester Roomboter gezouten	2.39	250
+n879	dirk	0.952	Zuivelmeester Roomboter gezouten	2.38	250
+n879	hoogvliet	1.3	Melkan Roomboter gezouten	3.25	250
+n879	jumbo	0.9156	Jumbo Roomboter Gezouten 225g	2.06	225
+n879	lidl	0.86	Roomboter gezouten	2.15	250
+n879	plus	0.956	Zuivelmeester Roomboter gezouten	2.39	250
+n879	spar	0.66	Zuivelmeester Boter Roomboter Gezouten	1.65	250
+n883	dekamarkt	2.475	Old Amsterdam 48+ kaas plakken	4.95	200
+n883	dirk	2.345	Old Amsterdam 48+ kaas plakken	4.69	200
+n883	hoogvliet	2.1733	Old Amsterdam 8 kaasplakken	4.89	225
+n883	jumbo	2.1225	Old Amsterdam Original 48+ Kaas Stuk 400 g	8.49	400
+n883	poiesz	2.6412	Old Amsterdam Voorgesneden Borrelblokjes Kaas 48+	4.49	170
+n884	jumbo	0.9967	Jumbo Pizzabrood Paprika & Rode Ui 300g	2.99	300
+n899	jumbo	2.1125	Jumbo Mini Roomboter Pasteibakjes 12 Stuks	1.69	80
+n9	ah	0.7821	AH Witte asperges	2.19	280
+n908	ah	0.8967	AH Sate gehaktballen	2.69	300
+n908	dekamarkt	0.558	ROLNIK Gehaktballen in kool	2.79	500
+n908	dirk	0.9933	Van 't Huijs Mini gehaktballetjes	1.49	150
+n908	hoogvliet	1.1405	Hoogvliet Gehaktballetjes ketjap	3.49	306
+n908	jumbo	0.545	Jumbo Soepballetjes 200 g	1.09	200
+n908	lidl	0.8893	Griekse gehaktballen	2.49	280
+n908	plus	0.6737	Snacks Gehaktballetjes	2.56	380
+n908	spar	0.575	g'woon soepballetjes	1.15	200
+n922	dirk	5.5278	Honig Bakplaat mix mex. courgette & kip	1.99	36
+n923	jumbo	0.199	Jumbo Boomgaard Perensap 1 L	1.99	1000
+n923	plus	0.412	De Perelaere Perensap	3.09	750
+n938	ah	0.5533	Mona Griesmeelpudding met rode bessensaus	2.49	450
+n938	hoogvliet	0.5089	Mona Griesmeelpudding met rode bessensaus	2.29	450
+n938	plus	0.5311	Mona Griesmeelpudding met rode bessensaus	2.39	450
+n938	spar	0.6556	Mona Griesmeelpudding Met rode bessensaus	2.95	450
+n940	ah	0.5533	Mona Vanillepudding met aardbeiensaus	2.49	450
+n940	plus	0.5444	Mona Vanillepudding met aardbeiensaus	2.45	450
+n958	ah	0.29	AH Biologisch Rode bieten gekookt	1.45	500
+n958	dekamarkt	0.258	Bio+ Biologische rode bieten gekookt	1.29	500
+n958	dirk	0.258	Bio+ Biologische rode bieten gekookt	1.29	500
+n958	spar	0.338	biologische rode bieten gekookt	1.69	500
+n959	ah	0.438	AH Boerenkool grootverpakking	2.19	500
+n959	dekamarkt	0.398	Boerenkool fijn voordeel	1.99	500
+n959	dirk	0.2967	1 de Beste Boerenkool grof	0.89	300
+n959	hoogvliet	0.3275	G'woon Boerenkool	2.62	800
+n959	jumbo	0.22	Jumbo Boerenkool 450 g	0.99	450
+n959	lidl	0.398	Boerenkool	1.99	500
+n959	spar	0.8167	boerenkool grof	2.45	300
+n975	ah	0.3333	AH Knäckebröd sesam	1.25	375
+n975	dekamarkt	0.3333	G'woon Knackebrod sesam	1.25	375
+n975	dirk	0.3307	1 de Beste Knäckebröd sesam	1.24	375
+n975	hoogvliet	0.3333	G'woon Knackebrod sesam	1.25	375
+n975	jumbo	0.3333	Jumbo Knäckebröd Sesam 5 x 5 Stuks	1.25	375
+n975	plus	0.3973	PLUS Knackebrod sesam	1.49	375
+n975	spar	0.3867	g'woon knäckebröd sesam	1.45	375
+n976	hoogvliet	0.63	Wasa Knackebrod lichtgewicht	1.89	300
+n976	plus	0.6633	Wasa Knäckebröd Lichtgewicht 32 stuks	1.99	300
+n976	spar	0.75	Wasa Knäckebröd  Lichtgewicht	2.25	300

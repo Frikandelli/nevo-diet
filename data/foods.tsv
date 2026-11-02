@@ -1,0 +1,54 @@
+key	nevo	group	query	exclude	edible	piece_g	nevo_cooked	yield	canned	note
+oats	213	grain	havermout	koek|reep|drink|ontbijt|pap|baby|maanden|bio	1	0				
+pasta	4	grain	^(ah |g'woon |jumbo |1 de beste )?(macaroni|spaghetti)$	volkoren	1	0	659	P		
+pasta_wholemeal	811	grain	volkoren (spaghetti|penne|macaroni)	bonb|baby|maanden	1	0	2157	P		
+rice	5	grain	^rijst wit 1kg$|^(ah |jumbo |g'woon |1 de beste )?(witte |langkorrel )?rijst$	wafel	1	0	658	P		
+rice_brown	712	grain	zilvervliesrijst	biolog	1	0	1014	P		
+flour_wholemeal	222	grain	volkoren tarwemeel	^$x	1	0				
+bread_wholemeal	246	bread	volkoren.*heel	mix	1	800				heel brood ~800 g
+potatoes	1	potato	^aardappelen (kruimig|vastkokend)	voorgekookt|gekookt	0.85	0	982	1		15% peel loss
+milk_semi	286	dairy	^(ah |jumbo |g'woon |1 de beste |plus )?halfvolle melk$	lactose|choco	1	0				
+milk_skim	294	dairy	^(ah |jumbo |g'woon |1 de beste |plus )?magere melk$	lactose|choco	1	0				
+milk_powder	295	dairy	melkpoeder	choco	1	0				
+quark	305	dairy	magere kwark	kinder|vrucht|soja|plantaardig|protein	1	0				
+yoghurt	301	dairy	^(ah |jumbo |g'woon |1 de beste |plus )?magere yoghurt$	griek	1	0				
+cheese_gouda	2757	dairy	jong belegen	snack|2-plaks|klein|appel	1	0				
+egg	83	egg	(scharrel|vrije uitloop)\s?eieren	paas|gevuld|spaghetti|choc	0.88	60	84	1		60 g/egg, 12% shell
+beans_brown_tin	660	legume	bruine bonen	droog|soep|chili|salade	1	0			1	
+lentils_dry	120	legume	linzen.*(gedroogd|droog)|^(ah |jumbo |lidl )?(groene|bruine) linzen$	soep|pot|blik|hak|terra	1	0	970	P		
+lentils_tin	5169	legume	^(hak |ah terra |jumbo )linzen	soep|biolog	1	0			1	
+split_peas	686	legume	spliterwten	soep	1	0	2314	P		
+chickpeas_tin	3185	legume	kikkererwten	hummus|snack|chips|geroost|soep|curry|olvarit|maanden	1	0			1	
+peanut_butter	455	nut	pindakaas	knabbel|bar|reep|koek|protein|chunky|light	1	0				
+peanuts	204	nut	ongezouten pinda|pinda.s ongezouten	choc	1	0				
+sunflower_seeds	872	nut	zonnebloempitten	gezouten|yoghurt|brood|gezout|cracker|reep	1	0				
+linseed	867	nut	lijnzaad	wafel|cracker|brood	1	0				
+walnuts	206	nut	walnoten ongezouten|walnoten ongebrand	brood	1	0				
+oil_sunflower	317	fat	zonnebloemolie	tomaten|makreel|sardine|tonijn|vis	1	0				ml->g x0.92
+margarine	2072	fat	halvarine|margarine	bak|vloeibaar|braad	1	0				NEVO generic 60% fat
+cabbage_white	69	veg	^(ah |jumbo |dirk |plus |lidl )?witte kool$	julienne|bio|wortel	0.8	1500	70	1		head ~1.5 kg
+cabbage_red	41	veg	^(ah |jumbo |dirk |plus |lidl )?rode kool$	appel|glas|pot|bio	0.8	1200	42	1		head ~1.2 kg
+kale_frozen	952	veg	boerenkool	stamppot|bio|mix	1	0				
+spinach_frozen	1146	veg	gehakte spinazie|bladspinazie|spinazie diepvries	creme|crème|borek|feta	1	0	146	1		
+carrots	2728	veg	winterpeen|^(ah |jumbo )?wortelen$	bospeen|baby	0.9	150	2729	1		~150 g/stuk
+onions	63	veg	gele uien	ringen|gebakken	0.9	150				~150 g/ui
+peas_frozen	953	veg	^(ah |jumbo |1 de beste |g'woon )?doperwten( extra fijn| fijn| zeer fijn)?$	wortel|blik|pot	1	0				
+broccoli	921	veg	^(ah |jumbo |plus |dirk )?broccoli$	bonb|baby|maanden	0.8	500	920	1		~500 g/stuk
+tomatoes_tin	2293	veg	tomatenblokjes|gepelde tomaten	kruiden|ui|knoflook|basilicum	1	0				
+banana	151	fruit	bananen	chips|bak|pudding|gesuikerd|smaak|brood	0.67	180				~180 g/stuk, peel 33%
+apple	875	fruit	appel(s)? (elstar|jonagold)|handappels	sap|moes	0.9	0				
+sardines	355	fish	sardines in (zonnebloem|soja)\s?olie	^$x	1	0				incl. oil
+mackerel_tin	1609	fish	makreel(filet)? in (zonnebloem)?\s?olie	tomaten	1	0				
+herring_tomato	349	fish	haring.*tomaten	^$x	1	0				
+chicken_liver	475	meat	kippenlever	pate|paté|worst	1	0				
+chicken_thigh	1305	meat	kippendijfilet|kipdijfilet	katten|honden|gegrild|gemarineerd|shoarma|saté|sate	1	0	1635	P		proxy: kip z vel rauw
+mince_mixed	1434	meat	half.om.half gehakt	mix|ballen|kruiden|bio	1	0	1326	P		
+tofu	5519	meat_sub	tofu	gerookt|gekruid|blokjes|reepjes|bio	1	0				
+soy_drink	3180	dairy	sojadrink ongezoet|soja drink ongezoet|plantaardige sojadrink ongezoet	bio	1	0				NEVO 3180: fortified Ca+vit
+yeast_flakes	1025	exotic	edelgistvlokken	^$x	1	0				NEVO: dried yeast (not B12-fortified)
+salt_iodised	841	misc	tafelzout met jodium|jodiumzout	^$x	1	0				
+frikandelbroodje	3373	snack	^(ah |plus |dirk |lidl |dekamarkt )?frikandelbroodje$	vegan|xxl	1	145				~145 g/stuk
+kidney_tin	3184	legume	kidneybonen	biolog|chili|salade|gedroogd|droog	1	0			1	
+flour_white	220	grain	^(ah |jumbo |g'woon |1 de beste |plus )?(patent )?tarwebloem|^(ah |jumbo |g'woon )?bloem$	knäck|knack|biscuit|digestive|cracker|zelfrijzend|volkoren|spelt|mix|biolog	1	0				stage 5: dish ingredient (Bloem tarwe-)
+sugar	377	sweet	kristalsuiker	alternatief|stevia|biolog|riet|klont	1	0				stage 5: dish ingredient (Suiker kristal-)
+tomato_paste	141	veg	tomatenpuree	knoflook|kruiden|basilicum|biolog	1	0				stage 5: dish ingredient (tomato paste)

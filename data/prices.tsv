@@ -1,0 +1,51 @@
+key	eur_per_100g	chain	pack_eur	pack_g	product
+oats	0.1450	ah	1.45	1000	AH Volkoren havermout grove vlokken
+pasta	0.0700	lidl	0.35	500	Macaroni
+pasta_wholemeal	0.1780	ah	0.89	500	AH Biologisch Volkoren penne
+rice	0.0630	lidl	0.63	1000	Rijst wit 1kg
+rice_brown	0.1090	jumbo	1.09	1000	Jumbo Zilvervliesrijst Voordeelverpakking 1 kg
+flour_wholemeal	0.0890	ah	0.89	1000	AH Volkoren tarwemeel
+bread_wholemeal	0.1163	dekamarkt	0.93	800	DekaVers Fijn volkoren heel
+potatoes	0.0976	spar	2.49	3000	aardappelen kruimig
+milk_semi	0.0890	dirk	0.89	1000	1 de Beste Halfvolle melk
+milk_skim	0.0950	dirk	0.95	1000	1 de Beste Magere melk
+milk_powder	1.5475	ah	6.19	400	Two Cows Melkpoeder
+quark	0.1690	lidl	1.69	1000	Magere kwark 1kg
+yoghurt	0.0820	lidl	0.82	1000	Magere yoghurt
+cheese_gouda	0.5980	lidl	2.99	500	Gouda jong belegen
+egg	0.4034	plus	6.39	1800	PLUS Vrije uitloopeieren wit S/M
+beans_brown_tin	0.2431	hoogvliet	1.05	432	G'woon Hollandse bruine bonen
+lentils_dry	0.2375	lidl	0.95	400	Linzen
+lentils_tin	0.3465	lidl	0.79	228	Hak linzen
+split_peas	0.1980	dekamarkt	0.99	500	Brandwijk Spliterwten
+chickpeas_tin	0.2063	lidl	0.99	480	Kikkererwten
+peanut_butter	0.2300	lidl	1.38	600	Pindakaas
+peanuts	0.2280	jumbo	1.14	500	Jumbo Pinda's Ongezouten Voordeelverpakking 500 g
+sunflower_seeds	0.4380	dekamarkt	2.19	500	Bio+ Zonnebloempitten
+linseed	0.3967	lidl	1.19	300	Lijnzaad
+walnuts	1.2380	hoogvliet	6.19	500	G'woon Walnoten ongebrand ongezouten
+oil_sunflower	0.1402	jumbo	1.29	920	Jumbo Zonnebloemolie 1 L
+margarine	0.1080	jumbo	0.54	500	Jumbo Halvarine 500 g
+cabbage_white	0.1242	dirk	1.49	1500	Witte kool
+cabbage_red	0.1305	plus	0.71	680	PLUS Rode kool
+kale_frozen	0.2112	dekamarkt	1.69	800	G'woon Boerenkool deelblokjes
+spinach_frozen	0.1720	jumbo	1.29	750	Jumbo Gehakte Spinazie Voordeelverpakking 750 g
+carrots	0.1089	dirk	0.98	1000	Hollandse Winterpeen
+onions	0.1050	jumbo	1.89	2000	Jumbo Gele Uien Extra Groot 2 kg
+peas_frozen	0.1838	spar	1.25	680	g'woon doperwten zeer fijn
+broccoli	0.2625	ah	1.05	500	AH Broccoli
+tomatoes_tin	0.0925	jumbo	0.37	400	Jumbo Tomatenblokjes 400 g
+banana	0.1925	dirk	1.29	1000	Del Monte Bananen
+apple	0.1050	lidl	1.89	2000	Appel Elstar tas
+sardines	1.1920	dekamarkt	1.49	125	Vis Marine Sardines in zonnebloemolie
+mackerel_tin	1.1040	dirk	1.38	125	La Miranda Makreelfilet in zonnebloemolie
+herring_tomato	0.5947	dirk	1.13	190	Statesman Haring in tomatensaus
+chicken_liver	0.6225	plus	2.49	400	PLUS Boerentrots Kippenlevers
+chicken_thigh	1.0714	plus	8.25	770	PLUS Boerentrots Kipdijfilet
+mince_mixed	0.8450	dirk	8.45	1000	Vleeschmeesters Half om half gehakt 1000 gram
+tofu	0.3611	lidl	1.3	360	Tofu
+soy_drink	0.0860	jumbo	0.86	1000	Jumbo Sojadrink Ongezoet 1 L
+yeast_flakes	5.2957	plus	6.09	115	BioToday Edelgistvlokken bio
+salt_iodised	0.3920	ah	0.49	125	AH Tafelzout met jodium
+frikandelbroodje	0.6552	plus	0.95	145	PLUS Frikandelbroodje
+kidney_tin	0.2333	hoogvliet	0.56	240	G'woon Kidneybonen

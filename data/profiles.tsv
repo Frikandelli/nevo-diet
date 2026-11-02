@@ -1,0 +1,5 @@
+name	label	sex	age	height_m	weight_kg	pal	kcal	protein_g_per_kg	source
+avg_man	Average man	m	35	1.826		1.6		0.83	Height: CBS 81565NED, men 30-40, 2025: 182.6 cm, self-reported. Weight: BMI 22 as in Gezondheidsraad 2021/10. PAL 1.6 moderate (Gezondheidsraad 2022/19). Protein 0.83 g/kg (2021/10)
+avg_woman	Average woman	f	35	1.685		1.6		0.83	Height: CBS 81565NED, women 30-40, 2025: 168.5 cm, self-reported. Weight: BMI 22 as in Gezondheidsraad 2021/10. PAL 1.6 moderate (Gezondheidsraad 2022/19). Protein 0.83 g/kg (2021/10)
+active_man	Active man	m	35	1.826		1.9		1.2	As the average man; PAL 1.9, between active 1.8 and very active 2.0 (Gezondheidsraad 2022/19). Protein 1.2 g/kg: a project choice, below the ISSN 2017 range of 1.4-2.0
+active_woman	Active woman	f	35	1.685		1.9		1.2	As the average woman; PAL 1.9, between active 1.8 and very active 2.0 (Gezondheidsraad 2022/19). Protein 1.2 g/kg: a project choice, below the ISSN 2017 range of 1.4-2.0
