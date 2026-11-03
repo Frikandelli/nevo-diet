@@ -5,7 +5,7 @@ Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data 
 Variables: x_i = grams/day of food i / 100 (so A and c are per 100 g).
 """
 import csv
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, linprog, milp
@@ -39,6 +39,8 @@ class Model:
     reqs: list
     unit_g: np.ndarray       # grams per unit (100 for foods, 0 for tablets)
     profile: dict = None
+    lb: np.ndarray = None    # units you want to eat anyway (your own foods); cap = lb when the amount is exact
+    elsewhere: set = field(default_factory=set)   # your own foods not sold at this chain: priced at the cheapest other chain
 
 
 def catalog_prices(chain=None):
@@ -52,30 +54,38 @@ def catalog_prices(chain=None):
     return best
 
 
-def load(drop=(), price_file=None, cooked=None, chain=None, min_chains=0, profile=None, nonhaem=None):
+def load(drop=(), price_file=None, cooked=None, chain=None, min_chains=0, profile=None, nonhaem=None, own=()):
     """Foods from the catalog (data/catalog_*.tsv, built by catalog.py), priced at `chain` or the cheapest chain.
     price_file: the old 50-food list with one price file instead. min_chains: drop foods sold at fewer chains.
     cooked=None follows COOKED. cooked=True: use the NEVO 'as eaten' entry (nevo_cooked) scaled by the yield,
     so x stays in grams as bought. yield 'P' = estimate from protein (raw protein / cooked protein).
-    profile: a name in data/profiles.tsv (default PROFILE). nonhaem: non-haem iron absorption (default NONHAEM_ABS)."""
+    profile: a name in data/profiles.tsv (default PROFILE). nonhaem: non-haem iron absorption (default NONHAEM_ABS).
+    own: your own foods, as (key, grams a day, exact?): at least that amount, or exactly it. They stay in whatever
+    `drop`, `chain` or `min_chains` say about them (at the cheapest other chain if this one doesn't sell them)."""
     cooked = COOKED if cooked is None else cooked
     prof = load_profile(profile or PROFILE)
     nonhaem = NONHAEM_ABS if nonhaem is None else nonhaem
     amino = {r["key"]: r for r in csv.DictReader(open("data/amino_foods.tsv"), delimiter="\t")}
     nevo = {r["NEVO-code"]: r for r in csv.DictReader(open(NEVO, encoding="utf-8"), delimiter="|")}
     colname = {k.split(" (")[0]: k for k in next(iter(nevo.values())).keys()}
+    own_keys = {o[0] for o in own}
+    elsewhere = set()
     if price_file:
         foods = {r["key"]: r for r in csv.DictReader(open("data/foods.tsv"), delimiter="\t")}
         prices = {r["key"]: r for r in csv.DictReader(open(price_file), delimiter="\t")}
     else:
         foods = {r["key"]: r for r in csv.DictReader(open("data/catalog_foods.tsv"), delimiter="\t")
-                 if int(r["n_chains"]) >= min_chains}
+                 if int(r["n_chains"]) >= min_chains or r["key"] in own_keys}
         prices = catalog_prices(chain)
+        if own_keys - prices.keys():
+            anywhere = catalog_prices()
+            elsewhere = {k for k in own_keys - prices.keys() if k in anywhere}
+            prices.update({k: anywhere[k] for k in elsewhere})
     reqs = requirements(prof)
     cols = sorted(({c for r in reqs for c in r["cols"].split("+")} - COMPUTED)
                   | {"ENERCC", "FASAT", "NA", "HAEM", "PROT", "FE", "TRP"})
 
-    keys = [k for k in foods if k in prices and k not in drop] + [k for k in SUPPLEMENTS if k not in drop]
+    keys = [k for k in foods if k in prices and (k not in drop or k in own_keys)] + [k for k in SUPPLEMENTS if k not in drop]
     n = len(keys)
     c, cap, unit_g, groups = np.zeros(n), np.zeros(n), np.zeros(n), []
     N = {col: np.zeros(n) for col in [*cols, *COMPUTED]}
@@ -116,7 +126,14 @@ def load(drop=(), price_file=None, cooked=None, chain=None, min_chains=0, profil
     # Absorbed iron (model rule): haem and non-haem absorbed at different rates. A blank HAEM counts as 0,
     # so all iron is then treated as non-haem (conservative).
     N["FE_ABS"] = HAEM_ABS * N["HAEM"] + nonhaem * (N["FE"] - N["HAEM"])
-    return Model(keys, groups, c, cap, N, missing, reqs, unit_g, prof)
+    lb = np.zeros(n)
+    for key, g_day, exact in own:
+        if key in keys:
+            i = keys.index(key)
+            lb[i] = g_day / 100
+            if exact:
+                cap[i] = g_day / 100
+    return Model(keys, groups, c, cap, N, missing, reqs, unit_g, prof, lb, elsewhere)
 
 
 def rows(m: Model, overrides=None):
@@ -148,7 +165,8 @@ def solve(m: Model, overrides=None, lb=None, extra=None, cost=None):
     if extra:
         for g_row, h_val, name in extra:
             G = np.vstack([G, g_row]); h = np.append(h, h_val); lab.append((name, "extra"))
-    lb = np.zeros(len(m.keys)) if lb is None else lb
+    if lb is None:
+        lb = np.zeros(len(m.keys)) if m.lb is None else m.lb
     res = linprog(m.c if cost is None else cost, A_ub=G, b_ub=h,
                   bounds=list(zip(lb, m.cap)), method="highs")
     return res, G, h, lab

@@ -4,6 +4,8 @@ Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data 
 
 Duality used here. The LP is  min c·x  s.t.  G x <= h,  0 <= x <= cap.  HiGHS returns multipliers
 lam_j <= 0 for the rows and mu_i <= 0 for the caps, with reduced cost  r_i = c_i - sum_j lam_j G_ji - mu_i >= 0.
+(A food you asked for sits on a lower bound, so r_i can be above 0 while it's in the basket: you pay more for it than the
+requirements think it's worth. Then c_i = sum_j lam_j G_ji + mu_i + r_i, which is why the check below has r_i in it.)
 For a food in the basket (0 < x_i) and not at its cap, r_i = 0, so its price splits exactly over the binding
 requirements:  c_i = sum_j lam_j G_ji. A lower-bound row has G_ji = -a_ji, so its share lam_j G_ji = y_j a_ji
 is the part of the price "paying for" nutrient j (y_j = -lam_j >= 0 is the shadow price). An upper-bound row
@@ -30,6 +32,7 @@ def price_split(m, res, G, lab):
     Shares of one food sum to price + cap_rent (checked)."""
     lam = res.ineqlin.marginals
     mu = res.upper.marginals
+    forced = res.lower.marginals
     out = {}
     for i in np.where(res.x > EPS)[0]:
         contrib = lam * G[:, i]
@@ -38,7 +41,7 @@ def price_split(m, res, G, lab):
             if abs(contrib[j]) > 1e-12:
                 by[name] += contrib[j]
         total = sum(by.values())
-        assert abs(total - (m.c[i] - mu[i])) < 1e-6 * max(1, m.c[i]), (m.keys[i], total, m.c[i], mu[i])
+        assert abs(total - (m.c[i] - mu[i] - forced[i])) < 1e-6 * max(1, m.c[i]), (m.keys[i], total, m.c[i], mu[i], forced[i])
         out[i] = {"price": m.c[i], "cap_rent": -mu[i], "shares": dict(by)}
     return out
 
@@ -62,7 +65,8 @@ def removal_tree(m, depth=3, branch=3, overrides=None):
     """Remove the biggest foods (by grams) one at a time and re-solve, `branch` children per node, `depth` levels.
     Returns a list of nodes: dict(path=[removed keys], cost, delta (vs parent), replaced_by=[(key, +g)],
     infeasible=bool, same_as=None or an earlier path with the same set of removed foods).
-    The root (path=[]) is the base optimum. Repeated sets are listed once more but not expanded."""
+    The root (path=[]) is the base optimum. Repeated sets are listed once more but not expanded.
+    Your own foods are never removed: they're what you said you'll eat."""
     nodes, seen = [], {}
 
     def visit(path, parent_x, parent_cost):
@@ -84,7 +88,7 @@ def removal_tree(m, depth=3, branch=3, overrides=None):
         nodes.append(node)
         if len(path) < depth:
             g = grams(m, r.x)
-            for i in [i for i in np.argsort(-g) if g[i] > EPS][:branch]:
+            for i in [i for i in np.argsort(-g) if g[i] > EPS and not (m.lb is not None and m.lb[i] > 0)][:branch]:
                 visit(path + [m.keys[i]], r.x, r.fun)
 
     visit([], None, None)

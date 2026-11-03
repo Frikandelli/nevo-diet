@@ -36,6 +36,11 @@ Your profiles and settings stay on your computer, in `~/.config/nevo-diet/`.
 ## The app
 
 - **Plan:** the cheapest diet, as a bare linear program or as a realistic week of meals in whole packs.
+- **Chain:** pick a supermarket, mix all chains (pure mode only), or choose "cheapest chain" and let the app find the one chain with
+  the lowest price under your settings. In realistic mode that compares a full week at every chain, about a minute on Solve.
+- **My foods:** on the Plan tab, pick foods you'll eat anyway, with grams per day or week, exactly or at least. The plan fills in
+  the rest, and shows what your foods changed.
+- **Category ticks:** on the Foods tab, no meat, no nuts, no grain products and so on. These are preferences, **not allergy protection**.
 - **Foods:** every food with its prices and nutrients. Exclude any food with one click.
 - **Dishes:** NEVO's dishes, priced from their ingredients.
 - **Charts:** nutrient coverage, which food covers which micronutrient, where the money goes, what each food pays for
@@ -94,6 +99,8 @@ python3 price.py                  # (old) price only the 50 hand-mapped foods ->
 - A vitamin D tablet (AH Care D3 25 µg, €4.99 for 300) is included as a priced pseudo-food, at most 1 a day.
 - Cooked mode (the default; `python3 run.py --raw` for raw values) swaps in NEVO's as-eaten entry × yield. For boiled vegetables the yield is
   assumed to be 1.0.
+- Your own foods are bounds on the variables: x >= amount, and x <= amount as well when it's "exactly". They count
+  in grams as bought and stay in whatever a tick, a ✗ or the chain says about them.
 - Absorption: NEVO is not corrected for bioavailability (background doc §4.4). The model counts absorbed iron
   (haem 25%, non-haem 10%; target = norm x EFSA absorption) and uses EFSA's zinc for a high-phytate diet. `sensitivity.py`
   varies these assumptions and calcium from soy drink.

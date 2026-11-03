@@ -45,6 +45,7 @@ for k, v in _saved.items():
         ss[k] = v
 ss.setdefault("editor_v", 0)
 ss.setdefault("limits_v", 0)
+ss.setdefault("own_v", 0)
 if "switch_profile" in ss:          # a saved or deleted profile: only now, before the widgets exist, can they be changed
     ss.profile = ss.pop("switch_profile")
     ss.weight = ss.height = ss.kcal = ss.protein = None
@@ -57,11 +58,13 @@ if ss.profile not in profiles:
 st.markdown("### nevo-diet · the cheapest adequate Dutch diet")
 c = st.columns([2.2, 1.6, 1.1, 1.3, 1.0])
 c[0].selectbox("Profile", list(profiles), format_func=profiles.get, key="profile")
-chain_opts = chains if ss.mode == "realistic" else [A.ALL_CHAINS] + chains
-if ss.chain not in chain_opts:
-    ss.chain = "ah"
+chain_col = c[1]
+chain_opts = [A.CHEAPEST] + (chains if ss.mode == "realistic" else [A.ALL_CHAINS] + chains)
+# Set it even when it's unchanged: without this the selectbox falls back to its first option when the list changes.
+ss.chain = ss.chain if ss.chain in chain_opts else "ah"
 c[1].selectbox("Chain", chain_opts, key="chain",
-               format_func=lambda x: "all chains (cheapest per food)" if x == A.ALL_CHAINS else x)
+               format_func=lambda x: {A.ALL_CHAINS: "all chains (cheapest per food)",
+                                      A.CHEAPEST: "cheapest chain (automatic)"}.get(x, x))
 c[2].radio("Composition", [True, False], key="cooked", horizontal=True, format_func=lambda b: "cooked" if b else "raw")
 c[3].radio("Mode", ["pure", "realistic"], key="mode", horizontal=True,
                        help="Pure: the bare LP (grams per day, any food). Realistic: a week of meals with whole "
@@ -97,28 +100,64 @@ settings["excluded"] = sorted(ss.excluded)
 if settings != _saved:
     A.save_settings(settings)
 
-ex = tuple(sorted(ss.excluded))
-pure_kw = dict(profile=person, chain=ss.chain, cooked=ss.cooked, excluded=list(ex), min3=ss.min3)
-real_kw = dict(profile=person, chain=ss.chain, cooked=ss.cooked, excluded=list(ex), strictness=ss.strictness,
-               pattern=ss.pattern, batch=ss.batch)
+own = A.own_spec(ss.my_foods)
+own_keys = {o[0] for o in own}
+ex = tuple(A.effective_excluded(ss.excluded, ss.no_categories, own))
+pure_rank_kw = dict(profile=person, cooked=ss.cooked, excluded=list(ex), min3=ss.min3, own=own)
+week_kw = dict(profile=person, cooked=ss.cooked, excluded=sorted(ss.excluded), strictness=ss.strictness,
+               pattern=ss.pattern, batch=ss.batch, no_cats=sorted(ss.no_categories), own=own)
+# "cheapest" resolves to a real chain here, from the current settings: everything below uses `chain`, never ss.chain.
+# In realistic mode that takes a week at every chain, so until Solve the pure LP's pick stands in and no week is shown.
+auto = ss.chain == A.CHEAPEST
+week_ranked = not (auto and real) or A.week_prices.is_cached(**week_kw)
+ranking, chain = None, ss.chain
+if auto:
+    ranking = A.week_prices(**week_kw) if real and week_ranked else A.chain_prices(**pure_rank_kw)
+    chain = ranking["best"] or A.DEFAULTS["chain"]
+    if not ranking["best"]:
+        chain_col.caption("No chain has a plan with these settings.")
+    elif not week_ranked:
+        chain_col.caption(f"Press **Solve** to compare a week at every chain. Cheapest in the pure LP: **{chain}**.")
+    else:
+        chain_col.caption(f"→ **{chain}**, €{ranking['rows'][0]['cost']:.2f} a day")
+pure_kw = dict(chain=chain, **pure_rank_kw)
+real_kw = dict(chain=chain, **week_kw)
+# The plan the before-and-after compares with: the same one without your own foods. The category ticks stay on in both,
+# unless the switch says otherwise or they're all there is to take away.
+drop_ticks = bool(ss.no_categories) and (ss.compare_ticks or not own)
+compare_with = ("without your foods and category ticks" if own and drop_ticks else "without your foods" if own else
+                "without your category ticks" if drop_ticks else None)
+base_cats = [] if drop_ticks else sorted(ss.no_categories)
+base_pure_kw = {**pure_kw, "excluded": A.effective_excluded(ss.excluded, base_cats), "own": []}
+base_real_kw = {**real_kw, "no_cats": base_cats, "own": []}
 
 with c[4]:
     if real:
-        known = A.realistic.is_cached(**real_kw)
+        known = week_ranked and A.realistic.is_cached(**real_kw) and (not compare_with or A.realistic.is_cached(**base_real_kw))
         if st.button("Solve" if not known else "Solved ✓ (cached)", type="primary", disabled=known,
                      width="stretch"):
-            with st.spinner("Solving a week of meals (about 10 s) ..."):
-                A.realistic(**real_kw)
+            if not week_ranked:         # each week is cached on its own, so an interrupted run picks up where it stopped
+                bar = st.progress(0.0)
+                for i, ch in enumerate(chains):
+                    bar.progress(i / len(chains), f"Solving a week at {ch} ({i + 1} of {len(chains)}) ...")
+                    A.realistic(chain=ch, **week_kw)
+                chain = A.week_prices(**week_kw)["best"] or A.DEFAULTS["chain"]
+                bar.empty()
+            with st.spinner("Solving a week of meals (about 10 s, twice with a before-and-after) ..."):
+                A.realistic(**{**real_kw, "chain": chain})
+                if compare_with:
+                    A.realistic(**{**base_real_kw, "chain": chain})
             st.rerun()
     if ex:
         st.caption(f"{len(ex)} food(s) excluded: " + ", ".join(A.label(k) for k in ex[:6]) + (" …" if len(ex) > 6 else ""))
 
 pure = A.pure(**pure_kw)
-R = A.realistic(**real_kw) if real and A.realistic.is_cached(**real_kw) else None
+R = A.realistic(**real_kw) if real and week_ranked and A.realistic.is_cached(**real_kw) else None
+R_base = A.realistic(**base_real_kw) if real and week_ranked and compare_with and A.realistic.is_cached(**base_real_kw) else None
 
 
-def tile(col, label, value, sub=""):
-    col.metric(label, value)
+def tile(col, label, value, sub="", delta=None, help=None):
+    col.metric(label, value, delta=delta, delta_color="inverse", help=help)     # inverse: dearer is red, cheaper is green
     if sub:
         col.caption(sub)
 
@@ -156,16 +195,141 @@ def nutrient_table(reqs, binding=()):
     show_table(df, height=35 * len(df) + 38)
 
 
+def split_note(result):
+    """Under the price: what your own foods cost and what the rest costs."""
+    return f"your foods €{result['own_eur']:.2f}, the rest €{result['cost'] - result['own_eur']:.2f}" if own else ""
+
+
+def per_of(key):
+    return next((f.get("per", "day") for f in ss.my_foods if f["key"] == key), "day")
+
+
+def my_foods_box():
+    """Pick foods you'll eat anyway, with an amount; the plan fills in the rest around them."""
+    with st.container(border=True):
+        st.markdown("**My foods** · what you want to eat anyway. The plan fills in the rest around it. "
+                    "Double-click a cell to change it.")
+        choices = A.food_choices(chain)
+        pick = st.selectbox("Add a food", list(choices), format_func=choices.get, index=None, key=f"own_pick_{ss.own_v}",
+                            placeholder="Add a food: type to search, e.g. milk", label_visibility="collapsed")
+        if pick:
+            if pick not in [f["key"] for f in ss.my_foods]:
+                ss.my_foods = [*ss.my_foods, {"key": pick, "grams": 100.0, "how": "exactly", "per": "day"}]
+            ss.own_v += 1
+            st.rerun()
+        if not ss.my_foods:
+            return
+        shown = pd.DataFrame([{"✗": False, "food": A.label(f["key"]), "grams": f["grams"], "how": f["how"], "per": f["per"],
+                               "key": f["key"]} for f in ss.my_foods])
+        edited = st.data_editor(
+            shown, hide_index=True, width="stretch", key=f"own_{ss.own_v}", disabled=["food"],
+            column_config={
+                "✗": st.column_config.CheckboxColumn("✗", help="remove from My foods", width="small"),
+                "grams": st.column_config.NumberColumn("grams", min_value=1, max_value=50000, step=10, format="%.0f",
+                                                       help="As bought, like the rest of the app: dry pasta, raw meat."),
+                "how": st.column_config.SelectboxColumn("how much", options=["exactly", "at least"], required=True,
+                                                        help="At least: the plan may add more if that's cheaper."),
+                "per": st.column_config.SelectboxColumn("per", options=["day", "week"], required=True),
+                "key": None})
+        new = [{"key": r["key"], "grams": old["grams"] if pd.isna(r["grams"]) else float(r["grams"]), "how": r["how"], "per": r["per"]}
+               for r, old in zip(edited.to_dict("records"), ss.my_foods) if not r["✗"]]
+        if new != ss.my_foods:
+            ss.my_foods = new
+            ss.own_v += 1
+            st.rerun()
+        away = [A.label(k) for k in own_keys if not any(r["chain"] == chain for r in A.prices_of(k))]
+        if away and chain != A.ALL_CHAINS:
+            st.caption(f"⚠ Not sold at {chain}, so priced at the cheapest other chain: " + ", ".join(sorted(away)) + ".")
+
+
+def impossible(why, intro):
+    """No plan: say what's in the way, and how much of each of your own foods would still work."""
+    lines = [f"- **{m['nutrient']}** would be {m['intake']:,.4g} {m['unit']}; the {m['side']} is {m['limit']:,.4g}."
+             for m in why["misses"]]
+    if why.get("rules"):
+        lines.append(f"- The meal rules leave no room: {why['n_dinners']} dinner(s) are left with these settings. "
+                     "Try a looser strictness, or take off a category tick.")
+    for a in why["amounts"]:
+        per = per_of(a["key"])
+        f = 7 if per == "week" else 1
+        if a["most"] is None:
+            lines.append(f"- **{a['food']}**: no amount works with your other foods and ticks.")
+        elif a["wanted"] > a["most"]:
+            lines.append(f"- **{a['food']}**: the most that still works is {f * a['most']:,.0f} g a {per} "
+                         f"(you asked for {f * a['wanted']:,.0f} g).")
+        elif a["least"] and a["wanted"] < a["least"]:
+            lines.append(f"- **{a['food']}**: it needs at least {f * a['least']:,.0f} g a {per} "
+                         f"(you asked for {f * a['wanted']:,.0f} g).")
+    st.error(intro + "\n\n" + "\n".join(lines))
+
+
+def change_note(now, before):
+    """For the price tile: what your foods and ticks do to the price, and compared with what."""
+    if not compare_with or before is None or not before["ok"]:
+        return {}
+    d = now["cost"] - before["cost"]
+    return {"delta": f"{'+' if d >= 0 else '-'}€{abs(d):.2f}", "help": f"Compared with the plan {compare_with}."}
+
+
+def compare_block(now, before, dinners=False):
+    """The before-and-after, folded away under the plan: the tile on top already has the price change. The label stays
+    the same whatever is compared, because an expander closes itself when its label changes."""
+    if not compare_with:
+        return
+    with st.expander("What changed in the rest of the plan"):
+        if own and ss.no_categories:
+            st.toggle("Also compare without the category ticks", key="compare_ticks",
+                      help="Off: what your own foods change. On: what your own foods and the ticks change together.")
+        if before is None:
+            st.info(f"Press **Solve** to compare with the plan {compare_with}.")
+        elif not before["ok"]:
+            st.info(f"There is no adequate plan {compare_with}, so there is nothing to compare with.")
+        else:
+            d = now["cost"] - before["cost"]
+            st.markdown(f"Compared with the plan {compare_with}: €{before['cost']:.2f} → €{now['cost']:.2f} a day "
+                        f"({'+' if d >= 0 else '−'}€{abs(d):.2f}). ★ = your food.")
+            rows_ = A.compare(now, before, own)
+            if rows_:
+                show_table(pd.DataFrame(rows_), height=35 * len(rows_) + 38, column_config={
+                    "before": st.column_config.NumberColumn("before (g/day)", format="%.0f"),
+                    "now": st.column_config.NumberColumn("now (g/day)", format="%.0f"),
+                    "change": st.column_config.NumberColumn("change (g/day)", format="%+.0f"),
+                    "€/day change": st.column_config.NumberColumn(format="%+.3f")})
+            if dinners:
+                changed = A.compare_dinners(now, before)
+                if changed:
+                    show_table(pd.DataFrame(changed))
+
+
+def ranking_block():
+    """With "cheapest": what the other chains would have cost. The label stays the same, see compare_block."""
+    if not ranking:
+        return
+    with st.expander("Every chain compared"):
+        show_table(pd.DataFrame(ranking["rows"]).rename(columns={"cost": "€/day", "bent": "rules bent"}),
+                   column_config={"€/day": st.column_config.NumberColumn(format="%.2f")})
+        st.caption("Empty: no plan at that chain with these settings. The chain is picked on price alone"
+                   + (", so a cheaper week may bend more meal rules." if real else "."))
+
+
+def _tick(key):
+    on = ss[f"nocat_{key}"]
+    ss.no_categories = sorted((set(ss.no_categories) | {key}) if on else (set(ss.no_categories) - {key}))
+
+
 tabs = st.tabs(["Plan", "Foods", "Dishes", "Charts", "Profile & limits", "Settings"])
 
 # ---------------- Plan ----------------
 with tabs[0]:
+    my_foods_box()
     if not real:
         if not pure["ok"]:
-            st.error(f"No adequate diet with these settings: {pure['message']}. Put back excluded foods, or change the calories or protein target.")
+            impossible(pure["why"], "**No adequate diet with these settings.** Change your own foods, put back excluded "
+                                    "foods or categories, or change the calories or protein target.")
         else:
             t = st.columns(4)
-            tile(t[0], "€ per day", f"€{pure['cost']:.2f}")
+            pure_base = A.pure(**base_pure_kw) if compare_with else None
+            tile(t[0], "€ per day", f"€{pure['cost']:.2f}", split_note(pure), **change_note(pure, pure_base))
             tile(t[1], "€ per week", f"€{7 * pure['cost']:.2f}")
             over = pure["cost"] - ss.budget
             tile(t[2], "Budget", "within budget" if over <= 0 else f"€{over:.2f} over",
@@ -174,33 +338,40 @@ with tabs[0]:
             st.caption("**Pure** is the bare linear program: the cheapest grams per day that meet every requirement. "
                        "It may use raw flour, odd amounts and foods from different chains. Switch to *realistic* "
                        "for meals, whole packs and a shopping list.")
+            ranking_block()
             df = pd.DataFrame(pure["basket"])
             df["chains"] = [f"{n}{' ⚠' if n < 3 else ''}" for n in df.n_chains]
-            df["cap"] = ["at cap" if c_ else "" for c_ in df.at_cap]
+            df["cap"] = ["your food" if m_ else "at cap" if c_ else "" for m_, c_ in zip(df.mine, df.at_cap)]
+            df["food"] = [f"{f_} ★" if m_ else f_ for f_, m_ in zip(df.food, df.mine)]
+            df["chain"] = [f"{c_} ⚠" if a_ else c_ for c_, a_ in zip(df.chain, df.away)]
             show_table(df[["food", "amount", "eur_day", "product", "chain", "chains", "cap"]].rename(
                 columns={"eur_day": "€/day"}), height=35 * len(df) + 38, column_config={"€/day": st.column_config.NumberColumn(format="%.3f")})
+            compare_block(pure, pure_base)
             st.markdown("**Nutrients** (✓ met, binding = the requirement that sets the price)")
             nutrient_table(pure["reqs"], pure["binding"])
     elif R is None:
-        st.info("Realistic mode solves a week of meals (about 10 s per setting). Press **Solve** above. "
-                "Results are cached, so settings you solved before show at once.")
+        st.info(("Realistic mode solves a week of meals (about 10 s per setting). " if week_ranked else
+                 f"The cheapest chain takes a week of meals at all {len(chains)} chains (about a minute). ") +
+                "Press **Solve** above. Results are cached, so settings you solved before show at once.")
     elif not R["ok"]:
-        st.error(R["message"])
+        impossible(R["why"], "**No feasible week with these settings.** Change your own foods, take off a category tick, "
+                             "or try a looser strictness.")
     else:
         t = st.columns(4)
-        tile(t[0], "€ per day", f"€{R['cost']:.2f}")
+        tile(t[0], "€ per day", f"€{R['cost']:.2f}", split_note(R), **change_note(R, R_base))
         tile(t[1], "€ per week", f"€{7 * R['cost']:.2f}")
         over = R["cost"] - ss.budget
         tile(t[2], "Budget", "within budget" if over <= 0 else f"€{over:.2f} over", f"budget €{ss.budget:.2f}/day")
         tile(t[3], "vs pure LP", f"+€{R['cost'] - pure['cost']:.2f}" if pure["ok"] else "-",
              "price of meals, packs and rules")
+        ranking_block()
         if R["bent"]:
             st.warning("Rules bent: " + "; ".join(
                 f"**{b['rule']}** (keeping it costs €{b['saving_day']:.2f}/day more)" if b["saving_day"] is not None
                 else f"**{b['rule']}** (keeping it is infeasible)" for b in R["bent"]))
         else:
             st.success("All meal rules kept.")
-        st.markdown(f"**Dinners** ({R['n_dishes']} NEVO dishes priceable at {ss.chain})")
+        st.markdown(f"**Dinners** ({R['n_dishes']} NEVO dishes priceable at {chain})")
         show_table(pd.DataFrame(R["dinners"]).rename(columns={"g_per_evening": "g per evening",
                                                               "hands_on_min": "hands-on min", "eur_portion": "€/portion"}),
                    column_config={"g per evening": st.column_config.NumberColumn(format="%.0f"),
@@ -213,14 +384,29 @@ with tabs[0]:
             st.markdown("**Shopping list**")
             show_table(pd.DataFrame(R["shop"]).rename(columns={"eur_week": "€/week"}),
                        column_config={"€/week": st.column_config.NumberColumn(format="%.2f")})
+        compare_block(R, R_base, dinners=True)
         st.markdown("**Nutrients per day**")
         nutrient_table(R["reqs"])
 
 # ---------------- Foods ----------------
 with tabs[1]:
-    F = A.foods_table(profile=person, chain=ss.chain, cooked=ss.cooked, min3=ss.min3)
+    st.markdown("**Leave out whole categories**")
+    st.caption("A tick removes every food with that in it (NEVO's recipes say what's in what), and in the realistic plan every "
+               "dinner with it as an ingredient. Oil, salt, sugar, yeast and the like only stop being eaten as such: "
+               "dinners keep their spoonful, or there would be almost nothing left to cook. A food in My foods stays in "
+               "whatever you tick. These are preferences, **not allergy protection**: recipes are typical ones, and real "
+               "products can differ or carry traces.")
+    tick_cols = st.columns(5)
+    for i, cat in enumerate(A.categories()):
+        tick_key = f"nocat_{cat['key']}"
+        ss[tick_key] = cat["key"] in ss.no_categories
+        tick_cols[i % 5].checkbox(f"No {cat['label']}", key=tick_key, on_change=_tick, args=(cat["key"],),
+                                  help=f"{cat['covers']} ({cat['n']} foods)")
+    F = A.foods_table(profile=person, chain=chain, cooked=ss.cooked, min3=ss.min3, keep=sorted(own_keys))
     df = pd.DataFrame(F["rows"])
     df.insert(0, "✗", df.key.isin(ex))
+    cat_out = A.removed_by(ss.no_categories)
+    df["why ✗"] = ["your food, stays in" if k in own_keys else f"no {cat_out[k]}" if k in cat_out else "" for k in df.key]
     plan_g = pure["grams"] if pure["ok"] else {}
     if real and R and R["ok"]:
         st.caption("Grams below are from the pure LP; the realistic plan is on the Plan tab.")
@@ -231,11 +417,13 @@ with tabs[1]:
     st.multiselect("Nutrient columns (per 100 g)", nut, key="food_columns")
     q = st.text_input("Search", placeholder="filter by name or group", key="food_q")
     view = df if not q else df[df.food.str.contains(q, case=False) | df.group.str.contains(q, case=False)]
-    cols = ["✗", "food", "group", "chains", "€/100 g", "g/day in plan", "reduced cost", "product", "pack"] + \
-           list(ss.food_columns)
-    st.caption("Tick ✗ to exclude a food; the plan re-solves at once. Reduced cost: how much the price per 100 g "
-               "must drop before the LP would use the food (0 = in the basket). ⚠ = sold at fewer than 3 chains.")
+    cols = ["✗", "food"] + (["why ✗"] if own_keys or cat_out else []) + \
+           ["group", "chains", "€/100 g", "g/day in plan", "reduced cost", "product", "pack"] + list(ss.food_columns)
+    st.caption("Tick ✗ to exclude a food; the plan re-solves at once. A food a category removes stays ✗ until that tick is "
+               "off. Reduced cost: how much the price per 100 g must drop before the LP would use the food (0 = in the "
+               "basket). ⚠ = sold at fewer than 3 chains.")
     cfg = {"✗": st.column_config.CheckboxColumn("✗", help="exclude this food", width="small"),
+           "why ✗": st.column_config.TextColumn(width="medium"),
            "€/100 g": st.column_config.NumberColumn(format="%.3f"),
            "g/day in plan": st.column_config.NumberColumn(format="%.0f"),
            "reduced cost": st.column_config.NumberColumn(format="%.3f")}
@@ -244,24 +432,25 @@ with tabs[1]:
     edited = st.data_editor(view[cols + ["key"]], hide_index=True, width="stretch", height=620,
                             column_config={**cfg, "key": None},
                             disabled=[c_ for c_ in cols if c_ != "✗"], key=f"foods_{ss.editor_v}")
-    now = (set(ex) - set(view.key)) | set(edited.loc[edited["✗"], "key"])
-    if now != set(ex):
-        ss.excluded = sorted(now)
+    ticked = set(edited.loc[edited["✗"], "key"])
+    if ticked != set(view.key) & set(ex):       # a change, or a click on a row that a tick or My foods decides: back it goes
+        single, locked = set(ss.excluded), set(cat_out) | own_keys
+        ss.excluded = sorted((single - set(view.key)) | (single & locked) | (ticked - locked))
         ss.editor_v += 1
         st.rerun()
-    if ex and st.button("Put back all excluded foods"):
+    if ss.excluded and st.button("Put back all excluded foods"):
         ss.excluded = []
         ss.editor_v += 1
         st.rerun()
 
 # ---------------- Dishes ----------------
 with tabs[2]:
-    if ss.chain == A.ALL_CHAINS:
+    if chain == A.ALL_CHAINS:
         st.info("Pick a chain: a dish is priced from the ingredients sold at one chain.")
     else:
-        Dt = A.dishes_table(chain=ss.chain)
+        Dt = A.dishes_table(chain=chain)
         dd = pd.DataFrame(Dt["rows"])
-        st.caption(f"{len(dd)} of NEVO's {Dt['n_total']} dishes and soups can be priced at {ss.chain} from their "
+        st.caption(f"{len(dd)} of NEVO's {Dt['n_total']} dishes and soups can be priced at {chain} from their "
                    "ingredients. Nutrients are NEVO's own values for the dish, per 100 g. Click a row for its "
                    "ingredients and substitutions.")
         st.multiselect("Nutrient columns (per 100 g)", list(A.FOOD_COLS), key="dish_columns")
@@ -305,16 +494,21 @@ with tabs[3]:
         chart_block(C.money(items, theme), items, "money")
 
         st.markdown("#### 3. Why each food is in the basket (pure LP)")
-        ch3, agg = C.price_split(pure["shares"], theme)
-        chart_block(ch3, agg.drop(columns=["order"]), "price_split",
-                    "LP duality: at the optimum a basket food's price equals Σ shadow price × nutrient content over "
-                    "the binding requirements, so each bar is the food's price split by what it pays for.")
+        if pure["shares"]:
+            ch3, agg = C.price_split(pure["shares"], theme)
+            chart_block(ch3, agg.drop(columns=["order"]), "price_split",
+                        "LP duality: at the optimum a basket food's price equals Σ shadow price × nutrient content over "
+                        "the binding requirements, so each bar is the food's price split by what it pays for."
+                        + (" Your own foods aren't here: they're in the basket because you put them there, so this sum "
+                           "doesn't hold for them." if own else ""))
+        else:
+            st.caption("Your own foods are the whole basket, so there's nothing for the LP to explain.")
 
         st.markdown("#### 4. Chains per profile (pure LP)")
         if person != ss.profile:
             st.caption("The standard profiles, without your weight, height and targets.")
-        CT = A.chain_table(cooked=ss.cooked, excluded=list(ex), min3=ss.min3)
-        chart_block(C.chains(CT["rows"], ss.chain, theme), CT["rows"], "chains")
+        CT = A.chain_table(cooked=ss.cooked, excluded=list(ex), min3=ss.min3, own=own)
+        chart_block(C.chains(CT["rows"], chain, theme), CT["rows"], "chains")
 
         st.markdown("#### 5. What replaces what (pure LP)")
         RM = A.removal(**pure_kw)
@@ -323,6 +517,7 @@ with tabs[3]:
         chart_block(ch5, df5.drop(columns=["node"]), "removal",
                     "Remove the biggest food, re-solve, then do the same in the new diet: three levels, three "
                     "branches each. Hover a dot to see what replaced the removed food."
+                    + (" Your own foods are never removed." if own else "")
                     + (f" Infeasible (no adequate diet left): {'; '.join(bad)}." if bad else ""))
 
         st.markdown("#### 6. Cost curves (pure LP)")

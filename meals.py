@@ -28,8 +28,9 @@ import time
 
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
-from scipy.sparse import lil_matrix
+from scipy.sparse import hstack, lil_matrix
 
+import categories as CAT
 import dishes as D
 import lp
 import plan as P
@@ -61,13 +62,16 @@ def direct_ok(m, i):
     return not NOT_DIRECT.search(P.NEVO_EN.get(f["nevo"], ""))
 
 
-def dish_model(m, chain, pattern):
-    """Append the chain's priceable dinner dishes to the model as pseudo-foods. Returns (model, dish info)."""
+def dish_model(m, chain, pattern, no_cats=()):
+    """Append the chain's priceable dinner dishes to the model as pseudo-foods. Returns (model, dish info).
+    no_cats: ticked categories; a dish with one of them anywhere in its recipe is left out, however small the amount."""
     cat = D.catalog(chain)
     roles = {r["code"]: r for r in csv.DictReader(open("data/dinners.tsv"), delimiter="\t")}
     info = []
     keyset = set(m.keys)
     for code, role in roles.items():
+        if CAT.dish_blocked(code, no_cats):
+            continue
         price, leaves, miss, subs, minor = D.price_dish(code, cat)
         if price is None or any(k not in keyset and k != "_veg_median" for k in leaves):
             continue
@@ -109,7 +113,8 @@ def dish_model(m, chain, pattern):
     mm = dataclasses.replace(
         m, keys=m.keys + [d["key"] for d in info], groups=m.groups + ["dish"] * nd,
         c=np.concatenate([m.c, np.zeros(nd)]), cap=np.concatenate([m.cap, np.full(nd, 99.0)]),
-        N=N, missing=missing, unit_g=np.concatenate([m.unit_g, np.full(nd, 100.0)]))
+        N=N, missing=missing, unit_g=np.concatenate([m.unit_g, np.full(nd, 100.0)]),
+        lb=np.concatenate([m.lb, np.zeros(nd)]))
     return mm, info
 
 
@@ -118,7 +123,8 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
     G, h, lab = rows(mm)
     n_food = len(mm.keys) - len(info)
     foods = [i for i in range(n_food)]
-    direct = [i for i in foods if direct_ok(mm, i)]
+    own = {i for i in foods if mm.lb[i] > 0}             # your own foods: eaten as such, whatever direct_ok says
+    direct = [i for i in foods if direct_ok(mm, i) or i in own]
     used_in_dish = {mm.keys.index(k) for d in info for k in d["leaves"] if k != "_veg_median"}
     active = sorted(set(direct) | used_in_dish)
     kind = {i: (P.shelf(mm.keys[i], mm.groups[i], pk.get(mm.keys[i], (0, 0, ""))[2]) if mm.unit_g[i] else "pantry")
@@ -132,7 +138,7 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
         var[name] = len(cost); cost.append(c); integ.append(is_int); lo_b.append(lo); hi_b.append(hi)
 
     for i in active:
-        add(("y", i), mm.c[i] if kind[i] == "pantry" else 0.0, 0, 0, 7 * mm.cap[i] if i in direct else 0)
+        add(("y", i), mm.c[i] if kind[i] == "pantry" else 0.0, 0, 7 * mm.lb[i], 7 * mm.cap[i] if i in direct else 0)
         if kind[i] != "pantry":
             add(("n", i), pk[mm.keys[i]][1] / kind[i], 1, 0, np.inf)
     vegmed = D.veg_median(D.catalog(chain)) or 0.0
@@ -187,8 +193,9 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
     row({**{var[("z", j)]: 1 for j in range(len(info))}, var[("b", "dinners_4")]: 4}, 4, np.inf)
     row({var[("k", j)]: 1 for j, d in enumerate(info) if d["role"] == "batch"}, -np.inf, BATCH_MAX)
     # starch sides (pasta, rice, potatoes ...) only on evenings whose dish wants one, <= 150 g each
-    starch = [i for i in direct if mm.groups[i] == "potato" or (mm.groups[i] == "grain" and not re.search(
-        r"oat|muesli|cereal|flakes|bran", P.NEVO_EN.get(P.FOODS.get(mm.keys[i], {}).get("nevo", ""), ""), re.I))]
+    # (your own foods aren't sides: you eat them when you like)
+    starch = [i for i in direct if i not in own and (mm.groups[i] == "potato" or (mm.groups[i] == "grain" and not re.search(
+        r"oat|muesli|cereal|flakes|bran", P.NEVO_EN.get(P.FOODS.get(mm.keys[i], {}).get("nevo", ""), ""), re.I)))]
     coefs = {var[("y", i)]: 1 for i in starch}
     for j, d in enumerate(info):
         if d["side"]:
@@ -216,18 +223,20 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
     for j in range(len(info)):
         tot[var[("G", j)]] = kc[dish_idx[j]]
     bigM = 7 * 6000
-    for v, kci in [(var[("y", i)], kc[i]) for i in active if kc[i] > 0] + \
-                  [(var[("G", j)], kc[dish_idx[j]]) for j in range(len(info))]:
+    # What you asked for of your own food doesn't count against the rule, only what the plan adds on top of it.
+    for v, kci, asked in [(var[("y", i)], kc[i], 7 * mm.lb[i] * kc[i]) for i in active if kc[i] > 0] + \
+                         [(var[("G", j)], kc[dish_idx[j]], 0.0) for j in range(len(info))]:
         coefs = {vv: -0.30 * c for vv, c in tot.items()}
         coefs[v] = coefs.get(v, 0) + kci
         coefs[var[("b", "kcal_30")]] = -bigM
-        row(coefs, -np.inf, 0)
+        row(coefs, -np.inf, asked)
 
     M = lil_matrix((len(A), len(cost)))
     for r, coefs in enumerate(A):
         for cidx, val in coefs.items():
             M[r, cidx] = val
-    lay = {"var": var, "kind": kind, "active": active, "direct": direct, "info": info, "n_food": n_food}
+    lay = {"var": var, "kind": kind, "active": active, "direct": direct, "info": info, "n_food": n_food, "own": own,
+           "n_nutrient_rows": len(lab)}
     return np.array(cost), M.tocsr(), np.array(lo), np.array(hi), np.array(integ), np.array(lo_b), np.array(hi_b), lay
 
 
@@ -244,6 +253,38 @@ def solve_week(mm, info, pk, chain, pattern="brunch", strictness="medium", force
     pen = sum(c[var[("b", b)]] for b in broken)
     lay.update(x=x, cost=r.fun - pen, objective=r.fun, broken=broken, seconds=time.time() - t, status=r.status)
     return lay
+
+
+def closest_week(mm, info, pk, chain, pattern="brunch", strictness="medium", no_batch=False, limit=30):
+    """When no week fits: the one that misses the nutrient limits by the least, in relative terms. What it misses is
+    what's in the way. None if even that fails, so the meal rules themselves leave no room."""
+    c, A, lo, hi, integ, lb, ub, lay = build(mm, info, pk, chain, pattern, PENALTY[strictness], None, no_batch)
+    k = lay["n_nutrient_rows"]
+    h = hi[:k]
+    energy = next((float(r["lower"]) for r in mm.reqs if r["name"] == "energy" and r["lower"]), 2000.0)
+    scale = np.where(np.abs(h) > 0, np.abs(h), 7 * energy)            # energy-share rows have h = 0 and are in kcal
+    slack = lil_matrix((A.shape[0], k))
+    for j in range(k):
+        slack[j, j] = -1
+    r = milp(np.r_[1e-6 * c, 1 / scale], constraints=LinearConstraint(hstack([A, slack.tocsr()]).tocsr(), lo, hi),
+             integrality=np.r_[integ, np.zeros(k)], bounds=Bounds(np.r_[lb, np.zeros(k)], np.r_[ub, np.full(k, np.inf)]),
+             options={"time_limit": limit, "mip_rel_gap": 1e-2})
+    if r.x is None:
+        return None
+    lay.update(x=r.x[:len(c)])
+    return lay
+
+
+def most_of(mm, info, pk, chain, i, pattern="brunch", strictness="medium", no_batch=False, limit=30):
+    """The most of food i (grams a day) any week can hold, with everything else as asked. None if none can."""
+    c, A, lo, hi, integ, lb, ub, lay = build(mm, info, pk, chain, pattern, PENALTY[strictness], None, no_batch)
+    v = lay["var"][("y", i)]
+    lb[v], ub[v] = 0.0, np.inf
+    goal = np.zeros(len(c))
+    goal[v] = -1.0
+    r = milp(goal, constraints=LinearConstraint(A, lo, hi), integrality=integ, bounds=Bounds(lb, ub),
+             options={"time_limit": limit, "mip_rel_gap": 1e-2})
+    return None if r.x is None else float(r.x[v]) * 100 / 7
 
 
 # ---------------- report ----------------

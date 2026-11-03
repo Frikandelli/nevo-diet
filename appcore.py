@@ -21,6 +21,7 @@ from pathlib import Path
 import numpy as np
 from scipy.optimize import linprog
 
+import categories as CAT
 import dishes as D
 import explain
 import lp
@@ -35,14 +36,16 @@ PR.USER_FILE = Path(os.environ.get("NEVO_DIET_PROFILES", "~/.config/nevo-diet/pr
 SETTINGS_FILE = Path(os.environ.get("NEVO_DIET_SETTINGS", "~/.config/nevo-diet/settings.json")).expanduser()
 VERSION_FILES = ["data/catalog_foods.tsv", "data/catalog_prices.tsv", "data/requirements.tsv", "data/profiles.tsv",
                  "data/dinners.tsv", "data/amino_foods.tsv", "lp.py", "plan.py", "meals.py", "dishes.py",
-                 "explain.py", "profiles.py", "appcore.py"]
+                 "explain.py", "profiles.py", "appcore.py", "categories.py"]
 EPS = 1e-7
 
 DEFAULTS = {"profile": "avg_man", "chain": "ah", "cooked": True, "mode": "pure", "budget": 3.0,
             "strictness": "medium", "pattern": "brunch", "batch": True, "min3": False, "excluded": [],
             "weight": None, "height": None, "kcal": None, "protein": None,
+            "my_foods": [], "no_categories": [], "compare_ticks": False,
             "cache_mb": 500, "food_columns": ["kcal", "protein", "fibre"], "dish_columns": ["kcal", "protein"]}
 ALL_CHAINS = "all"      # pure mode only: every food at its cheapest chain
+CHEAPEST = "cheapest"   # one chain, the one with the lowest price under the current settings; app.py resolves it
 
 # Display names of the requirements (data/requirements.tsv `name`).
 NICE = {"energy": "energy", "protein": "protein", "fibre": "fibre", "carbs": "carbohydrate", "fat": "fat",
@@ -74,6 +77,8 @@ def nice(r):
 def label(k):
     if k == "vitD_tablet":
         return "vitamin D tablet"
+    if k == "_veg_median":
+        return "vegetables sold per piece"
     f = P.FOODS.get(k)
     return f["name"] if f else k
 
@@ -280,9 +285,130 @@ def set_limits(name, rows_):
     _write_profiles(own)
 
 
-def model(profile, chain, cooked, excluded=(), min3=False):
+# ---------------- your own foods and the category ticks ----------------
+def own_spec(my_foods):
+    """What the solvers get from the My foods box: [food, grams a day, exact?], foods gone from the catalog left out."""
+    out = []
+    for f in my_foods:
+        if f["key"] in P.FOODS and f.get("grams"):
+            out.append([f["key"], float(f["grams"]) / (7 if f.get("per") == "week" else 1), f.get("how") != "at least"])
+    return sorted(out)
+
+
+def effective_excluded(excluded, no_cats, own=()):
+    """Your single ✗ marks plus everything the ticks remove. Your own foods stay in, whatever these say."""
+    return sorted((set(excluded) | CAT.members(no_cats)) - {o[0] for o in own})
+
+
+def categories():
+    return [{"key": k, "label": lab, "covers": covers, "n": len(CAT.members([k]))} for k, lab, covers in CAT.CATEGORIES]
+
+
+def removed_by(no_cats):
+    return CAT.removed_by(no_cats)
+
+
+def food_choices(chain):
+    """{food: name} for the My foods search, by name; foods this chain doesn't sell say so."""
+    _prices()
+    by = _PR["by"]              # not prices_of(): that checks the data version, and this asks 1,200 times per page
+    def name(k):
+        away = chain != ALL_CHAINS and not any(r["chain"] == chain for r in by.get(k, ()))
+        return label(k) + (f" (⚠ not at {chain})" if away else "")
+    return {k: name(k) for k in sorted((k for k in P.FOODS if by.get(k)), key=label)}
+
+
+def product_of(k, chain):
+    """(price row of the cheapest product of this food at the chain, else anywhere; was it elsewhere?)"""
+    prods = prices_of(k)
+    here = [r for r in prods if chain == ALL_CHAINS or r["chain"] == chain]
+    best = min(here or prods, key=lambda r: float(r["eur_per_100g"]), default=None)
+    return best, bool(best) and not here
+
+
+def compare(now, before, own):
+    """What changed between two plans: a row per food whose amount or cost moved, your own foods first."""
+    mine = {o[0] for o in own}
+    rows_ = []
+    for k in {*now["grams"], *before["grams"]}:
+        g1, g0 = now["grams"].get(k, 0.0), before["grams"].get(k, 0.0)
+        e1, e0 = now["eur"].get(k, 0.0), before["eur"].get(k, 0.0)
+        if abs(g1 - g0) >= 1 or abs(e1 - e0) >= 0.005:
+            rows_.append({"": "★" if k in mine else "", "food": label(k), "before": g0, "now": g1, "change": g1 - g0,
+                          "€/day change": e1 - e0, "_mine": k in mine})
+    rows_.sort(key=lambda r: (not r["_mine"], -abs(r["change"])))
+    return [{k: v for k, v in r.items() if k != "_mine"} for r in rows_]
+
+
+def compare_dinners(now, before):
+    """Dinners whose number of evenings changed."""
+    d1, d0 = ({d["dinner"]: d["evenings"] for d in r["dinners"]} for r in (now, before))
+    return [{"dinner": d, "evenings before": d0.get(d, 0), "evenings now": d1.get(d, 0)}
+            for d in sorted({*d0, *d1}) if d0.get(d, 0) != d1.get(d, 0)]
+
+
+def _misses(m, x):
+    """The limits this diet breaks, in words: what stands in the way of a real plan."""
+    out = []
+    for r in requirement_rows(m, totals_of(m, x)):
+        if not r["ok"]:
+            low = r["lower"] is not None and r["intake"] < r["lower"]
+            out.append({"nutrient": r["nutrient"], "unit": r["unit"], "intake": r["intake"],
+                        "side": "minimum" if low else "maximum", "limit": r["lower"] if low else r["upper"]})
+    return out
+
+
+def why_not(m, own):
+    """No adequate diet: which limits stand in the way, and how much of each of your foods would still work.
+    The limits come from the diet that misses them by the least (each miss relative to its limit, an LP)."""
+    G, h, _ = lp.rows(m)
+    n, k = G.shape[1], G.shape[0]
+    energy = next((float(r["lower"]) for r in m.reqs if r["name"] == "energy" and r["lower"]), 2000.0)
+    scale = np.where(np.abs(h) > 0, np.abs(h), energy)                # energy-share rows have h = 0 and are in kcal
+    res = linprog(np.r_[1e-6 * m.c, 1 / scale], A_ub=np.hstack([G, -np.eye(k)]), b_ub=h,
+                  bounds=list(zip(m.lb, m.cap)) + [(0, None)] * k, method="highs")
+    amounts = []
+    for key, wanted, _exact in own:
+        if key not in m.keys:
+            continue
+        i = m.keys.index(key)
+        lb, cap = m.lb.copy(), m.cap.copy()
+        lb[i], cap[i] = 0.0, np.inf
+        e = np.zeros(n)
+        e[i] = 1
+        most = linprog(-e, A_ub=G, b_ub=h, bounds=list(zip(lb, cap)), method="highs")
+        least = linprog(e, A_ub=G, b_ub=h, bounds=list(zip(lb, cap)), method="highs")
+        amounts.append({"key": key, "food": label(key), "wanted": wanted,
+                        "most": -most.fun * 100 if most.status == 0 else None,
+                        "least": least.fun * 100 if least.status == 0 else None})
+    return {"misses": _misses(m, res.x[:n]) if res.status == 0 else [], "amounts": amounts}
+
+
+def why_not_week(mm, info, pk, chain, pattern, strictness, batch, own):
+    """The same for a week of meals. This takes up to half a minute per question: the path to an error message only."""
+    lay = M.closest_week(mm, info, pk, chain, pattern, strictness, no_batch=not batch)
+    amounts = []
+    for key, wanted, _exact in own:
+        if key in mm.keys:
+            most = M.most_of(mm, info, pk, chain, mm.keys.index(key), pattern, strictness, no_batch=not batch)
+            amounts.append({"key": key, "food": label(key), "wanted": wanted, "most": most, "least": None})
+    return {"misses": _misses(mm, _week_intake(mm, info, lay)) if lay else [], "amounts": amounts, "n_dinners": len(info),
+            "rules": lay is None}
+
+
+def _week_intake(mm, info, lay):
+    """Grams (units) a day of every food and dish in a solved week, for the nutrient totals."""
+    x = np.zeros(len(mm.keys))
+    for i in lay["active"]:
+        x[i] = M.val(lay, ("y", i)) / 7
+    for j in range(len(info)):
+        x[lay["n_food"] + j] = M.val(lay, ("G", j)) / 7
+    return x
+
+
+def model(profile, chain, cooked, excluded=(), min3=False, own=()):
     return lp.load(drop=tuple(excluded), cooked=cooked, chain=None if chain == ALL_CHAINS else chain,
-                   min_chains=3 if min3 else 0, profile=profile)
+                   min_chains=3 if min3 else 0, profile=profile, own=own)
 
 
 def requirement_rows(m, totals):
@@ -354,11 +480,12 @@ def prices_of(k):
 
 # ---------------- pure LP ----------------
 @cached
-def pure(profile, chain, cooked, excluded, min3):
-    m = model(profile, chain, cooked, excluded, min3)
+def pure(profile, chain, cooked, excluded, min3, own=()):
+    m = model(profile, chain, cooked, excluded, min3, own)
+    mine = {o[0] for o in own}
     res, G, h, lab = lp.solve(m)
     if res.status != 0:
-        return {"ok": False, "message": res.message}
+        return {"ok": False, "message": res.message, "why": why_not(m, own)}
     x = res.x
     grams = x * m.unit_g
     basket = []
@@ -366,10 +493,8 @@ def pure(profile, chain, cooked, excluded, min3):
         if x[i] <= EPS:
             continue
         k = m.keys[i]
-        prods = prices_of(k)
-        best = min((r for r in prods if chain == ALL_CHAINS or r["chain"] == chain),
-                   key=lambda r: float(r["eur_per_100g"]), default=None)
-        basket.append({"key": k, "food": label(k), "group": m.groups[i],
+        best, away = product_of(k, chain)
+        basket.append({"key": k, "food": label(k), "group": m.groups[i], "mine": k in mine, "away": away,
                        "amount": f"{grams[i]:.0f} g" if m.unit_g[i] else f"{x[i]:.2f} tablet",
                        "g_day": float(grams[i]), "eur_day": float(x[i] * m.c[i]),
                        "at_cap": bool(abs(x[i] - m.cap[i]) < 1e-7),
@@ -379,6 +504,8 @@ def pure(profile, chain, cooked, excluded, min3):
     split = explain.price_split(m, res, G, lab)
     shares = []
     for i, s in split.items():
+        if m.keys[i] in mine:                # it's in the basket because you put it there, not because of what it pays for
+            continue
         for req, eur in s["shares"].items():
             shares.append({"food": label(m.keys[i]), "nutrient": nice(req), "eur_per_100g": eur,
                            "price": s["price"]})
@@ -394,12 +521,14 @@ def pure(profile, chain, cooked, excluded, min3):
             "by_food": food_coverage(m, x), "binding": binding_names(m, res, G, h, lab), "shares": shares, "shadow": shadow,
             "rc": {m.keys[i]: float(res.lower.marginals[i]) for i in range(len(m.keys))},
             "grams": {m.keys[i]: float(grams[i]) for i in range(len(m.keys)) if x[i] > EPS},
+            "eur": {m.keys[i]: float(x[i] * m.c[i]) for i in range(len(m.keys)) if x[i] > EPS},
+            "own_eur": sum(float(x[i] * m.c[i]) for i in range(len(m.keys)) if m.keys[i] in mine),
             "n_foods": len(m.keys)}
 
 
 @cached
-def removal(profile, chain, cooked, excluded, min3):
-    m = model(profile, chain, cooked, excluded, min3)
+def removal(profile, chain, cooked, excluded, min3, own=()):
+    m = model(profile, chain, cooked, excluded, min3, own)
     nodes = explain.removal_tree(m, depth=3, branch=3)
     out = []
     for n in nodes:
@@ -411,8 +540,8 @@ def removal(profile, chain, cooked, excluded, min3):
 
 
 @cached
-def cost_curve(profile, chain, cooked, excluded, min3, req, steps=(1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 3.0, 4.0)):
-    m = model(profile, chain, cooked, excluded, min3)
+def cost_curve(profile, chain, cooked, excluded, min3, req, own=(), steps=(1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 3.0, 4.0)):
+    m = model(profile, chain, cooked, excluded, min3, own)
     r = next(r for r in m.reqs if r["name"] == req)
     lo, hi = r["lower"], r["upper"]
     pts = []
@@ -427,15 +556,15 @@ def cost_curve(profile, chain, cooked, excluded, min3, req, steps=(1.0, 1.25, 1.
 
 
 @cached
-def wiggle(profile, chain, cooked, excluded, min3, slack=0.05):
+def wiggle(profile, chain, cooked, excluded, min3, own=(), slack=0.05):
     """Flux-variability ranges: min and max grams of each food over all diets within `slack` of the optimum."""
-    m = model(profile, chain, cooked, excluded, min3)
+    m = model(profile, chain, cooked, excluded, min3, own)
     res, G, h, lab = lp.solve(m)
     if res.status != 0:
         return {"rows": []}
     x, rc = res.x, res.lower.marginals
     Gc, hc = np.vstack([G, m.c]), np.append(h, (1 + slack) * res.fun)
-    bounds = list(zip(np.zeros(len(m.keys)), m.cap))
+    bounds = list(zip(m.lb, m.cap))
     rows_ = []
     for i, k in enumerate(m.keys):
         if x[i] < EPS and rc[i] > slack * res.fun:       # entering it costs more than the whole slack
@@ -452,26 +581,50 @@ def wiggle(profile, chain, cooked, excluded, min3, slack=0.05):
 
 
 @cached
-def chain_table(cooked, excluded, min3):
+def chain_table(cooked, excluded, min3, own=()):
     rows_ = []
     for prof, lab in profiles().items():
         for ch in [ALL_CHAINS] + chains():
-            m = model(prof, ch, cooked, excluded, min3)
+            m = model(prof, ch, cooked, excluded, min3, own)
             res, *_ = lp.solve(m)
             rows_.append({"profile": lab, "profile_key": prof, "chain": ch,
                           "cost": float(res.fun) if res.status == 0 else None})
     return {"rows": rows_}
 
 
+def _ranked(rows_):
+    """Cheapest first, chains without a plan last. best: the chain to shop at, None if no chain has a plan."""
+    rows_.sort(key=lambda r: (r["cost"] is None, r["cost"] or 0.0, r["chain"]))
+    return {"rows": rows_, "best": rows_[0]["chain"] if rows_[0]["cost"] is not None else None}
+
+
+@cached
+def chain_prices(profile, cooked, excluded, min3, own=()):
+    """The pure LP at every chain, for the "cheapest" option."""
+    rows_ = []
+    for ch in chains():
+        res, *_ = lp.solve(model(profile, ch, cooked, excluded, min3, own))
+        rows_.append({"chain": ch, "cost": float(res.fun) if res.status == 0 else None})
+    return _ranked(rows_)
+
+
 # ---------------- realistic: a week of meals ----------------
 @cached
-def realistic(profile, chain, cooked, excluded, strictness, pattern, batch):
-    m = lp.load(drop=tuple(excluded), cooked=cooked, chain=chain, min_chains=0, profile=profile)
-    mm, info = M.dish_model(m, chain, pattern)
+def realistic(profile, chain, cooked, excluded, strictness, pattern, batch, no_cats=(), own=()):
+    """excluded: your single ✗ marks; no_cats: the category ticks. A tick that follows ingredients removes the foods and
+    every dinner with them. A cooking basic (oil, salt ...) is only no longer eaten as such: dinners keep their spoonful."""
+    hard = effective_excluded(excluded, set(no_cats) & CAT.FOLLOWS_INGREDIENTS, own)
+    m = lp.load(drop=tuple(hard), cooked=cooked, chain=chain, min_chains=0, profile=profile, own=own)
+    for k in CAT.basics_in_dinners(no_cats) - {o[0] for o in own}:
+        if k in m.keys:
+            m.cap[m.keys.index(k)] = 0.0
+    mm, info = M.dish_model(m, chain, pattern, no_cats)
     pk = P.packs(chain)
+    mine = {o[0] for o in own}
     lay = M.solve_week(mm, info, pk, chain, pattern, strictness, no_batch=not batch)
     if lay is None:
-        return {"ok": False, "message": "no feasible week with these settings"}
+        return {"ok": False, "message": "no feasible week with these settings",
+                "why": why_not_week(mm, info, pk, chain, pattern, strictness, batch, own)}
     val = lambda k: M.val(lay, k)
     dinners = []
     for j, d in enumerate(info):
@@ -485,9 +638,10 @@ def realistic(profile, chain, cooked, excluded, strictness, pattern, batch):
     for i in sorted(lay["direct"], key=lambda i: -val(("y", i))):
         y = val(("y", i))
         if y > 1e-4:
-            direct.append({"food": label(mm.keys[i]), "amount": f"{y*100/7:.0f} g" if mm.unit_g[i] else
+            direct.append({"food": label(mm.keys[i]) + (" ★" if mm.keys[i] in mine else ""),
+                           "amount": f"{y*100/7:.0f} g" if mm.unit_g[i] else
                            f"{y/7:.2f} tablet", "g_day": y * 100 / 7 if mm.unit_g[i] else 0.0, "group": mm.groups[i]})
-    shop, money = [], []
+    shop, grams, eur_day = [], {}, {}
     for i in lay["active"]:
         u = val(("y", i)) + sum(d["leaves"].get(mm.keys[i], 0) * val(("G", j)) for j, d in enumerate(info))
         if u < 1e-4:
@@ -496,8 +650,16 @@ def realistic(profile, chain, cooked, excluded, strictness, pattern, batch):
         if not mm.unit_g[i]:
             shop.append({"product": "AH Care Vitamine D3 25 µg (300 tablets)", "food": label(k),
                          "buy": f"{u/7:.2f} a day", "eur_week": u * mm.c[i]})
+            eur_day[k] = shop[-1]["eur_week"] / 7
             continue
-        g, eur, prod, pg = pk.get(k, (0, 0, "?", 0))
+        grams[k] = u * 100 / 7
+        if k not in pk:                        # one of your own foods that this chain doesn't sell
+            best, _ = product_of(k, chain)
+            shop.append({"product": f"{best['product']} (⚠ at {best['chain']})", "food": label(k),
+                         "buy": f"{u*100:.0f} g/week", "eur_week": u * mm.c[i]})
+            eur_day[k] = shop[-1]["eur_week"] / 7
+            continue
+        g, eur, prod, pg = pk[k]
         if lay["kind"][i] == "pantry":
             weeks = g / (u * 100) if u else 0
             shop.append({"product": f"{prod} ({pg:.0f} g, €{eur:.2f})", "food": label(k),
@@ -506,18 +668,16 @@ def realistic(profile, chain, cooked, excluded, strictness, pattern, batch):
             n, L = round(val(("n", i))), lay["kind"][i]
             shop.append({"product": f"{prod} ({pg:.0f} g, €{eur:.2f})", "food": label(k),
                          "buy": f"{n} every {'week' if L == 1 else f'{L} weeks'}", "eur_week": n * eur / L})
+        eur_day[k] = shop[-1]["eur_week"] / 7
     vm = sum(d["leaves"].get("_veg_median", 0) * val(("G", j)) for j, d in enumerate(info))
     if vm > 1e-4:
         vegmed = D.veg_median(D.catalog(chain)) or 0
         shop.append({"product": "vegetables sold per piece (celery, cucumber, courgette ...)",
                      "food": "dish ingredients", "buy": f"{vm*100:.0f} g/week", "eur_week": vm * vegmed})
+        grams["_veg_median"], eur_day["_veg_median"] = vm * 100 / 7, vm * vegmed / 7
     shop.sort(key=lambda r: -r["eur_week"])
     # nutrients per day
-    x_all = np.zeros(len(mm.keys))
-    for i in lay["active"]:
-        x_all[i] = val(("y", i)) / 7
-    for j in range(len(info)):
-        x_all[lay["n_food"] + j] = val(("G", j)) / 7
+    x_all = _week_intake(mm, info, lay)
     # rule savings: each bent rule made hard on its own
     bent = []
     for b in lay["broken"]:
@@ -526,7 +686,20 @@ def realistic(profile, chain, cooked, excluded, strictness, pattern, batch):
     return {"ok": True, "cost": lay["cost"] / 7, "dinners": dinners, "direct": direct, "shop": shop,
             "reqs": requirement_rows(mm, totals_of(mm, x_all)),
             "by_food": food_coverage(mm, x_all, {d["key"]: d["note"] for d in info}), "bent": bent, "n_dishes": len(info),
+            "grams": grams, "eur": eur_day, "own_eur": sum(e for k, e in eur_day.items() if k in mine),
             "mip_seconds": lay["seconds"]}
+
+
+@cached
+def week_prices(profile, cooked, excluded, strictness, pattern, batch, no_cats=(), own=()):
+    """The realistic week at every chain, for the "cheapest" option. Packs and dinners differ per chain, so the pure LP's
+    ranking doesn't settle this one. Ranked on the price shown; `bent` says how many meal rules that price bends."""
+    rows_ = []
+    for ch in chains():
+        r = realistic(profile=profile, chain=ch, cooked=cooked, excluded=excluded, strictness=strictness, pattern=pattern,
+                      batch=batch, no_cats=no_cats, own=own)
+        rows_.append({"chain": ch, "cost": r["cost"] if r["ok"] else None, "bent": len(r["bent"]) if r["ok"] else None})
+    return _ranked(rows_)
 
 
 # ---------------- foods and dishes tables ----------------
@@ -539,17 +712,18 @@ FOOD_COLS = {"kcal": ("ENERCC", "kcal"), "protein": ("PROT", "g"), "fat": ("FAT"
 
 
 @cached
-def foods_table(profile, chain, cooked, min3):
-    """Every food in the catalog (excluded ones too, so they can be put back): prices and nutrients per 100 g."""
-    m = model(profile, chain, cooked, (), min3)
+def foods_table(profile, chain, cooked, min3, keep=()):
+    """Every food in the catalog (excluded ones too, so they can be put back): prices and nutrients per 100 g.
+    keep: your own foods, listed even if this chain doesn't sell them."""
+    m = model(profile, chain, cooked, (), min3, [[k, 0.0, False] for k in keep])
     out = []
     for i, k in enumerate(m.keys):
-        prods = [r for r in prices_of(k) if chain == ALL_CHAINS or r["chain"] == chain]
-        best = min(prods, key=lambda r: float(r["eur_per_100g"]), default=None)
+        best, away = product_of(k, chain)
         row = {"key": k, "food": label(k), "group": m.groups[i],
                "chains": int(P.FOODS[k]["n_chains"]) if k in P.FOODS else 1,
                "€/100 g": float(m.c[i]) if m.unit_g[i] else None,
-               "product": best["product"] if best else ("AH Care Vitamine D3 25 µg, 1 tablet" if not m.unit_g[i] else ""),
+               "product": (best["product"] + (f" (⚠ at {best['chain']})" if away else "")) if best else
+                          ("AH Care Vitamine D3 25 µg, 1 tablet" if not m.unit_g[i] else ""),
                "pack": f"{best['pack_g']} g, €{best['pack_eur']}" if best else ""}
         for name, (col, unit) in FOOD_COLS.items():
             if col in m.N:

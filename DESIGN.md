@@ -70,6 +70,25 @@ pickle keyed by settings and a hash of the data files and model code, with a lea
 updates live; a realistic week runs on the Solve button. Charts 3, 5, 6 and 7 always use the pure LP, because duality, removal,
 curves and ranges are LP concepts.
 
+**Cheapest chain.** One real chain, unlike "all chains", which mixes chains per food. The pick follows the mode and the current
+settings: pure ranks the LP at every chain, and realistic ranks a full week at all 10 chains, because packs and dinners differ
+per chain. It's ranked on the price shown, so a cheaper week may bend more meal rules; "Every chain compared" shows the count.
+The before-and-after stays at the picked chain, so it shows what your foods do, not a change of chain.
+
+**My foods.** Foods from the catalog, in grams per day or week, exactly or at least, as bounds on the variables. They work in pure and
+realistic mode, and in realistic they go on the shopping list in whole packs. A food the chain doesn't sell is priced at the
+cheapest other chain and marked ⚠. An impossible amount gives no plan, but a message naming the limit in the way and the most
+that still works. A before-and-after compares with the same plan without your foods, and a switch also takes away the ticks.
+Your own food beats a tick or a ✗. "Exactly" counts what you eat as such; a dinner may use more on top. In the realistic week,
+what you asked for doesn't count against "no food above 30% of energy". The removal tree never removes your own foods, and the
+price split leaves them out, because the duality sum doesn't hold for a food on its lower bound.
+
+**Category ticks** (`categories.py`). A tick removes everything containing that ingredient, including dinners, using NEVO's food
+group, its English name and its recipes. Cooking basics (fats and oils, sugar, salt, yeast and the like) only stop being eaten as
+such, and a dinner keeps its spoonful: taken strictly, "no fats and oils" would leave 3 of the 34 dinners. An average ("Beef av
+raw") only takes on what at least half of the mix has. Borderline foods: peanuts and chestnuts are nuts, coconut isn't; goat's
+milk and butter are dairy, plant drinks aren't; seed oils aren't seeds.
+
 ## Rules for the data
 
 - Never commit the NEVO files, and never change NEVO values. Handle suspicious values with documented model rules in code.

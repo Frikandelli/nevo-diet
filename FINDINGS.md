@@ -360,3 +360,40 @@ dishes, six soft rules, medium strictness (a rule bends only if that saves ≥ �
 - **Streamlit quirk worth knowing:** its chart theme quietly overrides Altair's font sizes and squeezes row
   heights when a chart stretches to the page width, so labels skip and stacked bars overlap. The app renders
   charts with `theme=None` and an explicit pixel height.
+
+## My foods and category ticks (2026-11-02)
+
+Prices in this section are for the high-protein profile at AH.
+
+- **What 500 g of milk a day does (pure):** €1.64 → €1.72. It costs €0.47 itself, but €0.39 comes back: soy drink
+  drops from 283 to 59 g, yoghurt (186 g) and white pasta (167 g) leave, and peanuts double to 211 g, presumably to replace the
+  energy of the pasta.
+- **Milk is nearly free until it suddenly isn't:** 250 g +€0.04, 1 kg +€0.32, 1.5 kg +€0.66, then 2 kg +€10.70, and 2.5 kg is
+  impossible. Calcium is the wall: 1 kg of milk has 1,230 mg and the maximum is 2,500 mg, so at 2 kg the rest of the diet has
+  to be almost calcium-free. Just below a limit the shadow price explodes, a nice picture of the polytope closing.
+- **Which food groups the cheapest diet actually needs (+€/day to remove):** vegetables 0.73, grain products 0.59, supplements
+  0.22, nuts 0.17, seeds 0.06, meat 0.05, dairy 0.01. Eggs, fruit, potatoes, legumes and soy cost under a cent: the cheapest
+  basket hardly uses them, or swaps them for something almost as cheap.
+- **Fish is the expensive one:** +€2.06, and vegetarian (no meat, no fish) is €4.22/day. The EPA+DHA minimum does all of it:
+  without that one limit, no fish costs €1.61 and vegetarian €1.74.
+  Vegan is impossible under the model's rule that plants have 0 EPA+DHA; it's the only limit in the way.
+- **Without the vitamin D tablet:** +€0.22/day, about 13 times the tablet's €0.017. It's the best deal in the basket.
+- **Soy drink is "dairy" in the catalog's groups,** so a first "no dairy" test also removed soy drink and cost +€0.65. With soy
+  drink kept, no dairy costs +€0.01, and no soy with dairy kept costs under a cent. Either one is nearly free to lose; losing
+  both isn't.
+- **Category war stories:** "self-raising" flour came out as fruit, because it contains "raisin", and "Salad cream" as dairy. The
+  name rules need guards from the start: "Egg whole chicken" and "Lettuce lambs" aren't meat, and NEVO's "wo" (without) has to
+  cancel the next word, or "Puff pastry wo butter" is dairy.
+- **"Beef av raw" had egg and bread crumbs in it:** one kind in the average (11%) is a meatball. Averages now only take on what
+  at least half of the mix has.
+- **NEVO's typical recipes hold surprises:** hummus has 17% peanut oil, and so does cucumber salad (17.5%). The coconut ice cream
+  alternative has 1% pecans. With "no nuts" they all go.
+- **A spoon of oil is in almost everything:** only 3 of the 34 dinners have no fat or oil anywhere in their recipe, 19 have no
+  added salt, and 5 have no vegetables.
+- **Duality with a floor under a food:** a food you force in sits on its lower bound, so its reduced cost can be positive while
+  it's in the basket. c = Σ y·a no longer holds for it, and `price_split` now carries that term.
+- **Streamlit quirk, a real bug for a while:** a selectbox whose list of options changes falls back to its first option, unless
+  you set its value yourself first. Going from realistic back to pure quietly moved the chain from AH to "all chains", so the
+  price dropped from €1.64 to €1.41 with nothing on screen saying why. Only a run in a real browser showed it.
+- **Which chain is cheapest depends on what you ask (average man, cooked, 2026-10-30 prices):** Dekamarkt wins both the pure LP (€1.41) and the real week (€2.24), but the rest reshuffles. Dirk is second in the pure LP (€1.49) and fifth for a real week (€2.52); Lidl goes from seventh (€1.82) to second (€2.35). Whole packs and dinners decide that, not the bare food prices.
+- **Vomar's real week is cheaper than its pure LP:** €5.38 against €6.34 for the average man, with 3 meal rules bent. The LP should be a lower bound on the same foods, so the dishes are probably adding something the LP can't buy there. Not looked into yet; Vomar is nowhere near winning.
