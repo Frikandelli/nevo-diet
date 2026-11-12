@@ -114,6 +114,10 @@ def main():
         with open(path, "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=list(rows[0]), delimiter="\t", lineterminator="\n")
             w.writeheader(); w.writerows(rows)
+    # Which price snapshot the catalog is built from: the snapshot itself isn't in git, so without this a clone can't
+    # tell how old its prices are (the app's Data and Settings pages show it).
+    with open("data/catalog_snapshot.txt", "w") as fh:
+        fh.write(latest_snapshot().split("/")[-1] + "\n")
     n_cooked = sum(1 for f in foods if f["nevo_cooked"])
     print(f"{len(foods)} foods ({len(curated)} hand, {len(foods) - len(curated)} auto), {n_cooked} with a cooked "
           f"entry; {len(prices)} food x chain prices; {sum(f['n_chains'] >= 3 for f in foods)} sold at >= 3 chains")

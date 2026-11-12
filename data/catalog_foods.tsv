@@ -35,7 +35,7 @@ onions	63	Onions raw	veg			hand	10	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,p
 peas_frozen	953	Peas frozen boiled	veg			hand	6	ah,dekamarkt,dirk,hoogvliet,lidl,spar
 broccoli	921	Broccoli raw	veg	920	1	hand	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 tomatoes_tin	2293	Tomatoes tinned	veg			hand	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
-banana	151	Banana	fruit			hand	10	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar,vomar
+banana	151	Banana	fruit			hand	9	ah,dekamarkt,dirk,hoogvliet,jumbo,plus,poiesz,spar,vomar
 apple	875	Apple w skin av	fruit			hand	2	lidl,plus
 sardines	355	Sardines/pilchards in oil tinned	fish			hand	7	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus
 mackerel_tin	1609	Mackerel in oil tinned	fish			hand	7	ah,dekamarkt,dirk,hoogvliet,lidl,plus,spar
@@ -54,14 +54,14 @@ sugar	377	Sugar granulated	sweet			hand	7	ah,dekamarkt,dirk,hoogvliet,jumbo,plus
 tomato_paste	141	Tomato puree concentrated tinned	veg			hand	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n10	10	Aubergine/eggplant raw	veg	11	1.0	auto	1	ah
 n1007	1007	Pomegranate	fruit			auto	1	spar
-n1010	1010	Figs fresh	fruit			auto	6	ah,dekamarkt,dirk,jumbo,lidl,plus
+n1010	1010	Figs fresh	fruit			auto	5	ah,dekamarkt,dirk,lidl,plus
 n1013	1013	Bread crumbs	grain			auto	7	ah,dekamarkt,dirk,hoogvliet,lidl,plus,poiesz
 n1015	1015	Bulgur wheat raw	grain	3200	2.5	auto	6	ah,dekamarkt,dirk,jumbo,plus,spar
 n1018	1018	Rye flakes	grain			auto	1	plus
 n1019	1019	Buckwheat groats	grain			auto	3	jumbo,plus,spar
 n1020	1020	Flour wheat self-raising	grain			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n1056	1056	Kiwi fruit green	fruit			auto	2	ah,hoogvliet
-n1074	1074	Passion fruit	fruit			auto	2	ah,vomar
+n1074	1074	Passion fruit	fruit			auto	1	lidl
 n1076	1076	Kefir	dairy			auto	9	ah,dekamarkt,dirk,hoogvliet,jumbo,plus,poiesz,spar,vomar
 n1090	1090	Lychees	fruit			auto	1	lidl
 n1095	1095	Peas chick boiled	legume			auto	2	ah,jumbo
@@ -69,7 +69,7 @@ n1096	1096	Salmon smoked	fish			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,pl
 n1097	1097	Caviar	fish			auto	1	lidl
 n1101	1101	Snails	fish			auto	1	ah
 n1104	1104	Cheese smoked 45+	cheese			auto	7	ah,dekamarkt,dirk,jumbo,lidl,plus,spar
-n1105	1105	Melon water	fruit			auto	7	ah,dekamarkt,dirk,hoogvliet,jumbo,plus,spar
+n1105	1105	Melon water	fruit			auto	5	ah,dirk,hoogvliet,jumbo,spar
 n111	111	Mussels boiled	fish			auto	2	jumbo,plus
 n1112	1112	Cheese raw milk 48+	cheese			auto	3	hoogvliet,jumbo,plus
 n1127	1127	Juice lemon fresh	drink			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
@@ -134,7 +134,7 @@ n1464	1464	Milk chocolate-flavoured semi-skimmed	dairy			auto	8	ah,dekamarkt,dir
 n1469	1469	Cream custard	dairy			auto	3	dekamarkt,hoogvliet,plus
 n147	147	Apple wo skin av	fruit			auto	10	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar,vomar
 n1472	1472	Butter cream	fat			auto	3	dekamarkt,dirk,plus
-n148	148	Strawberries	fruit			auto	10	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar,vomar
+n148	148	Strawberries	fruit			auto	9	ah,dekamarkt,dirk,jumbo,lidl,plus,poiesz,spar,vomar
 n1487	1487	Cheese Brie 60+	cheese			auto	1	jumbo
 n149	149	Apricots w skin	fruit			auto	9	dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar,vomar
 n1496	1496	Salad fish	spread			auto	1	lidl
@@ -144,30 +144,29 @@ n150	150	Pineapple	fruit			auto	8	ah,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar
 n1502	1502	Yoghurt half fat	dairy			auto	9	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,poiesz,spar
 n152	152	Blueberries	fruit			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n153	153	Redcurrants	fruit			auto	5	ah,dirk,jumbo,lidl,plus
-n155	155	Bilberries	fruit			auto	1	spar
 n157	157	Blackberries	fruit			auto	4	ah,jumbo,lidl,plus
 n158	158	Lemon	fruit			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n1585	1585	Halibut smoked	fish			auto	2	jumbo,lidl
 n1586	1586	Mackerel fillet smoked	fish			auto	5	ah,dekamarkt,dirk,hoogvliet,plus
 n1588	1588	Anchovy in oil canned	fish			auto	7	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus
 n1589	1589	Tuna in oil tinned	fish			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
-n159	159	Cranberries fresh	fruit			auto	7	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus
+n159	159	Cranberries fresh	fruit			auto	4	ah,dirk,hoogvliet,jumbo
 n1590	1590	Tuna in water tinned	fish			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n160	160	Grapes w skin av	fruit			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
-n161	161	Raspberries	fruit			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
+n161	161	Raspberries	fruit			auto	7	ah,dirk,hoogvliet,jumbo,lidl,plus,spar
 n162	162	Grapefruit	fruit			auto	3	ah,lidl,spar
-n163	163	Cherries sweet	fruit			auto	3	hoogvliet,jumbo,plus
+n163	163	Cherries sweet	fruit			auto	2	jumbo,plus
 n1634	1634	Chicken fillet raw	meat	1392	0.754	auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n1642	1642	Chicken rolled raw	meat	1641	0.858	auto	3	hoogvliet,jumbo,lidl
 n165	165	Manderins	fruit			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n1650	1650	Cheese goat fresh	cheese			auto	6	ah,dekamarkt,dirk,hoogvliet,jumbo,plus
 n1656	1656	Juice carrot	drink			auto	6	ah,dekamarkt,dirk,hoogvliet,jumbo,plus
 n166	166	Melon netted	fruit			auto	1	jumbo
-n168	168	Pear wo skin	fruit			auto	7	ah,dekamarkt,dirk,jumbo,lidl,plus,spar
-n169	169	Peach wo skin	fruit			auto	6	dekamarkt,dirk,jumbo,lidl,plus,spar
+n168	168	Pear wo skin	fruit			auto	6	dekamarkt,dirk,jumbo,lidl,plus,spar
+n169	169	Peach wo skin	fruit			auto	2	lidl,plus
 n17	17	Mushrooms chanterelle raw	veg	18	1.0	auto	2	jumbo,lidl
 n170	170	Plums w skin	fruit			auto	6	dekamarkt,dirk,hoogvliet,lidl,plus,poiesz
-n171	171	Orange	fruit			auto	5	ah,dekamarkt,jumbo,plus,spar
+n171	171	Orange	fruit			auto	2	plus,spar
 n1721	1721	Yoghurt vanilla half fat	dairy			auto	2	lidl,poiesz
 n1722	1722	Porridge semolina	dairy			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n1723	1723	Cheese 20+	cheese			auto	1	dekamarkt
@@ -471,7 +470,7 @@ n5263	5263	Bami vegetables raw	veg	2331	1.0	auto	1	plus
 n5264	5264	Crispbread light plain	bread			auto	6	ah,dekamarkt,dirk,hoogvliet,jumbo,spar
 n5265	5265	Tuna w vegetables and tomato sauce canned	fish			auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,vomar
 n5267	5267	Vegetables for stir-frying mushroom raw	veg	3254	1.0	auto	5	ah,dekamarkt,dirk,plus,spar
-n5279	5279	Fruit forest av	fruit			auto	7	dekamarkt,dirk,hoogvliet,jumbo,plus,poiesz,spar
+n5279	5279	Fruit forest av	fruit			auto	5	dekamarkt,dirk,hoogvliet,jumbo,plus
 n5299	5299	Bakery mix for apple pie	grain			auto	2	dekamarkt,dirk
 n53	53	Cabbage oxheart raw	veg	54	1.0	auto	7	ah,dekamarkt,dirk,hoogvliet,jumbo,plus,spar
 n530	530	Bakery mix for pancakes	grain			auto	7	dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
@@ -567,7 +566,7 @@ n680	680	Okra raw	veg	3135	1.0	auto	1	jumbo
 n682	682	Pumpkin raw	veg	2113	1.0	auto	6	ah,dekamarkt,dirk,hoogvliet,jumbo,plus
 n689	689	Avocado	veg			auto	6	ah,dekamarkt,dirk,jumbo,lidl,plus
 n691	691	Lime	fruit			auto	2	hoogvliet,lidl
-n692	692	Mango	fruit			auto	7	ah,dirk,hoogvliet,jumbo,lidl,plus,spar
+n692	692	Mango	fruit			auto	6	ah,dirk,hoogvliet,jumbo,lidl,plus
 n696	696	Flour corn	grain			auto	5	ah,dekamarkt,dirk,lidl,plus
 n71	71	Carrot raw av	veg	72	1.0	auto	8	ah,dekamarkt,dirk,hoogvliet,jumbo,lidl,plus,spar
 n718	718	Cheese Parmesan	cheese			auto	2	plus,spar

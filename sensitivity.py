@@ -1,6 +1,6 @@
-"""How much do cooking losses and absorption change the answer?  python3 sensitivity.py -> sensitivity.md
+"""How much do cooking losses and absorption change the answer?  python3 sensitivity.py -> reports/sensitivity.md
 
-Cooking: NEVO 'as eaten' entries x yield (see lp.load(cooked=True)).
+Cooking: each food as usually eaten, NEVO 'as eaten' entries x yield or USDA retention factors (cooking.py, lp.load(cooked=True)).
 Absorption: NEVO is not corrected for bioavailability (background doc §4.4), so we vary the
 assumptions that the Dutch norms (set for a typical mixed diet) quietly make.
 """
@@ -9,6 +9,7 @@ import csv
 
 import numpy as np
 
+import lp
 from lp import load, solve
 
 NEVO_EN = {r["NEVO-code"]: r["Engelse naam/Food name"] for r in
@@ -40,12 +41,12 @@ def run(m, label, base=None, overrides=None):
 
 p("# Sensitivity: cooking losses and absorption\n")
 p("_Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources._\n")
-p("Profile: `avg_man` (lp.PROFILE). Base for every row: cooked, absorbed iron (non-haem 10%), zinc 14.0 mg.\n")
+p(f"Profile: `{lp.PROFILE}` (lp.PROFILE). Base for every row: cooked, absorbed iron (non-haem 10%), zinc 14.0 mg.\n")
 p("| scenario | €/day | Δ | binding (selected) | top foods (g bought) |\n|---|---:|---:|---|---|")
 raw = load(cooked=False)
 b = run(raw, "base: raw NEVO values")
 ck = load(cooked=True)
-c = run(ck, "cooked (as eaten, NEVO prepared entries x yield)", b)
+c = run(ck, "cooked (as usually eaten: NEVO prepared entries x yield, or USDA retention factors)", b)
 
 p("| **absorption, varied around the cooked base** (base: zinc 14.0 mg, absorbed iron with non-haem 10%) | | | | |")
 for z in (9.4, 11.7, 14.0, 16.3):
@@ -59,4 +60,4 @@ run(soy, "soy-drink calcium 75% as available as milk calcium", c)
 worst = load(nonhaem=0.05); worst.N["CA"][worst.keys.index("soy_drink")] *= 0.75
 run(worst, "all pessimistic: zinc 16.3, non-haem 5%, soy Ca 75%", c, overrides={"zinc": (16.3, 25)})
 p()
-open("sensitivity.md", "w").write("\n".join(out) + "\n")
+open("reports/sensitivity.md", "w").write("\n".join(out) + "\n")

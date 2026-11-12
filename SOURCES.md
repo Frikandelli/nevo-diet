@@ -53,6 +53,7 @@ Cost per day for the cheapest diet at AH, changing only that limit from the earl
 | calcium | [Voedingscentrum 2025: 950 mg at 25-69 (18-24: 1000; women 50-69: 1100; from 70: 1200). Upper limit 2500: EFSA 2012](https://mobiel.voedingscentrum.nl/Assets/Uploads/voedingscentrum/Documents/Professionals/vitamines%20en%20mineralen/Vitamines%20mineralen%20en%20spoorelementen_2025_def.pdf) | confirmed |
 | phosphorus | [Voedingscentrum 2025: AI 550 mg, listed as too little data for a good norm and not meant as a target](https://mobiel.voedingscentrum.nl/Assets/Uploads/voedingscentrum/Documents/Professionals/vitamines%20en%20mineralen/Vitamines%20mineralen%20en%20spoorelementen_2025_def.pdf) | not a firm target |
 | magnesium | [Voedingscentrum 2025: AI men 350, women 300 mg](https://mobiel.voedingscentrum.nl/Assets/Uploads/voedingscentrum/Documents/Professionals/vitamines%20en%20mineralen/Vitamines%20mineralen%20en%20spoorelementen_2025_def.pdf) | confirmed |
+| magnesium_pills | [EFSA: upper limit 250 mg/day for magnesium from supplements only](https://www.efsa.europa.eu/sites/default/files/2024-05/ul-summary-report.pdf); in the program only when a supplement with magnesium is (`lp.MG_SUPP_ROW`, not in `data/requirements.tsv`) | confirmed |
 | iron_abs | [Voedingscentrum 2025 iron (men 11, women 18-49 16 mg) x EFSA 2015 absorption (men 16%, premenopausal women 18%). Haem 25% and non-haem 10% are a model rule](https://www.efsa.europa.eu/en/efsajournal/pub/4254) | project choice |
 | iron | [EFSA 2024: safe level 40 mg, not a formal upper limit. Taken over by Voedingscentrum 2025](https://www.efsa.europa.eu/sites/default/files/2024-05/ul-summary-report.pdf) | confirmed |
 | zinc | [EFSA 2014 at 900 mg/day phytate: men 14.0, women 11.0 mg, chosen for this diet. The Dutch norm is lower: men 9.0, women 7.0 (Voedingscentrum 2025). Upper limit 25: EFSA](https://www.efsa.europa.eu/sites/default/files/2017_09_DRVs_summary_report.pdf) | project choice |
@@ -92,7 +93,7 @@ Cost per day for the cheapest diet at AH, changing only that limit from the earl
 | Average man, woman | 2743 and 2165 kcal (Schofield × PAL 1.6) | [Gezondheidsraad 2022/19](https://www.gezondheidsraad.nl/site/binaries/site-content/collections/documents/2022/08/16/advies-voedingsnormen-voor-energie/Advies_Voedingsnormen-voor-energie.pdf), ages 30-39: 2690 and 2170 kcal, using Henry. Man 2% above, woman equal |
 | Average man, woman | Protein 0.83 g/kg | Exact match: Gezondheidsraad 2021/10, taken from EFSA |
 | Active man, woman | PAL 1.9 | Between active (1.8) and very active (2.0) in 2022/19. A project choice, not a published level |
-| Active man, woman | Protein 1.2 g/kg | A project choice, above the norm and below the ISSN 2017 range of 1.4-2.0 for people who train |
+| Active man, woman | Protein 1.2 g/kg | Project choice, above the norm and below the ISSN 2017 range of 1.4-2.0 for people who train |
 
 **Energy estimate for changed bodies and new profiles:** Henry (2005), the equation behind the Dutch norms, with
 coefficients from table A1 of the [2022/19 background document](https://www.gezondheidsraad.nl/site/binaries/site-content/collections/documents/2022/08/16/achtergronddocument-evaluation-of-dietary-reference-values-for-energy/Background-document_+DRVs-for-energy.pdf).
@@ -101,8 +102,6 @@ It reproduces all six adult reference values tested from 2022/19 to the kcal (me
 **Limits that change with age** are not automatic. Voedingscentrum 2025: vitamin D 20 µg and calcium 1200 mg from 70,
 vitamin B6 1.8 mg for men from 51, and for women iron 11 mg and calcium 1100 mg from 50. Calcium is 1000 mg at 18-24, so the
 model's 950 mg is slightly low for that group. The app warns about the older ages for profiles from 50.
-
-**Protein for people who train:** [Morton 2018](https://pubmed.ncbi.nlm.nih.gov/28698222/) finds gains level off near 1.62 g/kg (95% CI 1.03-2.20, p = 0.079, so not a sharp line), inside the [ISSN 2017](https://pubmed.ncbi.nlm.nih.gov/28642676/) range of 1.4-2.0. Use the protein box or your own profile to try this.
 
 ## What could not be confirmed
 
@@ -124,3 +123,4 @@ model's 950 mg is slightly low for that group. The app warns about the older age
 - EFSA, [Overview on Tolerable Upper Intake Levels](https://www.efsa.europa.eu/sites/default/files/2024-05/ul-summary-report.pdf), version 11, August 2025, adopted for the Netherlands by Gezondheidsraad 2023/04
 - EFSA, [Dietary Reference Values for iron](https://www.efsa.europa.eu/en/efsajournal/pub/4254), 2015
 - WHO, [sodium](https://www.who.int/news-room/fact-sheets/detail/sodium-reduction), [free sugars](https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children), [amino acids, TRS 935](https://iris.who.int/handle/10665/43411)
+- USDA, [Table of Nutrient Retention Factors, Release 6](https://www.ars.usda.gov/ARSUserFiles/80400525/Data/retn/retn06.pdf), 2007 ([data file](https://www.ars.usda.gov/ARSUserFiles/80400525/Data/retn/retn06.txt)): the share of each vitamin and mineral left after cooking, for foods without a cooked NEVO entry (`data/retention.tsv`)

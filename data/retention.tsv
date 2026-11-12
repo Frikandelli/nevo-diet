@@ -1,0 +1,381 @@
+usda	usda_name	nevo_col	factor	source
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	CA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	FE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	HAEM	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	MG	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	P	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	K	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	NA	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	CU	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	THIA	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	RIBF	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	NIAEQ	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	VITB6	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	FOL	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	FOLAC	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	VITB12	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0855	CHICKEN,SIMMERED,WO/DRIPPINGS	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	FE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	HAEM	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	P	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	K	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0358	CEREAL,REG/QUICK,COOKED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	FE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	HAEM	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	P	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	K	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0352	OATMEAL,REG/QUICK,COOKED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	CA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	MG	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	P	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	K	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	NA	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	THIA	0.4	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	RIBF	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	NIAEQ	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	VITB6	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	VITB12	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1555	PORK,CURED,SLICES,SIMMERED,WO/DRIP	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	CA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	MG	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	P	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	K	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	NA	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	THIA	0.4	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	RIBF	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	NIAEQ	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	VITB6	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	VITB12	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1301	PORK,FRESH,ROAST,SIMMERED WO/DRIP	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	VITC	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	THIA	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	RIBF	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	NIAEQ	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	VITB6	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	FOL	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	FOLAC	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	VITA_RAE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3380	POTATOES,CKD FROM FRZN,HASH BROWN	RETOL	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	VITC	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	THIA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	RIBF	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	NIAEQ	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	VITB6	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	VITA_RAE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3751	TOMATOES,BOILED/BAKED	RETOL	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	CA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	FE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	HAEM	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	MG	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	P	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	K	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	NA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	ZN	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	NIAEQ	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	VITB6	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3775	VEG,OTHER,BLD,WATER COVER,DRAINED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	CA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	FE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	HAEM	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	MG	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	P	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	K	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	NA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	ZN	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	THIA	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	RIBF	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3789	VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	CA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	FE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	HAEM	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	MG	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	P	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	K	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	NA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	ZN	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	VITC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+3455	VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	THIA	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	RIBF	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	NIAEQ	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	VITB6	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	FOL	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	FOLAC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	VITA_RAE	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2204	NUTS,BOILED,W/DRIPPINGS	RETOL	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	CA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	MG	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	P	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	K	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	NA	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	THIA	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	RIBF	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	NIAEQ	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	VITB6	0.35	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	VITB12	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0753	BEEF,GROUND,SIMMERED,WO/DRIPPINGS	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	CA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	MG	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	P	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	K	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	NA	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	CU	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	THIA	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	RIBF	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	NIAEQ	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	VITB6	0.35	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	VITB12	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0653	BEEF,ROAST,SIMMERED,WO/DRIPPINGS	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	CA	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	FE	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	HAEM	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	MG	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	P	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	K	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	NA	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	ZN	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	CU	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	THIA	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	RIBF	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	NIAEQ	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	VITB6	0.45	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	FOL	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	FOLAC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	VITB12	0.6	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	VITA_RAE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+1152	LIVER,SIMMERED,WO/DRIPPINGS	RETOL	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	VITC	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	THIA	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	RIBF	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	NIAEQ	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	VITB6	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	FOL	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	FOLAC	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	VITB12	0.95	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2605	FINFISH(FROZEN),HEATED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	MG	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	P	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	K	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	NA	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	NIAEQ	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	VITB6	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	FOL	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	FOLAC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	VITB12	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	VITA_RAE	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2401	FINFISH,<5%FAT,SIMMERED,WO/DRIPPING	RETOL	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	MG	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	P	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	K	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	NA	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	VITC	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	NIAEQ	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	VITB6	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	FOL	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	FOLAC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	VITB12	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	VITA_RAE	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+2551	FINFISH,>5%FAT,SIMMERED,WO/DRIP	RETOL	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	CA	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	FE	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	HAEM	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	MG	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	P	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	K	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	NA	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	ZN	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	CU	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	VITC	0.65	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	THIA	0.4	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	RIBF	0.75	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	NIAEQ	0.55	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	VITB6	0.5	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	FOL	0.3	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	FOLAC	0.3	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	VITA_RAE	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0541	LEGUMES,CKD 2/2.5HRS,BOILED,DRAINED	RETOL	0.85	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0301	FLOUR/MEAL,BAKED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	CA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	FE	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	HAEM	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	MG	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	P	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	K	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	NA	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	ZN	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	CU	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	VITC	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	THIA	0.8	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	RIBF	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	NIAEQ	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	VITB6	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	FOL	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	FOLAC	0.7	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	VITB12	1.0	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	VITA_RAE	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt
+0302	FLOUR/MEAL,BOILED,STEAMED	RETOL	0.9	USDA Table of Nutrient Retention Factors, Release 6 (2007), retn06.txt

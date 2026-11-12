@@ -1,4 +1,4 @@
-"""A week of meals at one chain.  python3 meals.py [--chain ah] [--strictness medium] -> meals.md
+"""Stage 5: a week of meals at one chain.  python3 meals.py [--chain ah] [--strictness medium] -> reports/meals.md
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources.
 
@@ -7,23 +7,24 @@ One weekly MILP (it repeats every week):
             G_d = grams per week, portion 300-600 g per evening, x1.0-1.5 with leftovers for the next brunch
             (brunch pattern; the classic pattern cooks 1.0-1.2). Nutrients: NEVO's own values for the dish.
             Its ingredients go on the shopping list (whole packs for fresh ones, like plan.py).
-  brunch/   basic foods that are eaten as they are (no raw flour, sugar, tomato paste ...), from lp.py.
-  sides     dinner sides (rice, potatoes, vegetables ...) and snacks are basic foods too.
+  brunch/   basic foods eaten as they are, from lp.py: any food sold at >= 3 chains, in any amount (no food has a
+  sides     default cap or ban since 2026-11-09; your own limits on foods and kinds, lp.load(limits=...), count the
+            food in dinners too).
 Rules (DESIGN.md), each soft: breaking it costs a fixed penalty per week, set by the strictness:
   strict = never, medium = only if it saves >= €0.25/day, loose = if it saves >= €0.10/day.
   dinners_4      at least 4 different dinners a week
   dinner_max2    no dinner more than twice a week
   toppings_2     at least 2 different bread toppings a week
   veg_250        >= 250 g vegetables a day (dinner dishes count with their vegetable ingredients)
-  fruit_200      >= 200 g fruit a day
-  kcal_30        no single food or dish above 30% of the week's energy
+  fruit_200      >= 200 g whole fruit a day (lp.NOT_WHOLE_FRUIT)
 Batch cooking: 'batch' dishes are cooked in the weekend session, at most BATCH_MAX evenings a week.
-Starch sides (pasta, rice, potatoes) only on evenings whose dish takes one (dinners.tsv starch_side).
+Removed on 2026-11-09, as default limits on foods: no food or dish above 30% of the week's energy (kcal_30); pasta, rice
+and potatoes as a 150 g side only on evenings whose dish takes one; raw flour, sugar, tomato paste, starch, bakery mixes
+and the like never eaten as such.
 """
 import argparse
 import csv
 import dataclasses
-import re
 import time
 
 import numpy as np
@@ -38,28 +39,21 @@ from lp import load, rows, solve
 from profiles import all_profiles, load_profile
 
 PENALTY = {"strict": None, "medium": 0.25, "loose": 0.10}     # €/day for breaking one rule
-RULES = ["dinners_4", "dinner_max2", "toppings_2", "veg_250", "fruit_200", "kcal_30"]
+RULES = ["dinners_4", "dinner_max2", "toppings_2", "veg_250", "fruit_200"]
 PORTION = (300, 600)          # g dish per evening
 LEFTOVER = {"brunch": (1.0, 1.5), "classic": (1.0, 1.2)}
-STARCH_SIDE_G = 150           # g of pasta, rice or potatoes per evening whose dish takes a starch side
 BATCH_MAX = 3                 # evenings per week from the weekend batch session
 TOPPING_GROUPS = {"cheese", "coldcut", "spread", "sweet"}
 TOPPING_MIN_G = 50            # g per week before a topping counts as "used"
-NOT_DIRECT = re.compile(r"^(flour|bread crumbs|dough|filo|corn starch|potato starch|bakery mix|vol-au-vent|yeast|"
-                        r"sugar|tomato puree|semolina|wheat bran|oat bran|rice white raw w candied|salt low)", re.I)
 ANIMAL = {"fish", "meat", "egg", "dairy", "cheese", "coldcut", "snack"}
 
 
 def direct_ok(m, i):
-    k = m.keys[i]
+    """May food i be eaten as such? Any food sold at >= 3 chains (an availability rule, not a limit on amounts)."""
     if not m.unit_g[i]:
-        return True                                   # vitamin D tablet
-    f = P.FOODS.get(k)
-    if f is None or int(f["n_chains"]) < 3:
-        return False
-    if k in ("flour_wholemeal", "flour_white", "sugar", "tomato_paste"):
-        return False
-    return not NOT_DIRECT.search(P.NEVO_EN.get(f["nevo"], ""))
+        return True                                   # a supplement (tablet, capsule, spoon)
+    f = P.FOODS.get(m.keys[i])
+    return f is not None and int(f["n_chains"]) >= 3
 
 
 def dish_model(m, chain, pattern, no_cats=()):
@@ -76,7 +70,6 @@ def dish_model(m, chain, pattern, no_cats=()):
         if price is None or any(k not in keyset and k != "_veg_median" for k in leaves):
             continue
         info.append({"code": code, "key": f"dish{code}", "role": role["role"], "min": int(role["hands_on_min"]),
-                     "side": role["starch_side"] == "yes",
                      "note": role["note"], "price": price, "leaves": leaves, "subs": subs, "minor": minor,
                      "name": D.NEVO[code]["Engelse naam/Food name"]})
     n0, nd = len(m.keys), len(info)
@@ -87,6 +80,9 @@ def dish_model(m, chain, pattern, no_cats=()):
         i = n0 + j
         for col in m.N:
             if col in lp.COMPUTED:
+                continue
+            if col.startswith(lp.LIMIT_COL):         # your limit: the grams of its foods among the dish's ingredients
+                N[col][i] = sum(g * m.N[col][m.keys.index(k)] for k, g in d["leaves"].items() if k != "_veg_median")
                 continue
             v = D.num(row[D.COL[col]]) if col in D.COL else None
             N[col][i] = v or 0.0
@@ -118,8 +114,10 @@ def dish_model(m, chain, pattern, no_cats=()):
     return mm, info
 
 
-def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
-    """forced: {rule: 0} to make a rule hard (for 'what does breaking it save')."""
+def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False, food_cost=0.0, only=None):
+    """forced: {rule: 0} to make a rule hard (for 'what does breaking it save').
+    food_cost: € a day for every food eaten as such, so none comes in for a gram. Your own foods are free, and a dinner's
+    ingredients too: the recipe asks for those. only: the foods that may be eaten as such, if not all of them."""
     G, h, lab = rows(mm)
     n_food = len(mm.keys) - len(info)
     foods = [i for i in range(n_food)]
@@ -138,7 +136,9 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
         var[name] = len(cost); cost.append(c); integ.append(is_int); lo_b.append(lo); hi_b.append(hi)
 
     for i in active:
-        add(("y", i), mm.c[i] if kind[i] == "pantry" else 0.0, 0, 7 * mm.lb[i], 7 * mm.cap[i] if i in direct else 0)
+        # supplements in whole units a week (one 75 µg vitamin D tablet a week, not 0.13 a day)
+        add(("y", i), mm.c[i] if kind[i] == "pantry" else 0.0, 0 if mm.unit_g[i] else 1, 7 * mm.lb[i],
+            7 * mm.cap[i] if i in direct and (only is None or i in only or i in own) else 0)
         if kind[i] != "pantry":
             add(("n", i), pk[mm.keys[i]][1] / kind[i], 1, 0, np.inf)
     vegmed = D.veg_median(D.catalog(chain)) or 0.0
@@ -158,6 +158,10 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
         add(("b", r), 0 if hard else 7 * penalty, 1, 0, 0 if hard else 1)
     for i in [i for i in active if mm.groups[i] in TOPPING_GROUPS and i in direct]:
         add(("t", i), 0.0, 1, 0, 1)
+    if food_cost:
+        for i in direct:
+            if i not in own and (only is None or i in only):
+                add(("u", i), 7 * food_cost, 1, 0, 1)
 
     A, lo, hi = [], [], []
 
@@ -182,6 +186,10 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
             if g:
                 coefs[var[("G", j)]] = g
         row(coefs, -np.inf, 0)
+    # a food eaten as such pays its food_cost
+    most = lp.most_units(mm)
+    for k_ in [k_ for k_ in var if k_[0] == "u"]:
+        row({var[("y", k_[1])]: 1, var[k_]: -7 * most[k_[1]]}, -np.inf, 0)
     # dinners: 7 a week, portions, counts
     row({var[("k", j)]: 1 for j in range(len(info))}, 7, 7)
     for j in range(len(info)):
@@ -192,15 +200,6 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
         row({var[("k", j)]: 1, var[("b", "dinner_max2")]: -5}, -np.inf, 2)
     row({**{var[("z", j)]: 1 for j in range(len(info))}, var[("b", "dinners_4")]: 4}, 4, np.inf)
     row({var[("k", j)]: 1 for j, d in enumerate(info) if d["role"] == "batch"}, -np.inf, BATCH_MAX)
-    # starch sides (pasta, rice, potatoes ...) only on evenings whose dish wants one, <= 150 g each
-    # (your own foods aren't sides: you eat them when you like)
-    starch = [i for i in direct if i not in own and (mm.groups[i] == "potato" or (mm.groups[i] == "grain" and not re.search(
-        r"oat|muesli|cereal|flakes|bran", P.NEVO_EN.get(P.FOODS.get(mm.keys[i], {}).get("nevo", ""), ""), re.I)))]
-    coefs = {var[("y", i)]: 1 for i in starch}
-    for j, d in enumerate(info):
-        if d["side"]:
-            coefs[var[("k", j)]] = -STARCH_SIDE_G / 100
-    row(coefs, -np.inf, 0)
     # toppings
     tops = [k for k in var if k[0] == "t"]
     for _, i in tops:
@@ -214,22 +213,9 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
             vegc[var[("G", j)]] = 100 * share
     vegc[var[("b", "veg_250")]] = 7 * 250
     row(vegc, 7 * 250, np.inf)
-    fruc = {var[("y", i)]: 100 for i in active if mm.groups[i] == "fruit" and i in direct}
+    fruc = {var[("y", i)]: mm.N["FRUIT"][i] for i in active if mm.N["FRUIT"][i] > 0 and i in direct}   # whole fruit only
     fruc[var[("b", "fruit_200")]] = 7 * 200
     row(fruc, 7 * 200, np.inf)
-    # 30% of energy, per food and per dish (big-M relaxed when broken)
-    kc = mm.N["ENERCC"]
-    tot = {var[("y", i)]: kc[i] for i in active if kc[i] > 0}
-    for j in range(len(info)):
-        tot[var[("G", j)]] = kc[dish_idx[j]]
-    bigM = 7 * 6000
-    # What you asked for of your own food doesn't count against the rule, only what the plan adds on top of it.
-    for v, kci, asked in [(var[("y", i)], kc[i], 7 * mm.lb[i] * kc[i]) for i in active if kc[i] > 0] + \
-                         [(var[("G", j)], kc[dish_idx[j]], 0.0) for j in range(len(info))]:
-        coefs = {vv: -0.30 * c for vv, c in tot.items()}
-        coefs[v] = coefs.get(v, 0) + kci
-        coefs[var[("b", "kcal_30")]] = -bigM
-        row(coefs, -np.inf, asked)
 
     M = lil_matrix((len(A), len(cost)))
     for r, coefs in enumerate(A):
@@ -240,9 +226,15 @@ def build(mm, info, pk, chain, pattern, penalty, forced=None, no_batch=False):
     return np.array(cost), M.tocsr(), np.array(lo), np.array(hi), np.array(integ), np.array(lo_b), np.array(hi_b), lay
 
 
-def solve_week(mm, info, pk, chain, pattern="brunch", strictness="medium", forced=None, no_batch=False, limit=180):
-    c, A, lo, hi, integ, lb, ub, lay = build(mm, info, pk, chain, pattern, PENALTY[strictness], forced, no_batch)
+def solve_week(mm, info, pk, chain, pattern="brunch", strictness="medium", forced=None, no_batch=False, limit=180, food_cost=0.0):
     t = time.time()
+    only = None
+    if food_cost:           # With a cost per food the full problem takes minutes: first the week without it, to pick from.
+        plain = solve_week(mm, info, pk, chain, pattern, strictness, forced, no_batch, limit)
+        if plain is None:
+            return None
+        only = {i for i in plain["direct"] if plain["x"][plain["var"][("y", i)]] > 1e-4}
+    c, A, lo, hi, integ, lb, ub, lay = build(mm, info, pk, chain, pattern, PENALTY[strictness], forced, no_batch, food_cost, only)
     r = milp(c, constraints=LinearConstraint(A, lo, hi), integrality=integ, bounds=Bounds(lb, ub),
              options={"time_limit": limit, "mip_rel_gap": 2e-3})
     if r.x is None:
@@ -250,7 +242,7 @@ def solve_week(mm, info, pk, chain, pattern="brunch", strictness="medium", force
     x = r.x
     var = lay["var"]
     broken = [k[1] for k in var if k[0] == "b" and x[var[k]] > 0.5]
-    pen = sum(c[var[("b", b)]] for b in broken)
+    pen = sum(c[var[("b", b)]] for b in broken) + sum(c[var[k]] * x[var[k]] for k in var if k[0] == "u")
     lay.update(x=x, cost=r.fun - pen, objective=r.fun, broken=broken, seconds=time.time() - t, status=r.status)
     return lay
 
@@ -317,7 +309,7 @@ def week_report(mm, pk, lay, title):
     for i in sorted(lay["direct"], key=lambda i: -val(lay, ("y", i))):
         y = val(lay, ("y", i))
         if y > 1e-4:
-            amt = f"{y*100/7:.0f}" if mm.unit_g[i] else f"{y/7:.2f} tablet"
+            amt = f"{y*100/7:.0f}" if mm.unit_g[i] else f"{y:.0f} a week"
             p(f"| {P.label(mm.keys[i])} | {amt} | {mm.groups[i]} |")
     # shopping list
     p("\n**Shopping list** (whole packs for fresh food; pantry paid per gram, buy a pack when it runs out):\n")
@@ -333,8 +325,9 @@ def week_report(mm, pk, lay, title):
         if use[i] < 1e-4:
             continue
         if not mm.unit_g[i]:
-            rows_.append((use[i] * mm.c[i], f"| AH Care Vitamine D3 25 µg (300 tablets) | vitamin D tablet | "
-                          f"{use[i]/7:.2f} a day | {use[i]*mm.c[i]:.2f} |"))
+            o = mm.pills.get(mm.keys[i], {}).get("offer")
+            rows_.append((use[i] * mm.c[i], f"| {o['product'] + ' (' + str(o['units']) + ')' if o else 'no price'} | "
+                          f"{P.label(mm.keys[i])} | {use[i]:.0f} a week | {use[i]*mm.c[i]:.2f} |"))
             continue
         g, eur, prod, pg = pk[mm.keys[i]] if mm.keys[i] in pk else (0, 0, "?", 0)
         if lay["kind"][i] == "pantry":
@@ -387,21 +380,21 @@ def main():
 
     p("# A week of meals\n")
     p("_Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources "
-      "(Checkjebon prices 2026-10-30)._\n")
+      f"(Checkjebon prices {P.catalog_date()})._\n")
     p(f"Chain: **{a.chain}**. Strictness: **{a.strictness}** (a rule is bent only if that saves at least "
       f"€{PENALTY[a.strictness] or 0:.2f}/day). Dinners are NEVO dishes (`data/dinners.tsv`); their nutrients are "
       "NEVO's values for the dish, their ingredients are on the shopping list. Everything else is basic foods.\n")
 
-    lp.PROFILE = "avg_man"
+    lp.PROFILE = lp.PROFILE_DEFAULT
     m = load(chain=a.chain, min_chains=0)
     mm, info = dish_model(m, a.chain, "brunch")
     p(f"{len(info)} dinner dishes are priceable at {a.chain}.\n")
-    p("## 1. You: brunch + warm dinner + snacks\n")
+    p(f"## 1. {load_profile(lp.PROFILE)['label']}: brunch + warm dinner + snacks\n")
     wk = solve_week(mm, info, pk, a.chain, "brunch", a.strictness)
     week_report(mm, pk, wk, "Week plan")
     coverage(mm, wk)
     base = P.plan(load(chain=a.chain, min_chains=3), pk, 1)
-    p(f"Price of meals: the bare weekly basket at {a.chain} costs €{base['cost']/7:.2f}/day, so real "
+    p(f"Price of meals: the bare weekly basket at {a.chain} (stage 4) costs €{base['cost']/7:.2f}/day, so real "
       f"dinners, brunches and the rules add **€{wk['cost']/7 - base['cost']/7:+.2f}/day**.\n")
 
     p("## 2. What each rule costs\n")
@@ -422,7 +415,7 @@ def main():
         f = solve_week(mm, info, pk, a.chain, kw2["pattern"], kw2["strictness"], no_batch=kw.get("no_batch", False))
         p(f"| {title} | {f['cost']/7:.2f} | {', '.join(f['broken']) or '-'} |" if f else f"| {title} | infeasible | |")
     p()
-    p("## 4. All profiles (classic pattern for the reference profiles)\n")
+    p("## 4. All profiles (brunch pattern for the default profile, classic for the others)\n")
     p("| profile | pattern | €/day | rules bent | dinners |\n|---|---|---:|---|---|")
     for n in all_profiles():
         lp.PROFILE = n
@@ -433,9 +426,9 @@ def main():
         dn = ", ".join(f"{d['note'].split(' (')[0].split(':')[0]} ×{round(val(f, ('k', j)))}"
                        for j, d in enumerate(infon) if round(val(f, ("k", j))))
         p(f"| {load_profile(n)['label']} | {pat} | {f['cost']/7:.2f} | {', '.join(f['broken']) or '-'} | {dn} |")
-    lp.PROFILE = "avg_man"
+    lp.PROFILE = lp.PROFILE_DEFAULT
     p()
-    open("meals.md", "w").write("\n".join(out) + "\n")
+    open("reports/meals.md", "w").write("\n".join(out) + "\n")
 
 
 if __name__ == "__main__":

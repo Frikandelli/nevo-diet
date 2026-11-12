@@ -30,16 +30,15 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 226	Aardappelzetmeel	Cereal products and types of flour	plus	0.8765	0.85	Koopmans Aardappelzetmeel	1.49	200
 226	Aardappelzetmeel	Cereal products and types of flour	poiesz	0.5882	0.85	Aardappelzetmeel	1.0	200
 226	Aardappelzetmeel	Cereal products and types of flour	spar	1.0529	0.85	Koopmans aardappelzetmeel helder bindend	1.79	200
-148	Aardbeien	Fruits	ah	0.5978	1.0	Arla Cultura aardbei	2.69	450
-148	Aardbeien	Fruits	dekamarkt	0.4625	1.0	Müller Müllermilk aardbei	1.85	400
-148	Aardbeien	Fruits	dirk	0.4375	1.0	Müller Müllermilk aardbei	1.75	400
-148	Aardbeien	Fruits	hoogvliet	0.6964	1.0	Balconi Trancetto aardbei	1.95	280
+148	Aardbeien	Fruits	ah	0.9975	1.0	AH Nederlandse aardbeien	3.99	400
+148	Aardbeien	Fruits	dekamarkt	1.0475	1.0	Hollandse aardbeien	4.19	400
+148	Aardbeien	Fruits	dirk	0.46	1.0	1 de Beste Aardbeien	3.45	750
 148	Aardbeien	Fruits	jumbo	0.4653	1.0	Jumbo Vriesverse Aardbeien Voordeelverpakking 750 g	3.49	750
 148	Aardbeien	Fruits	lidl	0.399	1.0	Aardbeien 1kg kist	3.99	1000
 148	Aardbeien	Fruits	plus	0.7067	1.0	PLUS Aardbeien	1.59	225
 148	Aardbeien	Fruits	poiesz	0.9975	1.0	Hollandse Aardbeien	3.99	400
-148	Aardbeien	Fruits	spar	0.538	1.0	Alpro aardbei	2.69	500
-148	Aardbeien	Fruits	vomar	0.478	1.0	Almhof roomyogh aardbei 500gr	2.39	500
+148	Aardbeien	Fruits	spar	1.196	1.0	aardbeien 250 gram	2.99	250
+148	Aardbeien	Fruits	vomar	0.8725	1.0	Aardbeien 400 gram	3.49	400
 175	Abrikozen gedroogd	Fruits	ah	1.396	1.0	AH Gewelde gedroogde abrikozen	3.49	250
 175	Abrikozen gedroogd	Fruits	jumbo	1.796	1.0	Jumbo Gedroogde Abrikozen Zonder Pit 250 g	4.49	250
 175	Abrikozen gedroogd	Fruits	lidl	0.795	1.0	Gedroogde abrikozen	1.59	200
@@ -172,10 +171,11 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 5263	Bamigroenten rauw	Vegetables	plus	0.3978	1.0	PLUS Bamigroenten	1.79	450
 151	Banaan	Fruits	ah	2.2578	0.64	Snelle Jelle Proteïne banaan 4-pack	2.89	200
 151	Banaan	Fruits	dekamarkt	0.3109	0.64	Del Monte Bananen	1.99	1000
-151	Banaan	Fruits	dirk	0.6992	0.64	Müller Müllermilk Banaan	1.79	400
+151	Banaan	Fruits	dirk	0.2016	0.64	Del Monte Bananen	1.29	1000
 151	Banaan	Fruits	hoogvliet	0.2797	0.64	Bananen	1.79	1000
 151	Banaan	Fruits	jumbo	0.3658	0.64	Jumbo Fairtrade Bio Bananen 850 g	1.99	850
 151	Banaan	Fruits	plus	0.3422	0.64	PLUS Bananen Fairtrade	2.19	1000
+151	Banaan	Fruits	poiesz	0.2423	0.64	Budget Bananen	1.29	832
 151	Banaan	Fruits	spar	0.3594	0.64	Fyffes bananen	0.46	200
 227	Beschuit naturel	Bread	ah	0.472	1.0	AH Beschuit naturel	0.59	125
 227	Beschuit naturel	Bread	dekamarkt	0.456	1.0	G'woon Beschuit naturel 13 stuks	0.57	125
@@ -202,7 +202,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 152	Bessen blauwe	Fruits	lidl	0.558	1.0	Diepv. blauwe bessen	2.79	500
 152	Bessen blauwe	Fruits	plus	0.5307	1.0	PLUS Blauwe Bessen	3.98	750
 152	Bessen blauwe	Fruits	spar	1.6633	1.0	bessen blauw	4.99	300
-155	Bessen bos-	Fruits	spar	0.83	1.0	Vos Banket Cakerol Bosbessen	2.49	300
 3445	Bessen goji- gedroogd	Fruits	dekamarkt	3.96	1.0	RAW Organic Food Gojibessen	7.92	200
 3445	Bessen goji- gedroogd	Fruits	dirk	3.425	1.0	RAW Organic Food Gojibessen	6.85	200
 3445	Bessen goji- gedroogd	Fruits	plus	3.745	1.0	Raw Organic Food Gojibessen biologisch	7.49	200
@@ -415,12 +414,9 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 5095	Cracker mini- naturel	Bread	dirk	0.82	1.0	Lu Minicrackers naturel	2.05	250
 5095	Cracker mini- naturel	Bread	spar	0.98	1.0	Lu MiniCrackers Naturel	2.45	250
 159	Cranberry vers	Fruits	ah	2.745	1.0	AH Biologisch Cranberry's	5.49	200
-159	Cranberry vers	Fruits	dekamarkt	1.66	1.0	Bon Appetit Cranberry mix	2.49	150
-159	Cranberry vers	Fruits	dirk	0.845	1.0	1 de Beste Cranberry mix	1.69	200
+159	Cranberry vers	Fruits	dirk	0.845	1.0	1 de Beste Cranberrys	1.69	200
 159	Cranberry vers	Fruits	hoogvliet	1.18	1.0	Hoogvliet Cranberry's	2.95	250
 159	Cranberry vers	Fruits	jumbo	0.796	1.0	Jumbo Vriesverse Cranberry's 250 g	1.99	250
-159	Cranberry vers	Fruits	lidl	1.076	1.0	Cranberry mix	2.69	250
-159	Cranberry vers	Fruits	plus	3.8533	1.0	BioToday Notenreep cranberry almond	2.89	75
 274	Creamer koffie-	Meat substitutes and dairy substitutes	ah	0.3686	1.0	AH Koffiecreamer navul	1.29	350
 274	Creamer koffie-	Meat substitutes and dairy substitutes	dekamarkt	0.3571	1.0	Melkan Koffiecreamer navulzak	1.25	350
 274	Creamer koffie-	Meat substitutes and dairy substitutes	dirk	0.3571	1.0	Melkan Koffiecreamer navulzak	1.25	350
@@ -572,14 +568,13 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 3258	Filodeeg onbereid	Cereal products and types of flour	lidl	0.3725	1.0	Filodeeg banitsa	1.49	400
 3258	Filodeeg onbereid	Cereal products and types of flour	plus	0.933	1.0	Duca Filodeeg	2.09	224
 3374	Focaccia	Bread	lidl	0.6633	1.0	Verse focaccia duo	1.99	300
-161	Frambozen	Fruits	ah	1.0	1.0	Verkade Tops framboos	1.0	100
-161	Frambozen	Fruits	dekamarkt	2.06	1.0	Lu Pims framboos	3.09	150
+161	Frambozen	Fruits	ah	1.7733	1.0	AH Frambozen	3.99	225
 161	Frambozen	Fruits	dirk	0.6467	1.0	1 de Beste Frambozen	4.85	750
-161	Frambozen	Fruits	hoogvliet	1.3833	1.0	Look-O-Look Foammmies framboos	2.49	180
+161	Frambozen	Fruits	hoogvliet	2.1933	1.0	Frambozen	3.29	150
 161	Frambozen	Fruits	jumbo	0.732	1.0	Jumbo Vriesverse Frambozen Voordeelverpakking 750 g	5.49	750
 161	Frambozen	Fruits	lidl	0.66	1.0	DV Frambozen	3.3	500
 161	Frambozen	Fruits	plus	0.6653	1.0	PLUS Frambozen	4.99	750
-161	Frambozen	Fruits	spar	1.1956	1.0	Napoleon framboos	2.69	225
+161	Frambozen	Fruits	spar	2.392	1.0	frambozen	2.99	125
 2875	Fruitsnack Knijpfruit/Slurpfruit	Fruits	lidl	0.5028	1.0	Fruitsnack	1.81	360
 5602	Garnalen gemarineerde	Fish, crustacean and shellfish	ah	2.995	1.0	AH Garnalen knoflook	5.99	200
 5602	Garnalen gemarineerde	Fish, crustacean and shellfish	dekamarkt	1.6111	1.0	Vis Marine Garnalen knoflook	7.25	450
@@ -1000,7 +995,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 1076	Kefir	Milk and milk products	poiesz	0.249	1.0	Arla Biologisch Kefir Naturel	2.49	1000
 1076	Kefir	Milk and milk products	spar	0.269	1.0	Arla bio kefir naturel naturel	2.69	1000
 1076	Kefir	Milk and milk products	vomar	0.219	1.0	Arla bio kefir naturel 1l	2.19	1000
-163	Kersen zoete	Fruits	hoogvliet	2.1652	1.0	Look-O-Look Zoete streken kersen	2.49	115
 163	Kersen zoete	Fruits	jumbo	1.036	1.0	Jumbo Vriesverse Zoete Kersen Pitloos 250 g	2.59	250
 163	Kersen zoete	Fruits	plus	0.796	1.0	PLUS Zoete kersen	1.99	250
 2365	Kip cordon bleu rauw	Meat and poultry	ah	1.198	1.0	AH Scharrel kip cordon bleu 4 stuks	5.99	500
@@ -1279,7 +1273,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 692	Mango	Fruits	jumbo	1.1371	0.7	Jumbo Smoothiemix Mango Dream 250 g	1.99	250
 692	Mango	Fruits	lidl	3.3238	0.7	Bio mango stukjes	3.49	150
 692	Mango	Fruits	plus	0.7638	0.7	PLUS Mangostukjes	4.01	750
-692	Mango	Fruits	spar	1.6071	0.7	Hipro proteine pouch mango	2.25	200
 5579	Meel amandel-	Cereal products and types of flour	ah	1.7475	1.0	AH Biologisch Amandelmeel	6.99	400
 5579	Meel amandel-	Cereal products and types of flour	dekamarkt	2.825	1.0	Smaakt Amandelmeel	5.65	200
 5579	Meel amandel-	Cereal products and types of flour	hoogvliet	1.645	1.0	Bio+ Amandelmeel	3.29	200
@@ -1419,11 +1412,9 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 5369	Meloen gem	Fruits	spar	3.1923	0.52	Spar meloen medley 150 gram	2.49	150
 166	Meloen net-	Fruits	jumbo	3.1923	0.52	Jumbo Galiameloen 150 g	2.49	150
 1105	Meloen water-	Fruits	ah	2.2189	0.52	AH Verse watermeloen	3.75	325
-1105	Meloen water-	Fruits	dekamarkt	1.8376	0.52	Napoleon Kogels watermeloen	2.15	225
 1105	Meloen water-	Fruits	dirk	1.6077	0.52	1 de Beste Watermeloen stukjes	2.09	250
-1105	Meloen water-	Fruits	hoogvliet	1.8697	0.52	Candyman Frisse watermeloen	1.75	180
-1105	Meloen water-	Fruits	jumbo	2.1261	0.52	Candyman Frisse Watermeloen 180 g	1.99	180
-1105	Meloen water-	Fruits	plus	1.7009	0.52	Napoleon Watermeloen	1.99	225
+1105	Meloen water-	Fruits	hoogvliet	2.5641	0.52	Healthyhand Watermeloenblokjes	2.0	150
+1105	Meloen water-	Fruits	jumbo	2.3018	0.52	Jumbo Watermeloen Voordeelverpakking 325 g	3.89	325
 1105	Meloen water-	Fruits	spar	1.7751	0.52	Spar watermeloenblokjes 325 gram	3.0	325
 111	Mosselen gekookt	Fish, crustacean and shellfish	jumbo	1.46	1.0	Jumbo Mosselen Gekookt 150 g	2.19	150
 111	Mosselen gekookt	Fish, crustacean and shellfish	plus	1.26	1.0	PLUS Gekookte mosselen	1.89	150
@@ -1686,8 +1677,7 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 2742	Paprika rauw gem	Vegetables	spar	2.152	1.0	Lay's Max ribbel paprika snackbox	2.69	125
 884	Paprika rode rauw	Vegetables	jumbo	0.9967	1.0	Jumbo Pizzabrood Paprika & Rode Ui 300g	2.99	300
 851	Paprika zoetzuur glas	Vegetables	jumbo	0.9844	0.6	Kühne Paprikareepjes Zoetzuur 320 g	1.89	320
-1074	Passievrucht	Fruits	ah	1.352	1.0	Isey Air passievrucht	1.69	125
-1074	Passievrucht	Fruits	vomar	0.478	1.0	Almhof roomyogh maracuja 500gr	2.39	500
+1074	Passievrucht	Fruits	lidl	0.4625	1.0	Passievrucht	1.85	400
 436	Pasta chocolade- hazelnoot	Sugar, sweets and sweet sauces	ah	0.8625	1.0	AH Biologisch Hazelnootpasta	3.45	400
 436	Pasta chocolade- hazelnoot	Sugar, sweets and sweet sauces	dekamarkt	0.3453	1.0	G'woon Hazelnootpasta	2.59	750
 436	Pasta chocolade- hazelnoot	Sugar, sweets and sweet sauces	dirk	0.34	1.0	Pranutti Hazelnootpasta	2.55	750
@@ -1751,7 +1741,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 3127	Pastinaak rauw	Vegetables	plus	0.358	1.0	PLUS Pastinaak	1.79	500
 3127	Pastinaak rauw	Vegetables	spar	0.5625	1.0	Mijnboer Bio pastinaak	2.25	400
 642	Pate room-	Cold meat cuts	jumbo	1.7471	1.0	Jumbo Roompaté ca. 170 g	2.97	170
-168	Peer z schil	Fruits	ah	3.0199	0.9	AH Pere joseph 50+	5.3	195
 168	Peer z schil	Fruits	dekamarkt	0.21	0.9	Hollandse Conference peren	1.89	1000
 168	Peer z schil	Fruits	dirk	0.1989	0.9	Hollandse Conference peren	1.79	1000
 168	Peer z schil	Fruits	jumbo	0.2056	0.9	Jumbo Conference Peren 1 kg	1.85	1000
@@ -1765,12 +1754,8 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 2524	Peper Spaanse rauw	Vegetables	dekamarkt	9.6207	1.0	Silvo Chilipeper vlokken	2.79	29
 2524	Peper Spaanse rauw	Vegetables	dirk	4.4483	1.0	Silvo Chilipeper vlokken	1.29	29
 5537	Pepers in zuur in blik/glas	Vegetables	jumbo	1.4074	0.6	Jumbo Jalapeño Peper Plakjes 225 g	1.9	225
-169	Perzik z schil	Fruits	dekamarkt	0.716	1.0	Haribo Perziken	1.79	250
-169	Perzik z schil	Fruits	dirk	0.672	1.0	Haribo Perziken	1.68	250
-169	Perzik z schil	Fruits	jumbo	5.98	1.0	Freeze Dried Candy Perzik Ringen 50g	2.99	50
-169	Perzik z schil	Fruits	lidl	0.249	1.0	Perziken schaal	2.49	1000
+169	Perzik z schil	Fruits	lidl	0.1625	1.0	Halve perziken	0.39	240
 169	Perzik z schil	Fruits	plus	0.349	1.0	PLUS Perziken verpakt	3.49	1000
-169	Perzik z schil	Fruits	spar	1.02	1.0	Haribo Perziken	2.55	250
 35	Peultjes rauw	Vegetables	ah	1.1	1.0	AH Peulen	2.75	250
 35	Peultjes rauw	Vegetables	dekamarkt	1.076	1.0	Eat Me Peulen	2.69	250
 35	Peultjes rauw	Vegetables	dirk	0.796	1.0	Eat Me Peulen	1.99	250
@@ -2129,11 +2114,8 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 838	Sesamzaad z schil	Nuts and seeds	hoogvliet	1.26	1.0	Smaakt Sesamzaad ongepeld	3.15	250
 838	Sesamzaad z schil	Nuts and seeds	jumbo	2.99	1.0	Jumbo Sesamzaad 100 g	2.99	100
 838	Sesamzaad z schil	Nuts and seeds	plus	1.196	1.0	Smaakt Sesamzaad ongepeld biologisch	2.99	250
-171	Sinaasappel	Fruits	ah	2.9132	0.73	LU Pim's sinaasappel	3.19	150
-171	Sinaasappel	Fruits	dekamarkt	5.4985	0.73	ANTA Refresh sinaasappel	2.89	72
-171	Sinaasappel	Fruits	jumbo	6.9751	0.73	Tic Tac Sinaasappel 2 x 49 g	4.99	98
-171	Sinaasappel	Fruits	plus	12.0939	0.73	Fairtrade Original Rooibos sinaasappel bio Fairtrade	3.09	35
-171	Sinaasappel	Fruits	spar	12.7808	0.73	XXL Nutrition blast pre workout sinaasappel	27.99	300
+171	Sinaasappel	Fruits	plus	0.3767	0.73	Biologisch PLUS Sinaasappels biologisch	2.75	1000
+171	Sinaasappel	Fruits	spar	0.2731	0.73	hand sinaasappelen	2.99	1500
 2346	Sla gem rauw	Vegetables	jumbo	2.2533	1.0	Growy Frisse Sla 75g	1.69	75
 1399	Sla ijsberg- rauw	Vegetables	ah	0.4975	1.0	AH IJsbergsla grootverpakking	1.99	400
 1399	Sla ijsberg- rauw	Vegetables	dekamarkt	0.4875	1.0	Ijsbergsla voordeel	1.95	400
@@ -2465,7 +2447,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 1010	Vijgen vers	Fruits	ah	1.578	1.0	AH Biologisch Vijgen	7.89	500
 1010	Vijgen vers	Fruits	dekamarkt	1.516	1.0	Smaakt Vijgen	3.79	250
 1010	Vijgen vers	Fruits	dirk	1.516	1.0	Smaakt Vijgen	3.79	250
-1010	Vijgen vers	Fruits	jumbo	2.5267	1.0	Chavroux Pyramide Vijgen 150 g	3.79	150
 1010	Vijgen vers	Fruits	lidl	0.798	1.0	Vijgen vers	3.99	500
 1010	Vijgen vers	Fruits	plus	1.399	1.0	Raw Organic Food Vijgen bio	13.99	1000
 2339	Vink runder- rauw	Meat and poultry	ah	1.995	1.0	AH Rundervink 2 stuks	3.99	200
@@ -2524,8 +2505,6 @@ nevo	nevo_name	group	chain	eur_per_100g	edible	product	pack_eur	pack_g
 5279	Vruchten bos- gem 	Fruits	hoogvliet	0.5187	1.0	G'woon Bosvruchten	3.89	750
 5279	Vruchten bos- gem 	Fruits	jumbo	0.5533	1.0	Jumbo Vriesverse Bosvruchten Voordeelverpakking 750 g	4.15	750
 5279	Vruchten bos- gem 	Fruits	plus	0.5187	1.0	PLUS Bosvruchten	3.89	750
-5279	Vruchten bos- gem 	Fruits	poiesz	0.3987	1.0	Zuivelhoeve Boer'n Yoghut Bosvruchten	2.99	750
-5279	Vruchten bos- gem 	Fruits	spar	1.125	1.0	Hipro proteïne pouch bosvruchten	2.25	200
 5462	Wafel mais- naturel m zout	Bread	ah	0.7174	1.0	AH Dikke maiswafels met zeezout	0.99	138
 5462	Wafel mais- naturel m zout	Bread	dekamarkt	0.6846	1.0	Bio+ Maiswafels met zeezout	0.89	130
 5462	Wafel mais- naturel m zout	Bread	dirk	0.6615	1.0	Bio+ Maiswafels met zeezout	0.86	130

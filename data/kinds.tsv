@@ -1,0 +1,80 @@
+kind	group	match
+wheat flour	grain	^Flour wheat
+other flour	grain	^Flour
+pasta and noodles	grain	^(Pasta|Noodles)
+rice	grain	^Rice
+oats and other flakes	grain	^(Oat flakes|Flakes|Rye flakes)
+bran	grain	\bbran\b
+breakfast cereals and muesli	grain	^(Breakfast cereal|Muesli)
+bakery mixes, doughs and wraps	grain	^(Bakery mix|Dough|Filo|Vol -au-vent|Bread crumbs|Wrap)
+starch	grain	starch
+couscous, bulgur and other grains	grain	.
+crispbread and crackers	bread	^(Crisp|Cracker|Toast|Rice cake|Corn cakes|Breadsticks|Croutons)
+bread	bread	bread|baguette|\broll\b|\bbun\b|^Wheat|^Multigrain|^Rye
+croissants and pastries	bread	.
+plant drinks	dairy	^Drink soya
+yoghurt drinks	dairy	^(Yoghurt|Yogurt) drink
+milk	dairy	^Milk
+yoghurt	dairy	^Yoghurt
+quark	dairy	^Quark
+buttermilk and kefir	dairy	^(Buttermilk|Kefir)
+cheese	dairy	^Cheese
+cream and coffee creamer	dairy	^(Cream|Creme|Coffee creamer)
+desserts and porridge	dairy	.
+cheese	cheese	.
+cold cuts	coldcut	.
+eggs	egg	.
+oils and frying fats	fat	^(Oil|Frying)
+butter	fat	[Bb]utter
+margarine	fat	.
+oily fish	fish	^(Herring|Mackerel|Salmon|Sardines|Anchovy|Caviar|Eel|Trout)
+tuna	fish	^Tuna
+shellfish and other seafood	fish	^(Mussels|Oysters|Prawns|Shrimp|Crab|Snails|Surimi|Squid)
+white fish	fish	.
+apples and pears	fruit	^(Apple|Pear)
+citrus fruit	fruit	^(Orange|Manderins|Mandarin|Grapefruit|Lemon|Lime)
+berries	fruit	^(Blackberries|Blueberries|Cranberries|Raspberries|Redcurrants|Strawberries|Goji)
+bananas	fruit	^Banana
+dried fruit	fruit	\bdried\b|^(Prunes|Raisins)
+olives	fruit	^Olives
+other fruit	fruit	.
+juices	drink	.
+beans	legume	^(Beans|Pulses)
+lentils	legume	^Lentils
+chickpeas	legume	^Peas chick
+dried and tinned peas	legume	^Peas
+poultry	meat	^(Chicken|Turkey)
+beef	meat	^(Beef|Hamburger)
+pork	meat	^(Pork|Bacon)
+minced meat	meat	^Minced
+liver	meat	^Liver
+lamb	meat	^Lamb
+sausages and other meat	meat	.
+plant drinks	meat_sub	^(Drink|Rice drink|Coconut milk)
+plant-based dairy alternatives	meat_sub	^(Plant-based|Coffee creamer)
+meat substitutes	meat_sub	.
+peanut butter	nut|spread	^Peanut butter
+seeds	nut	^(Chia|Hemp|Linseeds|Poppy|Pumpkin|Sesame|Sunflower|Seeds)
+peanuts	nut	^Peanut
+nuts	nut	.
+potatoes	potato	^Potatoes (raw|floury)
+sweet potatoes and cassava	potato	^(Potato sweet|Cassava)
+potato products	potato	.
+salt	misc	^Salt
+sandwich salads	spread	^(Salad|Sandwich spread)
+hummus and tahini	spread	.
+sugar, syrup and honey	sweet	^(Sugar|Syrup|Golden syrup|Honey)
+jam	sweet	^Jam
+chocolate spreads and sprinkles	sweet	.
+snacks	snack	.
+yeast	exotic	.
+cabbages	veg	^(Cabbage|Kale|Brussel|Broccoli|Cauliflower)
+leafy greens	veg	^(Lettuce|Rocket|Cress|Spinach|Chicory|Purslane|Glasswort|Endive)
+root vegetables	veg	^(Carrot|Beetroot|Parsnip|Swede|Salsify|Celery|Radish|Celeriac)
+onions, leek and garlic	veg	^(Onions?|Leek|Garlic|Silver-skin)
+tomatoes	veg	^Tomato
+peas, beans and sweetcorn	veg	^(Peas|Beans|Bean|Mange-tout|Sweetcorn)
+vegetable mixes	veg	^(Vegetables|Bami)
+pickles	veg	^(Gherkins|Capers)
+mushrooms	veg	^Mushroom
+other vegetables	veg	.

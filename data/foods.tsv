@@ -35,7 +35,7 @@ onions	63	veg	gele uien	ringen|gebakken	0.9	150				~150 g/ui
 peas_frozen	953	veg	^(ah |jumbo |1 de beste |g'woon )?doperwten( extra fijn| fijn| zeer fijn)?$	wortel|blik|pot	1	0				
 broccoli	921	veg	^(ah |jumbo |plus |dirk )?broccoli$	bonb|baby|maanden	0.8	500	920	1		~500 g/stuk
 tomatoes_tin	2293	veg	tomatenblokjes|gepelde tomaten	kruiden|ui|knoflook|basilicum	1	0				
-banana	151	fruit	bananen	chips|bak|pudding|gesuikerd|smaak|brood	0.67	180				~180 g/stuk, peel 33%
+banana	151	fruit	bananen	chips|bak|pudding|gesuikerd|smaak|brood|cake|choco|bananenpl	0.67	180				~180 g/stuk, peel 33%
 apple	875	fruit	appel(s)? (elstar|jonagold)|handappels	sap|moes	0.9	0				
 sardines	355	fish	sardines in (zonnebloem|soja)\s?olie	^$x	1	0				incl. oil
 mackerel_tin	1609	fish	makreel(filet)? in (zonnebloem)?\s?olie	tomaten	1	0				

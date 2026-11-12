@@ -9,9 +9,10 @@ import explain
 import lp
 from lp import load, nutrient_totals, rows, solve
 from profiles import all_profiles
+from snapshot import catalog_date, food_name
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--raw", action="store_true", help="raw NEVO values instead of cooked (as eaten)")
+ap.add_argument("--raw", action="store_true", help="raw NEVO values for every food instead of each food as usually eaten")
 ap.add_argument("--profile", nargs="*", help="profiles from data/profiles.tsv (default: all)")
 args = ap.parse_args()
 lp.COOKED = not args.raw
@@ -59,9 +60,8 @@ def keys(groups=(), name=None, keep=()):
 
 
 def label(k):
-    """Readable food name: hand-mapped key, or the NEVO English name for auto-matched foods."""
-    f = FOODS.get(k)
-    return k if not f or f["source"] == "hand" else NEVO_EN[f["nevo"]][:32]
+    """Readable food name: the NEVO English name, for hand-mapped foods too."""
+    return food_name(k, FOODS)
 
 
 def report(profile):
@@ -72,11 +72,11 @@ def report(profile):
     x, v = res.x, res.fun
 
     pr = m.profile
-    p(f"# {pr['label']}: cheapest adequate Dutch diet, NEVO 2025 + Checkjebon prices (2026-10-30), {len(FOODS)} foods\n")
+    p(f"# {pr['label']}: cheapest adequate Dutch diet, NEVO 2025 + Checkjebon prices ({catalog_date()}), {len(FOODS)} foods\n")
     p("_Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources._\n")
     p(f"Profile `{pr['name']}`: {pr['sex']}, {pr['age']}, {pr['weight']:.1f} kg, {pr['energy']:.0f} kcal, "
       f"{pr['protein']:.0f} g protein. Source: {pr['source']}.\n")
-    p(f"Composition: {'cooked, as eaten (NEVO prepared entries x yield)' if lp.COOKED else 'raw NEVO values'}.\n")
+    p(f"Composition: {'each food as usually eaten, cooked or raw (cooking.py: NEVO prepared entries x yield, else USDA retention factors)' if lp.COOKED else 'raw NEVO values'}.\n")
     p("## 1. Base LP (cheapest product per food across all chains)\n")
     basket(m, x, v, "Optimum")
 
@@ -101,7 +101,7 @@ def report(profile):
     caps = sum(abs(x - m.cap) < 1e-7)
     S = sum(x > 1e-7)
     p(f"\nSparsity check: |S| = {S} foods used, |T| = {T} tight nutrient rows + {caps} caps = {T+caps}. "
-      f"Lemma from the earlier chat says |S| <= |T|: {'holds' if S <= T + caps else 'VIOLATED'}.\n")
+      f"An optimal vertex of the polytope uses at most as many foods as tight constraints, |S| <= |T|: {'holds' if S <= T + caps else 'VIOLATED'}.\n")
 
     # missing NEVO values among the basket for binding nutrients
     p("NEVO gaps in the basket (blank cell counted as 0, so the true intake is higher):\n")
@@ -222,17 +222,29 @@ def report(profile):
 
     # ranges in the 5% near-optimal polytope
     p("## 7. Ranges within 5% of the optimum cost (flux-variability style)\n")
+    # Duality bound: cost(x) - v >= rc_i x_i for any adequate x, so within 5% food i takes at most 0.05 v / rc_i units.
+    # Only foods whose bound is under 1 g are skipped. (Before 2026-11-09 this skipped every food with rc_i above 5% of
+    # its own price, which hid foods that fit in at tens of grams.) A food outside the diet has min 0 without an LP.
     Gc = np.vstack([G, m.c]); hc = np.append(h, 1.05 * v)
-    p("| food | min g | max g |\n|---|---:|---:|")
+    bounds = list(zip(np.zeros(len(m.keys)), m.cap))
+    ranges = []
     for i, k in enumerate(m.keys):
-        if x[i] < 1e-7 and rc[i] > 0.05 * m.c[i]:
-            continue                           # far from entering: skip the two LPs
+        f = m.unit_g[i] or 1
+        if x[i] < 1e-7 and rc[i] > 0 and 0.05 * v / rc[i] * f < 1:
+            continue
         e = np.zeros(len(m.keys)); e[i] = 1
-        lo = linprog(e, A_ub=Gc, b_ub=hc, bounds=list(zip(np.zeros(len(m.keys)), m.cap)), method="highs").fun
-        hi = -linprog(-e, A_ub=Gc, b_ub=hc, bounds=list(zip(np.zeros(len(m.keys)), m.cap)), method="highs").fun
-        if hi > 1e-6:
-            f = m.unit_g[i] or 1
-            p(f"| {label(k)} | {lo*f:.0f} | {hi*f:.0f} |")
+        hi = -linprog(-e, A_ub=Gc, b_ub=hc, bounds=bounds, method="highs").fun * f
+        lo = linprog(e, A_ub=Gc, b_ub=hc, bounds=bounds, method="highs").fun * f if x[i] > 1e-7 else 0.0
+        if hi >= 1:
+            ranges.append((x[i] > 1e-7, x[i] * f, lo, hi, label(k)))
+    inside = sorted((r for r in ranges if r[0]), key=lambda r: -r[1])
+    outside = sorted((r for r in ranges if not r[0]), key=lambda r: -r[3])
+    p(f"{len(ranges)} foods can be part of an adequate diet within 5% of the optimum. The {len(inside)} in the optimum, "
+      f"then the 25 others that can go furthest; the remaining {max(0, len(outside) - 25)} fit in at most "
+      f"{outside[25][3] if len(outside) > 25 else 0:.0f} g.\n")
+    p("| food | optimum g | min g | max g |\n|---|---:|---:|---:|")
+    for _, opt, lo, hi, name in inside + outside[:25]:
+        p(f"| {name} | {opt:.0f} | {lo:.0f} | {hi:.0f} |")
     p()
 
     # nutrient totals for the base optimum, incl. K1/K2

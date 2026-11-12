@@ -1,4 +1,4 @@
-"""Price NEVO's dishes from their ingredients.  python3 dishes.py [--chain ah] -> dishes.md
+"""Price NEVO's dishes from their ingredients.  python3 dishes.py [--chain ah] -> reports/dishes.md
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources.
 
@@ -224,7 +224,7 @@ def main():
         out.append(f"| {NEVO[d]['Engelse naam/Food name'][:50]} ({d}) | {p:.3f} | {kcal:.0f} | {prot:.1f} | {per500:.2f} |")
     out += [f"\n## Ingredients that block the most dishes at {a.chain}\n", "| ingredient | dishes |", "|---|---:|"]
     out += [f"| {k} | {v} |" for k, v in miss_all.most_common(25)]
-    open("dishes.md", "w").write("\n".join(out) + "\n")
+    open("reports/dishes.md", "w").write("\n".join(out) + "\n")
     print("\n".join(out[:20]))
 
 

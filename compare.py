@@ -1,4 +1,4 @@
-"""Compare the profiles across chains.  python3 compare.py -> profiles.md
+"""Compare the profiles across chains.  python3 compare.py -> reports/profiles.md
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources.
 """
@@ -8,6 +8,7 @@ import numpy as np
 
 from lp import load, solve
 from profiles import all_profiles, load_profile
+from snapshot import catalog_date, food_name
 
 NEVO_EN = {r["NEVO-code"]: r["Engelse naam/Food name"] for r in
            csv.DictReader(open("data/nevo/NEVO2025_v9.0.csv", encoding="utf-8"), delimiter="|")}
@@ -18,8 +19,7 @@ SKIP = {"energy"}
 
 
 def label(k):
-    f = FOODS.get(k)
-    return k if not f or f["source"] == "hand" else NEVO_EN[f["nevo"]][:26]
+    return food_name(k, FOODS)
 
 
 out = []
@@ -35,9 +35,9 @@ def summary(m, r, G, h, lab):
     return binding, top
 
 
-p("# Five profiles compared\n")
+p("# The profiles compared\n")
 p("_Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources "
-  "(Checkjebon prices 2026-10-30)._\n")
+  f"(Checkjebon prices {catalog_date()})._\n")
 p("Cooked composition, absorbed iron (haem 25%, non-haem 10%), zinc at EFSA's high-phytate level, "
   "WHO 2007 amino acids. Details per profile in `reports/<profile>.md`.\n")
 p("## Profiles\n")
@@ -68,4 +68,4 @@ p("| profile | €/day | binding requirements | biggest costs |\n|---|---:|---|-
 for n, (cost, binding, top) in details.items():
     p(f"| {load_profile(n)['label']} | {cost:.2f} | {', '.join(binding)} | {', '.join(top)} |")
 p()
-open("profiles.md", "w").write("\n".join(out) + "\n")
+open("reports/profiles.md", "w").write("\n".join(out) + "\n")

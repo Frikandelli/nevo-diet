@@ -1,8 +1,8 @@
 # nevo-diet
 
-What's the cheapest diet that meets every Dutch nutrient norm, using real products and prices from Dutch supermarkets?
-This is a linear program (Stigler's diet problem) on the Dutch food composition table, with a local app to explore it:
-weekly shopping lists, a week of meals, your own body and goals, and charts showing why each food is in the basket.
+The cheapest diet that meets every Dutch nutrient norm, built from real products and real prices in Dutch supermarkets.
+A linear program (Stigler's diet problem) on the Dutch food composition table NEVO 2025 and the prices of 10 chains
+(Checkjebon), turned into a week of meals and a shopping list, with a local app to explore it.
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources.
 
@@ -22,91 +22,125 @@ python3 -m venv .venv
 .venv/bin/streamlit run app.py
 ```
 
-On Windows the last two commands use `.venv\Scripts\`. With Nix or on NixOS, use `./app.sh` instead: it does all of this, and the pip packages above do not run on NixOS as they are.
+On Windows the last two commands use `.venv\Scripts\`. With Nix or on NixOS, use `./app.sh` instead: it does all of this
+(through `shell.nix`, a pinned nixpkgs), and the pip packages above do not run on NixOS as they are.
 
 **2. Add the dataset.** The app opens at http://localhost:8501 and asks for it. The food data is free, but only RIVM may
 hand it out, so it isn't in this repo:
 
 - **[Request the NEVO dataset from RIVM](https://www.rivm.nl/en/dutch-food-composition-database/nevo-online-request-dataset)**:
   fill in your email and accept the conditions, and RIVM emails you a download link.
-- Upload the zip in the app. That's all, and you only do this once per computer.
-
-Your profiles and settings stay on your computer, in `~/.config/nevo-diet/`.
+- Upload the zip in the app (or run `python3 setup_data.py path/to/the.zip`). That's all, and you only do this once per
+  computer.
 
 ## The app
 
-- **Plan:** the cheapest diet, as a bare linear program or as a realistic week of meals in whole packs.
-- **Chain:** pick a supermarket, mix all chains (pure mode only), or choose "cheapest chain" and let the app find the one chain with
-  the lowest price under your settings. In realistic mode that compares a full week at every chain, about a minute on Solve.
-- **My foods:** on the Plan tab, pick foods you'll eat anyway, with grams per day or week, exactly or at least. The plan fills in
-  the rest, and shows what your foods changed.
-- **Category ticks:** on the Foods tab, no meat, no nuts, no grain products and so on. These are preferences, **not allergy protection**.
-- **Foods:** every food with its prices and nutrients. Exclude any food with one click.
-- **Dishes:** NEVO's dishes, priced from their ingredients.
-- **Charts:** nutrient coverage, which food covers which micronutrient, where the money goes, what each food pays for
-  (LP duality), what replaces what, cost curves and wiggle room.
-- **Profile & limits:** create or edit profiles, and set the minimum and maximum per nutrient. Every limit shows its source.
-- **Settings:** cache size, and fetching new prices.
+The **sidebar** on every page holds what to solve, in six numbered steps: who eats (profile), calories and protein
+(with your body for the estimates), where you shop (chain), kind of plan (pure LP or a realistic week of meals, with a
+Solve button), the cost per food, and which supplements the plan may use (set on the Supplements page); fruit, budget
+and the ≥ 3 chains switch are folded under *Optional*. The pages:
 
-At the top you can change weight, height and the calories and protein targets for the selected profile.
+| Page | What's there |
+|---|---|
+| **Plan** | The answer: €/day, the basket (pure) or the week's dinners, foods and shopping list (realistic), **My foods** (what you'll eat anyway), **Limits** (at most so much of a food or a whole kind; none by default), what that changes, and the nutrient check. ✗ a food or a whole kind (all pasta, all rice ...) right in the table, and put them back. Downloads: every table as CSV, the whole plan as a ZIP. |
+| **Nutrients** | Charts of what's in the diet: minimums met, maximums used, which food gives which vitamin and mineral, where the energy and macros come from, where the money goes; the full nutrient table. |
+| **Why this diet** | The LP explained through its dual: what each food is worth vs its price, what each food pays for (price split), what each limit costs (±10%), cost curves, wiggle room within 5%, what replaces what, the same diet at every chain. |
+| **Foods** | All foods with prices and nutrients: ✗ to leave one out, whole kinds, a *cook* tick per food, allergy and category ticks. |
+| **Supplements** | 28 vitamin and mineral pills, oils and psyllium with their cheapest price (supermarkets and drugstores), what each would save, and which ones the plan may use: only vitamin D by default, the ticked ones, every priced one, or all (no price = free ⚠). Your own prices and exact amounts. How each label is counted (folic acid ×1.7, B12 by dose ...). |
+| **Dishes** | NEVO's dishes priced from their recipes at the chain, with ingredients and stand-ins. |
+| **Profile & limits** | Your own profiles, and the minimum and maximum of every nutrient, each with its source. |
+| **Data & sources** | Every dataset and what was done to it (`docs/data.md`), every table in `data/` and every report to download, the limits with their sources (`SOURCES.md`). |
+| **How to use** | The sidebar step by step, what every setting does and when to change it, leaving foods out and putting them back, common tasks (`docs/how-to-use.md`). |
+| **About** | What it is, how it works, where to find what, and the words it uses (`docs/about.md`). |
+| **Settings** | Start over, reset the cook ticks, the solution cache (500 MB, least recently used out first), fetch new prices. |
 
-## How it's built
+Settings and exclusions are saved per computer in `~/.config/nevo-diet/settings.json`, own profiles in
+`~/.config/nevo-diet/profiles.json`, solutions in `~/.cache/nevo-diet`: none of it in git. `python3 test_app.py` checks
+that every page renders in many settings (about 5 minutes with a warm cache, longer the first time); it needs the
+dataset.
 
-- `SOURCES.md`: where every limit comes from, what was checked, and where the model deliberately differs.
-- `DESIGN.md`: how the model, plans, meals and app work, and why.
-- `FINDINGS.md`: what was learned along the way: data surprises, price oddities, matcher war stories.
-- `NOTICE.md`: data credits and licences. The code is MIT licensed (`LICENSE`).
+## Where to find what
 
-`python3 test_app.py` checks that every tab renders. It needs the dataset.
+| Where | What |
+|---|---|
+| `app.py` | The app's entry point: the sidebar and the page list. |
+| `views/` | One file per page of the app. |
+| `ui.py` | What the pages share: the settings context, tables and charts with their downloads, the sources line, the ZIP export. |
+| `charts.py` | Every chart (Altair), in one validated colour palette for light and dark mode. |
+| `appcore.py` | Everything the app computes, as plain data, behind the disk cache. |
+| `lp.py` | The model: foods, prices and nutrients in, the LP (and the cost-per-food MILP) out. |
+| `supplements.py` | Supplements: labels → what the norms count (absorption rules), prices per shop, which ones the plan may use; run it to refresh their supermarket prices. |
+| `profiles.py`, `cooking.py`, `categories.py`, `kinds.py` | Profile → limits; cooked or raw per food; the category and allergy ticks; kinds of food (wheat flour, pasta, rice ...). |
+| `explain.py` | Duality: the price split, the removal tree, dropping one limit at a time. |
+| `plan.py`, `meals.py`, `dishes.py` | Whole packs at one chain; a week of meals; NEVO dishes priced from their recipes. |
+| `expand.py`, `catalog.py`, `amino.py`, `price.py`, `fetch_prices.py` | Building the data: products → NEVO foods → the catalog; amino acids; prices. |
+| `run.py`, `compare.py`, `sensitivity.py` | The reports. |
+| `data/` | The tables the model reads (see below). `data/nevo/`: the two NEVO files, put there by `setup_data.py` (not in git). |
+| `docs/data.md` | Every dataset, its terms, and every step done to it. |
+| `docs/how-to-use.md` | The app's How to use page: every setting, leaving foods out, common tasks. |
+| `docs/about.md` | The app's About page: what it is, how it works, the glossary. |
+| `SOURCES.md` | Where every limit comes from, how it was checked, where the model deliberately differs. |
+| `reports/` | Where the scripts write their reports (below); not in git. |
+| `FINDINGS.md` | What was learned along the way: data surprises, odd prices, matcher war stories. |
+| `DESIGN.md` | How the model, plans, meals, supplements and app work, and why. |
+| `setup_data.py` | Puts the two NEVO files in `data/nevo/` from RIVM's zip (the app does this on first start). |
+| `NOTICE.md`, `LICENSE` | Data credits and their terms; the code is MIT licensed. |
 
-## Rebuilding the data and reports
+## Data
 
-These scripts are optional; the catalog is committed. `python3 fetch_prices.py` downloads the latest Checkjebon snapshot
-(MIT licensed), which the rebuild scripts need. Amino acids: USDA FoodData Central SR Legacy CSV (public domain) unzipped into
-`data/usda/`, only to rerun `amino.py`.
+Composition: NEVO 2025/9.0 (RIVM). Prices: Checkjebon, snapshot in `data/catalog_snapshot.txt`. Amino acids: USDA
+FoodData Central SR Legacy. Cooking losses: NEVO's cooked entries, else the USDA Table of Nutrient Retention Factors
+(Release 6). Limits: Voedingscentrum 2025, Gezondheidsraad, EFSA, WHO (`SOURCES.md`). **`docs/data.md` describes every
+dataset and every manipulation**: matching, edible parts, drained weights, cooked or raw, absorbed iron, plant EPA/DHA,
+amino acids, whole fruit, dish stand-ins.
+
+Files you edit by hand (every change with a reason in the file):
+- `data/foods.tsv`: the 53 hand-mapped staples (search pattern, NEVO raw and cooked code, edible fraction, yield).
+- `data/review.tsv`: decisions on products: `exclude`, `remap:<NEVO code>` or `keep`.
+- `data/requirements.tsv`: every limit: men's values, women's overrides, scaling per profile, source, link, evidence.
+- `data/profiles.tsv`: the four standard profiles (average and active man and woman).
+- `data/cooking.tsv`: which foods are cooked by default, and their USDA retention class.
+- `data/supplements.tsv`: the supplements: label amounts per tablet, capsule or spoon, form, source and date.
+- `data/supplement_prices.tsv`: who sells each supplement: shop, product, units per pack, price, source (Checkjebon or
+  the shop's website) and date.
+- `data/dinners.tsv`: which NEVO dishes count as dinners (quick or batch, hands-on minutes; the starch side column is no longer used).
+- `data/kinds.tsv`: the kinds of food you can leave out at once (wheat flour, pasta and noodles, rice ...): rules on the
+  food group and NEVO name, first match wins (`python3 kinds.py` lists every kind with its foods).
+
+## Rebuild and reports
+
+Optional: the catalog and the other derived tables are committed. `python3 fetch_prices.py` downloads the newest
+Checkjebon snapshot (MIT), which the rebuild scripts need; the USDA SR Legacy CSV (public domain) goes in `data/usda/`,
+only to rerun `amino.py`.
 
 ```
-python3 expand.py [--sample 80]   # auto-match all products to NEVO -> data/auto_matches.tsv, auto_prices.tsv
-python3 catalog.py                # merge with the hand-mapped foods -> data/catalog_foods.tsv, catalog_prices.tsv
-python3 amino.py                  # USDA amino acid profiles per food -> data/amino_foods.tsv
-python3 run.py [--raw] [--profile avg_man]   # analyses per profile -> reports/<profile>.md
-python3 compare.py                # all profiles x chains -> profiles.md
-# each report also explains the basket (explain.py): chains per food, price split, removal tree, rule costs
-python3 profiles.py               # print each profile's weight, energy and protein
-python3 plan.py [--chain ah]      # shopping lists in whole packs at one chain -> plans.md
-python3 dishes.py [--chain ah]    # NEVO dishes priced from their ingredients -> dishes.md
-python3 meals.py [--strictness medium]   # a week of meals -> meals.md
-python3 sensitivity.py            # cooking losses + absorption scenarios -> sensitivity.md
+python3 expand.py [--sample 80]   # products -> NEVO matches: data/auto_matches.tsv, auto_prices.tsv (~1.5 min)
+python3 catalog.py                # merged catalog: data/catalog_foods.tsv, catalog_prices.tsv, catalog_snapshot.txt
+python3 supplements.py            # supermarket supplement prices from the newest snapshot: data/supplement_prices.tsv
+python3 amino.py                  # amino acids per food: data/amino_foods.tsv (needs data/usda/)
+python3 cooking.py retn06.txt     # USDA retention factors: data/retention.tsv
+python3 run.py [--raw] [--profile avg_man]   # reports/<profile>.md: the full analysis per profile
+python3 compare.py                # reports/profiles.md: the four profiles at every chain
+python3 sensitivity.py            # reports/sensitivity.md: cooking and absorption scenarios
+python3 plan.py [--chain ah]      # reports/plans.md: shopping lists in whole packs (~1 min)
+python3 dishes.py [--chain ah]    # reports/dishes.md: NEVO dishes priced at every chain
+python3 meals.py [--strictness medium]   # reports/meals.md: a week of meals (~1.5 min)
+python3 profiles.py               # each profile's weight, energy and protein
 python3 search.py nevo 'kool'     # find NEVO codes;  python3 search.py price 'kwark' finds products
-python3 price.py                  # (old) price only the 50 hand-mapped foods -> data/prices.tsv
 ```
 
-## Files you edit
-- `data/dinners.tsv`: which NEVO dishes count as dinners (quick/batch, hands-on minutes, starch side).
-- `data/review.tsv`: hand decisions on products: `exclude` a product, or `remap:<NEVO code>` it.
-- `data/foods.tsv`: one row per food: NEVO code (raw and as-eaten), price regex + exclusions, edible fraction,
-  piece weight, cooking yield (`P` = estimated from protein, raw/cooked).
-- `data/profiles.tsv`: the standard profiles (average and active man and woman).
-- `data/requirements.tsv`: Dutch norms (Voedingscentrum 2025 table of Gezondheidsraad values, EFSA zinc, WHO amino
-  acids; sources per row): men's values, women's overrides, and how each scales with the profile.
+## Modelling choices, in short
 
-## Modelling choices
-- Variables are grams as bought per day; prices are per 100 g edible portion (peel/shell/bone removed).
-- A blank NEVO cell counts as 0, which is conservative for minimum requirements. `run.py` lists blanks in nutrients
-  that bind.
-- EPA/DHA counts as 0 for plant foods. This is a model rule, not a change to the NEVO files: NEVO lists trace
-  "DHA" in oats and peanut butter from lab analyses, and the LP built the vegetarian optimum on it.
-- A vitamin D tablet (AH Care D3 25 µg, €4.99 for 300) is included as a priced pseudo-food, at most 1 a day.
-- Cooked mode (the default; `python3 run.py --raw` for raw values) swaps in NEVO's as-eaten entry × yield. For boiled vegetables the yield is
-  assumed to be 1.0.
-- Your own foods are bounds on the variables: x >= amount, and x <= amount as well when it's "exactly". They count
-  in grams as bought and stay in whatever a tick, a ✗ or the chain says about them.
-- Absorption: NEVO is not corrected for bioavailability (background doc §4.4). The model counts absorbed iron
-  (haem 25%, non-haem 10%; target = norm x EFSA absorption) and uses EFSA's zinc for a high-phytate diet. `sensitivity.py`
-  varies these assumptions and calcium from soy drink.
-- Amino acids: USDA mg per g protein for the food's family (oats, wheat, legumes, dairy, ...) x NEVO protein x
-  digestibility (0.95 animal, 0.85 plant); NEVO's own tryptophan where it has one. Needs: WHO 2007 per kg.
-
-## Ignores
-Promotions, taste, meal-level
-absorption interactions (vitamin C with iron, calcium against iron), and phytate (NEVO has no phytate data).
+- Variables are grams as bought per day; prices are per 100 g of the edible part (peel, shell and bone off; tins drained).
+- A blank NEVO cell counts as 0, which is cautious for minimums; the reports list the blanks that matter.
+- Each food counts as it's usually eaten, cooked (boiled) or raw, with a *cook* tick per food in the app.
+- Iron counts as absorbed iron (haem 25%, non-haem 10%); zinc uses EFSA's norm for a high-phytate diet.
+- Plant foods have no EPA/DHA (NEVO's traces in oats and peanut butter are lab noise the optimiser exploited).
+- Amino acids: USDA's profile per food family × NEVO protein × digestibility (0.95 animal, 0.85 plant), against WHO 2007.
+- Supplements are pseudo-foods per tablet, counted as the norms count them (folic acid ×1.7, synthetic vitamin E ×0.67,
+  B12 by dose, iron 10% absorbed); only the vitamin D tablet by default, the rest on the Supplements page. No caps of
+  their own; magnesium from pills has EFSA's 250 mg maximum.
+- No food has a limit of its own. Your own limits on a food or a kind are extra rows ("at most so many grams of these
+  foods together"), counting dinner ingredients in the realistic week.
+- Your own foods are bounds: at least the amount, or exactly it.
+- Ignored: promotions, taste in the pure plan, absorption interactions within a meal, and phytate (NEVO has no data).

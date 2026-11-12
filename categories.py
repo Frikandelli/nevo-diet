@@ -20,6 +20,7 @@ import csv
 import re
 
 import dishes as D
+import supplements as S
 
 # key, label as shown after "No ...", what it covers. Every food in the catalog has at least one (test_app.py checks).
 CATEGORIES = [
@@ -42,11 +43,27 @@ CATEGORIES = [
     ("snacks", "snacks", "savoury snacks"),
     ("salt", "salt", "salt"),
     ("yeast", "yeast", "yeast"),
-    ("supplements", "supplements", "the vitamin D tablet"),
+    ("supplements", "supplements", "vitamin and mineral pills, fish and algae oil, psyllium"),
 ]
-LABEL = {k: label for k, label, _ in CATEGORIES}
+# Allergies and intolerances. NEVO has no allergen data, so these come from NEVO's group, name and recipes like the rest, but
+# the other way round: when in doubt a food goes out. A processed food's real recipe is on its label, not in NEVO. Celery,
+# mustard, lupin and sulphites aren't offered: nothing in the data would show where they're hidden.
+ALLERGIES = [
+    ("x_gluten", "gluten", "wheat, rye, barley, spelt and oats (usually contaminated), and what's made with them"),
+    ("x_lactose", "lactose", "milk products, butter and cheese, unless labelled lactose-free"),
+    ("x_milk", "milk", "every milk product, lactose-free too, and food that may hold milk"),
+    ("x_egg", "egg", "eggs, mayonnaise, baked goods"),
+    ("x_fish", "fish", "fish, fish paste, anchovies"),
+    ("x_shellfish", "shellfish", "crustaceans and molluscs: shrimp, crab, mussels, oysters, snails"),
+    ("x_peanut", "peanuts", "peanuts, peanut oil, frying oils, and food that may hold them"),
+    ("x_nuts", "tree nuts", "almonds, cashews, hazelnuts, walnuts and the like, and food that may hold them; not coconut"),
+    ("x_soy", "soy", "soy drinks, tofu, tempeh, margarine, chocolate, meat substitutes"),
+    ("x_sesame", "sesame", "sesame, tahini, hummus, falafel, bread and food that may hold it"),
+]
+LABEL = {k: label for k, label, _ in CATEGORIES + ALLERGIES}
 # A dinner or composite food with this as an ingredient counts as having it. The rest only cover the food itself.
-FOLLOWS_INGREDIENTS = {"meat", "fish", "eggs", "dairy", "legumes", "grain", "nuts", "seeds", "veg", "fruit", "potatoes"}
+ALLERGY_KEYS = {a[0] for a in ALLERGIES}
+FOLLOWS_INGREDIENTS = {"meat", "fish", "eggs", "dairy", "legumes", "grain", "nuts", "seeds", "veg", "fruit", "potatoes"} | ALLERGY_KEYS
 
 BY_NEVO_GROUP = {
     "Vegetables": "veg", "Meat and poultry": "meat", "Cold meat cuts": "meat", "Pastry and biscuits": "grain",
@@ -86,6 +103,51 @@ BY_NAME = {
 }
 # Filed under flours and cereals by NEVO, but not made of grain.
 NOT_GRAIN = {"potato starch": "potatoes", "flour almond": "nuts", "flour coconut": "fruit"}
+# Whose recipe is on the label, not in NEVO: it may hold anything these allergens are commonly used for.
+_FACTORY = (r"sausage|salami|saveloy|metworst|hamburger|kromesky|forcemeat|scrapple|black pudding|\bpate\b|luncheon|processed|"
+            r"corned beef|frikandel|filet americain|tartare spiced|croquette|fried|rosti|fish fingers|surimi|marinated|"
+            r"schnitzel|cordon bleu|filled|ready-to-eat|\bballs?\b|rolled|beef olives|minced meat")
+_FACTORY_GROUPS = {"Cold meat cuts", "Savoury snacks", "Savoury bread spreads", "Pastry and biscuits", "Sauces", "Soups",
+                   "Meat substitutes and dairy substitutes"}
+_NOT_FACTORY = re.compile(r"^drink |rice drink|tofu|coconut milk|peanut butter|sesame paste")      # one thing, or close to it
+_BAKED = {"Bread", "Pastry and biscuits"}
+_CHOC = r"chocolate|cocoa|sprinkles|\bflakes (dark|milk|white)|nougat|praline|comfits|speculaas|ice cream|tiramisu"
+_CEREAL_OK = r"\brice\b(?!.*(nuts|fruit))|\bcorn\b|millet|quinoa|buckwheat|potato starch|flour (almond|coconut)|gluten free"
+_MUESLI = r"muesli|breakfast cereal|granola"
+# allergen -> (name has this, these NEVO groups count, a factory food counts, unless the name has that)
+ALLERGENS = {
+    "x_gluten": (r"wheat(?<!buckwheat)|\brye\b|barley|spelt|\boats?\b|semolina|couscous|bulgur|seitan|\bbread|crumbs|\bflour\b|"
+                 r"pasta|noodle|\bbami\b|macaroni|spaghetti|gnocchi|pastry|dough|pizza|tortilla|\bwrap|pancake|poffertjes|"
+                 r"vol -au|soy sauce|ketjap|tomato sauce|baked in|chilli canned|\bbeer\b|\bmalt|croutons|speculaas|comfits|liquorice|sandwich spread|" + _MUESLI,
+                 _BAKED, True, r"gluten free|rice cake|corn cakes|flour (almond|coconut|corn|buckwheat)|\boil\b"),
+    "x_lactose": (r"\bmilk\b|milkchocolate|cheese|\bcream\b|creme|yoghurt|yogurt|quark|custard|\bbutter\b|kefir|\bwhey\b|mascarpone|"
+                  r"blancmange|pudding airy|porridge|creamer|brioche|croissant|margarine|dairy|ayran|pastry|dough|bakery mix|pancake|" + _MUESLI + "|" + _CHOC,
+                  {"Milk and milk products", "Cheese", "Pastry and biscuits"}, True,
+                  r"lactose.free|plant-based|coconut|\bsoya?\b|\balmond\b|peanut butter|nut butter|cocoa butter|butter bean|"
+                  r"salad cream|non-dairy"),
+    "x_milk": (r"\bmilk\b|milkchocolate|cheese|\bcream\b|creme|yoghurt|yogurt|quark|custard|\bbutter\b|kefir|\bwhey\b|mascarpone|"
+               r"blancmange|pudding airy|porridge|creamer|margarine|dairy|ayran|lactose|pastry|dough|bakery mix|pancake|" + _MUESLI + "|" + _CHOC,
+               {"Milk and milk products", "Cheese"} | _BAKED, True,
+               r"plant-based|coconut|\bsoya?\b|\balmond\b|peanut butter|nut butter|cocoa butter|butter bean|non-dairy|gluten free bread"),
+    "x_egg": (r"\beggs?\b|omelette|mayonnaise|\bsalad\b|pastry|pancake|poffertjes|brioche|croissant|custard|meringue|tiramisu|noodle|"
+              r"\bbami\b|gnocchi|vol -au|bakery mix|blancmange|pudding airy|sandwich spread|ice cream", {"Eggs", "Pastry and biscuits"},
+              True, None),
+    "x_fish": (r"\bfish\b|salmon|\btuna\b|herring|mackerel|sardine|anchov|\bcod\b|trout|plaice|pollock|halibut|pangasius|tilapia|caviar|"
+               r"\beel\b|surimi|sandwich spread", None, False, r"shellfish"),
+    "x_shellfish": (r"shrimp|prawn|\bcrab\b|lobster|mussel|oyster|snail|squid|scallop|surimi|shellfish|crustacean", None, False, None),
+    "x_peanut": (r"peanut|satay|almond|cashew|hazelnut|walnut|pecan|pistachio|macadamia|pine nut|chestnut|\bnuts?\b|seeds and kernels|frying|\bwok\b|" + _MUESLI + "|" + _CHOC, {"Pastry and biscuits"}, False, None),
+    "x_nuts": (r"peanut|satay|almond|cashew|hazelnut|walnut|pecan|pistachio|macadamia|pine nut|chestnut|brazil|\bnuts?\b|seeds and kernels|marzipan|"
+               r"nougat|pesto|frangipane|" + _MUESLI + "|" + _CHOC, {"Pastry and biscuits"}, False, r"water chestnut|coconut"),
+    "x_soy": (r"\bsoya?\b|tofu|tempeh|plant-based|miso|ketjap|margarine|multigrain|\bwok\b|sandwich spread|coffee creamer|" + _CHOC,
+              {"Meat substitutes and dairy substitutes", "Pastry and biscuits"}, True, r"^coconut milk|drink (oat|almond|coconut|rice)|rice drink"),
+    "x_sesame": (r"sesame|tahin|hummus|falafel|seeds and kernels|multiseed|\bwok\b", _BAKED | {"Savoury snacks", "Savoury bread spreads"}, False,
+                 r"peanut butter"),
+}
+ALLERGENS = {k: (re.compile(has), groups or set(), factory, re.compile(unless) if unless else None)
+             for k, (has, groups, factory, unless) in ALLERGENS.items()}
+_FACTORY = re.compile(_FACTORY)
+_CEREAL_OK = re.compile(_CEREAL_OK)
+FREE_OF = {"x_gluten": r"gluten.free", "x_lactose": r"lactose.free"}      # the label says so, whatever a typical recipe has
 AVERAGE = re.compile(r"\bav\b")      # "Beef av raw": a mix of kinds of one food, not a list of what's in it
 _CANCEL = re.compile(r"\b(wo|not|without)\s+[\w-]+(\s+and\s+[\w-]+)?")
 _cache = {}
@@ -108,6 +170,13 @@ def _own(code):
     for cat, (has, unless) in BY_NAME.items():
         if has.search(name) and not (unless and unless.search(name)) and (cat != "legumes" or group != "Vegetables"):
             out.add(cat)
+    plain = row["Engelse naam/Food name"].lower()      # "wo salt" cancels nothing here: "gluten free" must stay readable
+    for key, (has, groups, factory, unless) in ALLERGENS.items():
+        hit = bool(has.search(name)) or group in groups or (factory and (group in _FACTORY_GROUPS or _FACTORY.search(name)) and not _NOT_FACTORY.search(name))
+        if key == "x_gluten" and group == "Cereal products and types of flour" and not _CEREAL_OK.search(name):
+            hit = True
+        if hit and not (unless and unless.search(plain)):
+            out.add(key)
     return out
 
 
@@ -120,18 +189,43 @@ def of_code(code):
         if AVERAGE.search(D.NEVO[code]["Engelse naam/Food name"]) if code in D.NEVO else False:
             # One kind of beef in nine is a meatball with egg; that doesn't put egg in "beef". Count what most of it has.
             for cat in FOLLOWS_INGREDIENTS:
-                if sum(share for ing, share in recipe if cat in of_code(ing)) >= 0.5:
+                if cat not in ALLERGY_KEYS and sum(share for ing, share in recipe if cat in of_code(ing)) >= 0.5:
                     out.add(cat)
+            # An allergy isn't a matter of what most of it has.
+            for ing, _share in recipe:
+                out |= of_code(ing) & ALLERGY_KEYS
+            plain = D.NEVO[code]["Engelse naam/Food name"].lower() if code in D.NEVO else ""
+            out -= {key for key, words in FREE_OF.items() if re.search(words, plain)}
         else:
             for ing, _share in recipe:
                 out |= of_code(ing) & FOLLOWS_INGREDIENTS
+            plain = D.NEVO[code]["Engelse naam/Food name"].lower() if code in D.NEVO else ""
+            out -= {key for key, words in FREE_OF.items() if re.search(words, plain)}
         _cache[code] = out
     return _cache[code]
 
 
 _foods = list(csv.DictReader(open("data/catalog_foods.tsv"), delimiter="\t"))
 FOOD_CATS = {f["key"]: of_code(f["nevo"]) | (of_code(f["nevo_cooked"]) if f["nevo_cooked"] else set()) for f in _foods}
-FOOD_CATS["vitD_tablet"] = {"supplements"}
+FOOD_CATS.update({k: S.categories(k) for k in S.SUPP})      # fish oil: fish; a beef gelatin capsule: meat ...
+# The real products count too: about 1 in 10 automatic matches is wrong ("Cranberries fresh" had a nut bar among its products),
+# and a food is only as safe as whatever the cheapest product turns out to be.
+_MILKY = r"(?<!pinda)kaas|boter|(?<!kokos)(?<!soja)(?<!haver)(?<!amandel)(?<!rijst)(?<!cocos)melk|(?<!kokos)(?<!cocos)room|yoghurt|kwark|lactose"
+_PLANT = r"plantaardig|alpro|(soja|haver|rijst|amandel|kokos) ?drink"       # Melkan is a brand, and a plant yoghurt says "yoghurt"
+PRODUCT_WORDS = {
+    "x_gluten": (r"tarwe|rogge|gerst|spelt|\bhaver|gluten|brood|volkoren|(?<!aardappel)(?<!mais)(?<!rijst)meel\b|beschuit|paneer", r"glutenvrij"),
+    "x_lactose": (_MILKY, _PLANT + r"|lactosevrij|lactofree"), "x_milk": (_MILKY, _PLANT),
+    "x_egg": (r"\bei\b|\beieren|\beier|mayo", None),
+    "x_fish": (r"\bvis\b|\bvisse|zalm|tonijn|haring|makreel|ansjovis", None),
+    "x_shellfish": (r"garnal|mossel|\bkrab|kreeft|\boester", None),
+    "x_peanut": (r"pinda|noot|noten|amandel|marsepein", None), "x_nuts": (r"pinda|noot|noten|amandel|marsepein", None),
+    "x_soy": (r"\bsoja|tofu|tempeh", None), "x_sesame": (r"sesam|tahin|hummus", None),
+}
+for _r in csv.DictReader(open("data/catalog_prices.tsv"), delimiter="\t"):
+    _p = _r["product"].lower()
+    for _key, (_has, _unless) in PRODUCT_WORDS.items():
+        if _r["key"] in FOOD_CATS and re.search(_has, _p) and not (_unless and re.search(_unless, _p)):
+            FOOD_CATS[_r["key"]].add(_key)
 
 
 def members(cats):
@@ -142,7 +236,7 @@ def members(cats):
 
 def removed_by(cats):
     """{food: 'nuts, spreads and salads'}: which of these ticks remove each food."""
-    return {k: ", ".join(LABEL[c] for c, *_ in CATEGORIES if c in cats and c in have)
+    return {k: ", ".join(LABEL[c] for c, *_ in CATEGORIES + ALLERGIES if c in cats and c in have)
             for k, have in FOOD_CATS.items() if have & set(cats)}
 
 

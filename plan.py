@@ -1,4 +1,4 @@
-"""Shopping plans with whole packs at one chain.  python3 plan.py [--chain dekamarkt] -> plans.md
+"""Stage 4: shopping plans with whole packs at one chain.  python3 plan.py [--chain dekamarkt] -> reports/plans.md
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources.
 
@@ -13,7 +13,7 @@ How food is bought (model decisions, DESIGN.md):
             because the rest of the pack carries over to the next cycle.
 Nutrient windows: lower bounds of stored nutrients (vitamins A, D, B12, K1, absorbed iron, iodine, selenium,
 EPA/DHA) hold on the 4-week average; everything else (and every upper limit) holds every week.
-Plans are "not crazy": one chain, foods sold at >= 3 chains, no food above 30% of a week's energy.
+Plans are "not crazy": one chain, foods sold at >= 3 chains. No food has a cap (the 30%-of-energy rule went on 2026-11-09).
 """
 import argparse
 import csv
@@ -25,12 +25,13 @@ from scipy.optimize import Bounds, LinearConstraint, linprog, milp
 from scipy.sparse import lil_matrix
 
 import lp
+import supplements as S
 from lp import load, rows, solve
 from profiles import all_profiles, load_profile
+from snapshot import catalog_date, food_name
 
 WEEKS = 4
 STORED = {"vitA", "vitD", "vitB12", "vitK1", "iron_abs", "iodine", "selenium", "epa_dha"}
-MAX_KCAL_SHARE = 0.30
 FREEZER_KG = 10.0     # small freezer (2-3 drawers): food kept frozen between weeks (model decision)
 FREEZER_GROUPS = {"bread", "meat", "fish", "meat_sub"}   # fresh foods that keep 4 weeks only by freezing
 CANDIDATE_RC = 0.5     # foods whose reduced cost is within 50% of their price join the MILP
@@ -44,8 +45,7 @@ BIG_CHAINS = [c for c in CHAINS if c not in ("poiesz", "vomar")]   # the two wit
 
 
 def label(k):
-    f = FOODS.get(k)
-    return k if not f or f["source"] == "hand" else NEVO_EN[f["nevo"]][:34]
+    return food_name(k, FOODS)
 
 
 def packs(chain):
@@ -65,7 +65,7 @@ def shelf(key, group, product):
     """'pantry' or the number of weeks a fresh pack keeps (freezer counted: bread, meat and fish keep 4)."""
     name = (NEVO_EN.get(FOODS[key]["nevo"], "") if key in FOODS else "").lower()
     dutch = product.lower()
-    if group in PANTRY_GROUPS or key == "vitD_tablet":
+    if group in PANTRY_GROUPS:                     # supplements too (group "supplement")
         return "pantry"
     if group == "spread" and re.search(r"peanut|tahin|sesame", name):
         return "pantry"
@@ -97,7 +97,7 @@ def candidates(m, res):
     return sorted(keep)
 
 
-def build(m, idx, pk, weeks, kcal_share=MAX_KCAL_SHARE):
+def build(m, idx, pk, weeks):
     """MILP over `weeks` weeks for the foods idx. Returns (c, A, lo, hi, integrality, bounds, layout)."""
     G, h, lab = rows(m)
     n_f = len(idx)
@@ -178,15 +178,6 @@ def build(m, idx, pk, weeks, kcal_share=MAX_KCAL_SHARE):
                             coefs[kk] = coefs.get(kk, 0) - 1
                 row(coefs, -np.inf, cap_units)
     lay_frozen = frozen
-    # no food above kcal_share of the week's energy
-    if kcal_share:
-        kc = m.N["ENERCC"]
-        for v in range(weeks):
-            for i in idx:
-                if kc[i] > 0:
-                    coefs = {var[("y", i2, v)]: -kcal_share * kc[i2] for i2 in idx if kc[i2] > 0}
-                    coefs[var[("y", i, v)]] += kc[i]
-                    row(coefs, -np.inf, 0)
     A = lil_matrix((len(A_rows), nv))
     for r, coefs in enumerate(A_rows):
         for cidx, val in coefs.items():
@@ -195,12 +186,12 @@ def build(m, idx, pk, weeks, kcal_share=MAX_KCAL_SHARE):
             {"var": var, "kind": kind, "idx": idx, "weeks": weeks, "frozen": lay_frozen})
 
 
-def plan(m, pk, weeks, kcal_share=MAX_KCAL_SHARE, time_limit=120):
+def plan(m, pk, weeks, time_limit=120):
     res, *_ = solve(m)
     if res.status != 0:
         return None
     idx = [i for i in candidates(m, res) if m.keys[i] in pk or not m.unit_g[i]]
-    c, A, lo, hi, integ, ub, lay = build(m, idx, pk, weeks, kcal_share)
+    c, A, lo, hi, integ, ub, lay = build(m, idx, pk, weeks)
     t = time.time()
     r = milp(c, constraints=LinearConstraint(A, lo, hi), integrality=integ, bounds=Bounds(0, ub),
              options={"time_limit": time_limit, "mip_rel_gap": 1e-3})
@@ -230,7 +221,7 @@ def shopping(m, pk, lay, title):
     W, var, x = lay["weeks"], lay["var"], lay["x"]
     per_day = lay["cost"] / (7 * W)
     p(f"### {title}: €{per_day:.2f}/day, €{per_day * 7:.2f}/week\n")
-    p(f"Pure LP at this chain: €{lay['lp_cost']:.2f}/day, so whole packs, shelf life and the 30% rule cost "
+    p(f"Pure LP at this chain: €{lay['lp_cost']:.2f}/day, so whole packs and shelf life cost "
       f"€{per_day - lay['lp_cost']:+.2f}/day. (MILP: {lay['seconds']:.1f} s.)\n")
     fresh = [i for i in lay["idx"] if lay["kind"][i] != "pantry" and any(bought(lay, i, w) for w in range(W))]
     pantry = [i for i in lay["idx"] if lay["kind"][i] == "pantry" and sum(eaten(lay, i, v) for v in range(W)) > 1e-4]
@@ -266,8 +257,10 @@ def shopping(m, pk, lay, title):
             p(f"| {prod} ({pg:.0f} g, €{eur:.2f}) | {label(m.keys[i])} | {use*100/7:.0f} | "
               f"{lasts:.1f} weeks | {use*m.c[i]:.2f} |")
         else:
-            p(f"| AH Care Vitamine D3 25 µg (300 tablets, €4.99) | vitamin D tablet | {use/7:.2f} tablet | "
-              f"{300/use:.0f} weeks | {use*m.c[i]:.2f} |")
+            o = m.pills.get(m.keys[i], {}).get("offer")
+            prod = f"{o['product']} ({o['units']} units, €{o['price']:.2f}, {S.shop_name(o['shop'])})" if o else "no price"
+            p(f"| {prod} | {label(m.keys[i])} | {use/7:.2f} a day | "
+              f"{(o['units'] if o else 0)/use:.0f} weeks | {use*m.c[i]:.2f} |")
     p()
 
 
@@ -290,22 +283,22 @@ def coverage(m, lay):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--chain", help="chain for the shopping lists (default: cheapest weekly plan)")
-    ap.add_argument("--profile", default="avg_man")
+    ap.add_argument("--profile", default=lp.PROFILE_DEFAULT)
     a = ap.parse_args()
     lp.PROFILE = a.profile
     pr = load_profile(a.profile)
 
     p(f"# Shopping plans: whole packs at one chain\n")
     p("_Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources "
-      "(Checkjebon prices 2026-10-30)._\n")
-    p("Rules: one chain; only foods sold at >= 3 chains; no food above 30% of a week's energy; fresh food in "
+      f"(Checkjebon prices {catalog_date()})._\n")
+    p("Rules: one chain; only foods sold at >= 3 chains; fresh food in "
       "whole packs within its shelf life (waste is paid for); pantry food paid per gram. Stored nutrients "
       "(vitamins A, D, B12, K1, iron, iodine, selenium, EPA/DHA) on the 4-week average, everything else "
       "every week. Freezer: at most 10 kg kept frozen between weeks.\n")
     p("**Not yet a diet you'd want to eat:** these are the cheapest nutrient baskets, bought as real packs. "
-      "Meals, the vegetable/fruit minimums and variety rules are in `meals.py`.\n")
+      "Meals, the vegetable/fruit minimums, variety rules and cooking notes come in stage 5.\n")
 
-    # 1) the chosen profile: weekly plan per chain, pick the cheapest
+    # 1) the profile: weekly plan per chain, pick the cheapest
     p(f"## 1. {pr['label']}: weekly plan per chain\n")
     p("| chain | pure LP €/day | weekly plan €/day | 4-week rotation €/day |\n|---|---:|---:|---:|")
     results = {}
@@ -332,9 +325,6 @@ def main():
     p("## 4. Crazy savings (not in any plan; opt in if you like)\n")
     p("| what | €/day | saving vs the weekly plan |\n|---|---:|---:|")
     base = wk["cost"] / 7
-    nocap = plan(m, pk, 1, kcal_share=None)
-    if nocap:
-        p(f"| allow one food above 30% of energy | {nocap['cost']/7:.2f} | {base - nocap['cost']/7:.2f} |")
     mall = load(min_chains=0, chain=chain)
     allf = plan(mall, pk, 1)
     if allf:
@@ -360,7 +350,7 @@ def main():
         p(f"| {load_profile(n)['label']} | {ch} | {w['lp_cost']:.2f} | {w['cost']/7:.2f} | "
           f"{r4['cost']/28:.2f} | {w['cost']/7 - w['lp_cost']:+.2f} |")
     p()
-    open("plans.md", "w").write("\n".join(out) + "\n")
+    open("reports/plans.md", "w").write("\n".join(out) + "\n")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+match	group	default	usda	why
+\b(boiled|cooked|fried|baked|roasted|tinned|canned|glass|pack|smoked|pickled|marinated|dried in oil|sun-dried)\b		as_sold		Sold ready to eat or already prepared: NEVO's values are as eaten.
+frozen unprepared	veg	must	3789	Frozen vegetables are to be heated: the pack says so, and Dutch food-safety advice (Voedingscentrum, NVWA) since the Listeria outbreaks linked to frozen vegetables.
+^Rosti		must	3380	Sold to be fried or baked.
+^Fish fingers		must	2605	Sold to be fried or baked.
+^Potato croquettes		must		Sold to be fried.
+^Liver	meat	must	1152	Raw meat.
+(^Minced|^Hamburger|ball)	meat	must	0753	Raw minced meat.
+^(Beef|Lamb)	meat	must	0653	Raw meat.
+^Bacon	meat	must	1555	Raw cured pork.
+^(Pork|Sausage .*raw|Kromesky)	meat	must	1301	Raw pork or raw sausage.
+^(Chicken|Turkey)	meat	must	0855	Raw poultry.
+\braw\b	meat	must		Raw meat.
+^Anchovy raw	fish	must	2551	Raw fish, more than 5% fat.
+^Mackerel raw	fish	must	2551	Raw fish, more than 5% fat.
+\braw\b	fish	must	2401	Raw fish or shellfish, under 5% fat.
+.	egg	must		Raw egg.
+dried	legume	must	0541	Dried pulses: inedible raw, and raw kidney beans are toxic.
+^(Flour|Bakery mix|Dough|Filo)	grain	must	0301	Flour and doughs are baked: raw flour can carry E. coli (Voedingscentrum).
+^Semolina	grain	must	0302	Cooked as porridge or pudding.
+^Buckwheat groats	grain	must	0358	Cooked like rice.
+(starch)	grain	must		Thickens a sauce: only eaten cooked.
+^(Pasta|Rice|Bulgur|Couscous|Quinoa|Millet|Noodles)	grain	must		Dry grains and pasta are cooked.
+^(Oat flakes|Rye flakes|Flakes)	grain	raw	0352	Fine raw (muesli), or cooked as porridge.
+.	potato	must		Raw potatoes, cassava and the like are cooked.
+^Beans French raw	veg	must		Raw green beans contain lectins (phasin): cook them (Voedingscentrum).
+^Bean sprouts	veg	must	3775	Bean sprouts are to be heated (Voedingscentrum).
+^(Tempeh|Falafel|Schnitzel.*unprepared)	meat_sub	must		Sold to be fried. No retention factors for these, so values stay as NEVO lists them.
+^Chestnuts raw	nut	usual	2204	Usually roasted or boiled.
+^Onions? 	veg	usual	3455	Usually cooked in a Dutch kitchen; fine raw too.
+^Tomato (vine|cherry|beef|av) raw	veg	raw	3751	Usually eaten raw; can be cooked.
+^Sweet pepper .*raw	veg	raw	3775	Usually eaten raw; can be cooked.
+^(Lettuce|Rocket|Cress|Radish|Avocado|Glasswort|Capers|Chili|Garlic)	veg	as_sold		Eaten raw.
+\braw\b	veg	usual	3775	Usually cooked in a Dutch kitchen; fine raw too.

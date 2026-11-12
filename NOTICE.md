@@ -13,15 +13,24 @@ The tables in `data/` refer to NEVO foods by code and name. Under RIVM's conditi
 outputs must carry the reference line above, and users can't be charged for it. Suspicious values are handled by model
 rules in the code, never by editing the data. This project isn't affiliated with or endorsed by RIVM.
 
-## Amino acids (USDA)
+## Amino acids and cooking losses (USDA)
 
-`data/amino_foods.tsv` and `data/amino_families.tsv` are derived from USDA FoodData Central, SR Legacy, which is in the
-public domain.
+`data/amino_foods.tsv` and `data/amino_families.tsv` are derived from USDA FoodData Central, SR Legacy, and
+`data/retention.tsv` from the USDA Table of Nutrient Retention Factors, Release 6 (2007). Both are in the public domain.
+
+## Supplements
+
+`data/supplements.tsv` lists the amounts on supplement labels, copied by hand from the product pages of PLUS, De Online
+Drogist and Vitaminstore (each row has its source and date), or taken from the dose in a product's name.
+`data/supplement_prices.tsv` has their prices: supermarket ones from Checkjebon (below), drugstore ones copied from the
+shop's website on the date shown. Product and brand names belong to their owners; this project isn't affiliated with any
+of these shops or brands, and labels and prices change.
 
 ## Supermarket prices (Checkjebon)
 
-`data/auto_prices.tsv`, `data/catalog_prices.tsv` and `data/prices.tsv` are derived from Checkjebon
-(https://github.com/supermarkt/checkjebon), snapshot of 2026-10-30. Products and prices come from Dutch supermarkets,
+`data/auto_prices.tsv`, `data/catalog_prices.tsv`, `data/prices.tsv` and the supermarket rows of
+`data/supplement_prices.tsv` are derived from Checkjebon (https://github.com/supermarkt/checkjebon), snapshots of
+2026-10-30 (foods) and 2026-11-09 (supplements). Products and prices come from Dutch supermarkets,
 change often, and may be wrong. This project isn't affiliated with any of them. Checkjebon's licence:
 
 ```

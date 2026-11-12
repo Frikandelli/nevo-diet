@@ -18,6 +18,8 @@ KCAL_PER_MJ = 239.006
 SCHOFIELD = {("m", 18, 30): (15.057, 692.2), ("m", 30, 60): (11.472, 873.1),
              ("f", 18, 30): (14.818, 486.6), ("f", 30, 60): (8.126, 845.6)}
 BMI_HEALTHY = 22.0   # EFSA reference body weight: BMI 22 at the population's height
+FRUIT_URL = ("https://www.gezondheidsraad.nl/site/binaries/site-content/collections/documents/2015/11/04/"
+             "richtlijnen-goede-voeding-2015/Advies+in+kort+RGV2015.pdf")
 # Henry (2005) resting energy, kcal/day = a * weight + b * height(m) + c, as used by EFSA 2013 and Gezondheidsraad 2022/19.
 HENRY = {("m", 18, 30): (14.4, 313, 113), ("m", 30, 60): (11.4, 541, -137), ("m", 60, 200): (11.4, 541, -256),
          ("f", 18, 30): (10.4, 615, -282), ("f", 30, 60): (8.18, 502, -11.6), ("f", 60, 200): (8.52, 421, 10.7)}
@@ -70,9 +72,10 @@ def load_profile(name):
     return r
 
 
-def personalise(base, weight=None, height=None, kcal=None, protein=None):
+def personalise(base, weight=None, height=None, kcal=None, protein=None, fruit=None):
     """Profile `base` with its body or goals changed (None = as in the profile). weight in kg, height in cm, kcal the
-    energy target, protein the minimum in g/day. Sex, age and activity stay the profile's.
+    energy target, protein the minimum in g/day. fruit: whole fruit in g/day, a minimum (None or 0 = none).
+    Sex, age and activity stay the profile's.
 
     Without a target, energy follows the body: resting energy (Henry with a known height, otherwise Schofield) x the
     profile's activity level, and protein is the profile's g/kg x weight."""
@@ -84,7 +87,7 @@ def personalise(base, weight=None, height=None, kcal=None, protein=None):
     if weight or height:
         pal = num(r["pal"]) or r["energy"] / schofield(r["sex"], r["age"], r["weight"])
         energy = (henry(r["sex"], r["age"], w, h) if h else schofield(r["sex"], r["age"], w)) * pal
-    r.update(weight=w, height_cm=h, energy=kcal or energy, protein=protein or num(r["protein_g_per_kg"]) * w)
+    r.update(weight=w, height_cm=h, energy=kcal or energy, protein=protein or num(r["protein_g_per_kg"]) * w, fruit=fruit or 0.0)
     return r
 
 
@@ -111,6 +114,10 @@ def requirements(prof):
         out.append({"name": r["name"], "cols": r["cols"], "unit": r["unit"], "kind": r["kind"],
                     "lower": "" if lower in ("0", "0.0") else lower, "upper": upper,
                     "source": r["source"], "url": r["url"], "evidence": r["evidence"]})
+    if prof.get("fruit"):                # the fruit-per-day box: whole fruit only (lp.NOT_WHOLE_FRUIT)
+        out.append({"name": "fruit", "cols": "FRUIT", "unit": "g", "kind": "abs", "lower": f"{prof['fruit']:.4g}", "upper": "",
+                    "source": "Your own minimum. Gezondheidsraad, Richtlijnen goede voeding 2015: at least 200 g fruit a day",
+                    "url": FRUIT_URL, "evidence": "project choice"})
     return out
 
 

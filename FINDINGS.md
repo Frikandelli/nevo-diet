@@ -1,9 +1,7 @@
 # Findings
 
 Things learned while building this that don't show up in the app: surprises in the data, odd supermarket
-prices, matcher war stories, and what the optimiser does when you let it. Newest stage at the bottom. Numbers are from when
-each stage was built, so later changes to the foods, caps and limits have moved some of them. "High-protein profile" means
-1.6 g/kg at 2,950 kcal, an example used during the build.
+prices, matcher war stories, and what the optimiser does when you let it. Newest stage at the bottom.
 
 Based on data from NEVO online version 2025/9.0, RIVM, Bilthoven and other data sources (Checkjebon price
 snapshot of 2026-10-30, Voedingscentrum 2025 norms).
@@ -43,7 +41,7 @@ snapshot of 2026-10-30, Voedingscentrum 2025 norms).
 - **Dutch food words learned from the matcher:** *boerenkaas* is raw-milk cheese (NEVO "Kaas rauwmelkse");
   *veldertjes* are young marrowfat peas ("Kapucijners jonge"); *hoofdkaas* is *zure zult*.
 - **RIVM's terms:** use only unchanged, cite the exact reference line, don't charge for it. So the NEVO
-  files stay unchanged (the two the code reads are in this private repo), and suspicious values are overridden by *model rules* in code, never by editing data.
+  files stay unchanged (and aren't in this repository), and suspicious values are overridden by *model rules* in code, never by editing data.
 
 ## The price data (Checkjebon, 2026-10-30)
 
@@ -181,18 +179,19 @@ Cheapest adequate day (cooked, all norms incl. free sugars):
 
 ## Stage 2: amino acids, five profiles, absorption
 
-**Profiles, cheapest adequate day** (all chains; `compare.py` makes the per-chain table):
+**Five profiles, cheapest adequate day** (all chains; `reports/profiles.md` has the per-chain table). The high-protein one
+was a development profile, removed from the repo on 2026-11-09:
 
 | profile | weight | kcal | protein | €/day |
 |---|---:|---:|---:|---:|
-| high-protein | - | 2,950 | 128 g | **1.47** |
+| high-protein (removed later) | | | 1.6 g/kg | **1.47** |
 | average man (35) | 73.4 kg | 2,743 | 61 g | 1.33 |
 | average woman (35) | 62.5 kg | 2,165 | 52 g | 1.40 |
 | active man | 73.4 kg | 3,258 | 88 g | 1.40 |
 | active woman | 62.5 kg | 2,571 | 75 g | 1.43 |
 
-- **Calories are almost free; protein and iron are what cost money.** The active man eats 300 kcal more than the high-protein profile
-  and is €0.07/day cheaper. The extra cost there is protein: at 1.2 g/kg that diet would cost €1.36, the same as at
+- **Calories are almost free; protein and iron are what cost money.** The active man eats more calories than the high-protein
+  profile and is €0.07/day cheaper. Its extra cost is protein: at 1.2 g/kg the diet would cost €1.36, the same as at
   0.83 g/kg, so everything above ~1.2 g/kg is a pure protein bill (€0.11/day for the last 0.4 g/kg).
 - **The average woman eats 580 kcal less than the average man and still pays more.** All of it is iron:
   16 mg × 16% = 2.56 mg absorbed vs 1.76 for men. With the men's iron target her day costs €1.28 instead of
@@ -202,7 +201,7 @@ Cheapest adequate day (cooked, all norms incl. free sugars):
   the free-sugar limit.
 - **Absorption corrections:** absorbed iron (non-haem 10%) costs the average man €0.06/day; zinc at EFSA's
   high-phytate level (14 mg instead of 9) costs nothing for any profile, the cheap basket is full of zinc
-  (wholemeal flour, peanuts, lentils). At 2,950 kcal neither costs anything.
+  (wholemeal flour, peanuts, lentils). For the high-protein profile neither costs anything.
 
 **Amino acids** (USDA SR Legacy profiles × NEVO protein × digestibility, WHO 2007 per-kg needs):
 - **None bind, as expected.** The tightest is always **lysine**: 1.47× the requirement for the average man,
@@ -233,11 +232,11 @@ requirements; `reports/<profile>.md` §10). What each food is *really* bought fo
 - **For the average woman, pasta is an iron supplement:** 53% of white pasta's price pays for absorbed iron,
   61% of wholemeal pasta's. Apple syrup is 88% iron. Her whole basket bends around iron: dropping the iron rule
   would save **€0.26/day**, 18% of her diet.
-- **For the average man, yoghurt is bought for calcium (43%) and riboflavin (39%);** for the high-protein profile it's riboflavin
-  (41%) and protein (35%). Same food, same price, different reasons, because the shadow prices differ.
+- **For the average man, yoghurt is bought for calcium (43%) and riboflavin (39%);** for the high-protein profile
+  it's riboflavin (41%) and protein (35%). Same food, same price, different reasons, because the shadow prices differ.
 - **Brown rice for the average man is 39% energy, 31% selenium.** Blue Band halvarine is a vitamin pill:
   riboflavin and B6 (it's fortified), not fat.
-- **Energy can be a penalty, not a need.** At 1.6 g/kg, 128 g protein drags calories against the energy maximum,
+- **Energy is a penalty for the high-protein profile, not a need.** Its protein minimum drags calories against the energy maximum,
   so every calorie-dense protein food has a negative "energy" share: 25% of pasta's price, 14% of peanuts'.
   For the reference profiles energy is a *positive* share instead: they're bought partly for calories.
 - **Cap rent:** apple syrup at the women's cap (the model's daily maximum) is worth €0.14/100 g more than it
@@ -256,7 +255,7 @@ requirements; `reports/<profile>.md` §10). What each food is *really* bought fo
 - **Average man:** calcium (€0.09), absorbed iron (€0.07), vitamin C (€0.05).
 - **Average woman:** absorbed iron (€0.26), calcium (€0.14), vitamin C (€0.05).
 - **Potassium is cheap only because of LoSalt** (the KCl salt substitute, sold at one chain). Restricting to
-  foods sold at ≥ 3 chains costs the average man €0.07/day, almost all of it LoSalt leaving; for the high-protein profile nothing.
+  foods sold at ≥ 3 chains costs the average man €0.07/day, almost all of it LoSalt leaving; the high-protein profile nothing.
 
 **Data errors the hand-check found** (every product of every food in any alternative, 39 foods):
 - **Lentils without "dried" on the label were priced as dried.** "AH Terra Linzen 400 g", Lidl "Linzen 400 g",
@@ -273,7 +272,7 @@ requirements; `reports/<profile>.md` §10). What each food is *really* bought fo
 
 ## Stage 4: whole packs at one chain
 
-`plans.md` (`plan.py`): the cheapest basket bought as real packs at one chain, as a repeating weekly list and as a
+`reports/plans.md` (`plan.py`): the cheapest basket bought as real packs at one chain, as a repeating weekly list and as a
 4-week rotation. Fresh food in whole packs within its shelf life (waste is paid for), pantry food per gram,
 stored nutrients on the 4-week average, at most 10 kg in the freezer.
 
@@ -302,7 +301,7 @@ stored nutrients on the 4-week average, at most 10 kg in the freezer.
 
 ## Stage 5: meals and dishes
 
-**NEVO's dishes, priced from their ingredients** (`dishes.py` → `dishes.md`):
+**NEVO's dishes, priced from their ingredients** (`dishes.py` → `reports/dishes.md`):
 - **At first only 4 of the 99 dishes could be priced at AH.** NEVO's recipes use prepared ingredients ("onion
   boiled", "potatoes boiled") and specific products ("salt *without* iodine", "Parmesan", "beef poulet"). With
   cooked → raw by name (buy raw, same cooking yields as the catalog), a close substitute in the same food group
@@ -319,7 +318,7 @@ stored nutrients on the 4-week average, at most 10 kg in the freezer.
   Ella's Kitchen jars were matched as plain apples, bananas, peas, cauliflower and rice flour. Also "Flower Farm
   Bakken zonder palmolie" (frying fat *without* palm oil) as palm oil and a vegan tuna as vegetable oil.
 
-**A week of meals** (`meals.py` → `meals.md`): brunch + warm dinner + snacks, dinners are NEVO
+**A week of meals** (`meals.py` → `reports/meals.md`, `reports/cooking-notes.md`): brunch + warm dinner + snacks, dinners are NEVO
 dishes, six soft rules, medium strictness (a rule bends only if that saves ≥ €0.25/day).
 - **High-protein profile: €2.65/day** at AH: hutspot ×2, stamppot zuurkool ×2, risotto ×2, an omelette with pasta; porridge, 8
   slices of wholemeal bread, peanuts. **Real meals cost €0.91/day more than the bare basket** (€1.73), mostly
@@ -347,13 +346,13 @@ dishes, six soft rules, medium strictness (a rule bends only if that saves ≥ �
   near-optimal polytope is wide and flat: many very different diets cost almost the same, which is why tiny
   price changes can swap foods in and out of the basket.
 - **Protein is the expensive requirement to push.** At AH: 1.25× protein costs €2.23/day, 2× (256 g) €5.52/day,
-  and at **2.5× (320 g) there is no diet at all**: with energy capped at 104% of 2,950 kcal and carbs ≥ 40% and fat
+  and at **2.5× (320 g) there is no diet at all**: with energy capped at 104% of the profile's calories and carbs ≥ 40% and fat
   ≥ 20% of energy, there's no room left for that much protein. Drop either energy-share rule and it's feasible
   again (€8.48). Calcium doubles for +€0.38, vitamin C quadruples for +€0.24.
 - **Fibre is free up to 1.5×** (the basket already has 153% thanks to wholemeal bread and flour), then climbs
   steeply: 4× costs €3.64/day.
 - **Shadow prices at AH:** the dearest requirements per unit are riboflavin (€0.18 per mg) and EPA/DHA (€0.15 per
-  g). Protein's shadow price is €0.006 per g, so the 128 g floor itself "costs" about €0.73 of the €1.71.
+  g). Protein's shadow price is €0.006 per g, so the protein floor itself "costs" about €0.73 of the €1.71.
 - **Poiesz and Vomar look absurdly expensive** (€6.76 and €9.09/day for the high-protein profile) only because their online ranges in
   Checkjebon are tiny: the LP has to build a diet from a handful of foods. The chain chart leaves them out; the
   table under it keeps them.
@@ -363,9 +362,7 @@ dishes, six soft rules, medium strictness (a rule bends only if that saves ≥ �
 
 ## My foods and category ticks (2026-11-02)
 
-Prices in this section are for the high-protein profile at AH.
-
-- **What 500 g of milk a day does (pure):** €1.64 → €1.72. It costs €0.47 itself, but €0.39 comes back: soy drink
+- **What 500 g of milk a day does (high-protein profile, AH, pure):** €1.64 → €1.72. It costs €0.47 itself, but €0.39 comes back: soy drink
   drops from 283 to 59 g, yoghurt (186 g) and white pasta (167 g) leave, and peanuts double to 211 g, presumably to replace the
   energy of the pasta.
 - **Milk is nearly free until it suddenly isn't:** 250 g +€0.04, 1 kg +€0.32, 1.5 kg +€0.66, then 2 kg +€10.70, and 2.5 kg is
@@ -395,5 +392,166 @@ Prices in this section are for the high-protein profile at AH.
 - **Streamlit quirk, a real bug for a while:** a selectbox whose list of options changes falls back to its first option, unless
   you set its value yourself first. Going from realistic back to pure quietly moved the chain from AH to "all chains", so the
   price dropped from €1.64 to €1.41 with nothing on screen saying why. Only a run in a real browser showed it.
-- **Which chain is cheapest depends on what you ask (average man, cooked, 2026-10-30 prices):** Dekamarkt wins both the pure LP (€1.41) and the real week (€2.24), but the rest reshuffles. Dirk is second in the pure LP (€1.49) and fifth for a real week (€2.52); Lidl goes from seventh (€1.82) to second (€2.35). Whole packs and dinners decide that, not the bare food prices.
-- **Vomar's real week is cheaper than its pure LP:** €5.38 against €6.34 for the average man, with 3 meal rules bent. The LP should be a lower bound on the same foods, so the dishes are probably adding something the LP can't buy there. Not looked into yet; Vomar is nowhere near winning.
+- **Which chain is cheapest depends on what you ask (high-protein profile, cooked, no own foods, 2026-10-30 prices):** Dekamarkt wins both the pure LP (€1.57) and the real week (€2.37), but the rest reshuffles. Dirk is second in the pure LP (€1.61) and sixth for a real week (€2.69); Lidl goes from seventh (€1.88) to third (€2.53). Whole packs and dinners decide that, not the bare food prices.
+- **Vomar's real week is cheaper than its pure LP:** €5.69 against €7.04, with 4 dinners priceable and 4 rules bent. The LP should be a lower bound on the same foods, so the dishes are probably adding something the LP can't buy there. Not looked into yet; Vomar is nowhere near winning.
+
+## Cost per food and delayed ticks (2026-11-04)
+
+- **The 1 g of kale was real:** at Dekamarkt the LP wanted 0.8 g of frozen kale a day. €0.02 per food takes the basket there from 13 foods to 10 for €0.02 a day more, but leaves 1.2 g of mixed nuts; €0.05 gives 9 foods for €0.04 more, the smallest being 6.6 g of linseed.
+- **A cost per food isn't a minimum amount:** 2.7 g of linseed stays in the AH basket even at €0.08 per food, presumably because that little is still the cheapest way to the omega-3 minimum. 2 to 3 g of salt stays too.
+- **A cost per food can make a week cheaper (high-protein profile, Dirk):** €2.69 → €2.50, because it then bends a meal rule it kept before. The price shown leaves the cost per food out, so the solver's sum went up while the price went down.
+- **Half the reduced cost is enough:** limiting the MILP to foods with a reduced cost below half their price cut 366 candidates to about 40 and 2-4 s to under 1 s, with the same basket in all 8 tests.
+- **Timer war story:** the timer that starts the recalculation also ran inside the recalculation, so the app restarted itself ten times a second. And a one-line "recalculating" message pushed the table down 38 px after the first click, so the next click un-ticked the row above. Only a browser test with real clicks showed either.
+
+## Allergies (2026-11-05)
+
+- **"Cranberries fresh" has a nut bar among its products** (BioToday Notenreep cranberry almond): a matcher error that only a scan of the real product names showed. The allergy ticks now read those names too. (The nut bar itself went into `data/review.tsv` on 2026-11-06, with the other fruit-flavoured products.)
+- **Melkan is a brand,** not milk: "Melkan Sojadrink" first made soy drink unsafe for lactose, and plant yoghurts say "yoghurt" on the pack.
+- **What an allergy costs (pure, AH, the test profile; €1.64 without):** gluten €2.07, milk €1.75, peanuts and tree nuts €1.81 each, fish €2.31 (EPA+DHA again), egg €1.67, soy €1.70, lactose €1.68, sesame €1.65, shellfish €1.64. In a real week no milk leaves 6 of the 34 dinners and no gluten 10.
+
+## Which macro limits matter (2026-11-06)
+
+Pure LP, high-protein profile, AH, cooked, plain LP (no cost per food); each case changes only the limits named.
+Baseline: €1.64/day, fat 20 en%, carbohydrate 59, protein 16, free sugars 0.
+
+- **The free-sugar maximum never binds.** The cheapest diet has 0 g free sugars, so dropping the limit changes
+  nothing. Even unrestricted, sugar doesn't come in: flour gives energy at about the same price plus protein and fibre.
+- **The 20 en% fat floor doesn't bind either.** The diet sits at exactly 20 en%, but because of ALA and EPA+DHA, not
+  the floor: dropping the 20-40 range leaves €1.64. What a fat floor adds is outside the LP: Gezondheidsraad 2026/14
+  (§7.2, p. 32) bases it on absorbing vitamins A, D, E and K, and the LP only counts what's in the food.
+- **Mostly carbohydrate works:** fat ≤ 10 en% costs €1.68 (twice the flour, more yoghurt, no peanuts). The essential
+  fatty acids set a hard floor of **6.4 en% fat**, at €27/day; without the LA, ALA and EPA+DHA minimums fat can go to 0.
+- **Mostly fat works too, but costs more:** carbohydrate ≤ 10 en% gives a peanut, soya drink and linseed diet at
+  €2.01 (68 en% fat, saturated fat at its 10 en% cap); ≤ 5 en% costs €3.09; the lowest possible, 0.4 en%, €35. Fibre
+  and vitamin C come from plants, and plants bring carbohydrate.
+- **Low fat *and* low carbohydrate means a lot of protein:** both ≤ 20 en% costs €12.10 at 51 en% protein, both ≤ 15
+  €20.24 at 60 en%, both ≤ 10 is infeasible. The model has no protein maximum, so it would accept that.
+
+## Fruit (2026-11-06)
+
+- **Fruit was there all along.** Over 20 kinds of whole fruit have a price and every chain sells some, mostly in bags and boxes. The LP just
+  never picks any: flour, peanuts and soya drink give everything fruit gives for less, and Brussels sprouts cover vitamin C.
+- **200 g whole fruit a day costs** €0.05 at Lidl (mandarins at €1.64/kg) and €0.42 at AH (apples at €2.19/kg), pure
+  plan with the cost per food. The realistic week at Lidl already ate 220 g. Without the "whole fruit" rule the cheapest
+  "fruit" at AH and Dirk was sweetened apple sauce.
+- **The matcher's fruit was full of sweets.** Strawberries at Dirk and Dekamarkt were Müllermilk strawberry milk, at AH
+  Arla Cultura yoghurt; oranges were Pim's, Tic Tac, rooibos tea and a €28 pre-workout powder; watermelon was Candyman
+  and Napoleon sweets; peaches were Haribo; a pear at AH was Père Joseph, which is a Belgian cheese; and after the
+  banana cake at Lidl was excluded, the next "banana" was a banana houseplant. 47 products went into `data/review.tsv`.
+  None of them was the cheapest fruit anywhere, so no earlier plan changed.
+- **Excluding by brand backfires:** "Melkan" (a strawberry protein pouch at Spar) is also a whole dairy brand, and
+  "Dr. Oetker" also makes the pancake mix and sliced almonds that were matched correctly. The rules name the product.
+
+## Cooking per food (2026-11-09)
+
+- **"Cooked" mode quietly ate frozen vegetables raw.** NEVO has no "peas and carrots frozen boiled", so the frozen mix had
+  no cooked partner and kept its raw values, unlike Brussels sprouts or carrots. The same held for flour, onions, bean
+  sprouts, dried white beans and a dozen raw meats and fish. 518 of the 608 foods have no cooked partner; for most
+  (milk, bread, cheese, tins) that's right, and `data/cooking.tsv` now sorts out the rest.
+- **The frozen mix was a workhorse, not a vitamin C source.** In a pure plan at Jumbo without flour it came in at 707 g a
+  day: 40% of the absorbed iron and potassium, 85% of the vitamin C, 88% of vitamin A, 81% of vitamin K and half the
+  fibre. Vitamin C itself was not binding: iron and potassium were. At only 10 mg of vitamin C per 100 g raw, it's
+  volume that does it.
+- **Cooking it made the plan want more, not less.** Boiled from frozen, USDA keeps 80% of the vitamin C, 70% of the
+  folate and 90-95% of the minerals. Vitamin C then became binding, and the same plan went to 781 g a day (€1.88 →
+  €1.92). With the cost per food at 0 the LP spreads out instead: 122 g of the mix.
+- **Retention factors work per gram bought,** so they need no cooking yield, which is just what an LP in grams as bought
+  wants. USDA's table (2007, 20 classes used) has no factors for protein, fat, fibre or vitamins D, E and K; those stay at
+  100%.
+- **Flour counted as baked costs the average man €0.01 a day** (€1.28 → €1.29): in USDA's table baking keeps 80-90% of B1, B2,
+  niacin and B6 and 70% of folate (minerals all stay), and flour is a main source of those vitamins in the plan.
+- **The ticks were slow because every click reran the whole page,** and a 1-second timer kept rerunning it to see if
+  you'd stopped clicking. Clicks made during a rerun landed on a table that was about to be replaced. A form with an
+  Apply button has no reruns until you press it, so any number of quick clicks are kept.
+
+## The app reorganised, and what its new charts show (2026-11-09)
+
+- **Wiggle room had been missing nine foods in ten.** To save LPs, the app skipped every food whose reduced cost was
+  above the 5% slack (€0.078/day for the average man at AH), and `run.py` every food whose reduced cost was above 5% of
+  its own price. Both quietly assume a food enters at 100 g. Duality gives the right screen: for any adequate diet,
+  cost − optimum ≥ rc_i · x_i, so within the slack food i can't exceed slack / rc_i. With that bound **363 foods** fit
+  into some diet within 5% of the cheapest, not ~35. Semi-skimmed milk can go to 626 g a day and was not on the list.
+  It was also faster than feared: one LP per food outside the diet (its minimum is 0 for free), 2 s for all 363.
+- **No food is worth more than its price, checked to the 16th digit.** The new "worth" chart plots every food's price
+  against Σ shadow price × content. The largest worth/price ratio at AH is 1.0000000000000002, for the foods in the diet;
+  every other food sits below the diagonal. That is dual feasibility, the certificate that the diet is optimal, drawn.
+- **A shadow price is only good for small steps.** Re-solving with each binding limit 10% looser and 10% stricter (the
+  average man at AH): potassium saves €0.039 looser but costs €0.058 stricter, where the shadow price says €0.051 both
+  ways. Energy is the extreme: 10% less saves €0.0006, 10% more costs €0.018, thirty times as much, because 10% more
+  energy pushes past the +4% band and the basket has to change. Iodine stricter costs nearly twice its shadow-price
+  estimate. Vitamins A and D, ALA and EPA+DHA are perfectly symmetric: their foods (liver sausage, the tablet,
+  margarine, herring) just scale.
+- **The average man's plan at AH has 0.009 g of free sugar a day,** all from liver sausage. The macro chart used to drop a column
+  whose total was 0, so on some settings free sugars simply vanished; now every macro keeps its column, at 0 g too.
+- **A clone couldn't tell how old its prices were.** The catalog is committed but the Checkjebon snapshot isn't, so the
+  Settings page said "current snapshot: none" on any other computer while the prices were from 2026-10-30.
+  `catalog.py` now writes `data/catalog_snapshot.txt`, and the reports take their date from it instead of a hard-coded
+  string.
+- **Tabs computed every chart on every click.** Streamlit runs all tabs' code on each rerun, so ticking a box on the
+  Foods tab also recomputed the removal tree, cost curves and wiggle room (cached, but still dozens of LPs on a new
+  setting). With pages, only the page on screen runs.
+
+## No default limits on foods, and limits of your own (2026-11-09)
+
+- **The vitamin D tablet's cap of one a day never did anything.** The tablet only carries vitamin D, so the LP takes
+  exactly what the minimum still lacks: 0.23-0.28 tablet a day for the average man. The cap is gone; vitamin D's own
+  maximum (100 µg) would stop it at 4.
+- **The three meal-week rules that capped foods were worth €0.20 a day.** The average man's week at Albert Heijn
+  (medium, brunch, €0.05 per food) went from €2.51 to €2.31 without them. The bread (314 g a day) left; in came
+  **391 g of wholemeal flour a day eaten as such**, the pure plan's favourite (390 g), plus 127 g of pasta outside the
+  dinners and 7 g of sugar. The flour alone is half the day's energy (1,345 of 2,743 kcal), so the 30% rule would have
+  stopped it even without the "no raw flour" list. The LP has no taste: bread is flour, water, salt and a baker's markup.
+- **A limit is just one more row, so its shadow price comes free.** At most 100 g of wheat flour (the kind) and 50 g of
+  peanuts a day: the pure plan goes from €1.57 to €1.78, wholemeal bread (387 g) takes over from the flour, and both
+  limits set the price. Their ±10% costs are tiny (about €0.004 a day each way): near 100 g, 10 g of flour more or
+  less hardly matters; the price was paid getting from 390 g down to 100.
+- **Limits don't add up.** The flour limit alone costs €0.13 a day, the peanut limit alone €0.15, both together €0.21:
+  less than the sum. What a limit costs depends on the other limits already in place.
+- **A limit sees inside dinners.** Potatoes at most 300 g a week: the week buys exactly 42.9 g a day (= 300/7), its
+  hutspot included, and the two stamppots make way for omelette and bacon pancakes (€2.31 → €2.39). Leaving potatoes
+  out with ✗ kind would have dropped hutspot too; a limit keeps it while it fits.
+- **In the reports (no cost per food):** the average man's week of meals went from €2.41 to €2.24 a day, the other
+  profiles from €2.55-2.63 to €2.31-2.48; the dinners barely moved (one omelette became a stamppot rauwe andijvie).
+  Keeping the fruit rule still costs €0.49 a day: the week with fruit and the week without both got €0.17 cheaper.
+  The stage 4 shopping list without the 30% rule: €1.60 → €1.54 a day for the average man, and the cheapest chain switched from
+  Jumbo to DekaMarkt.
+
+## Supplements (2026-11-09/10)
+
+Pure LP at Albert Heijn, no cost per food, supermarket prices of 2026-11-09, drugstore prices copied the same day.
+
+- **Every priced supplement allowed vs the vitamin D tablet only:** average man €1.55 → €1.25 a day (−€0.31), average
+  woman €1.80 → €1.22 (−€0.59), active man €1.60 → €1.30, active woman €1.74 → €1.24. Women gain most: the iron tablet
+  (14 mg, 1.5 a week) does what liver and pulses did, and iron is the expensive nutrient for women.
+- **The star is PLUS's own multivitamin** (A-Z compleet, 60 for €2.79: €0.047 a tablet). Every profile takes it, 3.6-4.1
+  tablets a week for the average profiles, plus a selenium tablet about once a week and a sliver of vitamin C. Brand
+  multivitamins cost two to eight times as much per tablet: Dagravit €0.10-0.12 (in the list, never taken), Supradyn
+  and Centrum €0.31-0.37 (not in the list: no label that could be read).
+- **75 µg vitamin D beats 25 µg:** AH Care sells 300 of either for €4.99 (25 µg) and €6.99 (75 µg), so per µg the big one
+  is half the price. The LP takes about one 75 µg tablet every 12 days next to the multivitamin's 5 µg; the realistic
+  week rounds it to whole tablets a week. Vitamin D is stored, so a weekly tablet is fine.
+- **Vegan becomes possible.** With no meat, fish, eggs and dairy there is no adequate diet at all: nothing in a Dutch
+  supermarket gives EPA+DHA or enough B12 without animals. With the priced supplements: €1.40 a day (man), €1.37
+  (woman), with algae oil (0.8 capsule a day), about one B12 1000 µg tablet every three weeks, a B-complex, the multivitamin,
+  calcium tablets (8.5 a week) and selenium. That is cheaper than the woman's omnivore plan without supplements.
+- **The first vegan run took fish oil.** Supplements didn't follow the category ticks, so "no fish" left the fish oil
+  capsules in. Now each supplement carries its categories: fish oil is fish (and fish and soy for the allergy ticks: its
+  label says "bevat vis, soja"), the AOV vitamin E capsule is beef gelatin, so meat; the B-complex has brewer's yeast.
+- **"Free" breaks everything, as expected.** With *every supplement* and *buy anywhere* off at AH, everything AH doesn't
+  sell is free: €0.67 a day, made of 139 spoons of psyllium a day (695 g of husk, for fibre, and 1,240 kcal of it), 7
+  potassium tablets a day, free multivitamins and free algae oil. That's why a supplement without a price is never
+  in the plan unless you ask, and the price tile says so when it is.
+- **B12 dose arithmetic:** the gut takes up about 1.2 µg per dose plus 1% of the rest, so a 1000 µg tablet counts as
+  22.4 µg of food B12, 8 days of the 2.8 µg norm, and a 100 µg tablet as only 4.4 µg. The 2.5 µg in a multivitamin
+  counts at full value. Per µg that counts, 1000 µg at €0.047 is the cheapest B12 there is.
+- **Synthetic vitamin E is worth two thirds of its label:** PLUS A-Z's 12 mg (dl-alpha) counts as 8.1 mg; the fizzy
+  multivitamin's 12 mg is natural (d-alpha) and counts in full.
+- **Labels are hard to get.** Albert Heijn and Kruidvat answer a script with 403, Etos times out; PLUS's product pages
+  have the full table per tablet (chemical form included), and so does De Online Drogist. Lidl's pills are in the price
+  data without a pack size ("Vitamine B12 350 µg", €3.99, for how many?). Jumbo's "Curalyn Vitamine D 25MG" is surely
+  25 µg (25 mg would be 250 times the upper limit) but it's left out: the page gives no dose. Dagravit's label gives
+  selenium as 25.7-82.5 µg for 1-3 dragees, which isn't 3×; the 1-dragee value is used.
+- **Magnesium from pills stays far from its 250 mg limit:** 74 mg a day for the average man with every priced
+  supplement; the multivitamin's magnesium oxide and the PLUS calcium-magnesium-zinc tablet are where it comes from.
+- **The default plans didn't move:** the vitamin D tablet's price is the same €4.99 for 300 (AH Care and PLUS tie), and
+  `lp.load()` without a pills setting gives every report's plan to the cent.

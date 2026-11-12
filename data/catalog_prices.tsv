@@ -283,7 +283,6 @@ banana	dekamarkt	0.297	Del Monte Bananen	1.99	1000
 banana	dirk	0.1925	Del Monte Bananen	1.29	1000
 banana	hoogvliet	0.2672	Bananen	1.79	1000
 banana	jumbo	0.3494	Jumbo Fairtrade Bio Bananen 850 g	1.99	850
-banana	lidl	2.4793	Bananencake	2.99	180
 banana	plus	0.3269	PLUS Bananen Fairtrade	2.19	1000
 banana	poiesz	0.2314	Budget Bananen	1.29	832
 banana	spar	0.3068	bananen	1.85	900
@@ -393,7 +392,6 @@ n1007	spar	2.7667	Spar granaatappel pitjes 90 gram	2.49	90
 n1010	ah	1.578	AH Biologisch Vijgen	7.89	500
 n1010	dekamarkt	1.516	Smaakt Vijgen	3.79	250
 n1010	dirk	1.516	Smaakt Vijgen	3.79	250
-n1010	jumbo	2.5267	Chavroux Pyramide Vijgen 150 g	3.79	150
 n1010	lidl	0.798	Vijgen vers	3.99	500
 n1010	plus	1.399	Raw Organic Food Vijgen bio	13.99	1000
 n1013	ah	0.1875	AH Paneermeel naturel broodkruim	0.75	400
@@ -423,8 +421,7 @@ n1020	plus	0.075	PLUS Zelfrijzend bakmeel	0.75	1000
 n1020	spar	0.218	Koopmans zelfrijzend bakmeel beste basis	1.09	500
 n1056	ah	0.5802	AH Groene kiwi's	4.99	1000
 n1056	hoogvliet	0.464	Groene kiwi	3.99	1000
-n1074	ah	1.352	Isey Air passievrucht	1.69	125
-n1074	vomar	0.478	Almhof roomyogh maracuja 500gr	2.39	500
+n1074	lidl	0.4625	Passievrucht	1.85	400
 n1076	ah	0.129	AH Kefir naturel	1.29	1000
 n1076	dekamarkt	0.225	Arla Biologisch kefir naturel	2.25	1000
 n1076	dirk	0.219	Arla Biologisch kefir naturel	2.19	1000
@@ -455,11 +452,9 @@ n1104	lidl	1.5267	Rookkaas 45+	2.29	150
 n1104	plus	1.6333	PLUS Rookkaas 45+ plakken	1.96	120
 n1104	spar	1.86	Spar Rookkaas 45+	2.79	150
 n1105	ah	2.2189	AH Verse watermeloen	3.75	325
-n1105	dekamarkt	1.8376	Napoleon Kogels watermeloen	2.15	225
 n1105	dirk	1.6077	1 de Beste Watermeloen stukjes	2.09	250
-n1105	hoogvliet	1.8697	Candyman Frisse watermeloen	1.75	180
-n1105	jumbo	2.1261	Candyman Frisse Watermeloen 180 g	1.99	180
-n1105	plus	1.7009	Napoleon Watermeloen	1.99	225
+n1105	hoogvliet	2.5641	Healthyhand Watermeloenblokjes	2.0	150
+n1105	jumbo	2.3018	Jumbo Watermeloen Voordeelverpakking 325 g	3.89	325
 n1105	spar	1.7751	Spar watermeloenblokjes 325 gram	3.0	325
 n111	jumbo	1.46	Jumbo Mosselen Gekookt 150 g	2.19	150
 n111	plus	1.26	PLUS Gekookte mosselen	1.89	150
@@ -743,16 +738,15 @@ n147	vomar	0.2215	Junami appelen tas 1,5kg	2.99	1500
 n1472	dekamarkt	2.2571	Dr. Oetker Botercreme mix	2.37	105
 n1472	dirk	2.0857	Dr. Oetker Botercreme mix	2.19	105
 n1472	plus	2.181	Dr. Oetker Botercreme mix	2.29	105
-n148	ah	0.5978	Arla Cultura aardbei	2.69	450
-n148	dekamarkt	0.4625	Müller Müllermilk aardbei	1.85	400
-n148	dirk	0.4375	Müller Müllermilk aardbei	1.75	400
-n148	hoogvliet	0.6964	Balconi Trancetto aardbei	1.95	280
+n148	ah	0.9975	AH Nederlandse aardbeien	3.99	400
+n148	dekamarkt	1.0475	Hollandse aardbeien	4.19	400
+n148	dirk	0.46	1 de Beste Aardbeien	3.45	750
 n148	jumbo	0.4653	Jumbo Vriesverse Aardbeien Voordeelverpakking 750 g	3.49	750
 n148	lidl	0.399	Aardbeien 1kg kist	3.99	1000
 n148	plus	0.7067	PLUS Aardbeien	1.59	225
 n148	poiesz	0.9975	Hollandse Aardbeien	3.99	400
-n148	spar	0.538	Alpro aardbei	2.69	500
-n148	vomar	0.478	Almhof roomyogh aardbei 500gr	2.39	500
+n148	spar	1.196	aardbeien 250 gram	2.99	250
+n148	vomar	0.8725	Aardbeien 400 gram	3.49	400
 n1487	jumbo	2.19	Jumbo President Brie Kaas 60+ ca. 200 g	4.38	200
 n149	dekamarkt	1.396	Abrikozen zonder pit ready to eat	3.49	250
 n149	dirk	1.0533	1 de Beste Abrikozen	3.95	375
@@ -800,7 +794,6 @@ n153	dirk	1.33	Rode bessen	3.99	300
 n153	jumbo	1.992	Jumbo Nederlandse Rode Bessen 125 g	2.49	125
 n153	lidl	1.432	Rode bessen	1.79	125
 n153	plus	1.6633	PLUS Rode bessen	4.99	300
-n155	spar	0.83	Vos Banket Cakerol Bosbessen	2.49	300
 n157	ah	1.8622	AH Bramen	4.19	225
 n157	jumbo	1.9933	Jumbo Bramen 150 g	2.99	150
 n157	lidl	1.032	Bramen	1.29	125
@@ -836,12 +829,9 @@ n1589	lidl	0.6656	Tonijn in olijfolie	5.99	900
 n1589	plus	0.9938	Statesman Tonijnstukken in zonnebloemolie	1.59	160
 n1589	spar	1.0562	Statesman Statesman Tonijnstukken MSC in Zonnebloemolie	1.69	160
 n159	ah	2.745	AH Biologisch Cranberry's	5.49	200
-n159	dekamarkt	1.66	Bon Appetit Cranberry mix	2.49	150
-n159	dirk	0.845	1 de Beste Cranberry mix	1.69	200
+n159	dirk	0.845	1 de Beste Cranberrys	1.69	200
 n159	hoogvliet	1.18	Hoogvliet Cranberry's	2.95	250
 n159	jumbo	0.796	Jumbo Vriesverse Cranberry's 250 g	1.99	250
-n159	lidl	1.076	Cranberry mix	2.69	250
-n159	plus	3.8533	BioToday Notenreep cranberry almond	2.89	75
 n1590	ah	0.8438	Statesman Tonijn stukken in water	1.35	160
 n1590	dekamarkt	0.825	Statesman Tonijnstukken in water	1.32	160
 n1590	dirk	0.8375	Statesman Tonijnstukken in water	1.34	160
@@ -858,18 +848,16 @@ n160	jumbo	0.518	Jumbo Druiven Mix Pitloos 500 g	2.59	500
 n160	lidl	0.538	Druiven mix	2.69	500
 n160	plus	0.478	PLUS Druiven rood pitloos	2.39	500
 n160	spar	0.398	druiven rood	1.99	500
-n161	ah	1.0	Verkade Tops framboos	1.0	100
-n161	dekamarkt	2.06	Lu Pims framboos	3.09	150
+n161	ah	1.7733	AH Frambozen	3.99	225
 n161	dirk	0.6467	1 de Beste Frambozen	4.85	750
-n161	hoogvliet	1.3833	Look-O-Look Foammmies framboos	2.49	180
+n161	hoogvliet	2.1933	Frambozen	3.29	150
 n161	jumbo	0.732	Jumbo Vriesverse Frambozen Voordeelverpakking 750 g	5.49	750
 n161	lidl	0.66	DV Frambozen	3.3	500
 n161	plus	0.6653	PLUS Frambozen	4.99	750
-n161	spar	1.1956	Napoleon framboos	2.69	225
+n161	spar	2.392	frambozen	2.99	125
 n162	ah	0.3411	AH Grapefruits rood	2.49	1000
 n162	lidl	0.3137	Grapefruit	2.29	1000
 n162	spar	0.4064	rode grapefruit	0.89	300
-n163	hoogvliet	2.1652	Look-O-Look Zoete streken kersen	2.49	115
 n163	jumbo	1.036	Jumbo Vriesverse Zoete Kersen Pitloos 250 g	2.59	250
 n163	plus	0.796	PLUS Zoete kersen	1.99	250
 n1634	ah	1.2488	AH Scharrel kipfilet	9.99	800
@@ -904,19 +892,14 @@ n1656	hoogvliet	0.332	Zonnatura Wortelsap	2.49	750
 n1656	jumbo	0.3853	Zonnatura Biologische Wortelsap 750 ml	2.89	750
 n1656	plus	0.3853	Smaakt Wortelsap biologisch	2.89	750
 n166	jumbo	3.1923	Jumbo Galiameloen 150 g	2.49	150
-n168	ah	3.0199	AH Pere joseph 50+	5.3	195
 n168	dekamarkt	0.21	Hollandse Conference peren	1.89	1000
 n168	dirk	0.1989	Hollandse Conference peren	1.79	1000
 n168	jumbo	0.2056	Jumbo Conference Peren 1 kg	1.85	1000
 n168	lidl	0.1767	Peren Doyenne du com	1.59	1000
 n168	plus	0.2211	PLUS Conference Peren los	1.99	1000
 n168	spar	0.2622	Conference peer	0.59	250
-n169	dekamarkt	0.716	Haribo Perziken	1.79	250
-n169	dirk	0.672	Haribo Perziken	1.68	250
-n169	jumbo	5.98	Freeze Dried Candy Perzik Ringen 50g	2.99	50
-n169	lidl	0.249	Perziken schaal	2.49	1000
+n169	lidl	0.1625	Halve perziken	0.39	240
 n169	plus	0.349	PLUS Perziken verpakt	3.49	1000
-n169	spar	1.02	Haribo Perziken	2.55	250
 n17	jumbo	3.49	Jumbo Cantharellen 100 g	3.49	100
 n17	lidl	1.495	Cantharelle	2.99	200
 n170	dekamarkt	0.498	Rode pruimen verpakt	2.49	500
@@ -925,11 +908,8 @@ n170	hoogvliet	1.198	Qualino Pruimen rte	5.99	500
 n170	lidl	0.249	Pruimen	2.49	1000
 n170	plus	0.538	PLUS Pruimen	2.69	500
 n170	poiesz	0.4196	Aarts pruimen	2.35	560
-n171	ah	2.9132	LU Pim's sinaasappel	3.19	150
-n171	dekamarkt	5.4985	ANTA Refresh sinaasappel	2.89	72
-n171	jumbo	6.9751	Tic Tac Sinaasappel 2 x 49 g	4.99	98
-n171	plus	12.0939	Fairtrade Original Rooibos sinaasappel bio Fairtrade	3.09	35
-n171	spar	12.7808	XXL Nutrition blast pre workout sinaasappel	27.99	300
+n171	plus	0.3767	Biologisch PLUS Sinaasappels biologisch	2.75	1000
+n171	spar	0.2731	hand sinaasappelen	2.99	1500
 n1721	lidl	0.149	Halfvolle vanilleyoghurt	1.49	1000
 n1721	poiesz	0.199	Melkan Halfvolle Vanilleyoghurt 1,6% Vet	1.99	1000
 n1722	ah	0.229	Melkunie Griesmeelpap	2.29	1000
@@ -2324,8 +2304,6 @@ n5279	dirk	0.5267	1 de Beste Bosvruchten	3.95	750
 n5279	hoogvliet	0.5187	G'woon Bosvruchten	3.89	750
 n5279	jumbo	0.5533	Jumbo Vriesverse Bosvruchten Voordeelverpakking 750 g	4.15	750
 n5279	plus	0.5187	PLUS Bosvruchten	3.89	750
-n5279	poiesz	0.3987	Zuivelhoeve Boer'n Yoghut Bosvruchten	2.99	750
-n5279	spar	1.125	Hipro proteïne pouch bosvruchten	2.25	200
 n5299	dekamarkt	0.1475	G'woon Appeltaartmix	0.59	400
 n5299	dirk	0.13	1 de Beste Appeltaartmix	0.52	400
 n53	ah	0.6719	AH Gesneden spitskool	2.15	400
@@ -2749,7 +2727,6 @@ n692	hoogvliet	1.7857	Healthyhand Mangoblokjes	3.0	240
 n692	jumbo	1.1371	Jumbo Smoothiemix Mango Dream 250 g	1.99	250
 n692	lidl	3.3238	Bio mango stukjes	3.49	150
 n692	plus	0.7638	PLUS Mangostukjes	4.01	750
-n692	spar	1.6071	Hipro proteine pouch mango	2.25	200
 n696	ah	0.7225	Smaakt Maismeel biologisch	2.89	400
 n696	dekamarkt	0.2333	Valle Del Sole Maismeel rood	2.1	900
 n696	dirk	0.21	Valle Del Sole Maismeel rood	1.89	900
