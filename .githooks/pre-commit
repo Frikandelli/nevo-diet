@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Run the quick tests before every commit; a red test blocks the commit.
+# Enabled with `git config core.hooksPath .githooks` (bootstrap.sh does this for every clone).
+# Tests the working tree, not just the staged files. Skip only with the owner's OK: --no-verify.
+# Without the NEVO data (data/nevo/, gitignored) the tests can't run: warn and let the commit through.
+cd "$(git rev-parse --show-toplevel)"
+if ! ls data/nevo/*.csv >/dev/null 2>&1; then
+  echo "pre-commit: no NEVO data in data/nevo/, tests skipped (the app's first start sets it up)." >&2
+  exit 0
+fi
+if ! out=$(nix-shell --run 'python3 test_app.py --quick' 2>&1); then
+  echo "$out" | tail -40
+  echo "pre-commit: tests failed (python3 test_app.py --quick). Fix them before committing." >&2
+  exit 1
+fi
+echo "$out" | tail -1

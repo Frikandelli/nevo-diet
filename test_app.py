@@ -1,11 +1,13 @@
 """Smoke test of the app: every page (charts included) renders without errors in several settings.
 nix-shell --run 'python3 test_app.py'   (uses a temporary settings file; the cache is the normal one)
+--quick stops after the first section (every page renders once, the sums add up): the pre-commit hook runs that.
 
 The app has one page per file in views/; the sidebar (app.py) is drawn on every page. `at` stays on the page it was
 last switched to, so a check of the Foods or Settings page switches there first and back to the Plan page after."""
 import json
 import os
 import re
+import sys
 import tempfile
 import time
 
@@ -64,6 +66,9 @@ _zero = [{**x, "amount": 0.0, "pct": 0.0, "day_total": 0.0} if x["nutrient"] == 
 _spec = C.macro_split(_zero, "light").to_dict()
 assert "free sugars (0 g)" in json.dumps(_spec), "the free sugars column must be drawn at 0 g"
 print("macro chart: free sugars keep their column at 0 g")
+if "--quick" in sys.argv:  # the pre-commit hook's tier (~6 s); the full run takes ~7 min
+    print("quick run: stopped after the first section (run without --quick for everything)")
+    raise SystemExit
 # Wiggle room: no food that fits in a diet within 5% is missing (the old screen skipped foods entering under 100 g).
 _w = A.wiggle(profile="avg_man", chain="ah", cooked=True, excluded=[], min3=False)
 _v = A.worth(profile="avg_man", chain="ah", cooked=True, excluded=[], min3=False)

@@ -19,7 +19,11 @@ for the NEVO zip on first start.
 
 ## Test
 
-`nix-shell --run 'python3 test_app.py'` (needs the NEVO data in `data/nevo/`, which is gitignored).
+`nix-shell --run 'python3 test_app.py'` (about 7 min; needs the NEVO data in `data/nevo/`, which is
+gitignored). Add `--quick` for the first section only (about 6 s): the pre-commit hook
+`.githooks/pre-commit` runs that, and lets the commit through with a warning when `data/nevo/` is
+missing. Enable it once per clone with `git config core.hooksPath .githooks` (`bootstrap.sh` does
+it). Run the full test before pushing a change to the app.
 
 ## Ship
 
